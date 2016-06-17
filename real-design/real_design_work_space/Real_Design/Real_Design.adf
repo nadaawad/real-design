@@ -66,6 +66,12 @@ UCF=
 [DefineMacro]
 Global=
 
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=
+
 [Files]
 /a_s.v=-1
 /p_v2.txt=-1
@@ -188,8 +194,3 @@ Global=
 .\src\8_organizer.v=Verilog Source Code
 .\src\vxc_add_8_delay.v=Verilog Source Code
 
-[HierarchyViewer]
-SortInfo=u
-HierarchyInformation=
-ShowHide=ShowTopLevel
-Selected=

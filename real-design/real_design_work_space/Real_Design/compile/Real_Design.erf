@@ -37,16 +37,16 @@ UPDATEPROGRESS 33
 UPDATEPROGRESS 34
 MESSAGE "Pass 2. Processing instantiations."
 UPDATEPROGRESS 36
-MESSAGE_SP VCP2876 "Implicit net declaration, symbol mXv1_finish has not been declared in module Alu." "E:/files/ahmed/College/Graduation Project/June_Work/git_repo/real-design/real_design_work_space/Real_Design/src/alu.v" 109 1
+MESSAGE_SP VCP2876 "Implicit net declaration, symbol mXv1_finish has not been declared in module Alu." "E:/files/ahmed/College/Graduation Project/June_Work/GIT_REPOS/real_design/real-design/real_design_work_space/Real_Design/src/alu.v" 109 1
 UPDATEPROGRESS 37
 UPDATEPROGRESS 38
 UPDATEPROGRESS 39
-MESSAGE_SP VCP2876 "Implicit net declaration, symbol mXv1_finish has not been declared in module top_module." "E:/files/ahmed/College/Graduation Project/June_Work/git_repo/real-design/real_design_work_space/Real_Design/src/top_module.v" 62 1
-MESSAGE_SP VCP2876 "Implicit net declaration, symbol memoryP_write_enable has not been declared in module top_module." "E:/files/ahmed/College/Graduation Project/June_Work/git_repo/real-design/real_design_work_space/Real_Design/src/top_module.v" 65 1
-MESSAGE_SP VCP2876 "Implicit net declaration, symbol memoryR_write_enable has not been declared in module top_module." "E:/files/ahmed/College/Graduation Project/June_Work/git_repo/real-design/real_design_work_space/Real_Design/src/top_module.v" 65 1
-MESSAGE_SP VCP2876 "Implicit net declaration, symbol memoryX_write_enable has not been declared in module top_module." "E:/files/ahmed/College/Graduation Project/June_Work/git_repo/real-design/real_design_work_space/Real_Design/src/top_module.v" 65 1
-MESSAGE_SP VCP2876 "Implicit net declaration, symbol memoryP_write_enable_old has not been declared in module top_module." "E:/files/ahmed/College/Graduation Project/June_Work/git_repo/real-design/real_design_work_space/Real_Design/src/top_module.v" 68 1
-MESSAGE_SP VCP2876 "Implicit net declaration, symbol finishP_v2 has not been declared in module top_module." "E:/files/ahmed/College/Graduation Project/June_Work/git_repo/real-design/real_design_work_space/Real_Design/src/top_module.v" 71 1
+MESSAGE_SP VCP2876 "Implicit net declaration, symbol outsider_read_now has not been declared in module top_module." "E:/files/ahmed/College/Graduation Project/June_Work/GIT_REPOS/real_design/real-design/real_design_work_space/Real_Design/src/top_module.v" 62 1
+MESSAGE_SP VCP2876 "Implicit net declaration, symbol memoryP_write_enable has not been declared in module top_module." "E:/files/ahmed/College/Graduation Project/June_Work/GIT_REPOS/real_design/real-design/real_design_work_space/Real_Design/src/top_module.v" 65 1
+MESSAGE_SP VCP2876 "Implicit net declaration, symbol memoryR_write_enable has not been declared in module top_module." "E:/files/ahmed/College/Graduation Project/June_Work/GIT_REPOS/real_design/real-design/real_design_work_space/Real_Design/src/top_module.v" 65 1
+MESSAGE_SP VCP2876 "Implicit net declaration, symbol memoryX_write_enable has not been declared in module top_module." "E:/files/ahmed/College/Graduation Project/June_Work/GIT_REPOS/real_design/real-design/real_design_work_space/Real_Design/src/top_module.v" 65 1
+MESSAGE_SP VCP2876 "Implicit net declaration, symbol memoryP_write_enable_old has not been declared in module top_module." "E:/files/ahmed/College/Graduation Project/June_Work/GIT_REPOS/real_design/real-design/real_design_work_space/Real_Design/src/top_module.v" 68 1
+MESSAGE_SP VCP2876 "Implicit net declaration, symbol finishP_v2 has not been declared in module top_module." "E:/files/ahmed/College/Graduation Project/June_Work/GIT_REPOS/real_design/real-design/real_design_work_space/Real_Design/src/top_module.v" 71 1
 UPDATEPROGRESS 40
 UPDATEPROGRESS 41
 UPDATEPROGRESS 45
@@ -92,5 +92,5 @@ UPDATEPROGRESS 99
 MESSAGE "Unit top modules: matrix_by_vector_v3 vectorXvector_mXv vectorXvector tb."
 MESSAGE "$root top modules: matrix_by_vector_v3 vectorXvector_mXv vectorXvector tb."
 ENDPROGRESS Compiling...
-SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time: 0[s]."
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time: 1[s]."
 MESSAGE "done"

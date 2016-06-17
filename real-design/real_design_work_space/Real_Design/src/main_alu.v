@@ -1,5 +1,5 @@
 
-module main_alu(clk,reset,reset_vXv1,reset_mXv1,memoryA_output,memoryP_output,pKold_v2,memoryR_output,memoryR_read_address,memoryX_output,memoryP_input,memoryR_input,memoryX_input,finish,mXv1_finish,result_mem_we_4,memoryRprev_we,result_mem_we_5,result_mem_counter_5,read_again,start,read_again_2,result_mem_we_6,vXv1_finish ,finish_all
+module main_alu(clk,reset,reset_vXv1,reset_mXv1,memoryA_output,memoryP_output,pKold_v2,memoryR_output,memoryR_read_address,memoryX_output,memoryP_input,memoryR_input,memoryX_input,finish,outsider_read_now,result_mem_we_4,memoryRprev_we,result_mem_we_5,result_mem_counter_5,read_again,start,read_again_2,result_mem_we_6,vXv1_finish ,finish_all
 	);
 
     parameter number_of_clusters =40;
@@ -28,7 +28,7 @@ module main_alu(clk,reset,reset_vXv1,reset_mXv1,memoryA_output,memoryP_output,pK
     output wire [no_of_units * element_width - 1 : 0]memoryR_input;
     output wire [no_of_units * element_width - 1 : 0]memoryX_input;
     output wire finish;
-	output wire mXv1_finish ;
+	output wire outsider_read_now ;
       
 	
 	
@@ -65,6 +65,6 @@ module main_alu(clk,reset,reset_vXv1,reset_mXv1,memoryA_output,memoryP_output,pK
 	
 	
 	Alu #(.number_of_clusters(number_of_clusters),.number_of_equations_per_cluster(number_of_equations_per_cluster),.element_width (element_width ))
-	alu(clk,reset,reset_vXv1,reset_mXv1,memoryA_output,memoryP_output,pKold_v2,memoryR_output,memoryX_output,rKold_prev,memoryP_input,memoryR_input,memoryX_input,finish,mXv1_finish,result_mem_we_4,rkold_read_address,result_mem_we_5,result_mem_counter_5,read_again,start,read_again_2,result_mem_we_6,vXv1_finish,finish_all);
+	alu(clk,reset,reset_vXv1,reset_mXv1,memoryA_output,memoryP_output,pKold_v2,memoryR_output,memoryX_output,rKold_prev,memoryP_input,memoryR_input,memoryX_input,finish,outsider_read_now,result_mem_we_4,rkold_read_address,result_mem_we_5,result_mem_counter_5,read_again,start,read_again_2,result_mem_we_6,vXv1_finish,finish_all);
 	
-endmodule
+endmodule	 

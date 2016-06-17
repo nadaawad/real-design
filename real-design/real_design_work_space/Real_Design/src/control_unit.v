@@ -1,5 +1,5 @@
 
-module control_unit (clk,reset,finish_alu,memoryP_write_enable,memoryR_write_enable,memoryX_write_enable,memoryA_read_address,memoryP_read_address,memoryP_v2_read_address, memoryR_read_address,memoryX_read_address,memoryP_write_address,memoryR_write_address ,memoryX_write_address,halt,reset_vXv1,mXv1_finish,result_mem_we_4,memoryRprev_we,result_mem_we_5,result_mem_counter_5,read_again,start,read_again_2,result_mem_we_6,vXv1_finish,finish_all);
+module control_unit (clk,reset,finish_alu,memoryP_write_enable,memoryR_write_enable,memoryX_write_enable,memoryA_read_address,memoryP_read_address,memoryP_v2_read_address, memoryR_read_address,memoryX_read_address,memoryP_write_address,memoryR_write_address ,memoryX_write_address,halt,reset_vXv1,outsider_read_now,result_mem_we_4,memoryRprev_we,result_mem_we_5,result_mem_counter_5,read_again,start,read_again_2,result_mem_we_6,vXv1_finish,finish_all);
 	
 	parameter no_of_units = 8;
 	parameter memory_read_address_width=20;	// m7tag yt3`yr
@@ -23,7 +23,7 @@ module control_unit (clk,reset,finish_alu,memoryP_write_enable,memoryR_write_ena
 
 	input wire clk,reset;
 	input wire reset_vXv1;
-	input wire mXv1_finish ;
+	input wire outsider_read_now ;
 	
 	input wire result_mem_we_4;
 	input wire read_again;	
@@ -213,7 +213,7 @@ module control_unit (clk,reset,finish_alu,memoryP_write_enable,memoryR_write_ena
 					counter5 <=1 ;
 				end	
 		
-			else if(mXv1_finish && counter5==0)
+			else if(outsider_read_now && counter5==0)
 				begin
 					@(posedge clk);
 					memoryP_v2_read_address	<= memoryP_v2_read_address + 1'b1;	

@@ -92,5 +92,5 @@ UPDATEPROGRESS 99
 MESSAGE "Unit top modules: matrix_by_vector_v3 vectorXvector_mXv vectorXvector tb."
 MESSAGE "$root top modules: matrix_by_vector_v3 vectorXvector_mXv vectorXvector tb."
 ENDPROGRESS Compiling...
-SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time: 1[s]."
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time: 0[s]."
 MESSAGE "done"

@@ -22,11 +22,12 @@
 //{{ Section below this comment is automatically maintained
 //   and may be overwritten
 //{module {adder_subtractor}}
-module adder_subtractor_with_control (A, B,result,op,clk,ce,outsider15,controlled_adder_output);
+module adder_subtractor_with_control (A, B,result,op,clk,ce,outsider15,controlled_adder_output,start);
 //}} End of automatically maintained section
 
 // -- Enter your statements here -- //
-input A,B;
+input A,B;	
+input start;
 
 wire[31:0] A,B;	  
 wire [31:0]A_no_neg_zero,B_no_neg_zero;

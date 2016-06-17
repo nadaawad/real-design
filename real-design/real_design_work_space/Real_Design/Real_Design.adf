@@ -58,10 +58,14 @@ CompileWithDebug=0
 
 [$LibMap$]
 Real_Design=.
-
 Active_lib=
+
 [IMPLEMENTATION]
 UCF=
+
+[DefineMacro]
+Global=
+
 [Files]
 /a_s.v=-1
 /p_v2.txt=-1
@@ -122,6 +126,7 @@ UCF=
 /adder_subtractor_with_control.v=-1
 /8_organizer.v=-1
 /vxc_add_8_delay.v=-1
+
 [Files.Data]
 .\src\a_s.v=Verilog Source Code
 .\src\p_v2.txt=Text File
@@ -182,5 +187,9 @@ UCF=
 .\src\adder_subtractor_with_control.v=Verilog Source Code
 .\src\8_organizer.v=Verilog Source Code
 .\src\vxc_add_8_delay.v=Verilog Source Code
-[DefineMacro]
-Global=
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=

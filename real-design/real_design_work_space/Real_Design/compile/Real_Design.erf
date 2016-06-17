@@ -1,0 +1,96 @@
+MESSAGE "Pass 1. Scanning modules hierarchy."
+MESSAGE_SP VCP2113 "Module \$root found in current working library."
+BEGINPROGRESS Compiling...
+UPDATEPROGRESS 1
+UPDATEPROGRESS 2
+UPDATEPROGRESS 3
+UPDATEPROGRESS 4
+UPDATEPROGRESS 5
+UPDATEPROGRESS 6
+UPDATEPROGRESS 7
+UPDATEPROGRESS 8
+UPDATEPROGRESS 9
+UPDATEPROGRESS 10
+UPDATEPROGRESS 11
+UPDATEPROGRESS 12
+UPDATEPROGRESS 13
+UPDATEPROGRESS 14
+UPDATEPROGRESS 15
+UPDATEPROGRESS 16
+UPDATEPROGRESS 17
+UPDATEPROGRESS 18
+UPDATEPROGRESS 19
+UPDATEPROGRESS 20
+UPDATEPROGRESS 21
+UPDATEPROGRESS 22
+UPDATEPROGRESS 23
+UPDATEPROGRESS 24
+UPDATEPROGRESS 25
+UPDATEPROGRESS 26
+UPDATEPROGRESS 27
+UPDATEPROGRESS 28
+UPDATEPROGRESS 29
+UPDATEPROGRESS 30
+UPDATEPROGRESS 31
+UPDATEPROGRESS 32
+UPDATEPROGRESS 33
+UPDATEPROGRESS 34
+MESSAGE "Pass 2. Processing instantiations."
+UPDATEPROGRESS 36
+MESSAGE_SP VCP2876 "Implicit net declaration, symbol mXv1_finish has not been declared in module Alu." "E:/files/ahmed/College/Graduation Project/June_Work/git_repo/real-design/real_design_work_space/Real_Design/src/alu.v" 109 1
+UPDATEPROGRESS 37
+UPDATEPROGRESS 38
+UPDATEPROGRESS 39
+MESSAGE_SP VCP2876 "Implicit net declaration, symbol mXv1_finish has not been declared in module top_module." "E:/files/ahmed/College/Graduation Project/June_Work/git_repo/real-design/real_design_work_space/Real_Design/src/top_module.v" 62 1
+MESSAGE_SP VCP2876 "Implicit net declaration, symbol memoryP_write_enable has not been declared in module top_module." "E:/files/ahmed/College/Graduation Project/June_Work/git_repo/real-design/real_design_work_space/Real_Design/src/top_module.v" 65 1
+MESSAGE_SP VCP2876 "Implicit net declaration, symbol memoryR_write_enable has not been declared in module top_module." "E:/files/ahmed/College/Graduation Project/June_Work/git_repo/real-design/real_design_work_space/Real_Design/src/top_module.v" 65 1
+MESSAGE_SP VCP2876 "Implicit net declaration, symbol memoryX_write_enable has not been declared in module top_module." "E:/files/ahmed/College/Graduation Project/June_Work/git_repo/real-design/real_design_work_space/Real_Design/src/top_module.v" 65 1
+MESSAGE_SP VCP2876 "Implicit net declaration, symbol memoryP_write_enable_old has not been declared in module top_module." "E:/files/ahmed/College/Graduation Project/June_Work/git_repo/real-design/real_design_work_space/Real_Design/src/top_module.v" 68 1
+MESSAGE_SP VCP2876 "Implicit net declaration, symbol finishP_v2 has not been declared in module top_module." "E:/files/ahmed/College/Graduation Project/June_Work/git_repo/real-design/real_design_work_space/Real_Design/src/top_module.v" 71 1
+UPDATEPROGRESS 40
+UPDATEPROGRESS 41
+UPDATEPROGRESS 45
+MESSAGE "Pass 3. Processing behavioral statements."
+UPDATEPROGRESS 46
+UPDATEPROGRESS 48
+UPDATEPROGRESS 50
+UPDATEPROGRESS 51
+UPDATEPROGRESS 53
+UPDATEPROGRESS 55
+UPDATEPROGRESS 56
+UPDATEPROGRESS 58
+UPDATEPROGRESS 60
+UPDATEPROGRESS 61
+UPDATEPROGRESS 63
+UPDATEPROGRESS 65
+UPDATEPROGRESS 66
+UPDATEPROGRESS 68
+UPDATEPROGRESS 70
+UPDATEPROGRESS 80
+MESSAGE "Running Optimizer."
+MESSAGE "ELB/DAG code generating."
+MESSAGE_SP VCP2113 "Module \$root found in current working library."
+UPDATEPROGRESS 81
+UPDATEPROGRESS 82
+UPDATEPROGRESS 83
+UPDATEPROGRESS 84
+UPDATEPROGRESS 85
+UPDATEPROGRESS 86
+UPDATEPROGRESS 87
+UPDATEPROGRESS 88
+UPDATEPROGRESS 89
+UPDATEPROGRESS 90
+UPDATEPROGRESS 91
+UPDATEPROGRESS 92
+UPDATEPROGRESS 93
+UPDATEPROGRESS 94
+UPDATEPROGRESS 95
+UPDATEPROGRESS 96
+UPDATEPROGRESS 97
+UPDATEPROGRESS 98
+UPDATEPROGRESS 99
+MESSAGE "Unit top modules: matrix_by_vector_v3 vectorXvector_mXv vectorXvector tb."
+MESSAGE "$root top modules: matrix_by_vector_v3 vectorXvector_mXv vectorXvector tb."
+ENDPROGRESS Compiling...
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time: 1[s]."
+MESSAGE "done"

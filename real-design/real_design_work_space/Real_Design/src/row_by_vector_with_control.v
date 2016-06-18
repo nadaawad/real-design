@@ -76,10 +76,7 @@ always @(posedge clk)
 	if (reset) begin  i<=0 ;end
 	else 
 		begin  
-			if(  i >=(total/no_of_units ))  // a failed trial for the case of number of multiples ==1 
-				// need to get back to this if needed
-				begin  give_us_all <= 0; end
-			else if(~ counter_for_deasserting && (number_of_multiples - number_of_multiples_counter -1 > 0))
+			if(~ counter_for_deasserting && (number_of_multiples - number_of_multiples_counter -1 > 0))
 				begin 
 					give_us_all <=0;    
 					number_of_multiples_counter <= number_of_multiples_counter +1 ;

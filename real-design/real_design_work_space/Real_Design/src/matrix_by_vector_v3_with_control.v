@@ -123,7 +123,8 @@ always@(posedge clk) begin
 	
 	else if(!start) 		 
 		 begin		 
-			 i<=0;		 
+			 i<=0;	
+			 initialization_counter<=0;
 		 end
 	
 	 else if(i<(total/no_of_units)&&start && (&give_us_all  || ~initialization_counter)) 

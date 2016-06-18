@@ -1,8 +1,8 @@
-timestamp=1466187664767
+timestamp=1466252052935
 
 [$root]
-A/$root=22|""|0|1*1957920
-BinI32/$root=3*1429503
+A/$root=22|""|0|1*2238507
+BinI32/$root=3*1634415
 Version=9.1.2353.4205  (Windows)|00000012789cd3cd51084a4dcc8977492dce4ccf53d0f537020037e105c5
 
 [AP_total]
@@ -230,9 +230,9 @@ R=./src/matrix_by_vector_v3.v|27
 Version=9.1.2353.4205  (Windows)|00000012789cd3cd51084a4dcc8977492dce4ccf53d0f537020037e105c5
 
 [matrix_by_vector_v3_with_control]
-A/matrix_by_vector_v3_with_control=22|./src/matrix_by_vector_v3_with_control.v|27|1*2097904
-BinI32/matrix_by_vector_v3_with_control=3*1532388
-P/~emb=901,1482,2604,3132
+A/matrix_by_vector_v3_with_control=22|./src/matrix_by_vector_v3_with_control.v|27|1*2244989
+BinI32/matrix_by_vector_v3_with_control=3*1635753
+P/~emb=901,1482,2607,3133
 R=./src/matrix_by_vector_v3_with_control.v|27
 Version=9.1.2353.4205  (Windows)|00000012789cd3cd51084a4dcc8977492dce4ccf53d0f537020037e105c5
 
@@ -293,9 +293,9 @@ R=./src/row_by_vector_module.v|25
 Version=9.1.2353.4205  (Windows)|00000012789cd3cd51084a4dcc8977492dce4ccf53d0f537020037e105c5
 
 [row_by_vector_with_control]
-A/row_by_vector_with_control=22|./src/row_by_vector_with_control.v|25|1*1974512
-BinI32/row_by_vector_with_control=3*1449756
-P/~emb=1755,2219,2853,3258
+A/row_by_vector_with_control=22|./src/row_by_vector_with_control.v|25|1*2238929
+BinI32/row_by_vector_with_control=3*1634554
+P/~emb=660,1124,1731,2125
 R=./src/row_by_vector_with_control.v|25
 Version=9.1.2353.4205  (Windows)|00000012789cd3cd51084a4dcc8977492dce4ccf53d0f537020037e105c5
 
@@ -371,18 +371,19 @@ Version=9.1.2353.4205  (Windows)|00000012789cd3cd51084a4dcc8977492dce4ccf53d0f53
 
 [~A]
 E:/files/ahmed/College/Graduation Project/June_Work/GIT_REPOS/real_design/real-design/real_design_work_space/Real_Design/src/a_s.v_8_dot_product.v_2x1_mux.v_row_by_vector_with_control.v_row_by_vector_module.v_multiply.v_matrix_by_vector_v3.v_lzcshifter_28_to_28_counting_32_uid15.v_fpmultiplier_8_23_8_23_8_23_uid2.v_rkold_prev.v_inputieee_8_23_to_8_23.v_division.v_vectorxvector_mxv.v_intadder_33_f300_uid23.v_delay.v_decoder.v_main_alu.v_alu.v_n_to_2n_demux.v_memp.v_intadder_27_f180_uid7.v_fpaddsub_8_23_uid2.v_adder_subtractor.v_8x8_adder.v_vxc_add_8.v_memr.v_mema.v_matrix_by_vector_v3_with_control.v_ap_total_mem.v_fp_div.v_vxc_mul3_sub.v_vectorxvector.v_intadder_34_f180_uid18.v_decoder_with_control.v_8_organizer_with_control.v_vxc_mul3_add.v_fpaddsub_8_23_uid2_rightshifter.v_vectorxvector_mxv_with_control.v_top_module.v_memp_v2.v_control_unit.v_8_dot_product _with_control.v_tb.v_outputieee_8_23_to_8_23.v_intmultiplier_usingdsp_24_24_48_unsigned_uid4.v_div_nr_wsticky.v_vectorxvector_with_control.v_memx.v_intadd=0*1373565*1407239
+E:/files/ahmed/College/Graduation Project/June_Work/GIT_REPOS/real_design/real-design/real_design_work_space/Real_Design/src/row_by_vector_with_control.v_matrix_by_vector_v3_with_control.v=0*1417030*1419867
 E:/files/ahmed/College/Graduation Project/June_Work/git_repo/real-design/real_design_work_space/Real_Design/src/a_s.v_8_dot_product.v_2x1_mux.v_row_by_vector_with_control.v_row_by_vector_module.v_multiply.v_matrix_by_vector_v3.v_lzcshifter_28_to_28_counting_32_uid15.v_fpmultiplier_8_23_8_23_8_23_uid2.v_rkold_prev.v_inputieee_8_23_to_8_23.v_division.v_vectorxvector_mxv.v_intadder_33_f300_uid23.v_delay.v_decoder.v_main_alu.v_alu.v_n_to_2n_demux.v_memp.v_intadder_27_f180_uid7.v_fpaddsub_8_23_uid2.v_adder_subtractor.v_8x8_adder.v_vxc_add_8.v_memr.v_mema.v_matrix_by_vector_v3_with_control.v_ap_total_mem.v_fp_div.v_vxc_mul3_sub.v_vectorxvector.v_intadder_34_f180_uid18.v_decoder_with_control.v_8_organizer_with_control.v_vxc_mul3_add.v_fpaddsub_8_23_uid2_rightshifter.v_vectorxvector_mxv_with_control.v_top_module.v_memp_v2.v_control_unit.v_8_dot_product _with_control.v_tb.v_outputieee_8_23_to_8_23.v_intmultiplier_usingdsp_24_24_48_unsigned_uid4.v_div_nr_wsticky.v_vectorxvector_with_control.v_memx.v_intadder_42_f300_ui=0*1196882*1230652
 LastVerilogToplevel=tb
-ModifyID=4788
+ModifyID=4822
 Version=73
 
 [~MFT]
-0=451|0Real_Design.mgf|1407239|214824
-1=794|1Real_Design.mgf|2236996|1957920
-3=794|3Real_Design.mgf|1633707|1429503
+0=456|0Real_Design.mgf|1419867|214824
+1=800|1Real_Design.mgf|2244989|1972462
+3=800|3Real_Design.mgf|1635753|1451646
 
 [~U]
-$root=12|0*1232878|
+$root=12|0*1409465|
 AP_total=12|0*1304311||0x80
 Alu=12|0*1288255||0x80
 Eight_Organizer=12|0*1240417||0x80
@@ -415,7 +416,7 @@ eight_Dot_Product_Multiply=12|0*1234403||0x80
 eight_Dot_Product_Multiply_with_control=12|0*1353065||0x80
 main_alu=12|0*1284219||0x80
 matrix_by_vector_v3=12|0*1258051||0x90
-matrix_by_vector_v3_with_control=12|0*1300086||0x80
+matrix_by_vector_v3_with_control=12|0*1412801||0x80
 memA=12|0*1337650||0x80
 memP=12|0*1316759||0x80
 memP_v2=12|0*1366751||0x80
@@ -424,7 +425,7 @@ memX=12|0*1368640||0x80
 multiply=12|0*1238943||0x80
 rKold_prev=12|0*1272977||0x80
 row_by_vector=12|0*1248762||0x80
-row_by_vector_with_control=12|0*1243166||0x80
+row_by_vector_with_control=12|0*1410079||0x80
 tb=12|0*1370467||0x90
 top_module=12|0*1357209||0x80
 vXc_add_8=12|0*1333341||0x80

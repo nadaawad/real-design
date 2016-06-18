@@ -14,4 +14,6 @@ TemplateId=2
 TemplateId=2
 [OPENDOC|Aldec.WaveFormASDB.7|.\src\wave.asdb|]
 TemplateId=0
+[OPENDOC|Aldec.Hde.HdePlugIn.7|.\src\row_by_vector_with_control.v|]
+TemplateId=2
 ActiveDocument=1

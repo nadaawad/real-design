@@ -1,4 +1,4 @@
-4822
+1112
 ~M 0 "" 0 $root
 ~A 1 "" 0 $root
 ~M 1 "./src/ap_total_mem.v" 1 AP_total
@@ -37,6 +37,10 @@
 ~A 1 "./src/n_to_2n_demux.v" 1 N_to_2N_demux
 ~M 1 "./src/outputieee_8_23_to_8_23.v" 24 OutputIEEE_8_23_to_8_23
 ~A 1 "./src/outputieee_8_23_to_8_23.v" 24 OutputIEEE_8_23_to_8_23
+~M 3 "./src/p_emap_16.v" 5 P_Emap_16
+~A 1 "./src/p_emap_16.v" 5 P_Emap_16
+~M 1 "./src/p_emap_8.v" 5 P_Emap_8
+~A 1 "./src/p_emap_8.v" 5 P_Emap_8
 ~M 1 "./src/2x1_mux.v" 1 TwoxOne_mux
 ~A 1 "./src/2x1_mux.v" 1 TwoxOne_mux
 ~M 1 "./src/a_s.v" 17 a_s
@@ -45,6 +49,8 @@
 ~A 1 "./src/adder_subtractor.v" 25 adder_subtractor
 ~M 1 "./src/adder_subtractor_with_control.v" 25 adder_subtractor_with_control
 ~A 1 "./src/adder_subtractor_with_control.v" 25 adder_subtractor_with_control
+~M 1 "./src/col_nos.v" 1 col_nos
+~A 1 "./src/col_nos.v" 1 col_nos
 ~M 1 "./src/control_unit.v" 2 control_unit
 ~A 1 "./src/control_unit.v" 2 control_unit
 ~M 1 "./src/decoder.v" 25 decoder
@@ -61,15 +67,17 @@
 ~A 1 "./src/8_dot_product.v" 2 eight_Dot_Product_Multiply
 ~M 1 "./src/8_dot_product _with_control.v" 2 eight_Dot_Product_Multiply_with_control
 ~A 1 "./src/8_dot_product _with_control.v" 2 eight_Dot_Product_Multiply_with_control
+~M 1 "./src/8_dot_product _with_control_row.v" 2 eight_Dot_Product_Multiply_with_control_row
+~A 1 "./src/8_dot_product _with_control_row.v" 2 eight_Dot_Product_Multiply_with_control_row
 ~M 1 "./src/main_alu.v" 2 main_alu
 ~A 1 "./src/main_alu.v" 2 main_alu
 ~M 3 "./src/matrix_by_vector_v3.v" 27 matrix_by_vector_v3
 ~A 1 "./src/matrix_by_vector_v3.v" 27 matrix_by_vector_v3
-~M 1 "./src/matrix_by_vector_v3_with_control.v" 27 matrix_by_vector_v3_with_control
-~A 1 "./src/matrix_by_vector_v3_with_control.v" 27 matrix_by_vector_v3_with_control
+~M 1 "./src/matrix_by_vector_v3_with_control.v" 7 matrix_by_vector_v3_with_control
+~A 1 "./src/matrix_by_vector_v3_with_control.v" 7 matrix_by_vector_v3_with_control
 ~M 1 "./src/mema.v" 1 memA
 ~A 1 "./src/mema.v" 1 memA
-~M 1 "./src/memp.v" 1 memP
+~M 3 "./src/memp.v" 1 memP
 ~A 1 "./src/memp.v" 1 memP
 ~M 1 "./src/memp_v2.v" 1 memP_v2
 ~A 1 "./src/memp_v2.v" 1 memP_v2
@@ -77,16 +85,24 @@
 ~A 1 "./src/memr.v" 1 memR
 ~M 1 "./src/memx.v" 1 memX
 ~A 1 "./src/memx.v" 1 memX
+~M 3 "./src/memory_tb.v" 5 memory_tb
+~A 1 "./src/memory_tb.v" 5 memory_tb
+~M 1 "./src/multiples_matrix.v" 1 multiples_memory
+~A 1 "./src/multiples_matrix.v" 1 multiples_memory
 ~M 1 "./src/multiply.v" 25 multiply
 ~A 1 "./src/multiply.v" 25 multiply
+~M 1 "./src/parameters_mem.v" 1 parameters_mem
+~A 1 "./src/parameters_mem.v" 1 parameters_mem
 ~M 1 "./src/rkold_prev.v" 1 rKold_prev
 ~A 1 "./src/rkold_prev.v" 1 rKold_prev
 ~M 1 "./src/row_by_vector_module.v" 25 row_by_vector
 ~A 1 "./src/row_by_vector_module.v" 25 row_by_vector
-~M 1 "./src/row_by_vector_with_control.v" 25 row_by_vector_with_control
-~A 1 "./src/row_by_vector_with_control.v" 25 row_by_vector_with_control
+~M 1 "./src/row_by_vector_with_control.v" 5 row_by_vector_with_control
+~A 1 "./src/row_by_vector_with_control.v" 5 row_by_vector_with_control
 ~M 3 "./src/tb.v" 3 tb
 ~A 1 "./src/tb.v" 3 tb
+~M 3 "./src/tb_row_by_vector.v" 5 tb_row_by_vector
+~A 1 "./src/tb_row_by_vector.v" 5 tb_row_by_vector
 ~M 1 "./src/top_module.v" 3 top_module
 ~A 1 "./src/top_module.v" 3 top_module
 ~M 1 "./src/vxc_add_8.v" 1 vXc_add_8

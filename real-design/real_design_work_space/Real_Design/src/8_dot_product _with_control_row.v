@@ -1,5 +1,5 @@
 
-module eight_Dot_Product_Multiply_with_control_row(clk,reset ,first_row_input,second_row_input, dot_product_output,finish,outsider_read_now,no_of_multiples);
+module eight_Dot_Product_Multiply_with_control_row(clk,reset ,first_row_input,second_row_input, dot_product_output,finish,outsider_read_now,no_of_multiples,prepare_my_new_input);
 
 parameter NOE = 10;
 parameter NI = 8;
@@ -9,7 +9,8 @@ parameter total = NOE+additional ;
 integer counter = 0;
 integer ii=0; 
 integer iii=0;
-output reg finish ;
+output reg finish ;	 
+output reg prepare_my_new_input=0;
 
 input wire [31:0] no_of_multiples;
 input wire outsider_read_now;
@@ -56,6 +57,23 @@ endgenerate
 Eight_Organizer_with_control #(.NI(NI)) E_O (clk,package_by_package,adder_tree_start , adder_output,outsider4,outsider15);
 
 
+always@(posedge clk)
+	begin 
+		if(reset)
+			begin
+				prepare_my_new_input<=0;	
+			end	
+		else if(ii==(no_of_multiples-1) && outsider5)
+		    begin 
+				
+				prepare_my_new_input<=1;
+			end	 
+		else 
+			begin
+				prepare_my_new_input<=0;	
+			end	
+	end	
+
 
 always @ (posedge clk)
 begin
@@ -64,7 +82,7 @@ begin
 			
 			finish <= 0;
 			ii <=0;	   
-			iii<=0;
+			iii<=0;	
 		end
 	else if(!reset) 
 		begin
@@ -109,24 +127,26 @@ always @(posedge clk)
 
 always @(posedge clk)
 begin
-if(reset) begin counter <= 0;
-adder_tree_start <= 0;
-end
-else if(!reset)
-begin
-if(outsider_read_now) begin adder_tree_start <=1; end
-counter <= counter+1;
-end
+	if(reset) 
+		begin 
+			counter <= 0;
+			adder_tree_start <= 0;
+		end
+	else if(!reset)
+	begin
+		if(outsider_read_now) begin adder_tree_start <=1; end
+		counter <= counter+1;
+	end
 end
 
 
 always @(posedge clk)
 	begin  
-	outsider1 <= outsider_read_now;	
-	outsider2 <= outsider1;
-	outsider3 <= outsider2 ;
-	outsider4<=outsider3;
-	outsider5<=outsider4;
+		outsider1 <= outsider_read_now;	
+		outsider2 <= outsider1;
+		outsider3 <= outsider2 ;
+		outsider4<=outsider3;
+		outsider5<=outsider4;
 	
 	end	
 

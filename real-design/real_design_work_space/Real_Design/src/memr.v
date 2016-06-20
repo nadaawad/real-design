@@ -1,7 +1,6 @@
 module memR(clk, input_data, write_enable, input_read_address, input_write_address, memory_output,finish);
 	
-	parameter number_of_clusters = 1;
-	parameter number_of_equations_per_cluster = 9;
+
 	parameter element_width = 32;
 	parameter address_width = 20;
 	parameter memories_address_width=20;

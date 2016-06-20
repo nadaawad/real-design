@@ -14,10 +14,11 @@ module Alu(clk,reset,reset_vXv1,reset_mXv1,matA,pKold,pKold_v2,rKold,xKold,rKold
 	
  
     input [element_width*(3* number_of_equations_per_cluster-2*2+2)-1:0] matA; 
-	input [32*number_of_equations_per_cluster-1:0] pKold;
-	input [32*no_of_units-1:0] rKold;
-	input [32*no_of_units-1:0] pKold_v2; 
-	input [32*no_of_units-1:0] xKold;
+	input [32*number_of_equations_per_cluster-1:0] pKold; 
+	
+	input [element_width*no_of_units-1:0] rKold;
+	input [element_width*no_of_units-1:0] pKold_v2; 
+	input [element_width*no_of_units-1:0] xKold;
 	
 	
 	
@@ -34,10 +35,10 @@ module Alu(clk,reset,reset_vXv1,reset_mXv1,matA,pKold,pKold_v2,rKold,xKold,rKold
 	
 	//output wire mXv1_finish ;
 
-    output wire [32*no_of_units-1:0]memoryR_input;
+    output wire [element_width*no_of_units-1:0]memoryR_input;
 	
-	output wire [32*no_of_units-1:0] memoryX_input;	
-	output wire [32*no_of_units-1:0] memoryP_input;
+	output wire [element_width*no_of_units-1:0] memoryX_input;	
+	output wire [element_width*no_of_units-1:0] memoryP_input;
 	
 	output wire result_mem_we_4; 
 	output wire read_again; 
@@ -84,7 +85,9 @@ module Alu(clk,reset,reset_vXv1,reset_mXv1,matA,pKold,pKold_v2,rKold,xKold,rKold
 	reg start_div2;
 	reg start_mul_add;
 	reg outsider_read;
-	reg outsider_read2;	
+	reg outsider_read2;	   
+	
+	wire[31:0]total_with_additional_A;
 
 	
 	
@@ -105,8 +108,8 @@ module Alu(clk,reset,reset_vXv1,reset_mXv1,matA,pKold,pKold_v2,rKold,xKold,rKold
 	//mat by vector (A*p)
 	
 	
-	matrix_by_vector_v3_with_control #(.no_of_units(no_of_units/2),.NI(no_of_units),.number_of_clusters(number_of_clusters),.no_of_eqn_per_cluster(number_of_equations_per_cluster),.element_width (element_width ))
-	mXv1(clk,reset,reset_mXv1,matA,pKold,mXv1_result,mXv1_finish,outsider_read_now);
+	matrix_by_vector_v3_with_control #(.no_of_row_by_vector_modules(no_of_units/2),.NI(no_of_units),.element_width (element_width ))
+	mXv1(clk,reset,reset_mXv1,matA,pKold,mXv1_result,mXv1_finish,outsider_read_now,total_with_additional_A);
 	
 	
 	

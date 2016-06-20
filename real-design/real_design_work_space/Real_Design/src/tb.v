@@ -13,7 +13,7 @@ module tb();
 	integer counter2=0;	
 	integer counter3=0;
 	
-	top_module uut (clk,reset,finish,reset_vXv1,reset_mXv1,halt);
+	top_module uut (clk,reset,reset_vXv1,reset_mXv1,halt,reset_cluster);
 	
 	initial
 		begin

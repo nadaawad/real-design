@@ -122,7 +122,7 @@ module memA(clk,memA_read_address,memA_output,read_preprocess,no_of_multiples);
 				
 
 				
-			always @(posedge clk)
+		/*	always @(posedge clk)
 				begin
 				$display(" DISPLAY COUNTER %d",display_counter);
 				$display(" Read_Preprocess %b",read_preprocess);
@@ -133,8 +133,10 @@ module memA(clk,memA_read_address,memA_output,read_preprocess,no_of_multiples);
 				$display("%h",value_2);
 				$display("%h",value_1);
 	
-			   	display_counter =  display_counter+1;
-				end	
+			   	display_counter =  display_counter+1;	  
+			
+				end		
+		*/
 			
 	
 endmodule	

@@ -41,13 +41,11 @@ MESSAGE_SP VCP2876 "Implicit net declaration, symbol prepare_my_new_input has no
 UPDATEPROGRESS 36
 MESSAGE_SP VCP2876 "Implicit net declaration, symbol mXv1_finish has not been declared in module Alu." "E:/files/ahmed/College/Graduation Project/June_Work/GIT_REPOS/real_design/real-design/real_design_work_space/Real_Design/src/alu.v" 112 1
 UPDATEPROGRESS 37
-MESSAGE_SP VCP2876 "Implicit net declaration, symbol mXv1_result has not been declared in module tb_row_by_vector." "E:/files/ahmed/College/Graduation Project/June_Work/GIT_REPOS/real_design/real-design/real_design_work_space/Real_Design/src/tb_row_by_vector.v" 69 1
-MESSAGE_SP VCP2876 "Implicit net declaration, symbol mXv1_finish has not been declared in module tb_row_by_vector." "E:/files/ahmed/College/Graduation Project/June_Work/GIT_REPOS/real_design/real-design/real_design_work_space/Real_Design/src/tb_row_by_vector.v" 69 1
-MESSAGE_SP VCP2876 "Implicit net declaration, symbol outsider_read_now has not been declared in module tb_row_by_vector." "E:/files/ahmed/College/Graduation Project/June_Work/GIT_REPOS/real_design/real-design/real_design_work_space/Real_Design/src/tb_row_by_vector.v" 69 1
+MESSAGE_SP VCP2876 "Implicit net declaration, symbol mXv1_finish has not been declared in module tb_row_by_vector." "E:/files/ahmed/College/Graduation Project/June_Work/GIT_REPOS/real_design/real-design/real_design_work_space/Real_Design/src/tb_row_by_vector.v" 71 1
+MESSAGE_SP VCP2876 "Implicit net declaration, symbol outsider_read_now has not been declared in module tb_row_by_vector." "E:/files/ahmed/College/Graduation Project/June_Work/GIT_REPOS/real_design/real-design/real_design_work_space/Real_Design/src/tb_row_by_vector.v" 71 1
 UPDATEPROGRESS 38
 MESSAGE_SP VCP2876 "Implicit net declaration, symbol reset_cluster has not been declared in module tb." "E:/files/ahmed/College/Graduation Project/June_Work/GIT_REPOS/real_design/real-design/real_design_work_space/Real_Design/src/tb.v" 16 1
 UPDATEPROGRESS 39
-UPDATEPROGRESS 40
 MESSAGE_SP VCP2876 "Implicit net declaration, symbol memoryA_output has not been declared in module top_module." "E:/files/ahmed/College/Graduation Project/June_Work/GIT_REPOS/real_design/real-design/real_design_work_space/Real_Design/src/top_module.v" 77 1
 MESSAGE_SP VCP2876 "Implicit net declaration, symbol memoryP_output has not been declared in module top_module." "E:/files/ahmed/College/Graduation Project/June_Work/GIT_REPOS/real_design/real-design/real_design_work_space/Real_Design/src/top_module.v" 77 1
 MESSAGE_SP VCP2876 "Implicit net declaration, symbol memoryP_input has not been declared in module top_module." "E:/files/ahmed/College/Graduation Project/June_Work/GIT_REPOS/real_design/real-design/real_design_work_space/Real_Design/src/top_module.v" 77 1
@@ -56,10 +54,10 @@ MESSAGE_SP VCP2876 "Implicit net declaration, symbol memoryP_write_enable has no
 MESSAGE_SP VCP2876 "Implicit net declaration, symbol memoryR_write_enable has not been declared in module top_module." "E:/files/ahmed/College/Graduation Project/June_Work/GIT_REPOS/real_design/real-design/real_design_work_space/Real_Design/src/top_module.v" 80 1
 MESSAGE_SP VCP2876 "Implicit net declaration, symbol memoryX_write_enable has not been declared in module top_module." "E:/files/ahmed/College/Graduation Project/June_Work/GIT_REPOS/real_design/real-design/real_design_work_space/Real_Design/src/top_module.v" 80 1
 MESSAGE_SP VCP2876 "Implicit net declaration, symbol finishP_v2 has not been declared in module top_module." "E:/files/ahmed/College/Graduation Project/June_Work/GIT_REPOS/real_design/real-design/real_design_work_space/Real_Design/src/top_module.v" 97 1
-UPDATEPROGRESS 41
+UPDATEPROGRESS 40
 UPDATEPROGRESS 45
 WARNING VCP2597 "Some unconnected ports remain at instance: P_E. Module P_Emap_8 has unconnected  port(s) : you_can_read." "E:/files/ahmed/College/Graduation Project/June_Work/GIT_REPOS/real_design/real-design/real_design_work_space/Real_Design/src/memory_tb.v" 19 1
-WARNING VCP2597 "Some unconnected ports remain at instance: mXv1. Module matrix_by_vector_v3_with_control has unconnected  port(s) : total_with_additional_A, memories_preprocess, you_can_read." "E:/files/ahmed/College/Graduation Project/June_Work/GIT_REPOS/real_design/real-design/real_design_work_space/Real_Design/src/alu.v" 111 1
+WARNING VCP2597 "Some unconnected ports remain at instance: mXv1. Module matrix_by_vector_v3_with_control has unconnected  port(s) : total_with_additional_A, memories_pre_preprocess, you_can_read." "E:/files/ahmed/College/Graduation Project/June_Work/GIT_REPOS/real_design/real-design/real_design_work_space/Real_Design/src/alu.v" 111 1
 WARNING VCP2597 "Some unconnected ports remain at instance: alu. Module main_alu has unconnected  port(s) : vXv1_finish, finish_all." "E:/files/ahmed/College/Graduation Project/June_Work/GIT_REPOS/real_design/real-design/real_design_work_space/Real_Design/src/top_module.v" 76 1
 WARNING VCP2597 "Some unconnected ports remain at instance: CU. Module control_unit has unconnected  port(s) : vXv1_finish, finish_all." "E:/files/ahmed/College/Graduation Project/June_Work/GIT_REPOS/real_design/real-design/real_design_work_space/Real_Design/src/top_module.v" 79 1
 WARNING VCP2597 "Some unconnected ports remain at instance: P_Emap_mem. Module P_Emap_8 has unconnected  port(s) : you_can_read." "E:/files/ahmed/College/Graduation Project/June_Work/GIT_REPOS/real_design/real-design/real_design_work_space/Real_Design/src/top_module.v" 87 1
@@ -111,5 +109,5 @@ UPDATEPROGRESS 99
 MESSAGE "Unit top modules: vectorXvector memory_tb matrix_by_vector_v3 memP tb_row_by_vector P_Emap_16 vectorXvector_mXv tb."
 MESSAGE "$root top modules: vectorXvector memory_tb matrix_by_vector_v3 memP tb_row_by_vector P_Emap_16 vectorXvector_mXv tb."
 ENDPROGRESS Compiling...
-SUCCESS "Compile success 0 Errors 6 Warnings  Analysis time: 0[s]."
+SUCCESS "Compile success 0 Errors 6 Warnings  Analysis time: 1[s]."
 MESSAGE "done"

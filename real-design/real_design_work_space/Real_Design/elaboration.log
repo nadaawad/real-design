@@ -1,4 +1,4 @@
-Active-HDL 9.1.2353.4205  2016-06-20 11:11:55
+Active-HDL 9.1.2353.4205  2016-06-21 19:22:09
 
 Elaboration top modules:
 Verilog Module                tb_row_by_vector
@@ -18,7 +18,7 @@ decoder_with_control                          | real_design |      | 9.1.2353.42
 row_by_vector_with_control                    | real_design |      | 9.1.2353.4205  (Windows) | -l Real_Design -O2
 eight_Dot_Product_Multiply_with_control_row   | real_design |      | 9.1.2353.4205  (Windows) | -l Real_Design -O2
 N_to_2N_demux                                 | real_design |      | 9.1.2353.4205  (Windows) | -l Real_Design -O2
-Eight_Organizer_with_control                  | real_design |      | 9.1.2353.4205  (Windows) | -l Real_Design -O2
+Eight_Organizer_with_control_row              | real_design |      | 9.1.2353.4205  (Windows) | -l Real_Design -O2
 multiply                                      | real_design |      | 9.1.2353.4205  (Windows) | -l Real_Design -O2
 InputIEEE_8_23_to_8_23                        | real_design |      | 9.1.2353.4205  (Windows) | -l Real_Design -O2
 FPMultiplier_8_23_8_23_8_23_uid2              | real_design |      | 9.1.2353.4205  (Windows) | -l Real_Design -O2

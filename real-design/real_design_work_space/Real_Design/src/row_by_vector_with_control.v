@@ -61,36 +61,17 @@ eight_Dot_Product_Multiply_with_control_row  edomwcr(clk,start_row_by_vector ,a,
 always @(posedge clk) 
 	begin 
 	if (reset) begin  i<=0 ;end
-	else 
+	else if(prepare_my_new_input)
 		begin  
-		    if(~ counter_for_deasserting &&initialization_counter&& (no_of_multiples - no_of_multiples_counter -1 > 0))
-				begin 
-					give_me_only <=0;    
-					no_of_multiples_counter <= no_of_multiples_counter +1 ;
-				end   
-			else if( ~ counter_for_deasserting &&initialization_counter&& (no_of_multiples - no_of_multiples_counter -1 == 0))
-				begin 
-					counter_for_deasserting <=1; 
-					no_of_multiples_counter <=0;   
-					give_me_only <=1;
-				end	
-			else if(initialization_counter) 
-				begin
-				counter_for_deasserting <=0; 
-				if(no_of_multiples >1 /*||1*/ ) // to accelerate the special case of number of multiples = 1 
-					// which will most probably be the one we use . I will disable it for now for debugging reasons.
-				begin give_me_only <=0; end 
-				end	
-				
-				if(start_row_by_vector) i <= i+1;
-				
-		end		
+		   give_me_only<=1;	
+		end	
+	else give_me_only<=0;	
 		
 	end	  
 	
 	always @(posedge clk)
 		begin
-			if (start_row_by_vector && (no_of_multiples - no_of_multiples_counter -1) == 0)	   
+			if (prepare_my_new_input)	   
 			begin 
 				pipeline0 <=1 ;
 			end 
@@ -100,12 +81,12 @@ always @(posedge clk)
 				end	
 			
 			pipeline1 <=pipeline0;
-			pipeline2 <=pipeline1;
-			pipeline3 <= pipeline2;
-			pipeline4 <= pipeline3;
-			pipeline5 <=pipeline4;
+			//pipeline2 <=pipeline1;
+			//pipeline3 <= pipeline2;
+			//pipeline4 <= pipeline3;
+			//pipeline5 <=pipeline4;
 			//decoder_read_now <= pipeline5;
-			decoder_read_now <= pipeline4;
+			decoder_read_now <= pipeline1;
 			
 		end	 
 		

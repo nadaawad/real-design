@@ -8,7 +8,8 @@ parameter additional = NI-(NOE%NI);
 parameter total = NOE+additional ;
 integer counter = 0;
 integer ii=0; 
-integer iii=0;
+integer iii=0; 
+integer iiii=0;
 output reg finish ;	 
 output reg prepare_my_new_input=0;
 
@@ -18,7 +19,7 @@ input wire reset ;
 input wire[32*NI-1:0] first_row_input;
 input wire[32*NI-1:0] second_row_input;
 reg save = 0;
-reg adder_tree_start;
+reg adder_tree_start=0;
 input clk ;
 reg[32*NI-1:0] package_by_package;
 wire [32*NI-1:0] multipliers_output_vector;
@@ -43,6 +44,7 @@ reg outsider3=0;
 reg outsider4=0;  
 reg outsider5=0;
 
+wire outsider11;
 wire outsider15;
 
 genvar j ;
@@ -54,23 +56,35 @@ end
 endgenerate
 
 
-Eight_Organizer_with_control #(.NI(NI)) E_O (clk,package_by_package,adder_tree_start , adder_output,outsider4,outsider15);
+Eight_Organizer_with_control_row #(.NI(NI)) E_O (clk,package_by_package,adder_tree_start , adder_output,outsider4,outsider15,outsider11);
 
 
 always@(posedge clk)
 	begin 
 		if(reset)
 			begin
+//-------->  iiii<=0;
 				prepare_my_new_input<=0;	
+			end
+		else if(iiii==(no_of_multiples-1) && outsider11)
+		    begin 
+				
+				prepare_my_new_input<=1;
 			end	
-		else if(ii==(no_of_multiples-1) && outsider5)
+		else if(iiii==(no_of_multiples-1) && outsider11)
 		    begin 
 				
 				prepare_my_new_input<=1;
 			end	 
-		else 
+		else if(iiii <(no_of_multiples-1) && outsider11) 
 			begin
-				prepare_my_new_input<=0;	
+
+				iiii <=iiii+1;
+			end	  
+		else if(iiii >=(no_of_multiples-1) && prepare_my_new_input)
+			begin
+				iiii <=0; 	   // THIS HAS TO BE CHANGED 
+				prepare_my_new_input<=0;
 			end	
 	end	
 
@@ -80,7 +94,6 @@ begin
 	if(reset)
 		begin
 			
-			finish <= 0;
 			ii <=0;	   
 			iii<=0;	
 		end

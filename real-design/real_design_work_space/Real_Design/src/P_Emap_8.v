@@ -179,9 +179,9 @@ out0[(no_of_units-elem0_r_pipe)*element_width-1-:element_width]};
 			begin
 				if(read_preprocess || ~first_time_flag)	
 					begin 
-						you_can_read<=0;
-						@(posedge clk);	
 						you_can_read<=1;
+						@(posedge clk);	
+						you_can_read<=0;
 						if(i<no_of_multiples)
 							begin
 								i<=i+1;

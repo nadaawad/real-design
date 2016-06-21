@@ -54,6 +54,11 @@ Active_lib=
 [IMPLEMENTATION]
 UCF=
 
+[Groups]
+wave.asdbw=1
+wave.asdbw\current=1
+wave.asdbw\LOCAL___CEC76757C415B8098500.sid=1
+
 [Files]
 /vectorxvector.v=-1
 /intadder_42_f300_uid15.v=-1
@@ -125,6 +130,34 @@ UCF=
 /control_unit.v=-1
 /outputieee_8_23_to_8_23.v=-1
 /div_nr_wsticky.v=-1
+/8_organizer_with_control_row.v=-1
+/wave.asdb=-1
+wave.asdbw/strings.data=-1
+wave.asdbw\current/channels=-1
+wave.asdbw\current/global_info=-1
+wave.asdbw\current/names.data=-1
+wave.asdbw\current/names.index=-1
+wave.asdbw\current/pattern_lut=-1
+wave.asdbw\current/scratchpad=-1
+wave.asdbw\current/sources=-1
+wave.asdbw\current/strings.index=-1
+wave.asdbw\current/treeinfo=-1
+wave.asdbw\current/typeinfo=-1
+wave.asdbw\LOCAL___CEC76757C415B8098500.sid/channels.data=-1
+wave.asdbw\LOCAL___CEC76757C415B8098500.sid/channels.index=-1
+wave.asdbw\LOCAL___CEC76757C415B8098500.sid/current_time=-1
+wave.asdbw\LOCAL___CEC76757C415B8098500.sid/global_info=-1
+wave.asdbw\LOCAL___CEC76757C415B8098500.sid/names.data=-1
+wave.asdbw\LOCAL___CEC76757C415B8098500.sid/names.index=-1
+wave.asdbw\LOCAL___CEC76757C415B8098500.sid/pattern_lut=-1
+wave.asdbw\LOCAL___CEC76757C415B8098500.sid/ref_counter=-1
+wave.asdbw\LOCAL___CEC76757C415B8098500.sid/scratchpad.data=-1
+wave.asdbw\LOCAL___CEC76757C415B8098500.sid/scratchpad.index=-1
+wave.asdbw\LOCAL___CEC76757C415B8098500.sid/sources=-1
+wave.asdbw\LOCAL___CEC76757C415B8098500.sid/status_ok=-1
+wave.asdbw\LOCAL___CEC76757C415B8098500.sid/strings.index=-1
+wave.asdbw\LOCAL___CEC76757C415B8098500.sid/treeinfo=-1
+wave.asdbw\LOCAL___CEC76757C415B8098500.sid/typeinfo=-1
 
 [Files.Data]
 .\src\vectorxvector.v=Verilog Source Code
@@ -197,4 +230,32 @@ UCF=
 .\src\control_unit.v=Verilog Source Code
 .\src\outputieee_8_23_to_8_23.v=Verilog Source Code
 .\src\div_nr_wsticky.v=Verilog Source Code
+.\src\8_organizer_with_control_row.v=Verilog Source Code
+.\src\wave.asdb=Accelerated Waveform File
+.\src\wave.asdbw\strings.data=External File
+.\src\wave.asdbw\current\channels=External File
+.\src\wave.asdbw\current\global_info=External File
+.\src\wave.asdbw\current\names.data=External File
+.\src\wave.asdbw\current\names.index=External File
+.\src\wave.asdbw\current\pattern_lut=External File
+.\src\wave.asdbw\current\scratchpad=External File
+.\src\wave.asdbw\current\sources=External File
+.\src\wave.asdbw\current\strings.index=External File
+.\src\wave.asdbw\current\treeinfo=External File
+.\src\wave.asdbw\current\typeinfo=External File
+.\src\wave.asdbw\LOCAL___CEC76757C415B8098500.sid\channels.data=External File
+.\src\wave.asdbw\LOCAL___CEC76757C415B8098500.sid\channels.index=External File
+.\src\wave.asdbw\LOCAL___CEC76757C415B8098500.sid\current_time=External File
+.\src\wave.asdbw\LOCAL___CEC76757C415B8098500.sid\global_info=External File
+.\src\wave.asdbw\LOCAL___CEC76757C415B8098500.sid\names.data=External File
+.\src\wave.asdbw\LOCAL___CEC76757C415B8098500.sid\names.index=External File
+.\src\wave.asdbw\LOCAL___CEC76757C415B8098500.sid\pattern_lut=External File
+.\src\wave.asdbw\LOCAL___CEC76757C415B8098500.sid\ref_counter=External File
+.\src\wave.asdbw\LOCAL___CEC76757C415B8098500.sid\scratchpad.data=External File
+.\src\wave.asdbw\LOCAL___CEC76757C415B8098500.sid\scratchpad.index=External File
+.\src\wave.asdbw\LOCAL___CEC76757C415B8098500.sid\sources=External File
+.\src\wave.asdbw\LOCAL___CEC76757C415B8098500.sid\status_ok=External File
+.\src\wave.asdbw\LOCAL___CEC76757C415B8098500.sid\strings.index=External File
+.\src\wave.asdbw\LOCAL___CEC76757C415B8098500.sid\treeinfo=External File
+.\src\wave.asdbw\LOCAL___CEC76757C415B8098500.sid\typeinfo=External File
 

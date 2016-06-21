@@ -15,7 +15,8 @@ module tb_row_by_vector ();
 			reg	clk=0;	
 			reg	reset =1; 
 			reg	reset_mXv1 =0;	
-			wire memories_preprocess;
+			wire memories_pre_preprocess; 
+			reg memories_preprocess=0;
 	
 
 	
@@ -37,7 +38,8 @@ module tb_row_by_vector ();
 	
 
    wire P_Emap_write_enable ;  
-   wire [no_of_row_by_vector_modules-1:0] you_can_read;
+   wire [no_of_row_by_vector_modules-1:0] you_can_read;	
+   wire[no_of_units*element_width-1:0] mXv1_result;
 
 
 	
@@ -66,7 +68,7 @@ module tb_row_by_vector ();
 	
 	
 	matrix_by_vector_v3_with_control #(.no_of_row_by_vector_modules(no_of_units/2),.NI(no_of_units),.element_width (element_width ))
-	mXv1_dash(clk,reset,reset_mXv1,memA_output,Emap_mem_output_row,mXv1_result,mXv1_finish,outsider_read_now,multiples_output,total_with_additional_A,memories_preprocess,you_can_read);
+	mXv1_dash(clk,reset,reset_mXv1,memA_output,Emap_mem_output_row,mXv1_result,mXv1_finish,outsider_read_now,multiples_output,total_with_additional_A,memories_pre_preprocess,you_can_read);
 	
 	
 	initial
@@ -75,9 +77,9 @@ module tb_row_by_vector ();
 			reset <=1; 
 			reset_mXv1 <=0;	 
 			
-				 memoryA_read_address <=3;
-				 col_nos_read_address <=3;
-				 multiples_read_address<=3;
+				 memoryA_read_address <=0;
+				 col_nos_read_address <=0;
+				 multiples_read_address<=0;
 			
 			#60
 			
@@ -88,10 +90,7 @@ module tb_row_by_vector ();
 
 			
 			#400
-			
-				 memoryA_read_address <=15;
-				 col_nos_read_address <=15;
-				 multiples_read_address<=15;
+
 				 
 			#190 
  
@@ -100,7 +99,7 @@ module tb_row_by_vector ();
 
 			
 			
-			#200
+			#2000
 			$finish();
 			
 		end 
@@ -108,6 +107,25 @@ module tb_row_by_vector ();
 	always 
 		begin 
 			#10 clk <= ~ clk;
+		end	 
+		
+	always @(posedge clk)
+		begin
+			if(memories_pre_preprocess)
+				begin
+					
+				memoryA_read_address <= memoryA_read_address +1 ;
+				 col_nos_read_address <= col_nos_read_address+1;
+				 multiples_read_address<= multiples_read_address +1;
+				end 	
+
+		end	 
+		
+	always @(posedge clk)
+		begin
+		 memories_preprocess <= memories_pre_preprocess	;	
+		 if(outsider_read_now)
+		 $display("%h",mXv1_result);
 		end	
 
 

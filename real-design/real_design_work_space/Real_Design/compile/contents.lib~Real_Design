@@ -1,4 +1,4 @@
-1112
+48348
 ~M 0 "" 0 $root
 ~A 1 "" 0 $root
 ~M 1 "./src/ap_total_mem.v" 1 AP_total
@@ -9,6 +9,8 @@
 ~A 1 "./src/8_organizer.v" 2 Eight_Organizer
 ~M 1 "./src/8_organizer_with_control.v" 2 Eight_Organizer_with_control
 ~A 1 "./src/8_organizer_with_control.v" 2 Eight_Organizer_with_control
+~M 1 "./src/8_organizer_with_control_row.v" 2 Eight_Organizer_with_control_row
+~A 1 "./src/8_organizer_with_control_row.v" 2 Eight_Organizer_with_control_row
 ~M 1 "./src/8x8_adder.v" 1 EightxEight_Adder
 ~A 1 "./src/8x8_adder.v" 1 EightxEight_Adder
 ~M 1 "./src/fpaddsub_8_23_uid2.v" 65 FPAddSub_8_23_uid2

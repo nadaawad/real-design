@@ -58,3 +58,4 @@
 .\src\control_unit.v
 .\src\outputieee_8_23_to_8_23.v
 .\src\div_nr_wsticky.v
+.\src\8_organizer_with_control_row.v

@@ -44,7 +44,8 @@ always @(posedge clk)
 begin
 	if(!start)
 		begin	
-			mux_select <= 1; 
+			mux_select <= 1;
+			first_time<=1;
 		end
 	else 
 		begin

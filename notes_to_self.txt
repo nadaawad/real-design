@@ -1,3 +1,5 @@
 1- el memory elle bettala3 8 mmknn2asemha bete2ra 4-4 
 2- el vxc_mull_add  ye2ra kol cycle msh kol etneen
 3- addertrees with control
+4- haneb2a asr3 bkteer law kan el row by vector beyedrab 16 element f el marra badal 8 . 3shan nesbet el rows elle fehom number of multiples = 1 2olayela geddan
+w kazalek elle fehom number of multiples  = 3 fe el PML 2olayela geddan , fa el most common case heya no_of_multiples =2 .

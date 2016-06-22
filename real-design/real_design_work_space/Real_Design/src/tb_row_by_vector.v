@@ -77,9 +77,9 @@ module tb_row_by_vector ();
 			reset <=1; 
 			reset_mXv1 <=0;	 
 			
-				 memoryA_read_address <=0;
-				 col_nos_read_address <=0;
-				 multiples_read_address<=0;
+				 memoryA_read_address <=-1;
+				 col_nos_read_address <=-1;
+				 multiples_read_address<=-1;
 			
 			#60
 			
@@ -113,7 +113,6 @@ module tb_row_by_vector ();
 		begin
 			if(memories_pre_preprocess)
 				begin
-					
 				memoryA_read_address <= memoryA_read_address +1 ;
 				 col_nos_read_address <= col_nos_read_address+1;
 				 multiples_read_address<= multiples_read_address +1;
@@ -125,7 +124,10 @@ module tb_row_by_vector ();
 		begin
 		 memories_preprocess <= memories_pre_preprocess	;	
 		 if(outsider_read_now)
-		 $display("%h",mXv1_result);
+			 begin
+				 $display("%h",mXv1_result); 
+			 end
+
 		end	
 
 

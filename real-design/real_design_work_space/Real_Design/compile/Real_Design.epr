@@ -26,6 +26,7 @@
 "./src/rkold_prev.v"	1
 "./src/multiples_matrix.v"	1
 "./src/vectorxvector_with_control.v"	1
+"./src/adder_subtractor_with_control_with_start.v"	1
 "./src/memp.v"	1
 "./src/2x1_mux.v"	1
 "./src/memr.v"	1
@@ -36,6 +37,7 @@
 "./src/n_to_2n_demux.v"	1
 "./src/8_dot_product _with_control_row.v"	1
 "./src/division.v"	1
+"./src/8x8_adder_with_start.v"	1
 "./src/parameters_mem.v"	1
 "./src/fpaddsub_8_23_uid2_rightshifter.v"	1
 "./src/fpmultiplier_8_23_8_23_8_23_uid2.v"	1
@@ -55,6 +57,7 @@
 "./src/matrix_by_vector_v3.v"	1
 "./src/alu.v"	2
 "./src/inputieee_8_23_to_8_23.v"	1
+"./src/adder_subtractor_with_start.v"	1
 "./src/8_organizer.v"	1
 "./src/row_by_vector_module.v"	1
 "./src/vxc_add_8_delay.v"	1

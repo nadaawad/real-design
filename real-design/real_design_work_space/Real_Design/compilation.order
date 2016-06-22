@@ -59,3 +59,6 @@
 .\src\outputieee_8_23_to_8_23.v
 .\src\div_nr_wsticky.v
 .\src\8_organizer_with_control_row.v
+.\src\adder_subtractor_with_control_with_start.v
+.\src\adder_subtractor_with_start.v
+.\src\8x8_adder_with_start.v

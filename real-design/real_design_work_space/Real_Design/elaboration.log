@@ -1,4 +1,4 @@
-Active-HDL 9.1.2353.4205  2016-06-22 02:20:06
+Active-HDL 9.1.2353.4205  2016-06-22 15:47:16
 
 Elaboration top modules:
 Verilog Module                tb_row_by_vector
@@ -27,9 +27,9 @@ IntMultiplier_UsingDSP_24_24_48_unsigned_uid4 | real_design |      | 9.1.2353.42
 IntAdder_33_f300_uid23                        | real_design |      | 9.1.2353.4205  (Windows) | -l Real_Design -O2
 IntAdder_42_f300_uid15                        | real_design |      | 9.1.2353.4205  (Windows) | -l Real_Design -O2
 TwoxOne_mux                                   | real_design |      | 9.1.2353.4205  (Windows) | -l Real_Design -O2
-EightxEight_Adder                             | real_design |      | 9.1.2353.4205  (Windows) | -l Real_Design -O2
-adder_subtractor_with_control                 | real_design |      | 9.1.2353.4205  (Windows) | -l Real_Design -O2
-adder_subtractor                              | real_design |      | 9.1.2353.4205  (Windows) | -l Real_Design -O2
+EightxEight_Adder_with_start                  | real_design |      | 9.1.2353.4205  (Windows) | -l Real_Design -O2
+adder_subtractor_with_control_with_start      | real_design |      | 9.1.2353.4205  (Windows) | -l Real_Design -O2
+adder_subtractor_with_start                   | real_design |      | 9.1.2353.4205  (Windows) | -l Real_Design -O2
 FPAddSub_8_23_uid2                            | real_design |      | 9.1.2353.4205  (Windows) | -l Real_Design -O2
 FPAddSub_8_23_uid2_RightShifter               | real_design |      | 9.1.2353.4205  (Windows) | -l Real_Design -O2
 IntAdder_27_f180_uid7                         | real_design |      | 9.1.2353.4205  (Windows) | -l Real_Design -O2

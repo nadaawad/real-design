@@ -1,0 +1,29 @@
+# SECOND INSTANCE OF VISUAL STUDIO
+# SECOND INSTANCE OF VISUAL STUDIO
+# SECOND INSTANCE OF VISUAL STUDIO
+# SECOND INSTANCE OF VISUAL STUDIO
+# SECOND INSTANCE OF VISUAL STUDIO
+# SECOND INSTANCE OF VISUAL STUDIO
+celldim 1 cm
+box 0 0 0 8 4 48
+dielectric 0 0 0 8 4 48 2.0 0.0
+esource 7 0 0 8 4 0 1910 y 0.1951 0
+esource 6 0 0 7 4 0 1910 y 0.5556 0
+esource 5 0 0 6 4 0 1910 y 0.8315 0
+esource 4 0 0 5 4 0 1910 y 0.9808 0
+esource 3 0 0 4 4 0 1910 y 0.9808 0
+esource 2 0 0 3 4 0 1910 y 0.8315 0
+esource 1 0 0 2 4 0 1910 y 0.5556 0
+esource 0 0 0 1 4 0 1910 y 0.1951 0
+ 
+esource 8 0 0 8 4 0 1910 y 0.0000 0
+esource 7 0 0 7 4 0 1910 y 0.3830 0
+esource 6 0 0 6 4 0 1910 y 0.7070 0
+esource 5 0 0 5 4 0 1910 y 0.9240 0
+esource 4 0 0 4 4 0 1910 y 1.0000 0
+esource 3 0 0 3 4 0 1910 y 0.9240 0
+esource 2 0 0 2 4 0 1910 y 0.7070 0
+esource 1 0 0 1 4 0 1910 y 0.3830 0
+esource 0 0 0 0 4 0 1910 y 0.0000 0
+ 
+efield_output 0 2 0 8 2 48 example.out

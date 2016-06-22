@@ -1,0 +1,28 @@
+# Waveguide driven in TE10 mode
+# It has a lossy dielectric
+
+box 0 0 0 8 4 48
+dielectric 0 0 0 8 4 48 3.0 0.04
+
+esource 7 0 0 8 4 0 1910 y 0.1951 0
+esource 6 0 0 7 4 0 1910 y 0.5556 0
+esource 5 0 0 6 4 0 1910 y 0.8315 0
+esource 4 0 0 5 4 0 1910 y 0.9808 0
+esource 3 0 0 4 4 0 1910 y 0.9808 0
+esource 2 0 0 3 4 0 1910 y 0.8315 0
+esource 1 0 0 2 4 0 1910 y 0.5556 0
+esource 0 0 0 1 4 0 1910 y 0.1951 0
+
+esource 8 0 0 8 4 0 1910 y 0.0    0
+esource 7 0 0 7 4 0 1910 y 0.383  0
+esource 6 0 0 6 4 0 1910 y 0.707  0
+esource 5 0 0 5 4 0 1910 y 0.924  0
+esource 4 0 0 4 4 0 1910 y 1.0    0
+esource 3 0 0 3 4 0 1910 y 0.924  0
+esource 2 0 0 2 4 0 1910 y 0.707  0
+esource 1 0 0 1 4 0 1910 y 0.383  0
+esource 0 0 0 0 4 0 1910 y 0.0    0
+
+efield_output 0 2 0 8 2 48 w_guid.out
+ 
+

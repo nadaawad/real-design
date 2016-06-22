@@ -2,14 +2,14 @@
 `define smaller_large_zero 256'h0 
 `define small_zero 32'h00000000
 
-module P_Emap_8 (clk,read_preprocess,write_enable,col_nos,output_row,no_of_multiples,you_can_read); 
+module P_Emap_8 (clk,read_preprocess,write_enable,col_nos,output_row,no_of_multiples,you_can_read,I_am_ready); 
 	
 	parameter no_of_elements_on_col_nos = 20 ;
 	parameter no_of_elements_in_output = 8 ;
 	parameter element_width = 32;   
 	parameter no_of_units = 8;	
 	input wire [31:0] no_of_multiples; 	// this should come from the index matrix
-
+	input wire I_am_ready;
 	
 	integer i = 1; 
 	reg first_time_flag =1;	 
@@ -187,7 +187,7 @@ out0[(no_of_units-elem0_r_pipe)*element_width-1-:element_width]};
 								i<=i+1;
 								first_time_flag<=0;
 							end	 
-						else
+						else if(i>= no_of_multiples)
 							begin 
 								i<=1; 
 								first_time_flag<=1;

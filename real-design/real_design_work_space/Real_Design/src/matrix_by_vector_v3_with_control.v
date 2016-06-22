@@ -4,7 +4,7 @@
 							 
 	
 `define zero_filling 32'd0
-module matrix_by_vector_v3_with_control (clk,reset,start,A_rows,vector_rows,out,finish,outsider_read_now,no_of_multiples,total_with_additional_A,memories_pre_preprocess,you_can_read);  
+module matrix_by_vector_v3_with_control (clk,reset,start,A_rows,vector_rows,out,finish,outsider_read_now,no_of_multiples,total_with_additional_A,memories_pre_preprocess,you_can_read,I_am_ready);  
 
 	// NOTE THAT : number of multiples determines how many cycles should the row by vector work on a certain row before it finishes
 	// While total_with_additional_A / no_of_row_by_vector_modules determines the number of times we will give out row_by_vector modules
@@ -66,7 +66,9 @@ reg second_pipeline=1;
 
 wire[no_of_row_by_vector_modules-1:0] decoder_read_now;	 
 reg [no_of_row_by_vector_modules-1:0] decoder_read_now_dash=0;
-reg [no_of_row_by_vector_modules-1:0] start_row_by_vector;	
+reg [no_of_row_by_vector_modules-1:0] start_row_by_vector;
+output wire [no_of_row_by_vector_modules-1:0] I_am_ready;	  
+
 reg matrix_by_vector_finished ;	 
 output wire outsider_read_now;		
 
@@ -75,7 +77,7 @@ generate
 for(j=0;j<no_of_row_by_vector_modules;j=j+1) begin:instantiate_ROW_BY_VECTOR
 	
 row_by_vector_with_control #(.NI(NI),.element_width(element_width)) R(clk,A_rows[(no_of_row_by_vector_modules-j)*NI*element_width-1-:element_width*NI],
-vector_rows[(no_of_row_by_vector_modules-j)*NI*element_width-1-:element_width*NI],result[(no_of_row_by_vector_modules-j)*element_width-1-:element_width],give_us_all[(no_of_row_by_vector_modules-j-1)],no_of_multiples[(no_of_row_by_vector_modules-j)*32-1-:32],start_row_by_vector[no_of_row_by_vector_modules-j-1],decoder_read_now[no_of_row_by_vector_modules-j-1],reset,you_can_read[no_of_row_by_vector_modules-j-1]);
+vector_rows[(no_of_row_by_vector_modules-j)*NI*element_width-1-:element_width*NI],result[(no_of_row_by_vector_modules-j)*element_width-1-:element_width],give_us_all[(no_of_row_by_vector_modules-j-1)],no_of_multiples[(no_of_row_by_vector_modules-j)*32-1-:32],start_row_by_vector[no_of_row_by_vector_modules-j-1],decoder_read_now[no_of_row_by_vector_modules-j-1],reset,you_can_read[no_of_row_by_vector_modules-j-1],I_am_ready[no_of_row_by_vector_modules-j-1]);
 	
 end
 endgenerate

@@ -58,3 +58,4 @@ i<>.\src\fpaddsub_8_23_uid2.v
 i<>.\src\control_unit.v
 i<>.\src\outputieee_8_23_to_8_23.v
 i<>.\src\div_nr_wsticky.v
+i<>.\src\check_signs.v

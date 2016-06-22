@@ -39,6 +39,7 @@ module tb_row_by_vector ();
 
    wire P_Emap_write_enable ;  
    wire [no_of_row_by_vector_modules-1:0] you_can_read;	
+   wire [no_of_row_by_vector_modules-1:0] I_am_ready;
    wire[no_of_units*element_width-1:0] mXv1_result;
 
 
@@ -50,13 +51,13 @@ module tb_row_by_vector ();
 			P_Emap_mem (clk,memories_preprocess,P_Emap_write_enable,
 			col_nos_output[(no_of_row_by_vector_modules-j)*no_of_elements_on_col_nos*32-1-:no_of_elements_on_col_nos*32],
 			Emap_mem_output_row[((no_of_row_by_vector_modules-j))*no_of_elements_in_p_emap_output*element_width-1-:(no_of_elements_in_p_emap_output*element_width)],
-			multiples_output[(no_of_row_by_vector_modules-j)*32-1-:32],you_can_read[no_of_row_by_vector_modules-j-1]);
+			multiples_output[(no_of_row_by_vector_modules-j)*32-1-:32],you_can_read[no_of_row_by_vector_modules-j-1],I_am_ready[no_of_row_by_vector_modules-j-1]);
 		end
 	endgenerate
 
 
 	memA #(.no_of_elements_on_col_nos(no_of_elements_on_col_nos),.no_of_row_by_vector_modules(no_of_row_by_vector_modules),.element_width (element_width ))
-	matA(clk,memoryA_read_address,memA_output,memories_preprocess,multiples_output);	 
+	matA(clk,memoryA_read_address,memA_output,memories_preprocess,multiples_output,I_am_ready);	 
 	
 	col_nos #(.no_of_elements_on_col_nos(no_of_elements_on_col_nos),.no_of_row_by_vector_modules(no_of_row_by_vector_modules))
 	col_nos_memory(clk,col_nos_read_address,col_nos_output);
@@ -68,7 +69,7 @@ module tb_row_by_vector ();
 	
 	
 	matrix_by_vector_v3_with_control #(.no_of_row_by_vector_modules(no_of_units/2),.NI(no_of_units),.element_width (element_width ))
-	mXv1_dash(clk,reset,reset_mXv1,memA_output,Emap_mem_output_row,mXv1_result,mXv1_finish,outsider_read_now,multiples_output,total_with_additional_A,memories_pre_preprocess,you_can_read);
+	mXv1_dash(clk,reset,reset_mXv1,memA_output,Emap_mem_output_row,mXv1_result,mXv1_finish,outsider_read_now,multiples_output,total_with_additional_A,memories_pre_preprocess,you_can_read,I_am_ready);
 	
 	
 	initial

@@ -1,5 +1,5 @@
 
-module eight_Dot_Product_Multiply_with_control_row(clk,reset ,first_row_input,second_row_input, dot_product_output,finish,outsider_read_now,no_of_multiples,prepare_my_new_input,fake_prepare0);
+module eight_Dot_Product_Multiply_with_control_row(clk,reset ,first_row_input,second_row_input, dot_product_output,finish,outsider_read_now,no_of_multiples,prepare_my_new_input,fake_prepare0,I_am_ready);
 
 parameter NOE = 10;
 parameter NI = 8;
@@ -29,6 +29,11 @@ input wire outsider_read_now;
 input wire reset ;
 input wire[32*NI-1:0] first_row_input;
 input wire[32*NI-1:0] second_row_input;
+
+reg [32*NI-1:0] anding_mask = {NI{32'h80000000}};  
+output wire I_am_ready;
+
+
 reg save = 0;
 reg adder_tree_start=0;
 input clk ;
@@ -56,8 +61,8 @@ reg outsider5=0;
 
 
 
-wire outsider11;
-wire outsider15;
+wire ExE_finish;
+wire final_adder_finish_dash;
 
 genvar j ;
 generate
@@ -68,7 +73,18 @@ end
 endgenerate
 
 
-Eight_Organizer_with_control_row #(.NI(NI)) E_O (clk,package_by_package,adder_tree_start , adder_output,outsider4,outsider15,outsider11);
+Eight_Organizer_with_control_row #(.NI(NI)) E_O (clk,package_by_package,adder_tree_start , adder_output,outsider4,final_adder_finish_dash,ExE_finish);
+
+
+
+				
+assign I_am_ready = (
+					(((first_row_input & anding_mask)^(second_row_input & anding_mask))== anding_mask) 
+					||
+					(((first_row_input & anding_mask)^(second_row_input & anding_mask))== 0)
+					) 
+					&& outsider1;
+				  
 
 
 always@(posedge clk)
@@ -94,11 +110,11 @@ always@(posedge clk)
 			end	
 		  
 			
-		 if(iiii <(delayed_no_of_multiples-1) && outsider11) 
+		 if(iiii <(delayed_no_of_multiples-1) && ExE_finish) 
 			begin
 				iiii <=iiii+1;
 			end	 		
-		 else if(iiii==(delayed_no_of_multiples-1) && outsider11)
+		 else if(iiii==(delayed_no_of_multiples-1) && ExE_finish)
 		    begin 
 				fake_prepare0<=1;
 			end	 
@@ -151,7 +167,7 @@ always @(posedge clk)
 
 				if(iii <delayed_no_of_multiples -1)
 					begin 
-						if(outsider15) 
+						if(final_adder_finish_dash) 
 							begin
 								iii <= iii+1;  
 							end	 
@@ -159,7 +175,7 @@ always @(posedge clk)
 					end
 				else if(iii == delayed_no_of_multiples -1)
 					begin 
-						if(outsider15)
+						if(final_adder_finish_dash)
 							begin	
 								dot_product_output <= adder_output;
 								finish<=1; 	  

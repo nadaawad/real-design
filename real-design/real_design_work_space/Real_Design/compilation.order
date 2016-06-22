@@ -62,3 +62,4 @@
 .\src\adder_subtractor_with_control_with_start.v
 .\src\adder_subtractor_with_start.v
 .\src\8x8_adder_with_start.v
+.\src\check_signs.v

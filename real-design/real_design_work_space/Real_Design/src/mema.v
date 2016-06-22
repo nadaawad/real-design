@@ -1,4 +1,4 @@
-module memA(clk,memA_read_address,memA_output,read_preprocess,no_of_multiples);
+module memA(clk,memA_read_address,memA_output,read_preprocess,no_of_multiples,I_am_ready);
 	
 	parameter no_of_elements_on_col_nos = 20 ;	 
 	parameter no_of_row_by_vector_modules = 4; 	 
@@ -8,7 +8,8 @@ module memA(clk,memA_read_address,memA_output,read_preprocess,no_of_multiples);
 	parameter additional =  (no_of_units -  overflow_allowed)*element_width;
 	
 	input wire read_preprocess;
-	input wire[32*no_of_row_by_vector_modules-1:0]no_of_multiples;	 
+	input wire[32*no_of_row_by_vector_modules-1:0]no_of_multiples;
+	input wire[no_of_row_by_vector_modules-1:0] I_am_ready ;
 	
 	  
 	reg first_time_flag =1;
@@ -79,7 +80,7 @@ module memA(clk,memA_read_address,memA_output,read_preprocess,no_of_multiples);
 			begin
 				if(read_preprocess || ~first_time_flag)	
 					begin 
-						@(posedge clk);
+						@(posedge clk);	
 						if((i<no_of_multiples[4*32-1-:32]) || (j<no_of_multiples[3*32-1-:32]) || 
 							(k<no_of_multiples[2*32-1-:32]) || (q<no_of_multiples[1*32-1-:32]))	
 							begin  

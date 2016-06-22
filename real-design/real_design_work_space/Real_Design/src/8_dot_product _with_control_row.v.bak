@@ -31,7 +31,7 @@ input wire[32*NI-1:0] first_row_input;
 input wire[32*NI-1:0] second_row_input;
 
 reg [32*NI-1:0] anding_mask = {NI{32'h80000000}};  
-output reg I_am_ready;
+output wire I_am_ready;
 
 
 reg save = 0;
@@ -76,37 +76,14 @@ endgenerate
 Eight_Organizer_with_control_row #(.NI(NI)) E_O (clk,package_by_package,adder_tree_start , adder_output,outsider4,final_adder_finish_dash,ExE_finish);
 
 
-always @(negedge clk)
-begin
-if(outsider1)
-begin
+
 				
-if  (
-(((first_row_input & anding_mask)^(second_row_input & anding_mask))== anding_mask) 
+assign I_am_ready = (
+					(((first_row_input & anding_mask)^(second_row_input & anding_mask))== anding_mask) 
 					||
-(((first_row_input & anding_mask)^(second_row_input & anding_mask))== 0)
-    ) 
-begin
-I_am_ready <=1;
-end
-
-else
-begin
-@(negedge clk);
-@(negedge clk);
-I_am_ready <=1;
-end
-					
-
-end
-
-else 
-begin
-I_am_ready <=0;
-end
-
-end
-
+					(((first_row_input & anding_mask)^(second_row_input & anding_mask))== 0)
+					) 
+					&& outsider1;
 				  
 
 

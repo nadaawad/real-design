@@ -41,6 +41,13 @@ output reg finish;
 
 output reg memories_pre_preprocess=0;
 
+
+// DECODER 
+
+decoder_with_control #(.no_of_row_by_vector_modules(no_of_row_by_vector_modules)) d (clk,result ,out , (&decoder_read_now_dash),outsider_read_now);
+
+//
+
 integer i=0;
 integer counter=0;
 integer counter2=0;	
@@ -64,15 +71,6 @@ output wire [no_of_row_by_vector_modules-1:0] I_am_ready;
 
 reg matrix_by_vector_finished ;	 
 output wire outsider_read_now;		
-
-
-// DECODER 
-
-decoder_with_control #(.no_of_row_by_vector_modules(no_of_row_by_vector_modules)) d (clk,result ,out , (&decoder_read_now_dash),outsider_read_now);
-
-//
-
-
 
 genvar j;
 generate

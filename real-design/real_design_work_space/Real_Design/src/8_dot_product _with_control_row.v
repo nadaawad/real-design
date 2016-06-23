@@ -7,7 +7,8 @@ integer repetition_times = (NI==8)?6:(NI==16)?6:0;
 parameter additional = NI-(NOE%NI); 
 parameter total = NOE+additional ;	 
 
-reg initialization_counter = 1;  
+reg initialization_counter = 1;
+reg initialization_counter2 = 1;  
 
 
 integer ii=0; 
@@ -24,7 +25,9 @@ reg fake_prepare2=0;
 reg fake_reset;
 
 input wire [31:0] no_of_multiples;
+reg second_number_of_multiples = 10000;
 reg [31:0] delayed_no_of_multiples=10000;
+
 input wire outsider_read_now;
 input wire reset ;
 input wire[32*NI-1:0] first_row_input;
@@ -45,8 +48,8 @@ output reg [31:0] dot_product_output;
 
 wire[32*(NI/2)-1:0] demux_four_inputs;
 reg demux_select;
-reg flip; 
-reg flip2;
+reg flip=1; 
+reg flip2=1;
 
 //four_to_eight_demux demux_1(demux_four_inputs,demux_select,multipliers_output_vector);
 N_to_2N_demux  #(.NI(NI))demux(demux_four_inputs,demux_select,multipliers_output_vector);
@@ -60,6 +63,13 @@ reg outsider4=0;
 reg outsider5=0;   
 
 
+reg reset_pip1,reset_pip2,reset_pip3;
+
+reg[3:0] fifo_read_address =1;
+reg[3:0] fifo_write_address=0 ;
+reg fifo_write_enable=0; 
+
+wire[31:0] fifo_output_data;
 
 wire ExE_finish;
 wire final_adder_finish_dash;
@@ -74,6 +84,10 @@ endgenerate
 
 
 Eight_Organizer_with_control_row #(.NI(NI)) E_O (clk,package_by_package,adder_tree_start , adder_output,outsider4,final_adder_finish_dash,ExE_finish);
+
+multiples_fifo M_F (clk,fifo_write_enable,fifo_read_address,fifo_write_address,no_of_multiples,fifo_output_data);
+
+
 
 
 always @(negedge clk)
@@ -117,11 +131,11 @@ always@(posedge clk)
 				prepare_my_new_input<=0;	
 			end	   
 		
-		else if(iiiii <(no_of_multiples-1) && outsider5) 
+		else if(iiiii <(no_of_multiples-1) && outsider3) 
 			begin
 				iiiii <=iiiii+1;
 			end
-		else if(iiiii==(no_of_multiples-1) && outsider5)
+		else if(iiiii==(no_of_multiples-1) && outsider3)
 		    begin 
 				prepare_my_new_input<=1;
 
@@ -148,28 +162,50 @@ always@(posedge clk)
 				fake_prepare0<=0;
 			end	
 	end	
-	
+
+
+
+always @(posedge clk)
+	begin 
+ 
+		if(outsider_read_now && ! initialization_counter)
+			begin
+				fifo_write_address <= (fifo_write_address +1)%10 ;
+				fifo_write_enable<=1;	
+
+			end
+		else
+			begin
+				fifo_write_enable<=0;
+			end
+	end	
+
+
 always @(posedge clk)
 	begin 
 		if(outsider_read_now && initialization_counter)	
 			begin 
-			delayed_no_of_multiples <= no_of_multiples;
-			initialization_counter<=0;
+				delayed_no_of_multiples <= no_of_multiples;
+				initialization_counter<=0;
 			end	 
-		else if (fake_reset)
-			delayed_no_of_multiples <= no_of_multiples;
-		
+		else if(fake_reset)
+			begin
+				delayed_no_of_multiples <=fifo_output_data;
+				fifo_read_address <= (fifo_read_address +1)%8;
+
+
+			end
 	end	
 
 always @ (posedge clk)
 begin
-	if(fake_reset)
+	if(reset)
 		begin
 		
 			ii <=0;	   
 			iii<=0;	
 		end
-	else if(!fake_reset) 
+	else if(!reset) 
 		begin
 			if(ii < delayed_no_of_multiples && outsider5)
 				begin
@@ -240,18 +276,22 @@ always @(posedge clk)
 	    fake_prepare1<=fake_prepare0;
 		fake_prepare2<=fake_prepare1; 
 		fake_reset<=fake_prepare2;
+
+		reset_pip1 <=reset;
+		reset_pip2 <=reset_pip1;	
+		reset_pip3 <=reset_pip2;	
 	
 	end	
 
 
 always @(posedge clk)
 	begin
-		if(reset)
+		if(outsider_read_now)
 			begin
 				//demux_select <= 0;
 				flip <= 1;
 			end
-		else if(!reset && (outsider1 || ~flip))
+		else if(!outsider_read_now && (outsider1 || ~flip))
 			begin
 				if(flip)
 					begin
@@ -272,12 +312,12 @@ always @(posedge clk)
 	
 	always @(posedge clk)
 	begin
-		if(reset)
+		if(outsider_read_now)
 			begin
 				demux_select <= 0;
 				flip2 <= 1;
 			end
-		else if(!reset && (outsider3 || ~flip2))
+		else if(!outsider_read_now && (outsider3 || ~flip2))
 			begin
 				if(flip2)
 					begin

@@ -96,6 +96,13 @@ Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 
 Top level modules:
 	memP
 
+} {} {}} D:/Ahmed/ModelSim_workspace/mema.v {1 {vlog -work work -stats=none D:/Ahmed/ModelSim_workspace/mema.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module memA
+
+Top level modules:
+	memA
+
 } {} {}} D:/Ahmed/ModelSim_workspace/adder_subtractor_with_start.v {1 {vlog -work work -stats=none D:/Ahmed/ModelSim_workspace/adder_subtractor_with_start.v
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
 -- Compiling module adder_subtractor_with_start
@@ -420,13 +427,6 @@ Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 
 
 Top level modules:
 	top_module
-
-} {} {}} {D:/Ahmed/ModelSim_workspace/8_dot_product _with_control_row.v} {1 {vlog -work work -stats=none {D:/Ahmed/ModelSim_workspace/8_dot_product _with_control_row.v}
-Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
--- Compiling module eight_Dot_Product_Multiply_with_control_row
-
-Top level modules:
-	eight_Dot_Product_Multiply_with_control_row
 
 } {} {}} D:/Ahmed/ModelSim_workspace/fpaddsub_8_23_uid2_rightshifter.v {1 {vlog -work work -stats=none D:/Ahmed/ModelSim_workspace/fpaddsub_8_23_uid2_rightshifter.v
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015

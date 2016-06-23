@@ -5,19 +5,19 @@ Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 
 Top level modules:
 	Alu
 
-} {} {}} D:/Ahmed/ModelSim_workspace/vectorxvector_mxv_with_control.v {1 {vlog -work work -stats=none D:/Ahmed/ModelSim_workspace/vectorxvector_mxv_with_control.v
-Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
--- Compiling module vectorXvector_mXv_with_control
-
-Top level modules:
-	vectorXvector_mXv_with_control
-
 } {} {}} D:/Ahmed/ModelSim_workspace/lzcshifter_28_to_28_counting_32_uid15.v {1 {vlog -work work -stats=none D:/Ahmed/ModelSim_workspace/lzcshifter_28_to_28_counting_32_uid15.v
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
 -- Compiling module LZCShifter_28_to_28_counting_32_uid15
 
 Top level modules:
 	LZCShifter_28_to_28_counting_32_uid15
+
+} {} {}} D:/Ahmed/ModelSim_workspace/vectorxvector_mxv_with_control.v {1 {vlog -work work -stats=none D:/Ahmed/ModelSim_workspace/vectorxvector_mxv_with_control.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module vectorXvector_mXv_with_control
+
+Top level modules:
+	vectorXvector_mXv_with_control
 
 } {} {}} D:/Ahmed/ModelSim_workspace/memory_tb.v {1 {vlog -work work -stats=none D:/Ahmed/ModelSim_workspace/memory_tb.v
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
@@ -26,13 +26,6 @@ Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 
 Top level modules:
 	memory_tb
 
-} {} {}} D:/Ahmed/ModelSim_workspace/8x8_adder_with_start.v {1 {vlog -work work -stats=none D:/Ahmed/ModelSim_workspace/8x8_adder_with_start.v
-Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
--- Compiling module EightxEight_Adder_with_start
-
-Top level modules:
-	EightxEight_Adder_with_start
-
 } {} {}} D:/Ahmed/ModelSim_workspace/8x8_adder.v {1 {vlog -work work -stats=none D:/Ahmed/ModelSim_workspace/8x8_adder.v
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
 -- Compiling module EightxEight_Adder
@@ -40,12 +33,19 @@ Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 
 Top level modules:
 	EightxEight_Adder
 
-} {} {}} D:/Ahmed/ModelSim_workspace/tb_row_by_vector.v {1 {vlog -work work -stats=none D:/Ahmed/ModelSim_workspace/tb_row_by_vector.v
+} {} {}} D:/Ahmed/ModelSim_workspace/8x8_adder_with_start.v {1 {vlog -work work -stats=none D:/Ahmed/ModelSim_workspace/8x8_adder_with_start.v
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
--- Compiling module tb_row_by_vector
+-- Compiling module EightxEight_Adder_with_start
 
 Top level modules:
-	tb_row_by_vector
+	EightxEight_Adder_with_start
+
+} {} {}} D:/Ahmed/ModelSim_workspace/n_to_2n_demux.v {1 {vlog -work work -stats=none D:/Ahmed/ModelSim_workspace/n_to_2n_demux.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module N_to_2N_demux
+
+Top level modules:
+	N_to_2N_demux
 
 } {} {}} D:/Ahmed/ModelSim_workspace/row_by_vector_module.v {1 {vlog -work work -stats=none D:/Ahmed/ModelSim_workspace/row_by_vector_module.v
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
@@ -54,12 +54,12 @@ Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 
 Top level modules:
 	row_by_vector
 
-} {} {}} D:/Ahmed/ModelSim_workspace/n_to_2n_demux.v {1 {vlog -work work -stats=none D:/Ahmed/ModelSim_workspace/n_to_2n_demux.v
+} {} {}} D:/Ahmed/ModelSim_workspace/tb_row_by_vector.v {1 {vlog -work work -stats=none D:/Ahmed/ModelSim_workspace/tb_row_by_vector.v
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
--- Compiling module N_to_2N_demux
+-- Compiling module tb_row_by_vector
 
 Top level modules:
-	N_to_2N_demux
+	tb_row_by_vector
 
 } {} {}} D:/Ahmed/ModelSim_workspace/multiples_matrix.v {1 {vlog -work work -stats=none D:/Ahmed/ModelSim_workspace/multiples_matrix.v
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
@@ -102,13 +102,6 @@ Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 
 
 Top level modules:
 	memA
-
-} {} {}} D:/Ahmed/ModelSim_workspace/adder_subtractor_with_start.v {1 {vlog -work work -stats=none D:/Ahmed/ModelSim_workspace/adder_subtractor_with_start.v
-Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
--- Compiling module adder_subtractor_with_start
-
-Top level modules:
-	adder_subtractor_with_start
 
 } {} {}} D:/Ahmed/ModelSim_workspace/vxc_mul3_add.v {1 {vlog -work work -stats=none D:/Ahmed/ModelSim_workspace/vxc_mul3_add.v
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
@@ -295,6 +288,13 @@ Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 
 Top level modules:
 	IntAdder_34_f180_uid18
 
+} {} {}} D:/Ahmed/ModelSim_workspace/multiples_fifo.v {1 {vlog -work work -stats=none D:/Ahmed/ModelSim_workspace/multiples_fifo.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module multiples_fifo
+
+Top level modules:
+	multiples_fifo
+
 } {} {}} D:/Ahmed/ModelSim_workspace/vxc_mul3_sub.v {1 {vlog -work work -stats=none D:/Ahmed/ModelSim_workspace/vxc_mul3_sub.v
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
 -- Compiling module vXc_mul3_sub
@@ -330,19 +330,19 @@ Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 
 Top level modules:
 	AP_total
 
-} {} {}} D:/Ahmed/ModelSim_workspace/8_organizer_with_control.v {1 {vlog -work work -stats=none D:/Ahmed/ModelSim_workspace/8_organizer_with_control.v
-Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
--- Compiling module Eight_Organizer_with_control
-
-Top level modules:
-	Eight_Organizer_with_control
-
 } {} {}} D:/Ahmed/ModelSim_workspace/adder_subtractor_with_control_with_start.v {1 {vlog -work work -stats=none D:/Ahmed/ModelSim_workspace/adder_subtractor_with_control_with_start.v
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
 -- Compiling module adder_subtractor_with_control_with_start
 
 Top level modules:
 	adder_subtractor_with_control_with_start
+
+} {} {}} D:/Ahmed/ModelSim_workspace/8_organizer_with_control.v {1 {vlog -work work -stats=none D:/Ahmed/ModelSim_workspace/8_organizer_with_control.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module Eight_Organizer_with_control
+
+Top level modules:
+	Eight_Organizer_with_control
 
 } {} {}} D:/Ahmed/ModelSim_workspace/tb.v {1 {vlog -work work -stats=none D:/Ahmed/ModelSim_workspace/tb.v
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
@@ -358,12 +358,12 @@ Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 
 Top level modules:
 	row_by_vector_with_control
 
-} {} {}} D:/Ahmed/ModelSim_workspace/rkold_prev.v {1 {vlog -work work -stats=none D:/Ahmed/ModelSim_workspace/rkold_prev.v
+} {} {}} D:/Ahmed/ModelSim_workspace/fp_div.v {1 {vlog -work work -stats=none D:/Ahmed/ModelSim_workspace/fp_div.v
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
--- Compiling module rKold_prev
+-- Compiling module FP_div
 
 Top level modules:
-	rKold_prev
+	FP_div
 
 } {} {}} D:/Ahmed/ModelSim_workspace/adder_subtractor.v {1 {vlog -work work -stats=none D:/Ahmed/ModelSim_workspace/adder_subtractor.v
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
@@ -372,26 +372,12 @@ Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 
 Top level modules:
 	adder_subtractor
 
-} {} {}} D:/Ahmed/ModelSim_workspace/fp_div.v {1 {vlog -work work -stats=none D:/Ahmed/ModelSim_workspace/fp_div.v
+} {} {}} D:/Ahmed/ModelSim_workspace/rkold_prev.v {1 {vlog -work work -stats=none D:/Ahmed/ModelSim_workspace/rkold_prev.v
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
--- Compiling module FP_div
+-- Compiling module rKold_prev
 
 Top level modules:
-	FP_div
-
-} {} {}} {D:/Ahmed/ModelSim_workspace/8_dot_product _with_control.v} {1 {vlog -work work -stats=none {D:/Ahmed/ModelSim_workspace/8_dot_product _with_control.v}
-Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
--- Compiling module eight_Dot_Product_Multiply_with_control
-
-Top level modules:
-	eight_Dot_Product_Multiply_with_control
-
-} {} {}} D:/Ahmed/ModelSim_workspace/intadder_27_f180_uid7.v {1 {vlog -work work -stats=none D:/Ahmed/ModelSim_workspace/intadder_27_f180_uid7.v
-Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
--- Compiling module IntAdder_27_f180_uid7
-
-Top level modules:
-	IntAdder_27_f180_uid7
+	rKold_prev
 
 } {} {}} D:/Ahmed/ModelSim_workspace/outputieee_8_23_to_8_23.v {1 {vlog -work work -stats=none D:/Ahmed/ModelSim_workspace/outputieee_8_23_to_8_23.v
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
@@ -400,12 +386,19 @@ Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 
 Top level modules:
 	OutputIEEE_8_23_to_8_23
 
-} {} {}} D:/Ahmed/ModelSim_workspace/parameters_mem.v {1 {vlog -work work -stats=none D:/Ahmed/ModelSim_workspace/parameters_mem.v
+} {} {}} D:/Ahmed/ModelSim_workspace/intadder_27_f180_uid7.v {1 {vlog -work work -stats=none D:/Ahmed/ModelSim_workspace/intadder_27_f180_uid7.v
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
--- Compiling module parameters_mem
+-- Compiling module IntAdder_27_f180_uid7
 
 Top level modules:
-	parameters_mem
+	IntAdder_27_f180_uid7
+
+} {} {}} {D:/Ahmed/ModelSim_workspace/8_dot_product _with_control.v} {1 {vlog -work work -stats=none {D:/Ahmed/ModelSim_workspace/8_dot_product _with_control.v}
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module eight_Dot_Product_Multiply_with_control
+
+Top level modules:
+	eight_Dot_Product_Multiply_with_control
 
 } {} {}} D:/Ahmed/ModelSim_workspace/8_organizer_with_control_row.v {1 {vlog -work work -stats=none D:/Ahmed/ModelSim_workspace/8_organizer_with_control_row.v
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
@@ -414,12 +407,26 @@ Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 
 Top level modules:
 	Eight_Organizer_with_control_row
 
+} {} {}} D:/Ahmed/ModelSim_workspace/parameters_mem.v {1 {vlog -work work -stats=none D:/Ahmed/ModelSim_workspace/parameters_mem.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module parameters_mem
+
+Top level modules:
+	parameters_mem
+
 } {} {}} D:/Ahmed/ModelSim_workspace/memp_v2.v {1 {vlog -work work -stats=none D:/Ahmed/ModelSim_workspace/memp_v2.v
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
 -- Compiling module memP_v2
 
 Top level modules:
 	memP_v2
+
+} {} {}} {D:/Ahmed/ModelSim_workspace/8_dot_product _with_control_row.v} {1 {vlog -work work -stats=none {D:/Ahmed/ModelSim_workspace/8_dot_product _with_control_row.v}
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module eight_Dot_Product_Multiply_with_control_row
+
+Top level modules:
+	eight_Dot_Product_Multiply_with_control_row
 
 } {} {}} D:/Ahmed/ModelSim_workspace/top_module.v {1 {vlog -work work -stats=none D:/Ahmed/ModelSim_workspace/top_module.v
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
@@ -428,18 +435,18 @@ Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 
 Top level modules:
 	top_module
 
-} {} {}} D:/Ahmed/ModelSim_workspace/fpaddsub_8_23_uid2_rightshifter.v {1 {vlog -work work -stats=none D:/Ahmed/ModelSim_workspace/fpaddsub_8_23_uid2_rightshifter.v
-Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
--- Compiling module FPAddSub_8_23_uid2_RightShifter
-
-Top level modules:
-	FPAddSub_8_23_uid2_RightShifter
-
 } {} {}} D:/Ahmed/ModelSim_workspace/fpmultiplier_8_23_8_23_8_23_uid2.v {1 {vlog -work work -stats=none D:/Ahmed/ModelSim_workspace/fpmultiplier_8_23_8_23_8_23_uid2.v
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
 -- Compiling module FPMultiplier_8_23_8_23_8_23_uid2
 
 Top level modules:
 	FPMultiplier_8_23_8_23_8_23_uid2
+
+} {} {}} D:/Ahmed/ModelSim_workspace/fpaddsub_8_23_uid2_rightshifter.v {1 {vlog -work work -stats=none D:/Ahmed/ModelSim_workspace/fpaddsub_8_23_uid2_rightshifter.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module FPAddSub_8_23_uid2_RightShifter
+
+Top level modules:
+	FPAddSub_8_23_uid2_RightShifter
 
 } {} {}}

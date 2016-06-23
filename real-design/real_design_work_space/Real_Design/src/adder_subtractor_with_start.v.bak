@@ -57,13 +57,13 @@ InputIEEE_8_23_to_8_23 A3 (.clk(clk),.rst(1'b0),.X(modified_result), .R( result)
 always @(posedge clk)
 	begin
 	
-		if( op==0&&A_no_neg_zero[31]== B_no_neg_zero[31])
+		if(start && op==0&&A_no_neg_zero[31]== B_no_neg_zero[31])
 			begin
 			finish<=start;
 			
 			end
 			
-		else 
+		else if(start)
 			begin
 			pip1<=start;
 			pip2<=pip1;

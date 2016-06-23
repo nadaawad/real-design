@@ -131,11 +131,11 @@ always@(posedge clk)
 				prepare_my_new_input<=0;	
 			end	   
 		
-		else if(iiiii <(no_of_multiples-1) && outsider3) 
+		else if(iiiii <(no_of_multiples-1) && outsider2) 
 			begin
 				iiiii <=iiiii+1;
 			end
-		else if(iiiii==(no_of_multiples-1) && outsider3)
+		else if(iiiii==(no_of_multiples-1) && outsider2)
 		    begin 
 				prepare_my_new_input<=1;
 
@@ -286,12 +286,12 @@ always @(posedge clk)
 
 always @(posedge clk)
 	begin
-		if(outsider_read_now)
+		if(outsider_read_now && flip)
 			begin
 				//demux_select <= 0;
 				flip <= 1;
 			end
-		else if(!outsider_read_now && (outsider1 || ~flip))
+		else if(/*!outsider_read_now && */(outsider1 || ~flip))
 			begin
 				if(flip)
 					begin

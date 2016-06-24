@@ -1,13 +1,9 @@
-module vectorXvector_mXv_with_control(clk,reset,first_row_plus_additional,vector2,result,finish,AP_total_mem_we,counter2,outsider_read_now); 
+module vectorXvector_mXv_with_control(total,clk,reset,first_row_plus_additional,vector2,result,finish,AP_total_mem_we,counter2,outsider_read_now); 
 
-    parameter number_of_equations_per_cluster=16;
-	parameter element_width_modified=34;
+   
 	parameter element_width=32;
 	parameter no_of_units=8;
-	parameter count=number_of_equations_per_cluster/no_of_units;
-	parameter additional = no_of_units-(number_of_equations_per_cluster%no_of_units); 
-	parameter total = number_of_equations_per_cluster+additional ;
-	parameter number_of_clusters=1;
+	
 	integer counter = 0;
 	integer i=0;
 	integer counter3=0;
@@ -18,7 +14,7 @@ module vectorXvector_mXv_with_control(clk,reset,first_row_plus_additional,vector
 	input wire reset;		
 	input wire [element_width*no_of_units-1:0]vector2;
 	input wire [element_width*no_of_units-1:0] first_row_plus_additional;
-	//input wire [element_width*total-1:0] AP_total ;
+	input wire [31:0]total;
 	
 	
 	
@@ -26,7 +22,7 @@ module vectorXvector_mXv_with_control(clk,reset,first_row_plus_additional,vector
 	output wire [element_width-1:0]result;
 	output wire finish;		 
 	
-	output reg AP_total_mem_we;	 
+	output reg AP_total_mem_we=0;	 
 	output reg[31:0] counter2;
 	
 	reg [no_of_units*element_width-1:0] first_row_input;
@@ -38,8 +34,8 @@ module vectorXvector_mXv_with_control(clk,reset,first_row_plus_additional,vector
 	//assign AP=AP_total[element_width*total-1:element_width*total-element_width*number_of_equations_per_cluster];
 	
 
-	eight_Dot_Product_Multiply_with_control #(.NOE(number_of_equations_per_cluster))
-	vXv(clk,reset,first_row_input,second_row_input, result,finish,outsider_read_now);
+	eight_Dot_Product_Multiply_with_control
+	vXv(total,clk,reset,first_row_input,second_row_input, result,finish,outsider_read_now);
 		
 //fiveonetwo_Dot_Product_Multiply#(.NOE(number_of_equations_per_cluster))
 //vXv(clk,reset,first_row_input,second_row_input, result,finish );

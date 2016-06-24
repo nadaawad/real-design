@@ -23,6 +23,8 @@ module tb();
 			reset_mXv1<=0;
 		end
 		
+		
+		
 		always @(posedge clk)
 			begin
 				

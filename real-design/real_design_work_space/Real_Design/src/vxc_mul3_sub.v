@@ -1,13 +1,9 @@
-module vXc_mul3_sub(clk,reset,first_row_plus_additional,constant,second_row_plus_additional,op,finish,counter2,counter5,result_mem_we,counter3,vXc_add_8_output); 
+module vXc_mul3_sub(total,clk,reset,first_row_plus_additional,constant,second_row_plus_additional,op,finish,counter2,counter5,result_mem_we,counter3,vXc_add_8_output); 
 
-    parameter number_of_equations_per_cluster=16;
-	parameter element_width_modified=34;
+    
 	parameter element_width=32;
 	parameter no_of_units=8;
-	parameter count=number_of_equations_per_cluster/no_of_units;
-	parameter additional = no_of_units-(number_of_equations_per_cluster%no_of_units); 
-	parameter total = number_of_equations_per_cluster+additional ;
-	parameter number_of_clusters=1;
+	
 	integer counter=0;
 	output reg[31:0] counter2;
 	output reg[31:0] counter3;
@@ -17,14 +13,13 @@ module vXc_mul3_sub(clk,reset,first_row_plus_additional,constant,second_row_plus
 	
 	input wire clk;
 	input wire reset;		
-	//input wire [element_width*number_of_equations_per_cluster-1:0]vector1;
-	//input wire [element_width*number_of_equations_per_cluster-1:0]vector2;
+	
 	input wire [element_width-1:0] constant;
 	input wire op;
+	input wire [31:0]total;
 	
-	//output reg [element_width*number_of_equations_per_cluster-1:0]result;
-			output reg finish;	
-	output reg result_mem_we;//vector1_mem_we,vector2_mem_we;
+	output reg finish;	
+	output reg result_mem_we;
 	
 	reg [no_of_units*element_width-1:0] first_row_input;
 	reg [no_of_units*element_width-1:0] second_row_input;
@@ -32,9 +27,9 @@ module vXc_mul3_sub(clk,reset,first_row_plus_additional,constant,second_row_plus
 	
 
 	input wire [element_width*no_of_units-1:0] first_row_plus_additional;
-		// pragma attribute first_row_plus_additional ram_block 1
+		
 	input wire [element_width*no_of_units-1:0] second_row_plus_additional;
-		// pragma attribute second_row_plus_additional ram_block 1
+		
 	
 		
 	output wire [element_width*no_of_units-1:0]vXc_add_8_output;

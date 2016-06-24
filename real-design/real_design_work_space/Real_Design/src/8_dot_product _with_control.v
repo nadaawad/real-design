@@ -1,16 +1,16 @@
 
-module eight_Dot_Product_Multiply_with_control(clk,reset ,first_row_input,second_row_input, dot_product_output,finish,outsider_read_now );
+module eight_Dot_Product_Multiply_with_control(total,clk,reset ,first_row_input,second_row_input, dot_product_output,finish,outsider_read_now );
 
-parameter NOE = 10;
+
 parameter NI = 8;
 integer repetition_times = (NI==8)?6:(NI==16)?6:0;
-parameter additional = NI-(NOE%NI); 
-parameter total = NOE+additional ;
+
 integer counter = 0;
 integer ii=0; 
 integer iii=0;
 output reg finish ;
 
+input wire [31:0]total;
 input wire outsider_read_now;
 input wire reset ;
 input wire[32*NI-1:0] first_row_input;
@@ -123,9 +123,10 @@ always @(posedge clk)
 	begin  
 	outsider1 <= outsider_read_now;	
 	outsider2 <= outsider1;
-	outsider3 <= outsider2 ;
-	outsider4<=outsider3;
-	outsider5<=outsider4;
+	outsider3 <= outsider2;
+	outsider4 <= outsider3;
+	outsider5<=  outsider4;
+	 
 	
 	end	
 

@@ -5,6 +5,7 @@
 module row_by_vector_with_control (clk,a,p,result,give_me_only,no_of_multiples,start_row_by_vector,decoder_read_now,reset,you_can_read,I_am_ready);
 
 
+
 parameter NI=8;
 parameter element_width = 32;
 
@@ -43,7 +44,12 @@ output wire I_am_ready;
 
 eight_Dot_Product_Multiply_with_control_row  edomwcr(clk,start_row_by_vector ,a,p, result,dot_product_finish,you_can_read,no_of_multiples,prepare_my_new_input,fake_prepare0,I_am_ready);
 
+// note if you don't need to accelerate the special case where #of multiples =1 , you don't need the reset signal
+	// nor the total and no_of_units parameters. 
 	
+// note , both the special and slower case seem to work well now , although I am more relieved with the non-special case
+	// also for the non special case , decoder_read_now<=pipeline5 will work right , but won't work for the special case
+// overall it seems logical , and i didn't do any fabraka , i guess .		
 
 always @(posedge clk) 
 	begin 

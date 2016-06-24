@@ -1,17 +1,20 @@
 
 module Eight_Organizer_with_control_row(clk,adder_row_input,start,adder_output,outsider4,final_adder_finish_dash,ExE_finish);
-parameter NI = 8;
+
+parameter element_width = 32;
+parameter no_of_units = 8;
 input clk ;
 
 
-input wire [NI*32-1:0] adder_row_input;
+
+input wire [no_of_units*element_width-1:0] adder_row_input;
 input wire start;
 
 reg mux_select;
-reg [31:0] mux_one = 32'b0;
-wire [31:0] mux_output;
-wire[31:0] pre_last_output;	 
-output wire [31:0] adder_output ;
+reg [element_width-1:0] mux_one = 0;
+wire [element_width-1:0] mux_output;
+wire[element_width-1:0] pre_last_output;	 
+output wire [element_width-1:0] adder_output ;
 
 
 
@@ -21,8 +24,8 @@ output wire final_adder_finish_dash;   //  // NOTE :: THIS IS EQUIVALENT TO THE 
 reg first_time = 1;
 
 
-reg [31:0] second_pre_last_output;
-wire [31:0] controlled_adder_output; 
+reg [element_width-1:0] second_pre_last_output;
+wire [element_width-1:0] controlled_adder_output; 
 
 output wire ExE_finish;  // NOTE :: THIS IS EQUIVALENT TO THE FORMER  OUTSIDER11 
 

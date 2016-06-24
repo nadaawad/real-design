@@ -321,8 +321,8 @@ module Alu(total,clk,reset,reset_vXv1,reset_mXv1,memA_output,Emap_mem_output_row
 				
 		   always @(posedge clk)
 		begin
-		 if(outsider_read_now)
-		 $display("%h",mXv1_result);
+		// if(outsider_read_now)
+		// $display("%h",mXv1_result);
 		  if(vXv1_finish)
 		 $display("vXv1_finish");
 			

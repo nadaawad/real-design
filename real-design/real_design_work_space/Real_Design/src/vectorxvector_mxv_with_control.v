@@ -30,21 +30,11 @@ module vectorXvector_mXv_with_control(total,clk,reset,first_row_plus_additional,
 	
 	
 	
-	
-	//assign AP=AP_total[element_width*total-1:element_width*total-element_width*number_of_equations_per_cluster];
-	
 
-	eight_Dot_Product_Multiply_with_control
-	vXv(total,clk,reset,first_row_input,second_row_input, result,finish,outsider_read_now);
+	eight_Dot_Product_Multiply_with_control #(.no_of_units(no_of_units),.element_width(element_width))
+	vXv(clk,reset ,first_row_input,second_row_input, dot_product_output,finish,outsider_read_now,total,I_am_ready);
 		
-//fiveonetwo_Dot_Product_Multiply#(.NOE(number_of_equations_per_cluster))
-//vXv(clk,reset,first_row_input,second_row_input, result,finish );
 
-//Sixteen_Dot_Product_Multiply #(.NOE(number_of_equations_per_cluster))
-//vXv(clk,reset,first_row_input,second_row_input, result,finish );
-
-//onezerotwofour_Dot_Product_Multiply #(.NOE(number_of_equations_per_cluster))
-	//vXv(clk,reset,first_row_input,second_row_input, result,finish );
 	
 	initial
 		begin
@@ -55,23 +45,7 @@ module vectorXvector_mXv_with_control(total,clk,reset,first_row_plus_additional,
 
 
 
-	always @(posedge clk)
-		begin
-			if(reset)
-				begin
-				counter<=0;
-				
-				end
-			else if(!reset)
-				begin
-					if (counter==0)
-						begin 
-							
-							
-						end
-						counter <= counter+1;
-					end
-				end
+
 				
 				always @ (posedge clk)
 					begin 

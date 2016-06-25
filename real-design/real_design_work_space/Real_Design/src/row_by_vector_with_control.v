@@ -41,7 +41,7 @@ output wire I_am_ready;
 
 
 
-eight_Dot_Product_Multiply_with_control_row  edomwcr(clk,start_row_by_vector ,a,p, result,dot_product_finish,you_can_read,no_of_multiples,prepare_my_new_input,fake_prepare0,I_am_ready);
+eight_Dot_Product_Multiply_with_control_row  edomwcr(clk,reset,start_row_by_vector ,a,p, result,dot_product_finish,you_can_read,no_of_multiples,prepare_my_new_input,fake_prepare0,I_am_ready);
 
 	
 

@@ -1,5 +1,5 @@
 
-module eight_Dot_Product_Multiply_with_control_row(clk,reset ,first_row_input,second_row_input, dot_product_output,finish,outsider_read_now,no_of_multiples,prepare_my_new_input,fake_prepare0,I_am_ready);
+module eight_Dot_Product_Multiply_with_control_row(clk,main_reset,reset ,first_row_input,second_row_input, dot_product_output,finish,outsider_read_now,no_of_multiples,prepare_my_new_input,fake_prepare0,I_am_ready);
 
 
 parameter no_of_units = 8;
@@ -13,16 +13,16 @@ integer ii=0;
 integer iii=0; 
 integer iiii=0;
 integer iiiii=0;
-output reg finish ;	 
+output reg finish=0 ;	 
 output reg prepare_my_new_input=0; 
 
 output reg fake_prepare0=0;
 reg fake_prepare1=0;
 reg fake_prepare2=0; 
 
-reg fake_reset;
+reg fake_reset=0;
 
-
+input wire main_reset;
 input wire [31:0] no_of_multiples;
 reg [31:0] delayed_no_of_multiples=10000;
 
@@ -169,8 +169,9 @@ always@(posedge clk)
 
 always @(posedge clk)
 	begin 
- 
-		if(reset )
+		if(main_reset)
+		 begin initialization_counter <=1;end
+		else if(reset )
 			begin
 				fifo_write_address <= (fifo_write_address +1)%10 ;
 				fifo_write_enable<=1;	
@@ -225,7 +226,10 @@ end
 always @(posedge clk)
 	begin
 
-				if(iii <delayed_no_of_multiples -1)
+				if(main_reset)
+				begin finish <=0 ; end 
+
+				else if(iii <delayed_no_of_multiples -1)
 					begin 
 						if(final_adder_finish_dash) 
 							begin

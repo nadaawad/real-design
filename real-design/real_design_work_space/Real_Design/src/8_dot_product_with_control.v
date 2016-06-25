@@ -71,6 +71,12 @@ endgenerate
 
 Eight_Organizer_with_control_row #(.no_of_units(no_of_units)) E_O (clk,package_by_package,adder_tree_start , adder_output,outsider4,final_adder_finish_dash,ExE_finish);
 
+always @(posedge clk)
+	begin
+	if(reset) adder_tree_start <=0;
+	else adder_tree_start<=1;
+
+	end
 
 always @(negedge clk)
 	begin
@@ -109,7 +115,6 @@ always @ (posedge clk)
 		if(reset)
 			begin
 				ii <=0;	   
-				iii<=0;	
 			end
 		else if(!reset) 
 			begin
@@ -143,7 +148,8 @@ always @(posedge clk)
 						if(final_adder_finish_dash)
 							begin	
 								dot_product_output <= adder_output;
-								finish<=1; 	  
+								finish<=1; 
+								iii<=0;
 							end
 					end
 

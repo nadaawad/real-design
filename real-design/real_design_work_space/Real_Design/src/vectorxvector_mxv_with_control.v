@@ -32,7 +32,7 @@ module vectorXvector_mXv_with_control(total,clk,reset,first_row_plus_additional,
 	
 
 	eight_Dot_Product_Multiply_with_control #(.no_of_units(no_of_units),.element_width(element_width))
-	vXv(clk,reset ,first_row_input,second_row_input, dot_product_output,finish,outsider_read_now,total,I_am_ready);
+	vXv(clk,reset ,first_row_input,second_row_input, result,finish,outsider_read_now,total,I_am_ready);
 		
 
 	

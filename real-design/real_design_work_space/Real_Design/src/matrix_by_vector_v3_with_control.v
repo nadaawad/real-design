@@ -33,13 +33,12 @@ input wire[no_of_row_by_vector_modules-1:0] you_can_read;
 
 wire[element_width*(no_of_row_by_vector_modules)-1:0] result;
 
-reg [element_width*(no_of_row_by_vector_modules)-1:0] result_pip;
 reg sel;
 
 output out;
 wire[NI*element_width-1:0] out;
 
-output reg finish;
+output reg finish=0;
 
 output reg memories_pre_preprocess=0;
 
@@ -64,7 +63,7 @@ reg [no_of_row_by_vector_modules-1:0] decoder_read_now_dash=0;
 reg [no_of_row_by_vector_modules-1:0] start_row_by_vector;
 output wire [no_of_row_by_vector_modules-1:0] I_am_ready;	  
 
-reg matrix_by_vector_finished ;	 
+ 
 output wire outsider_read_now;		
 
 
@@ -81,7 +80,7 @@ generate
 for(j=0;j<no_of_row_by_vector_modules;j=j+1) begin:instantiate_ROW_BY_VECTOR
 	
 row_by_vector_with_control #(.NI(NI),.element_width(element_width)) R(clk,A_rows[(no_of_row_by_vector_modules-j)*NI*element_width-1-:element_width*NI],
-vector_rows[(no_of_row_by_vector_modules-j)*NI*element_width-1-:element_width*NI],result[(no_of_row_by_vector_modules-j)*element_width-1-:element_width],give_us_all[(no_of_row_by_vector_modules-j-1)],no_of_multiples[(no_of_row_by_vector_modules-j)*32-1-:32],start_row_by_vector[no_of_row_by_vector_modules-j-1],decoder_read_now[no_of_row_by_vector_modules-j-1],reset,you_can_read[no_of_row_by_vector_modules-j-1],I_am_ready[no_of_row_by_vector_modules-j-1]);
+vector_rows[(no_of_row_by_vector_modules-j)*NI*element_width-1-:element_width*NI],result[(no_of_row_by_vector_modules-j)*element_width-1-:element_width],give_us_all[(no_of_row_by_vector_modules-j-1)],no_of_multiples[(no_of_row_by_vector_modules-j)*32-1-:32],start_row_by_vector[no_of_row_by_vector_modules-j-1],decoder_read_now[no_of_row_by_vector_modules-j-1],!start,you_can_read[no_of_row_by_vector_modules-j-1],I_am_ready[no_of_row_by_vector_modules-j-1]);
 	
 end
 endgenerate
@@ -90,7 +89,6 @@ endgenerate
 always @(posedge clk)
 	begin
 	 second_pipeline <= first_pipeline;
-	 result_pip <= result ;
 	end	 
 	
 always@(posedge clk)
@@ -122,23 +120,15 @@ always@(posedge clk)
 
 
 always@(posedge clk) begin
-	if(reset)
+	if(reset || !start)
 	begin	
 		i<=0;
 		first_pipeline <=1;
 		start_row_by_vector <=0;
-		matrix_by_vector_finished <=0; 
 		first_initialization_counter<=0; 
 		memories_pre_preprocess<=0;
 	end
 	
-	else if(!start) 		 
-		 begin		 
-			 i<=0;
-			 first_pipeline <=1;  
-			 first_initialization_counter<=0;
-			 memories_pre_preprocess<=0;
-		 end 
 	else if(start && first_pipeline && ~first_initialization_counter)
 		begin 
 			
@@ -158,10 +148,7 @@ always@(posedge clk) begin
 		memories_pre_preprocess <=1;	
 		start_row_by_vector <= -1;
         i<=i+1;	
-		if( i ==(total_with_additional_A/no_of_row_by_vector_modules))
-			begin	
-				 matrix_by_vector_finished <=1;
-			end	
+
 		end 
  
 	 else /* if((& give_us_all) !=1)  */ // I commented this for issues conecrning the special case

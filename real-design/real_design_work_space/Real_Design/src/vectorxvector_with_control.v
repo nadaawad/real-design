@@ -20,7 +20,7 @@
 `timescale 1 ns / 1 ps
 
 
-module vectorXvector_with_control (total,clk,reset,first_row_plus_additional,vector2,dot_product_output,finish,outsider_read_now); 
+module vectorXvector_with_control (total,clk,reset,first_row_plus_additional,vector2,dot_product_output,finish,outsider_read_now,I_am_ready); 
 
    
 	parameter element_width=32;
@@ -39,7 +39,8 @@ module vectorXvector_with_control (total,clk,reset,first_row_plus_additional,vec
 	input wire [element_width*no_of_units-1:0] first_row_plus_additional;
 	input wire [31:0]total;
 	
-	output wire finish;		 
+	output wire finish;		
+	output wire I_am_ready;
 	
 	output wire [element_width-1:0] dot_product_output ;
 	 

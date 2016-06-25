@@ -26,6 +26,7 @@ module Alu(total,clk,reset,reset_vXv1,reset_mXv1,memA_output,Emap_mem_output_row
 	input wire clk,reset;
 	
 	integer display_counter = 0;
+	reg display_vxv_finish = 0;
    
 	
 	input [element_width*no_of_units-1:0] rKold;
@@ -33,7 +34,7 @@ module Alu(total,clk,reset,reset_vXv1,reset_mXv1,memA_output,Emap_mem_output_row
 	input [element_width*no_of_units-1:0] xKold;
 	
 	
-	
+	reg vxv1_first_time = 1;
     input wire reset_vXv1;
 	input wire reset_mXv1;	  
 	input wire[element_width*no_of_units-1:0] rKold_prev;
@@ -66,6 +67,7 @@ module Alu(total,clk,reset,reset_vXv1,reset_mXv1,memA_output,Emap_mem_output_row
 	
 	
 	wire [element_width-1:0]vXv1_result;
+	wire vxv1_I_am_ready;
 	wire [element_width-1:0]vXv2_result;
 	wire [element_width-1:0]vXv3_result;
 	wire [element_width*no_of_units-1:0]mXv1_result;
@@ -116,14 +118,11 @@ module Alu(total,clk,reset,reset_vXv1,reset_mXv1,memA_output,Emap_mem_output_row
    
 	
 	vectorXvector_with_control#(.no_of_units(no_of_units),.element_width (element_width ))
-	vXv1 (total,clk,reset_vXv1,rKold,rKold,vXv1_result,vXv1_finish,outsider_read);
+	vXv1 (total,clk,reset_vXv1,rKold,rKold,vXv1_result,vXv1_finish,outsider_read,vxv1_I_am_ready);
 	
 	//mat by vector (A*p)
 	
-	
-	//matrix_by_vector_v3_with_control #(.no_of_row_by_vector_modules(no_of_units/2),.NI(no_of_units),.element_width (element_width ))
-//	mXv1(clk,reset,reset_mXv1,matA,pKold,mXv1_result,mXv1_finish,outsider_read_now,total_with_additional_A);
-//	
+
 	matrix_by_vector_v3_with_control #(.no_of_row_by_vector_modules(no_of_units/2),.NI(no_of_units),.element_width (element_width ))
 	mXv1_dash(clk,reset,reset_mXv1,memA_output,Emap_mem_output_row,mXv1_result,mXv1_finish,outsider_read_now,multiples_output,total_with_additional_A,memories_pre_preprocess,you_can_read,I_am_ready);
 	
@@ -180,24 +179,32 @@ module Alu(total,clk,reset,reset_vXv1,reset_mXv1,memA_output,Emap_mem_output_row
 		
 	always @(posedge clk)
 		begin
-		if(reset||mul_add3_finish)
-				begin
-				outsider_read<=0;
-				outsider_counter<=0;
-				end
-			
-			
-			else if(!reset_vXv1&&outsider_counter < (total/no_of_units))
-				begin
-				outsider_read<=1;
-				outsider_counter<=outsider_counter+1;
-				@(posedge clk);
-				outsider_read<=0;
-				
-				
-				end
-				
-			end
+			if(reset||mul_add3_finish)
+					begin
+						outsider_read<=0;
+						outsider_counter<=0;
+						vxv1_first_time <=1;
+					end
+				else if(!reset_vXv1&&outsider_counter < (total/no_of_units))
+					begin
+						if(!vxv1_first_time)
+							begin
+									@(vxv1_I_am_ready);
+									outsider_read<=1;
+									outsider_counter<=outsider_counter+1;
+									@(posedge clk);
+									outsider_read<=0;
+							end
+						else 
+							begin
+								vxv1_first_time<=0;
+								outsider_read<=1;
+								outsider_counter<=outsider_counter+1;
+								@(posedge clk);
+								outsider_read<=0;
+							end
+					end
+		end			
 			
 			
 			
@@ -324,9 +331,15 @@ module Alu(total,clk,reset,reset_vXv1,reset_mXv1,memA_output,Emap_mem_output_row
 		 if(outsider_read_now)
 		 begin
 		 display_counter <= display_counter +1 ;
-		 $display("%d :: %h",display_counter,mXv1_result);
-		 end
+		$display("%d :: %h",display_counter,mXv1_result);
 
+		 end
+		 
+		 if(vXv2_finish && !display_vxv_finish)
+		 begin
+		  $display("vXv2_finish");
+		  display_vxv_finish<=1;
+		 end
 			
 		end	
 				

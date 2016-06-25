@@ -47,6 +47,13 @@ Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 
 Top level modules:
 	memA
 
+} {} {}} D:/Ahmed/Modelsim_work_space/real_design_final_final/vectorxvector_with_control.v {1 {vlog -work work -stats=none {D:\Ahmed\Modelsim_work_space\real_design_final_final\vectorxvector_with_control.v}
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module vectorXvector_with_control
+
+Top level modules:
+	vectorXvector_with_control
+
 } {} {}} D:/Ahmed/Modelsim_work_space/real_design_final_final/vxc_mul3_add.v {1 {vlog -work work -stats=none D:/Ahmed/Modelsim_work_space/real_design_final_final/vxc_mul3_add.v
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
 -- Compiling module vXc_mul3_add
@@ -54,14 +61,7 @@ Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 
 Top level modules:
 	vXc_mul3_add
 
-} {} {}} D:/Ahmed/Modelsim_work_space/real_design_final_final/vectorxvector_with_control.v {1 {vlog -work work -stats=none D:/Ahmed/Modelsim_work_space/real_design_final_final/vectorxvector_with_control.v
-Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
--- Compiling module vectorXvector_with_control
-
-Top level modules:
-	vectorXvector_with_control
-
-} {} {}} D:/Ahmed/Modelsim_work_space/real_design_final_final/vectorxvector_mxv_with_control.v {1 {vlog -work work -stats=none D:/Ahmed/Modelsim_work_space/real_design_final_final/vectorxvector_mxv_with_control.v
+} {} {}} D:/Ahmed/Modelsim_work_space/real_design_final_final/vectorxvector_mxv_with_control.v {1 {vlog -work work -stats=none {D:\Ahmed\Modelsim_work_space\real_design_final_final\vectorxvector_mxv_with_control.v}
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
 -- Compiling module vectorXvector_mXv_with_control
 
@@ -109,13 +109,6 @@ Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 
 
 Top level modules:
 	adder_subtractor
-
-} {} {}} D:/Ahmed/Modelsim_work_space/real_design_final_final/alu.v {1 {vlog -work work -stats=none {D:\Ahmed\Modelsim_work_space\real_design_final_final\alu.v}
-Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
--- Compiling module Alu
-
-Top level modules:
-	Alu
 
 } {} {}} D:/Ahmed/Modelsim_work_space/real_design_final_final/2x1_mux.v {1 {vlog -work work -stats=none D:/Ahmed/Modelsim_work_space/real_design_final_final/2x1_mux.v
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
@@ -256,13 +249,6 @@ Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 
 
 Top level modules:
 	div_nr_wsticky
-
-} {} {}} D:/Ahmed/Modelsim_work_space/real_design_final_final/8_dot_product_with_control_row.v {1 {vlog -work work -stats=none {D:\Ahmed\Modelsim_work_space\real_design_final_final\8_dot_product_with_control_row.v}
-Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
--- Compiling module eight_Dot_Product_Multiply_with_control_row
-
-Top level modules:
-	eight_Dot_Product_Multiply_with_control_row
 
 } {} {}} D:/Ahmed/Modelsim_work_space/real_design_final_final/vectorxvector_mxv.v {1 {vlog -work work -stats=none D:/Ahmed/Modelsim_work_space/real_design_final_final/vectorxvector_mxv.v
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
@@ -446,19 +432,19 @@ Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 
 Top level modules:
 	FP_div
 
+} {} {}} D:/Ahmed/Modelsim_work_space/real_design_final_final/8_dot_product_with_control.v {1 {vlog -work work -stats=none {D:\Ahmed\Modelsim_work_space\real_design_final_final\8_dot_product_with_control.v}
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module eight_Dot_Product_Multiply_with_control
+
+Top level modules:
+	eight_Dot_Product_Multiply_with_control
+
 } {} {}} D:/Ahmed/Modelsim_work_space/real_design_final_final/row_by_vector_module.v {1 {vlog -work work -stats=none D:/Ahmed/Modelsim_work_space/real_design_final_final/row_by_vector_module.v
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
 -- Compiling module row_by_vector
 
 Top level modules:
 	row_by_vector
-
-} {} {}} D:/Ahmed/Modelsim_work_space/real_design_final_final/8_dot_product_with_control.v {1 {vlog -work work -stats=none D:/Ahmed/Modelsim_work_space/real_design_final_final/8_dot_product_with_control.v
-Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
--- Compiling module eight_Dot_Product_Multiply_with_control
-
-Top level modules:
-	eight_Dot_Product_Multiply_with_control
 
 } {} {}} D:/Ahmed/Modelsim_work_space/real_design_final_final/parameters_mem.v {1 {vlog -work work -stats=none D:/Ahmed/Modelsim_work_space/real_design_final_final/parameters_mem.v
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015

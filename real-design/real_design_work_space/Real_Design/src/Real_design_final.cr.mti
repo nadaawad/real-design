@@ -236,19 +236,19 @@ Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 
 Top level modules:
 	div_nr_wsticky
 
-} {} {}} D:/Ahmed/Modelsim_work_space/Real_design_final/8_dot_product_with_control_row.v {1 {vlog -work work -stats=none D:/Ahmed/Modelsim_work_space/Real_design_final/8_dot_product_with_control_row.v
-Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
--- Compiling module eight_Dot_Product_Multiply_with_control_row
-
-Top level modules:
-	eight_Dot_Product_Multiply_with_control_row
-
 } {} {}} D:/Ahmed/Modelsim_work_space/Real_design_final/multiply.v {1 {vlog -work work -stats=none D:/Ahmed/Modelsim_work_space/Real_design_final/multiply.v
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
 -- Compiling module multiply
 
 Top level modules:
 	multiply
+
+} {} {}} D:/Ahmed/Modelsim_work_space/Real_design_final/vectorxvector_with_control.v {1 {vlog -work work -stats=none {D:\Ahmed\Modelsim_work_space\Real_design_final\vectorxvector_with_control.v}
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module vectorXvector_with_control
+
+Top level modules:
+	vectorXvector_with_control
 
 } {} {}} D:/Ahmed/Modelsim_work_space/Real_design_final/fpaddsub_8_23_uid2_rightshifter.v {1 {vlog -work work -stats=none D:/Ahmed/Modelsim_work_space/Real_design_final/fpaddsub_8_23_uid2_rightshifter.v
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
@@ -340,13 +340,6 @@ Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 
 
 Top level modules:
 	decoder_with_control
-
-} {} {}} D:/Ahmed/Modelsim_work_space/Real_design_final/multiples_fifo.v {1 {vlog -work work -stats=none D:/Ahmed/Modelsim_work_space/Real_design_final/multiples_fifo.v
-Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
--- Compiling module multiples_fifo
-
-Top level modules:
-	multiples_fifo
 
 } {} {}} D:/Ahmed/Modelsim_work_space/Real_design_final/vxc_mul3_sub.v {1 {vlog -work work -stats=none D:/Ahmed/Modelsim_work_space/Real_design_final/vxc_mul3_sub.v
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015

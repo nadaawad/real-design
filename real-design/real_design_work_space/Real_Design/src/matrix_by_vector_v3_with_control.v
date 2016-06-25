@@ -32,6 +32,8 @@ input[31:0] total_with_additional_A;
 input wire[no_of_row_by_vector_modules-1:0] you_can_read;
 
 wire[element_width*(no_of_row_by_vector_modules)-1:0] result;
+
+reg [element_width*(no_of_row_by_vector_modules)-1:0] result_pip;
 reg sel;
 
 output out;
@@ -88,13 +90,15 @@ endgenerate
 always @(posedge clk)
 	begin
 	 second_pipeline <= first_pipeline;
+	 result_pip <= result ;
 	end	 
 	
 always@(posedge clk)
 	begin
 		if(give_us_all!=0 && ! (&give_us_all_dash))
 			begin
-				give_us_all_dash <= give_us_all_dash |	give_us_all;	
+				give_us_all_dash <= give_us_all_dash |	give_us_all;
+								
 			end	
 		else if(&give_us_all_dash && !(&give_us_all))	
 			begin 

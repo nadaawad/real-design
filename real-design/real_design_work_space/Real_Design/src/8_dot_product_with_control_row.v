@@ -63,8 +63,8 @@ reg outsider5=0;
 
 reg reset_pip1,reset_pip2,reset_pip3;
 
-reg[3:0] fifo_read_address =1;
-reg[3:0] fifo_write_address=0 ;
+reg[12:0] fifo_read_address =0;
+reg[12:0] fifo_write_address=0 ;
 reg fifo_write_enable=0; 
 
 wire[31:0] fifo_output_data;
@@ -86,6 +86,10 @@ Eight_Organizer_with_control_row #(.no_of_units(no_of_units)) E_O (clk,package_b
 multiples_fifo M_F (clk,fifo_write_enable,fifo_read_address,fifo_write_address,no_of_multiples,fifo_output_data);
 
 
+initial 
+begin
+initialization_counter <= 1;
+end
 
 
 always @(negedge clk)
@@ -166,7 +170,7 @@ always@(posedge clk)
 always @(posedge clk)
 	begin 
  
-		if(outsider_read_now && ! initialization_counter)
+		if(reset )
 			begin
 				fifo_write_address <= (fifo_write_address +1)%10 ;
 				fifo_write_enable<=1;	
@@ -180,18 +184,18 @@ always @(posedge clk)
 
 
 always @(posedge clk)
-	begin 
-		if(outsider_read_now && initialization_counter)	
-			begin 
-				delayed_no_of_multiples <= no_of_multiples;
+	begin
+		if(reset_pip2 && initialization_counter)
+		begin
+				delayed_no_of_multiples <=fifo_output_data;
+				fifo_read_address <= (fifo_read_address +1)%10;
 				initialization_counter<=0;
-			end	 
+		end
+		
 		else if(fake_reset)
 			begin
 				delayed_no_of_multiples <=fifo_output_data;
-				fifo_read_address <= (fifo_read_address +1)%8;
-
-
+				fifo_read_address <= (fifo_read_address +1)%10;
 			end
 	end	
 

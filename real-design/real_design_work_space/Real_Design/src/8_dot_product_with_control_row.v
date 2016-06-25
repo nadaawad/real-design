@@ -204,8 +204,7 @@ begin
 	if(reset)
 		begin
 		
-			ii <=0;	   
-			iii<=0;	
+			ii <=0;	   	
 		end
 	else if(!reset) 
 		begin
@@ -239,7 +238,8 @@ always @(posedge clk)
 						if(final_adder_finish_dash)
 							begin	
 								dot_product_output <= adder_output;
-								finish<=1; 	  
+								finish<=1; 	 
+								iii<=0;
 							end
 					end
 

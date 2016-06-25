@@ -25,7 +25,7 @@ module Alu(total,clk,reset,reset_vXv1,reset_mXv1,memA_output,Emap_mem_output_row
 	
 	input wire clk,reset;
 	
- 
+	integer display_counter = 0;
    
 	
 	input [element_width*no_of_units-1:0] rKold;
@@ -322,9 +322,11 @@ module Alu(total,clk,reset,reset_vXv1,reset_mXv1,memA_output,Emap_mem_output_row
 		   always @(posedge clk)
 		begin
 		 if(outsider_read_now)
-		 $display("%h",mXv1_result);
-		  if(vXv1_finish)
-		 $display("vXv1_finish");
+		 begin
+		 display_counter <= display_counter +1 ;
+		 $display("%d :: %h",display_counter,mXv1_result);
+		 end
+
 			
 		end	
 				

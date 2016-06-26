@@ -51,7 +51,10 @@ module control_unit (total,clk,reset,finish_alu,memories_pre_preprocess,memoryP_
 	
 	
 	
-	output reg memoryR_write_enable; 
+	//output reg memoryR_write_enable;
+	output wire memoryR_write_enable;
+	assign memoryR_write_enable=result_mem_we_5;
+	
 	output reg [memory_read_address_width-1:0]memoryA_read_address;
 	output reg [memory_read_address_width-1:0]memoryP_read_address;	
 	output reg [memory_read_address_width-1:0]memoryP_v2_read_address;
@@ -59,7 +62,9 @@ module control_unit (total,clk,reset,finish_alu,memories_pre_preprocess,memoryP_
 	output reg [memory_read_address_width-1:0]memoryR_read_address;
 	output reg [memory_read_address_width-1:0]memoryX_write_address;
 	output reg [memory_read_address_width-1:0]memoryP_write_address;
-	output reg [memory_read_address_width-1:0]memoryR_write_address;
+	//output reg [memory_read_address_width-1:0]memoryR_write_address;
+	output wire [memory_read_address_width-1:0]memoryR_write_address;
+	assign memoryR_write_address=result_mem_counter_5;
 	output reg memoryRprev_we;
 	
 	
@@ -78,7 +83,7 @@ module control_unit (total,clk,reset,finish_alu,memories_pre_preprocess,memoryP_
 				
 								
 		
-		always@(posedge clk)
+	/*	always@(posedge clk)
 		begin 
 			if(reset==1||finish_alu||memoryR_write_address>=(total/8))
 				begin
@@ -101,7 +106,7 @@ module control_unit (total,clk,reset,finish_alu,memories_pre_preprocess,memoryP_
 					
 					end
 				
-			end
+			end*/
 			
 	
 			

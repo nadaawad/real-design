@@ -76,7 +76,8 @@ module Alu(total,clk,reset,reset_vXv1,reset_mXv1,memA_output,Emap_mem_output_row
     wire[element_width-1:0]div1_result;
 	wire[element_width-1:0]div2_result;
 	
-	wire vXv3_finish;
+	wire vXv3_finish; 
+	wire vxv3_I_am_ready;
 	wire vXv2_finish;
 	wire div1_finish;  
 	wire div2_finish;
@@ -147,11 +148,7 @@ module Alu(total,clk,reset,reset_vXv1,reset_mXv1,memA_output,Emap_mem_output_row
 	//x=x+p*alpha	
 	vXc_mul3_add #(.no_of_units(no_of_units),.element_width (element_width ))
 	mul_add1(total,clk,!start_mul_add,pKold_v2,div1_result,xKold,1'b0,mul_add1_finish,result_mem_we_4,memoryX_input,read_again);  
-	
-	
-		
-		
-		
+
 		//r=r-alpha*A*p  
 	vXc_mul3_sub #(.no_of_units(no_of_units),.element_width (element_width ))
 	mul_add2(total,clk,!start_mul_add,AP_total,div1_result,rKold_prev,1'b1,mul_add2_finish,AP_read_address,rkold_read_address,result_mem_we_5,result_mem_counter_5,memoryR_input);
@@ -162,7 +159,7 @@ module Alu(total,clk,reset,reset_vXv1,reset_mXv1,memA_output,Emap_mem_output_row
 	
 	
 	vectorXvector_with_control#(.no_of_units(no_of_units),.element_width (element_width ))
-	vXv3 (total,clk,!start,rKold,rKold,vXv3_result,vXv3_finish,outsider_read2);
+	vXv3 (total,clk,!start,rKold,rKold,vXv3_result,vXv3_finish,outsider_read2,vxv3_I_am_ready);
 	
 	//rsnew/rsold
 	division div2( clk ,(start_div2),rnew,rold ,div2_result ,div2_finish );
@@ -354,7 +351,12 @@ module Alu(total,clk,reset,reset_vXv1,reset_mXv1,memA_output,Emap_mem_output_row
 		 if(div1_finish)
 			 begin 
 				$display("alpha is %h \n ",div1_result);	 
-			 end 	 
+			 end 	
+			 
+		 if(div2_finish)
+			 begin 
+				$display("BETA  is %h \n ",div2_result);	 
+			 end 
 			
 		end	
 				

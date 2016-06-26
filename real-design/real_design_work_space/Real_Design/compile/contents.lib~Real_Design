@@ -1,11 +1,11 @@
-50744
+61422
 ~M 0 "" 0 $root
 ~A 1 "" 0 $root
 ~M 1 "./src/ap_total_mem.v" 1 AP_total
 ~A 1 "./src/ap_total_mem.v" 1 AP_total
 ~M 1 "./src/alu.v" 2 Alu
 ~A 1 "./src/alu.v" 2 Alu
-~M 1 "./src/8_organizer.v" 2 Eight_Organizer
+~M 3 "./src/8_organizer.v" 2 Eight_Organizer
 ~A 1 "./src/8_organizer.v" 2 Eight_Organizer
 ~M 3 "./src/8_organizer_with_control.v" 2 Eight_Organizer_with_control
 ~A 1 "./src/8_organizer_with_control.v" 2 Eight_Organizer_with_control
@@ -118,7 +118,6 @@
 ~M 1 "./src/rounder.v" 16 rounder
 ~A 1 "./src/rounder.v" 16 rounder
 ~M 1 "./src/row_by_vector_module.v" 25 row_by_vector
-~A 1 "./src/row_by_vector_module.v" 25 row_by_vector
 ~M 1 "./src/row_by_vector_with_control.v" 5 row_by_vector_with_control
 ~A 1 "./src/row_by_vector_with_control.v" 5 row_by_vector_with_control
 ~M 1 "./src/special.v" 13 special

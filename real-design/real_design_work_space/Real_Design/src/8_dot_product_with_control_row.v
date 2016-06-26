@@ -201,7 +201,8 @@ always @(posedge clk)
 
 always @ (posedge clk)
 begin
-if(!reset) 
+
+ if(!reset) 
 		begin
 			if(ii < delayed_no_of_multiples && outsider5)
 				begin
@@ -211,7 +212,7 @@ if(!reset)
 				end
 			else if(ii == delayed_no_of_multiples)
 				begin
-					package_by_package <= 0;  
+					package_by_package <= 0; 
 					ii<=0;
 				end
 			

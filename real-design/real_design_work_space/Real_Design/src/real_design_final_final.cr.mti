@@ -110,6 +110,13 @@ Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 
 Top level modules:
 	adder_subtractor
 
+} {} {}} D:/Ahmed/Modelsim_work_space/real_design_final_final/alu.v {1 {vlog -work work -stats=none {D:\Ahmed\Modelsim_work_space\real_design_final_final\alu.v}
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module Alu
+
+Top level modules:
+	Alu
+
 } {} {}} D:/Ahmed/Modelsim_work_space/real_design_final_final/2x1_mux.v {1 {vlog -work work -stats=none D:/Ahmed/Modelsim_work_space/real_design_final_final/2x1_mux.v
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
 -- Compiling module TwoxOne_mux
@@ -250,6 +257,13 @@ Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 
 Top level modules:
 	div_nr_wsticky
 
+} {} {}} D:/Ahmed/Modelsim_work_space/real_design_final_final/8_dot_product_with_control_row.v {1 {vlog -work work -stats=none {D:\Ahmed\Modelsim_work_space\real_design_final_final\8_dot_product_with_control_row.v}
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module eight_Dot_Product_Multiply_with_control_row
+
+Top level modules:
+	eight_Dot_Product_Multiply_with_control_row
+
 } {} {}} D:/Ahmed/Modelsim_work_space/real_design_final_final/vectorxvector_mxv.v {1 {vlog -work work -stats=none D:/Ahmed/Modelsim_work_space/real_design_final_final/vectorxvector_mxv.v
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
 -- Compiling module vectorXvector_mXv
@@ -312,13 +326,6 @@ Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 
 
 Top level modules:
 	IntMultiplier_UsingDSP_24_24_48_unsigned_uid4
-
-} {} {}} D:/Ahmed/Modelsim_work_space/real_design_final_final/matrix_by_vector_v3_with_control.v {1 {vlog -work work -stats=none D:/Ahmed/Modelsim_work_space/real_design_final_final/matrix_by_vector_v3_with_control.v
-Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
--- Compiling module matrix_by_vector_v3_with_control
-
-Top level modules:
-	matrix_by_vector_v3_with_control
 
 } {} {}} D:/Ahmed/Modelsim_work_space/real_design_final_final/8_dot_product.v {1 {vlog -work work -stats=none D:/Ahmed/Modelsim_work_space/real_design_final_final/8_dot_product.v
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015

@@ -6,7 +6,8 @@ parameter no_of_units = 8;
 parameter element_width = 32; 
 
 reg initialization_counter = 1;
-reg initialization_counter2 = 1;  
+reg pos_neg_indicator = 0;  
+
 
 
 integer ii=0; 
@@ -93,35 +94,33 @@ end
 
 
 always @(negedge clk)
-begin
-if(outsider1)
-begin
+	begin
+		if(outsider1)
+			begin			
+				if  (
+				(((first_row_input & anding_mask)^(second_row_input & anding_mask))== anding_mask) 
+									||
+				(((first_row_input & anding_mask)^(second_row_input & anding_mask))== 0)
+				    ) 
+				begin 
+					pos_neg_indicator<=0; 
+					I_am_ready <=1;
+				end
 				
-if  (
-(((first_row_input & anding_mask)^(second_row_input & anding_mask))== anding_mask) 
-					||
-(((first_row_input & anding_mask)^(second_row_input & anding_mask))== 0)
-    ) 
-begin
-I_am_ready <=1;
-end
+				else
+					begin
+						pos_neg_indicator<=1;
+					//	@(negedge clk);
+					//	@(negedge clk);
+						I_am_ready <=1;
+					end
+			end
+		else 
+			begin
+				I_am_ready <=0;
+			end
 
-else
-begin
-@(negedge clk);
-@(negedge clk);
-I_am_ready <=1;
-end
-					
-
-end
-
-else 
-begin
-I_am_ready <=0;
-end
-
-end
+	end
 
 				  
 
@@ -202,12 +201,7 @@ always @(posedge clk)
 
 always @ (posedge clk)
 begin
-	if(reset)
-		begin
-		
-			ii <=0;	   	
-		end
-	else if(!reset) 
+if(!reset) 
 		begin
 			if(ii < delayed_no_of_multiples && outsider5)
 				begin
@@ -217,7 +211,8 @@ begin
 				end
 			else if(ii == delayed_no_of_multiples)
 				begin
-					package_by_package <= 0; 
+					package_by_package <= 0;  
+					ii<=0;
 				end
 			
 		end

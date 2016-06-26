@@ -39,7 +39,6 @@ i<>.\src\vectorxvector_mxv_with_control.v
 i<>.\src\top_module.v
 i<>.\src\memp_v2.v
 i<>.\src\control_unit.v
-i<>.\src\8_dot_product _with_control.v
 i<>.\src\tb.v
 i<>.\src\outputieee_8_23_to_8_23.v
 i<>.\src\intmultiplier_usingdsp_24_24_48_unsigned_uid4.v

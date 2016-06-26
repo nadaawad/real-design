@@ -331,7 +331,10 @@ module Alu(total,clk,reset,reset_vXv1,reset_mXv1,memA_output,Emap_mem_output_row
 		 if(outsider_read_now)
 		 begin
 		 display_counter <= display_counter +1 ;
-		$display("%d :: %h",display_counter,mXv1_result);
+		$display("%d :: %h %h %h %h",display_counter,
+		mXv1_result[8*32-1-:32],mXv1_result[7*32-1-:32],mXv1_result[6*32-1-:32],mXv1_result[5*32-1-:32]);
+		$display("%d :: %h %h %h %h",display_counter,mXv1_result[4*32-1-:32],mXv1_result[3*32-1-:32]
+		,mXv1_result[2*32-1-:32],mXv1_result[1*32-1-:32]);
 
 		 end
 		 
@@ -339,7 +342,12 @@ module Alu(total,clk,reset,reset_vXv1,reset_mXv1,memA_output,Emap_mem_output_row
 		 begin
 		  $display("vXv2_finish");
 		  display_vxv_finish<=1;
-		 end
+		 end 
+		 
+//		 if(div1_finish)
+//			 begin 
+//				$display("alpha is %h \n ",div1_result);	 
+//			 end 	 
 			
 		end	
 				

@@ -24,7 +24,7 @@ module memR(clk, input_data, write_enable, input_read_address, input_write_addre
 	
 	initial 
 		begin
-			$readmemh("R.txt", mem);
+			$readmemh("b.txt", mem);
 			finish<=0;
 		end
 	

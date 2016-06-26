@@ -1,62 +1,113 @@
 MESSAGE "Pass 1. Scanning modules hierarchy."
 MESSAGE_SP VCP2113 "Module \$root found in current working library."
 BEGINPROGRESS Compiling...
+UPDATEPROGRESS 1
+UPDATEPROGRESS 2
+UPDATEPROGRESS 3
+UPDATEPROGRESS 4
+UPDATEPROGRESS 5
+UPDATEPROGRESS 6
+UPDATEPROGRESS 7
+UPDATEPROGRESS 8
+UPDATEPROGRESS 9
+UPDATEPROGRESS 10
+UPDATEPROGRESS 11
+UPDATEPROGRESS 12
+UPDATEPROGRESS 13
+UPDATEPROGRESS 14
+UPDATEPROGRESS 15
+UPDATEPROGRESS 16
 UPDATEPROGRESS 17
-UPDATEPROGRESS 35
-MESSAGE_SP VCP2113 "Module multiply found in current working library."
-MESSAGE_SP VCP2113 "Module InputIEEE_8_23_to_8_23 found in current working library."
-MESSAGE_SP VCP2113 "Module FPMultiplier_8_23_8_23_8_23_uid2 found in current working library."
-MESSAGE_SP VCP2113 "Module OutputIEEE_8_23_to_8_23 found in current working library."
-MESSAGE_SP VCP2113 "Module decoder_with_control found in current working library."
-MESSAGE_SP VCP2113 "Module adder_subtractor found in current working library."
-MESSAGE_SP VCP2113 "Module FPAddSub_8_23_uid2 found in current working library."
-MESSAGE_SP VCP2113 "Module FPAddSub_8_23_uid2 found in current working library."
-MESSAGE_SP VCP2113 "Module FPAddSub_8_23_uid2_RightShifter found in current working library."
-MESSAGE_SP VCP2113 "Module IntAdder_27_f180_uid7 found in current working library."
-MESSAGE_SP VCP2113 "Module LZCShifter_28_to_28_counting_32_uid15 found in current working library."
-MESSAGE_SP VCP2113 "Module IntAdder_34_f180_uid18 found in current working library."
-MESSAGE_SP VCP2113 "Module FPMultiplier_8_23_8_23_8_23_uid2 found in current working library."
-MESSAGE_SP VCP2113 "Module IntMultiplier_UsingDSP_24_24_48_unsigned_uid4 found in current working library."
-MESSAGE_SP VCP2113 "Module IntAdder_33_f300_uid23 found in current working library."
-MESSAGE_SP VCP2113 "Module InputIEEE_8_23_to_8_23 found in current working library."
-MESSAGE_SP VCP2113 "Module OutputIEEE_8_23_to_8_23 found in current working library."
-MESSAGE_SP VCP2113 "Module IntAdder_33_f300_uid23 found in current working library."
-MESSAGE_SP VCP2113 "Module IntAdder_34_f180_uid18 found in current working library."
-MESSAGE_SP VCP2113 "Module LZCShifter_28_to_28_counting_32_uid15 found in current working library."
-MESSAGE_SP VCP2113 "Module IntAdder_27_f180_uid7 found in current working library."
-MESSAGE_SP VCP2113 "Module IntMultiplier_UsingDSP_24_24_48_unsigned_uid4 found in current working library."
-MESSAGE_SP VCP2113 "Module IntAdder_42_f300_uid15 found in current working library."
-MESSAGE_SP VCP2113 "Module FPAddSub_8_23_uid2_RightShifter found in current working library."
-MESSAGE_SP VCP2113 "Module IntAdder_42_f300_uid15 found in current working library."
+UPDATEPROGRESS 18
+UPDATEPROGRESS 19
+UPDATEPROGRESS 20
+UPDATEPROGRESS 21
+UPDATEPROGRESS 22
+UPDATEPROGRESS 23
+UPDATEPROGRESS 24
+UPDATEPROGRESS 25
+UPDATEPROGRESS 26
+UPDATEPROGRESS 27
+UPDATEPROGRESS 28
+UPDATEPROGRESS 29
+UPDATEPROGRESS 30
+UPDATEPROGRESS 31
+UPDATEPROGRESS 32
+UPDATEPROGRESS 33
+UPDATEPROGRESS 34
 MESSAGE "Pass 2. Processing instantiations."
+MESSAGE_SP VCP2876 "Implicit net declaration, symbol dot_product_finish has not been declared in module row_by_vector_with_control." "E:/files/ahmed/College/Graduation Project/June_Work/GIT_REPOS/real_design/real-design/real_design_work_space/Real_Design/src/row_by_vector_with_control.v" 44 1
+MESSAGE_SP VCP2876 "Implicit net declaration, symbol prepare_my_new_input has not been declared in module row_by_vector_with_control." "E:/files/ahmed/College/Graduation Project/June_Work/GIT_REPOS/real_design/real-design/real_design_work_space/Real_Design/src/row_by_vector_with_control.v" 44 1
+MESSAGE_SP VCP2876 "Implicit net declaration, symbol mXv1_finish has not been declared in module Alu." "E:/files/ahmed/College/Graduation Project/June_Work/GIT_REPOS/real_design/real-design/real_design_work_space/Real_Design/src/alu.v" 127 1
+UPDATEPROGRESS 36
+UPDATEPROGRESS 37
+MESSAGE_SP VCP2876 "Implicit net declaration, symbol I_am_ready has not been declared in module vectorXvector_mXv_with_control." "E:/files/ahmed/College/Graduation Project/June_Work/GIT_REPOS/real_design/real-design/real_design_work_space/Real_Design/src/vectorxvector_mxv_with_control.v" 35 1
+UPDATEPROGRESS 38
+MESSAGE_SP VCP2876 "Implicit net declaration, symbol outsider_read_now has not been declared in module top_module." "E:/files/ahmed/College/Graduation Project/June_Work/GIT_REPOS/real_design/real-design/real_design_work_space/Real_Design/src/top_module.v" 95 1
+MESSAGE_SP VCP2876 "Implicit net declaration, symbol memoryP_write_enable has not been declared in module top_module." "E:/files/ahmed/College/Graduation Project/June_Work/GIT_REPOS/real_design/real-design/real_design_work_space/Real_Design/src/top_module.v" 102 1
+MESSAGE_SP VCP2876 "Implicit net declaration, symbol memoryR_write_enable has not been declared in module top_module." "E:/files/ahmed/College/Graduation Project/June_Work/GIT_REPOS/real_design/real-design/real_design_work_space/Real_Design/src/top_module.v" 102 1
+MESSAGE_SP VCP2876 "Implicit net declaration, symbol memoryX_write_enable has not been declared in module top_module." "E:/files/ahmed/College/Graduation Project/June_Work/GIT_REPOS/real_design/real-design/real_design_work_space/Real_Design/src/top_module.v" 102 1
+MESSAGE_SP VCP2876 "Implicit net declaration, symbol finishP_v2 has not been declared in module top_module." "E:/files/ahmed/College/Graduation Project/June_Work/GIT_REPOS/real_design/real-design/real_design_work_space/Real_Design/src/top_module.v" 120 1
+UPDATEPROGRESS 39
+MESSAGE_SP VCP2876 "Implicit net declaration, symbol ExE_finish_dash has not been declared in module Eight_Organizer_with_control_row." "E:/files/ahmed/College/Graduation Project/June_Work/GIT_REPOS/real_design/real-design/real_design_work_space/Real_Design/src/8_organizer_with_control_row.v" 37 1
+UPDATEPROGRESS 40
+MESSAGE_SP VCP2876 "Implicit net declaration, symbol mXv1_finish has not been declared in module tb_row_by_vector." "E:/files/ahmed/College/Graduation Project/June_Work/GIT_REPOS/real_design/real-design/real_design_work_space/Real_Design/src/tb_row_by_vector.v" 73 1
+MESSAGE_SP VCP2876 "Implicit net declaration, symbol outsider_read_now has not been declared in module tb_row_by_vector." "E:/files/ahmed/College/Graduation Project/June_Work/GIT_REPOS/real_design/real-design/real_design_work_space/Real_Design/src/tb_row_by_vector.v" 73 1
+UPDATEPROGRESS 41
 UPDATEPROGRESS 45
+WARNING VCP2958 "Parameter NI not found." "E:/files/ahmed/College/Graduation Project/June_Work/GIT_REPOS/real_design/real-design/real_design_work_space/Real_Design/src/8_dot_product.v" 32 1
+WARNING VCP2597 "Some unconnected ports remain at instance: vXv3. Module vectorXvector_with_control has unconnected  port(s) : I_am_ready." "E:/files/ahmed/College/Graduation Project/June_Work/GIT_REPOS/real_design/real-design/real_design_work_space/Real_Design/src/alu.v" 164 1
+WARNING VCP2597 "Some unconnected ports remain at instance: P_E. Module P_Emap_8 has unconnected  port(s) : output_row, no_of_multiples, you_can_read, I_am_ready." "E:/files/ahmed/College/Graduation Project/June_Work/GIT_REPOS/real_design/real-design/real_design_work_space/Real_Design/src/memory_tb.v" 19 1
+WARNING VCP2597 "Some unconnected ports remain at instance: P_Emap_mem. Module P_Emap_8 has unconnected  port(s) : you_can_read, I_am_ready." "E:/files/ahmed/College/Graduation Project/June_Work/GIT_REPOS/real_design/real-design/real_design_work_space/Real_Design/src/tb_row_by_vector.v" 51 1
 MESSAGE "Pass 3. Processing behavioral statements."
+UPDATEPROGRESS 46
+UPDATEPROGRESS 47
+UPDATEPROGRESS 48
+UPDATEPROGRESS 49
+UPDATEPROGRESS 50
+UPDATEPROGRESS 51
+UPDATEPROGRESS 52
+UPDATEPROGRESS 53
+UPDATEPROGRESS 54
+UPDATEPROGRESS 55
+UPDATEPROGRESS 56
+UPDATEPROGRESS 57
+UPDATEPROGRESS 58
+UPDATEPROGRESS 59
+UPDATEPROGRESS 60
+UPDATEPROGRESS 61
+UPDATEPROGRESS 63
+UPDATEPROGRESS 64
+UPDATEPROGRESS 65
+UPDATEPROGRESS 66
+UPDATEPROGRESS 67
+UPDATEPROGRESS 68
+UPDATEPROGRESS 69
 UPDATEPROGRESS 80
 MESSAGE "Running Optimizer."
 MESSAGE "ELB/DAG code generating."
 MESSAGE_SP VCP2113 "Module \$root found in current working library."
-MESSAGE_SP VCP2113 "Module matrix_by_vector_v3 found in current working library."
-MESSAGE_SP VCP2113 "Module vectorXvector_mXv found in current working library."
-MESSAGE_SP VCP2113 "Module vectorXvector found in current working library."
-MESSAGE_SP VCP2113 "Module tb found in current working library."
 UPDATEPROGRESS 81
 UPDATEPROGRESS 82
 UPDATEPROGRESS 83
 UPDATEPROGRESS 84
 UPDATEPROGRESS 85
+UPDATEPROGRESS 86
 UPDATEPROGRESS 87
 UPDATEPROGRESS 88
 UPDATEPROGRESS 89
 UPDATEPROGRESS 90
 UPDATEPROGRESS 91
 UPDATEPROGRESS 92
+UPDATEPROGRESS 93
 UPDATEPROGRESS 94
 UPDATEPROGRESS 95
 UPDATEPROGRESS 96
 UPDATEPROGRESS 97
 UPDATEPROGRESS 98
-UPDATEPROGRESS 100
-MESSAGE "$root top modules: matrix_by_vector_v3 vectorXvector_mXv vectorXvector tb."
+UPDATEPROGRESS 99
+MESSAGE "Unit top modules: matrix_by_vector_v3 vectorXvector_mXv memP FPAddSub_8_23_uid2 vectorXvector Eight_Organizer_with_control tb memory_tb P_Emap_16 tb_row_by_vector."
+MESSAGE "$root top modules: matrix_by_vector_v3 vectorXvector_mXv vectorXvector tb memory_tb P_Emap_16 tb_row_by_vector memP Eight_Organizer_with_control FPAddSub_8_23_uid2."
 ENDPROGRESS Compiling...
-SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time: 0[s]."
+SUCCESS "Compile success 0 Errors 4 Warnings  Analysis time: 1[s]."
 MESSAGE "done"

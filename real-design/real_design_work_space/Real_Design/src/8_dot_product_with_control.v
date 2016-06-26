@@ -93,8 +93,8 @@ always @(negedge clk)
 					end
 				else
 					begin
-						@(negedge clk);
-						@(negedge clk);
+			//			@(negedge clk);
+			//			@(negedge clk);
 						I_am_ready <=1;
 					end
 					

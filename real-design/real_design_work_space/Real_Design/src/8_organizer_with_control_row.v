@@ -27,7 +27,7 @@ reg first_time = 1;
 reg [element_width-1:0] second_pre_last_output;
 wire [element_width-1:0] controlled_adder_output; 
 
-output wire ExE_finish;  // NOTE :: THIS IS EQUIVALENT TO THE FORMER  OUTSIDER11 
+output wire ExE_finish;  // NOTE :: THIS IS EQUIVALENT TO THE FORMER  OUTSIDER11  
 
 reg ExE_finish_dash_dash=0;
 wire final_adder_finish; 

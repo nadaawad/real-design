@@ -344,10 +344,10 @@ module Alu(total,clk,reset,reset_vXv1,reset_mXv1,memA_output,Emap_mem_output_row
 		  display_vxv_finish<=1;
 		 end 
 		 
-//		 if(div1_finish)
-//			 begin 
-//				$display("alpha is %h \n ",div1_result);	 
-//			 end 	 
+		 if(div1_finish)
+			 begin 
+				$display("alpha is %h \n ",div1_result);	 
+			 end 	 
 			
 		end	
 				

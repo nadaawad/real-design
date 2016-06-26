@@ -8,7 +8,7 @@ Active=Real_Design
 real_design=1
 [Browser]
 sort=order
-mode=none
+mode=asc
 [Order]
 order=1
 macro=

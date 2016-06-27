@@ -324,22 +324,22 @@ module Alu(total,clk,reset,reset_vXv1,reset_mXv1,memA_output,Emap_mem_output_row
 				
 		   always @(posedge clk)
 		begin
-//		 if(outsider_read_now)
-//		 begin
-//		 display_counter <= display_counter +1 ;
-//
-//		$display("%d :: %h %h %h %h ",display_counter,mXv1_result[8*32-1-:32], 
-//		mXv1_result[7*32-1-:32],
-//		mXv1_result[6*32-1-:32],
-//		mXv1_result[5*32-1-:32]);
-//			$display("%d :: %h %h %h %h ",display_counter,mXv1_result[4*32-1-:32], 
-//		mXv1_result[3*32-1-:32],
-//		mXv1_result[2*32-1-:32],
-//		mXv1_result[1*32-1-:32]);
-//		
-//
-//
-//		 end
+		 if(outsider_read_now)
+		 begin
+		 display_counter <= display_counter +1 ;
+
+		$display("%d :: %h %h %h %h ",display_counter,mXv1_result[8*32-1-:32], 
+		mXv1_result[7*32-1-:32],
+		mXv1_result[6*32-1-:32],
+		mXv1_result[5*32-1-:32]);
+			$display("%d :: %h %h %h %h ",display_counter,mXv1_result[4*32-1-:32], 
+		mXv1_result[3*32-1-:32],
+		mXv1_result[2*32-1-:32],
+		mXv1_result[1*32-1-:32]);
+		
+
+
+		 end
 		 
 		 if(vXv2_finish && !display_vxv_finish)
 		 begin
@@ -357,18 +357,18 @@ module Alu(total,clk,reset,reset_vXv1,reset_mXv1,memA_output,Emap_mem_output_row
 //				$display("BETA  is %h \n ",div2_result);	 
 //			 end 
 			 
-			 if(result_mem_we_5)
-				 begin 	
-					
-					 $display("displaycounter 1 :: %d :: %h  ",display_counter,memoryR_input)	 ;
-					  display_counter<=display_counter+1;
-				 end	
-			 if(outsider_read2)
-				 begin 	
-					
-					 $display("displaycounter2 :: %d :: %h  ",display_counter2,rKold)	 ;
-					  display_counter2<= display_counter2+1;
-				 end
+//			 if(result_mem_we_5)
+//				 begin 	
+//					
+//					 $display("displaycounter 1 :: %d :: %h  ",display_counter,memoryR_input)	 ;
+//					  display_counter<=display_counter+1;
+//				 end	
+//			 if(outsider_read2)
+//				 begin 	
+//					
+//					 $display("displaycounter2 :: %d :: %h  ",display_counter2,rKold)	 ;
+//					  display_counter2<= display_counter2+1;
+//				 end
 			
 		end	
 				

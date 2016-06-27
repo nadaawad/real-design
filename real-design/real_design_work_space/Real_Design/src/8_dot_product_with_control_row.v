@@ -82,7 +82,7 @@ end
 endgenerate
 
 
-Eight_Organizer_with_control_row #(.no_of_units(no_of_units)) E_O (clk,package_by_package,adder_tree_start , adder_output,outsider4,final_adder_finish_dash,ExE_finish);
+Eight_Organizer_with_control_row #(.no_of_units(no_of_units)) E_O (clk,package_by_package,adder_tree_start , adder_output,outsider4,final_adder_finish_dash,ExE_finish,main_reset);
 
 multiples_fifo M_F (clk,fifo_write_enable,fifo_read_address,fifo_write_address,no_of_multiples,fifo_output_data);
 

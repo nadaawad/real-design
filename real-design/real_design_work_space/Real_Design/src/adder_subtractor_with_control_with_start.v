@@ -41,7 +41,7 @@ output result;
 
 
 output wire [31:0] controlled_adder_output;	
-reg [31:0] previous_value;
+reg [31:0] previous_value=0;
 reg pip1=0;
 reg pip2=0;
 

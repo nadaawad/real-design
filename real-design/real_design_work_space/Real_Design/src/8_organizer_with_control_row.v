@@ -1,5 +1,5 @@
 
-module Eight_Organizer_with_control_row(clk,adder_row_input,start,adder_output,outsider4,final_adder_finish_dash,ExE_finish);
+module Eight_Organizer_with_control_row(clk,adder_row_input,start,adder_output,outsider4,final_adder_finish_dash,ExE_finish,main_reset);
 
 parameter element_width = 32;
 parameter no_of_units = 8;
@@ -18,6 +18,7 @@ output wire [element_width-1:0] adder_output ;
 
 
 
+input wire main_reset;
 input wire outsider4;
 
 output wire final_adder_finish_dash;   //  // NOTE :: THIS IS EQUIVALENT TO THE FORMER  OUTSIDER15
@@ -40,7 +41,7 @@ adder_subtractor_with_control_with_start final_adder (ExE_finish_dash_dash,mux_o
 
 always @(posedge clk)
 begin
-	if(!start)
+	if(!start || main_reset)
 		begin	
 			mux_select <= 1;
 			first_time<=1;

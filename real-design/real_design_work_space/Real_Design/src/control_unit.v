@@ -1,16 +1,9 @@
 
-module control_unit (clk,reset,finish_alu,memoryP_write_enable,memoryR_write_enable,memoryX_write_enable,memoryA_read_address,memoryP_read_address,memoryP_v2_read_address, memoryR_read_address,memoryX_read_address,memoryP_write_address,memoryR_write_address ,memoryX_write_address,halt,reset_vXv1,outsider_read_now,result_mem_we_4,memoryRprev_we,result_mem_we_5,result_mem_counter_5,read_again,start,read_again_2,result_mem_we_6,vXv1_finish,finish_all);
+module control_unit (total,clk,reset,finish_alu,memories_pre_preprocess,memoryP_write_enable,memoryR_write_enable,memoryX_write_enable,memoryA_read_address,memoryP_read_address,memoryP_v2_read_address, memoryR_read_address,memoryX_read_address,memoryP_write_address,memoryR_write_address ,memoryX_write_address,halt,reset_vXv1,outsider_read_now,result_mem_we_4,memoryRprev_we,result_mem_we_5,result_mem_counter_5,read_again,start,read_again_2,result_mem_we_6,vXv1_finish,finish_all);
 	
 	parameter no_of_units = 8;
-	parameter memory_read_address_width=20;	// m7tag yt3`yr
-	parameter number_of_clusters = 40;
-	parameter number_of_equations_per_cluster = 19;	  
-	parameter additional = no_of_units-(number_of_equations_per_cluster%no_of_units); 
-	parameter total = number_of_equations_per_cluster+additional ;
+	parameter memory_read_address_width=32;	// m7tag yt3`yr
 	parameter element_width = 32;
-	parameter memories_address_width=20; 
-	parameter no_of_iteration=20;
-	
 	
 	integer counter=0;
 	integer counter2=0;
@@ -37,7 +30,9 @@ module control_unit (clk,reset,finish_alu,memoryP_write_enable,memoryR_write_ena
 	input wire[31:0] result_mem_counter_5; 
 	input wire start;
 	input wire vXv1_finish;
-	input wire finish_all;
+	input wire finish_all;	
+	input wire[31:0] total;
+	input wire memories_pre_preprocess;
 	
 	
 	
@@ -56,7 +51,10 @@ module control_unit (clk,reset,finish_alu,memoryP_write_enable,memoryR_write_ena
 	
 	
 	
-	output reg memoryR_write_enable; 
+	//output reg memoryR_write_enable;
+	output wire memoryR_write_enable;
+	assign memoryR_write_enable=result_mem_we_5;
+	
 	output reg [memory_read_address_width-1:0]memoryA_read_address;
 	output reg [memory_read_address_width-1:0]memoryP_read_address;	
 	output reg [memory_read_address_width-1:0]memoryP_v2_read_address;
@@ -64,7 +62,9 @@ module control_unit (clk,reset,finish_alu,memoryP_write_enable,memoryR_write_ena
 	output reg [memory_read_address_width-1:0]memoryR_read_address;
 	output reg [memory_read_address_width-1:0]memoryX_write_address;
 	output reg [memory_read_address_width-1:0]memoryP_write_address;
-	output reg [memory_read_address_width-1:0]memoryR_write_address;
+	//output reg [memory_read_address_width-1:0]memoryR_write_address;
+	output wire [memory_read_address_width-1:0]memoryR_write_address;
+	assign memoryR_write_address=result_mem_counter_5;
 	output reg memoryRprev_we;
 	
 	
@@ -83,7 +83,7 @@ module control_unit (clk,reset,finish_alu,memoryP_write_enable,memoryR_write_ena
 				
 								
 		
-		always@(posedge clk)
+	/*	always@(posedge clk)
 		begin 
 			if(reset==1||finish_alu||memoryR_write_address>=(total/8))
 				begin
@@ -106,7 +106,7 @@ module control_unit (clk,reset,finish_alu,memoryP_write_enable,memoryR_write_ena
 					
 					end
 				
-			end
+			end*/
 			
 	
 			
@@ -239,15 +239,15 @@ module control_unit (clk,reset,finish_alu,memoryP_write_enable,memoryR_write_ena
 					NumCyclesTillNow = NumCyclesTillNow +1 ;
 			
 			
-					if(reset==1||finish_alu||memoryA_read_address>=number_of_clusters)
+					if(reset==1||finish_alu)
 				
 						begin
 					
-							memoryA_read_address<=0;
+							memoryA_read_address<=32'hffffffff;
 					
 				end
 			
-					else if(increment_read_address_enable&&!halt)
+					else if(memories_pre_preprocess&&!halt)
 				
 						begin
 					
@@ -262,7 +262,7 @@ module control_unit (clk,reset,finish_alu,memoryP_write_enable,memoryR_write_ena
 	
 				begin
 			
-					if(reset==1||finish_alu||memoryP_read_address>=number_of_clusters)
+					if(reset==1||finish_alu)//||memoryP_read_address>=number_of_clusters)
 				
 						begin
 					
@@ -389,7 +389,7 @@ module control_unit (clk,reset,finish_alu,memoryP_write_enable,memoryR_write_ena
 							if(counter3==4)	 
 								begin
 									iteration_counter<=iteration_counter+1;
-									if(iteration_counter==5)
+									if(iteration_counter ==2)
 										halt<=1;
 								end
 							end
@@ -411,14 +411,14 @@ module control_unit (clk,reset,finish_alu,memoryP_write_enable,memoryR_write_ena
 									
 									
 					
-						
-					always@(posedge clk)
-						begin
-							$display("%d",memoryX_read_address);
-							
-							$display("%d",memoryX_write_address);
-								
-					end
-					
+					//	
+//					always@(posedge clk)
+//						begin
+//							$display("%d",memoryX_read_address);
+//							
+//							$display("%d",memoryX_write_address);
+//								
+//					end
+//					
 
 endmodule 

@@ -1,4 +1,4 @@
-Active-HDL 9.1.2353.4205  2016-06-18 14:14:13
+Active-HDL 9.1.2353.4205  2016-06-27 11:40:50
 
 Elaboration top modules:
 Verilog Module                tb
@@ -11,11 +11,14 @@ tb                                            | real_design |      | 9.1.2353.42
 top_module                                    | real_design |      | 9.1.2353.4205  (Windows) | -l Real_Design -O2
 main_alu                                      | real_design |      | 9.1.2353.4205  (Windows) | -l Real_Design -O2
 control_unit                                  | real_design |      | 9.1.2353.4205  (Windows) | -l Real_Design -O2
-memP                                          | real_design |      | 9.1.2353.4205  (Windows) | -l Real_Design -O2
 memP_v2                                       | real_design |      | 9.1.2353.4205  (Windows) | -l Real_Design -O2
 memR                                          | real_design |      | 9.1.2353.4205  (Windows) | -l Real_Design -O2
 memA                                          | real_design |      | 9.1.2353.4205  (Windows) | -l Real_Design -O2
+col_nos                                       | real_design |      | 9.1.2353.4205  (Windows) | -l Real_Design -O2
+multiples_memory                              | real_design |      | 9.1.2353.4205  (Windows) | -l Real_Design -O2
 memX                                          | real_design |      | 9.1.2353.4205  (Windows) | -l Real_Design -O2
+parameters_mem                                | real_design |      | 9.1.2353.4205  (Windows) | -l Real_Design -O2
+P_Emap_8                                      | real_design |      | 9.1.2353.4205  (Windows) | -l Real_Design -O2
 rKold_prev                                    | real_design |      | 9.1.2353.4205  (Windows) | -l Real_Design -O2
 Alu                                           | real_design |      | 9.1.2353.4205  (Windows) | -l Real_Design -O2
 vectorXvector_with_control                    | real_design |      | 9.1.2353.4205  (Windows) | -l Real_Design -O2
@@ -27,7 +30,7 @@ vXc_mul3_add                                  | real_design |      | 9.1.2353.42
 vXc_mul3_sub                                  | real_design |      | 9.1.2353.4205  (Windows) | -l Real_Design -O2
 eight_Dot_Product_Multiply_with_control       | real_design |      | 9.1.2353.4205  (Windows) | -l Real_Design -O2
 N_to_2N_demux                                 | real_design |      | 9.1.2353.4205  (Windows) | -l Real_Design -O2
-Eight_Organizer_with_control                  | real_design |      | 9.1.2353.4205  (Windows) | -l Real_Design -O2
+Eight_Organizer_with_control_row              | real_design |      | 9.1.2353.4205  (Windows) | -l Real_Design -O2
 multiply                                      | real_design |      | 9.1.2353.4205  (Windows) | -l Real_Design -O2
 InputIEEE_8_23_to_8_23                        | real_design |      | 9.1.2353.4205  (Windows) | -l Real_Design -O2
 FPMultiplier_8_23_8_23_8_23_uid2              | real_design |      | 9.1.2353.4205  (Windows) | -l Real_Design -O2
@@ -36,21 +39,26 @@ IntMultiplier_UsingDSP_24_24_48_unsigned_uid4 | real_design |      | 9.1.2353.42
 IntAdder_33_f300_uid23                        | real_design |      | 9.1.2353.4205  (Windows) | -l Real_Design -O2
 IntAdder_42_f300_uid15                        | real_design |      | 9.1.2353.4205  (Windows) | -l Real_Design -O2
 TwoxOne_mux                                   | real_design |      | 9.1.2353.4205  (Windows) | -l Real_Design -O2
-EightxEight_Adder                             | real_design |      | 9.1.2353.4205  (Windows) | -l Real_Design -O2
-adder_subtractor_with_control                 | real_design |      | 9.1.2353.4205  (Windows) | -l Real_Design -O2
-adder_subtractor                              | real_design |      | 9.1.2353.4205  (Windows) | -l Real_Design -O2
-FPAddSub_8_23_uid2                            | real_design |      | 9.1.2353.4205  (Windows) | -l Real_Design -O2
-FPAddSub_8_23_uid2_RightShifter               | real_design |      | 9.1.2353.4205  (Windows) | -l Real_Design -O2
-IntAdder_27_f180_uid7                         | real_design |      | 9.1.2353.4205  (Windows) | -l Real_Design -O2
-LZCShifter_28_to_28_counting_32_uid15         | real_design |      | 9.1.2353.4205  (Windows) | -l Real_Design -O2
-IntAdder_34_f180_uid18                        | real_design |      | 9.1.2353.4205  (Windows) | -l Real_Design -O2
+EightxEight_Adder_with_start                  | real_design |      | 9.1.2353.4205  (Windows) | -l Real_Design -O2
+adder_subtractor_with_control_with_start      | real_design |      | 9.1.2353.4205  (Windows) | -l Real_Design -O2
+adder_subtractor_with_start                   | real_design |      | 9.1.2353.4205  (Windows) | -l Real_Design -O2
+fpadd                                         | real_design |      | 9.1.2353.4205  (Windows) | -l Real_Design -O2
+fpalign                                       | real_design |      | 9.1.2353.4205  (Windows) | -l Real_Design -O2
+mantadd                                       | real_design |      | 9.1.2353.4205  (Windows) | -l Real_Design -O2
+normlize                                      | real_design |      | 9.1.2353.4205  (Windows) | -l Real_Design -O2
+rounder                                       | real_design |      | 9.1.2353.4205  (Windows) | -l Real_Design -O2
+special                                       | real_design |      | 9.1.2353.4205  (Windows) | -l Real_Design -O2
+final                                         | real_design |      | 9.1.2353.4205  (Windows) | -l Real_Design -O2
 decoder_with_control                          | real_design |      | 9.1.2353.4205  (Windows) | -l Real_Design -O2
 row_by_vector_with_control                    | real_design |      | 9.1.2353.4205  (Windows) | -l Real_Design -O2
+eight_Dot_Product_Multiply_with_control_row   | real_design |      | 9.1.2353.4205  (Windows) | -l Real_Design -O2
+multiples_fifo                                | real_design |      | 9.1.2353.4205  (Windows) | -l Real_Design -O2
 FP_div                                        | real_design |      | 9.1.2353.4205  (Windows) | -l Real_Design -O2
 div_nr_wsticky                                | real_design |      | 9.1.2353.4205  (Windows) | -l Real_Design -O2
 a_s                                           | real_design |      | 9.1.2353.4205  (Windows) | -l Real_Design -O2
 vXc_add_8_delay                               | real_design |      | 9.1.2353.4205  (Windows) | -l Real_Design -O2
 delay                                         | real_design |      | 9.1.2353.4205  (Windows) | -l Real_Design -O2
+adder_subtractor                              | real_design |      | 9.1.2353.4205  (Windows) | -l Real_Design -O2
 vXc_add_8                                     | real_design |      | 9.1.2353.4205  (Windows) | -l Real_Design -O2
 --------------------------------------------------------------------------------------------------------------------
 

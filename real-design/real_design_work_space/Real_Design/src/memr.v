@@ -1,7 +1,6 @@
 module memR(clk, input_data, write_enable, input_read_address, input_write_address, memory_output,finish);
 	
-	parameter number_of_clusters = 1;
-	parameter number_of_equations_per_cluster = 9;
+
 	parameter element_width = 32;
 	parameter address_width = 20;
 	parameter memories_address_width=20;
@@ -25,7 +24,7 @@ module memR(clk, input_data, write_enable, input_read_address, input_write_addre
 	
 	initial 
 		begin
-			$readmemh("R.txt", mem);
+			$readmemh("b.txt", mem);
 			finish<=0;
 		end
 	
@@ -41,7 +40,6 @@ module memR(clk, input_data, write_enable, input_read_address, input_write_addre
 		 begin
 			 if(x==1)
 				 begin
-					// $writememh("OUTPUTX.txt",mem);
 					 x<=0;
 				 end
 			 end

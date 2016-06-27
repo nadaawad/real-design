@@ -1,195 +1,165 @@
-//-----------------------------------------------------------------------------
-//
-// Title       : matrix_by_vector2
-// Design      : cluster jacoubi
-// Author      : Windows User
-// Company     : toz fek 
-//
-//-----------------------------------------------------------------------------
-//
-// File        : matrix_by_vector2.v
-// Generated   : Sun Sep 20 14:38:41 2015
-// From        : interface description file
-// By          : Itf2Vhdl ver. 1.22
-//
-//-----------------------------------------------------------------------------
-//
-// Description : 
-//
-//-----------------------------------------------------------------------------
+
 `timescale 1 ns / 1 ps
 
-//{{ Section below this comment is automatically maintained
-//   and may be overwritten
-//{module {matrix_by_vector2}}								 
+							 
 	
 `define zero_filling 32'd0
-module matrix_by_vector_v3_with_control (clk,reset,start,mat,vector,out,finish,outsider_read_now);  
+module matrix_by_vector_v3_with_control (clk,reset,start,A_rows,vector_rows,out,finish,outsider_read_now,no_of_multiples,total_with_additional_A,memories_pre_preprocess,you_can_read,I_am_ready);  
+
+	// NOTE THAT : number of multiples determines how many cycles should the row by vector work on a certain row before it finishes
+	// While total_with_additional_A / no_of_row_by_vector_modules determines the number of times we will give out row_by_vector modules
+	// new rows to operate on .
 	
-	
-parameter no_of_eqn_per_cluster = 10;
-parameter no_of_elements_of_mat = 3*(no_of_eqn_per_cluster-1)+1;
 parameter element_width =32;   
-parameter no_of_units =4; 
-parameter reminder=(no_of_eqn_per_cluster%no_of_units);	
-parameter number_of_clusters=1;
-
-
+parameter no_of_row_by_vector_modules =4; 
 parameter NI = 8;
-parameter additional = NI-(no_of_eqn_per_cluster%NI); 
-parameter total = no_of_eqn_per_cluster+additional ;
+
          
 
 //}} End of automatically maintained section
 
 // -- Enter your statements here -- //		
 input clk,reset,start;	 
-
+input wire [no_of_row_by_vector_modules*element_width-1:0] no_of_multiples;
 
 wire clk,reset,start;
-input mat;
-wire[element_width*no_of_elements_of_mat-1:0] mat;  
-input vector;
-wire[(no_of_eqn_per_cluster)*element_width-1:0]vector;	
+input A_rows;
+wire[no_of_row_by_vector_modules*element_width*NI-1:0] A_rows;  
+input vector_rows;
+wire[no_of_row_by_vector_modules*NI*element_width-1:0]vector_rows;	  
+input[31:0] total_with_additional_A;
 
+input wire[no_of_row_by_vector_modules-1:0] you_can_read;
 
-wire[element_width*(no_of_units)-1:0] result;
+wire[element_width*(no_of_row_by_vector_modules)-1:0] result;
+
 reg sel;
 
 output out;
-output reg finish;
-wire[2*element_width*no_of_units-1:0] out;
+wire[NI*element_width-1:0] out;
 
-//output reg [(no_of_eqn_per_cluster)*element_width-1:0] out_full;
+output reg finish=0;
+
+output reg memories_pre_preprocess=0;
+
+integer i=0;
+integer counter=0;
+integer counter2=0;	
+
+
+
+
+wire [no_of_row_by_vector_modules-1:0] give_us_all;
+reg [no_of_row_by_vector_modules-1:0] give_us_all_dash=0;
+
+reg first_initialization_counter=0;
+
+reg first_pipeline=1;	
+reg second_pipeline=1;
+
+
+wire[no_of_row_by_vector_modules-1:0] decoder_read_now;	 
+reg [no_of_row_by_vector_modules-1:0] decoder_read_now_dash=0;
+reg [no_of_row_by_vector_modules-1:0] start_row_by_vector;
+output wire [no_of_row_by_vector_modules-1:0] I_am_ready;	  
+
+ 
+output wire outsider_read_now;		
 
 
 // DECODER 
 
-decoder_with_control #(.no_of_units(no_of_units)) d (clk,result ,out , (&decoder_read_now),outsider_read_now);
+decoder_with_control #(.no_of_row_by_vector_modules(no_of_row_by_vector_modules)) d (clk,result ,out , (&decoder_read_now_dash),outsider_read_now);
 
 //
 
-integer i=0;
-integer counter=0;
-integer counter2=0;
 
-
-
-
-reg[no_of_units*(3*element_width)-1:0] input1;
-reg[(no_of_units+2)*element_width-1:0] input2;
-
-wire [element_width*((no_of_elements_of_mat+2)+(3*additional))-1:0]modified_mat;
-wire[(no_of_eqn_per_cluster+2+additional)*element_width-1:0] modified_vector;
-
-
-
-assign modified_mat[element_width*((no_of_elements_of_mat+2)+(3*additional))-1-:element_width*(no_of_elements_of_mat+2)]={`zero_filling,mat,`zero_filling};
-assign modified_mat[3*element_width*(total)-1-element_width*(no_of_elements_of_mat+2):0]=0;
-
-
-assign modified_vector[(no_of_eqn_per_cluster+2+additional)*element_width-1-:(no_of_eqn_per_cluster+2)*element_width]={`zero_filling,vector,`zero_filling};
-assign modified_vector[((no_of_eqn_per_cluster+2+additional)*element_width-1)-(no_of_eqn_per_cluster+2)*element_width:0]=0;
-
-//reg [no_of_units-1:0] read_row;
-wire [no_of_units-1:0] give_us_all;	 
-reg initialization_counter ;  
-reg [no_of_units-1:0] number_of_multiples; // if three elements per row , then this is number of multiples of three and equals 1
-wire[no_of_units-1:0] decoder_read_now;	 
-reg [no_of_units-1:0] start_row_by_vector;	
-reg matrix_by_vector_finished ;	 
-output wire outsider_read_now;		
 
 genvar j;
 generate
-for(j=0;j<no_of_units;j=j+1) begin:instantiate_ROW_BY_VECTOR
+for(j=0;j<no_of_row_by_vector_modules;j=j+1) begin:instantiate_ROW_BY_VECTOR
 	
-row_by_vector_with_control #(.total(total),.no_of_units(no_of_units)) R(clk,input1[3*element_width*(j+1)-1 -:3*element_width],
-input2[element_width*(j+3)-1 -:3*element_width],result[(element_width)*(j+1)-1 -:element_width],give_us_all[j],number_of_multiples[j],start_row_by_vector[j],decoder_read_now[j],reset);
+row_by_vector_with_control #(.NI(NI),.element_width(element_width)) R(clk,A_rows[(no_of_row_by_vector_modules-j)*NI*element_width-1-:element_width*NI],
+vector_rows[(no_of_row_by_vector_modules-j)*NI*element_width-1-:element_width*NI],result[(no_of_row_by_vector_modules-j)*element_width-1-:element_width],give_us_all[(no_of_row_by_vector_modules-j-1)],no_of_multiples[(no_of_row_by_vector_modules-j)*32-1-:32],start_row_by_vector[no_of_row_by_vector_modules-j-1],decoder_read_now[no_of_row_by_vector_modules-j-1],!start,you_can_read[no_of_row_by_vector_modules-j-1],I_am_ready[no_of_row_by_vector_modules-j-1]);
 	
 end
 endgenerate
 
 
+always @(posedge clk)
+	begin
+	 second_pipeline <= first_pipeline;
+	end	 
+	
+always@(posedge clk)
+	begin
+		if(give_us_all!=0 && ! (&give_us_all_dash))
+			begin
+				give_us_all_dash <= give_us_all_dash |	give_us_all;
+								
+			end	
+		else if(&give_us_all_dash && !(&give_us_all))	
+			begin 
+				give_us_all_dash<=0;
+			end	
+	end	 
+	
+	always@(posedge clk)
+	begin
+		if(decoder_read_now!=0 && ! (&decoder_read_now_dash))
+			begin
+				decoder_read_now_dash <= decoder_read_now_dash | decoder_read_now;	
+			end	
+		else if(&decoder_read_now_dash && !(&decoder_read_now))	
+			begin 
+				decoder_read_now_dash<=0;
+			end	
+	end	
+
+
+
 
 always@(posedge clk) begin
-	if(reset)
+	if(reset || !start)
 	begin	
-		i<=0;	
-		initialization_counter <=0;
+		i<=0;
+		first_pipeline <=1;
 		start_row_by_vector <=0;
-		matrix_by_vector_finished <=0;
+		first_initialization_counter<=0; 
+		memories_pre_preprocess<=0;
 	end
 	
-	else if(!start) 		 
-		 begin		 
-			 i<=0;	
-			 initialization_counter<=0;
-		 end
-	
-	 else if(i<(total/no_of_units)&&start && (&give_us_all  || ~initialization_counter)) 
+	else if(start && first_pipeline && ~first_initialization_counter)
+		begin 
+			
+			memories_pre_preprocess <=1;  
+			first_pipeline<=0; 
+			first_initialization_counter<=1;
+		end	
+	else if(start && ~first_pipeline)
+		begin  
+			memories_pre_preprocess <=0; 
+			first_pipeline<=1;
+			start_row_by_vector <= -1;
+		end		
+	 else if(i<(total_with_additional_A/no_of_row_by_vector_modules )&&start && (&give_us_all_dash)  ) 
 		
 		begin
-		initialization_counter <=1;
-		start_row_by_vector <= -1;	
-		
-		input1<=modified_mat[element_width*3*(total-no_of_units*i)-1 -:3*element_width*no_of_units] ;
-		input2<=modified_vector[element_width*((total+2)-i*(no_of_units))-1 -: (no_of_units+2)*element_width ];
-		
-		number_of_multiples[0] =1;	
-		number_of_multiples[1] =1;
-		number_of_multiples[2] =1;
-		number_of_multiples[3] =1;	
-		
-		
+		memories_pre_preprocess <=1;	
+		start_row_by_vector <= -1;
         i<=i+1;	
-		if( i ==(total/no_of_units))
-			begin	
-				 matrix_by_vector_finished <=1;
-			end	
+
 		end 
  
 	 else /* if((& give_us_all) !=1)  */ // I commented this for issues conecrning the special case
-		 begin
+		 begin	
+			memories_pre_preprocess <=0; 
 			start_row_by_vector <= 0;	 
 		 end 
 		 
 	
 	 end	  
 	 
-	 
-   
- always@(posedge clk) 
-	 begin
-
-		 if(reset)
-		 begin
-			counter<=0;
-			sel<=0;
-		 end
-		 
-	 else if(!start)
-		 
-		   counter<=0;
-   
-   else if(!reset&&start)
-	
-	   begin
-		
-		   
-		 if(counter<7)
-			   
-			   sel<=1;
-			
-		   else
-			   sel<=~sel;	
-	
-			   
-			   counter<=counter+1;
-			end
-				
-		
-end	
 	 
 
 

@@ -1,13 +1,9 @@
-module vXc_mul3_add(clk,reset,first_row_fixed,constant,second_row_fixed,op,finish,result_mem_we,vXc_add_8_output,read_again); 
+module vXc_mul3_add(total,clk,reset,first_row_fixed,constant,second_row_fixed,op,finish,result_mem_we,vXc_add_8_output,read_again); 
 
-    parameter number_of_equations_per_cluster=16;
-	parameter element_width_modified=34;
+   
 	parameter element_width=32;
 	parameter no_of_units=8;
-	parameter count=number_of_equations_per_cluster/no_of_units;
-	parameter additional = no_of_units-(number_of_equations_per_cluster%no_of_units); 
-	parameter total = number_of_equations_per_cluster+additional ;
-	parameter number_of_clusters=1;
+	
 	
 	
 	integer counter=0;
@@ -23,7 +19,7 @@ module vXc_mul3_add(clk,reset,first_row_fixed,constant,second_row_fixed,op,finis
 	input wire op;
 	input wire [element_width*(no_of_units)-1:0] first_row_fixed;
 	input wire [element_width*(no_of_units)-1:0] second_row_fixed;
-	
+	input wire [31:0]total;
 	
 	
 	

@@ -15,6 +15,14 @@ module tb();
 	
 	top_module uut (clk,reset,finish,reset_vXv1,reset_mXv1,halt);
 	
+	reg[31:0] AA = 32'h42c80000;
+	reg[31:0] BB = 32'h42c80000;
+	wire [31:0]CC ;	  
+	wire [31:0]DD ;	
+	wire [31:0]EE ;
+	
+	
+
 	initial
 		begin
 			clk<=0;
@@ -22,6 +30,8 @@ module tb();
 			reset_vXv1<=1;
 			reset_mXv1<=0;
 		end
+		
+		
 		
 		always @(posedge clk)
 			begin

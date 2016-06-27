@@ -1,11 +1,9 @@
 module rKold_prev(clk, input_data, address,read_address ,write_enable,memory_output);
 	
-	parameter number_of_clusters = 1;
-	parameter number_of_equations_per_cluster = 9;
+	
 	parameter element_width = 32;
-	parameter address_width = 20;
-	parameter memories_address_width=20;
 	parameter no_of_units = 8; 
+	parameter address_width=32;
 	
 	input wire clk;
 	input wire write_enable;

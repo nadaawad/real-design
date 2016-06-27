@@ -38,7 +38,7 @@ UPDATEPROGRESS 34
 MESSAGE "Pass 2. Processing instantiations."
 MESSAGE_SP VCP2876 "Implicit net declaration, symbol dot_product_finish has not been declared in module row_by_vector_with_control." "E:/files/ahmed/College/Graduation Project/June_Work/GIT_REPOS/real_design/real-design/real_design_work_space/Real_Design/src/row_by_vector_with_control.v" 44 1
 MESSAGE_SP VCP2876 "Implicit net declaration, symbol prepare_my_new_input has not been declared in module row_by_vector_with_control." "E:/files/ahmed/College/Graduation Project/June_Work/GIT_REPOS/real_design/real-design/real_design_work_space/Real_Design/src/row_by_vector_with_control.v" 44 1
-MESSAGE_SP VCP2876 "Implicit net declaration, symbol mXv1_finish has not been declared in module Alu." "E:/files/ahmed/College/Graduation Project/June_Work/GIT_REPOS/real_design/real-design/real_design_work_space/Real_Design/src/alu.v" 128 1
+MESSAGE_SP VCP2876 "Implicit net declaration, symbol mXv1_finish has not been declared in module Alu." "E:/files/ahmed/College/Graduation Project/June_Work/GIT_REPOS/real_design/real-design/real_design_work_space/Real_Design/src/alu.v" 129 1
 UPDATEPROGRESS 36
 UPDATEPROGRESS 37
 MESSAGE_SP VCP2876 "Implicit net declaration, symbol I_am_ready has not been declared in module vectorXvector_mXv_with_control." "E:/files/ahmed/College/Graduation Project/June_Work/GIT_REPOS/real_design/real-design/real_design_work_space/Real_Design/src/vectorxvector_mxv_with_control.v" 35 1
@@ -59,23 +59,23 @@ UPDATEPROGRESS 47
 UPDATEPROGRESS 48
 UPDATEPROGRESS 49
 UPDATEPROGRESS 50
-UPDATEPROGRESS 51
 UPDATEPROGRESS 52
+UPDATEPROGRESS 53
 UPDATEPROGRESS 54
 UPDATEPROGRESS 55
 UPDATEPROGRESS 56
 UPDATEPROGRESS 57
-UPDATEPROGRESS 58
 UPDATEPROGRESS 59
 UPDATEPROGRESS 60
 UPDATEPROGRESS 61
+UPDATEPROGRESS 62
 UPDATEPROGRESS 63
 UPDATEPROGRESS 64
-UPDATEPROGRESS 65
 UPDATEPROGRESS 66
 UPDATEPROGRESS 67
 UPDATEPROGRESS 68
 UPDATEPROGRESS 69
+UPDATEPROGRESS 70
 UPDATEPROGRESS 80
 MESSAGE "Running Optimizer."
 MESSAGE "ELB/DAG code generating."
@@ -107,5 +107,5 @@ UPDATEPROGRESS 99
 MESSAGE "Unit top modules: memP FPAddSub_8_23_uid2 Eight_Organizer_with_control tb Eight_Organizer P_Emap_16."
 MESSAGE "$root top modules: matrix_by_vector_v3 vectorXvector_mXv vectorXvector tb memory_tb P_Emap_16 tb_row_by_vector memP Eight_Organizer_with_control FPAddSub_8_23_uid2 Eight_Organizer."
 ENDPROGRESS Compiling...
-SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time: 0[s]."
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time: 1[s]."
 MESSAGE "done"

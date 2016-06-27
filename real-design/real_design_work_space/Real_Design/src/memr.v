@@ -40,7 +40,6 @@ module memR(clk, input_data, write_enable, input_read_address, input_write_addre
 		 begin
 			 if(x==1)
 				 begin
-					// $writememh("OUTPUTX.txt",mem);
 					 x<=0;
 				 end
 			 end

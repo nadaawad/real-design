@@ -112,11 +112,8 @@ always @(negedge clk)
 
 always @ (posedge clk)
 	begin
-		if(reset)
-			begin
-				ii <=0;	   
-			end
-		else if(!reset) 
+
+		if(!reset) 
 			begin
 				if(ii < total/no_of_units && outsider5)
 					begin
@@ -127,6 +124,7 @@ always @ (posedge clk)
 				else if(ii == total/no_of_units)
 					begin
 						package_by_package <= 0; 
+						ii<=0;
 					end
 				
 			end
@@ -134,8 +132,8 @@ always @ (posedge clk)
 
 always @(posedge clk)
 	begin
-
-				if(iii <total/no_of_units -1)
+				if(reset) finish<=0;
+				else if(iii <total/no_of_units -1)
 					begin 
 						if(final_adder_finish_dash) 
 							begin
@@ -152,6 +150,7 @@ always @(posedge clk)
 								iii<=0;
 							end
 					end
+				
 
 	end
 

@@ -1,7 +1,7 @@
 [Version]
 Version=9.1
 [Designs]
-real_design=.\Real_Design\Real_Design.adf
+real_design_final=.\real_design_final\real_design_final.adf
 [Browser]
 sort=order
 mode=none
@@ -9,4 +9,4 @@ mode=none
 order=1
 macro=
 [Expand]
-real_design=1
+real_design_final=1

@@ -2,5 +2,16 @@ NET tb.halt
 
 
 MODULE tb.P_E.mem 	
+MODULE tb.uut.matP_v2.mem
+MODULE tb.uut.matR.mem
+MODULE tb.uut.instantiate_P_Emap_8[0].P_Emap_mem.mem
+MODULE tb.uut.instantiate_P_Emap_8[1].P_Emap_mem.mem
+MODULE tb.uut.instantiate_P_Emap_8[2].P_Emap_mem.mem
+MODULE tb.uut.instantiate_P_Emap_8[3].P_Emap_mem.mem
+MODULE tb.uut.matA.mem
+MODULE tb.uut.col_nos_memory.mem
+MODULE tb.uut.multiples_mat.mem
+MODULE tb.uut.matX.mem
+MODULE tb.uut.parameters_memory.mem
 
 

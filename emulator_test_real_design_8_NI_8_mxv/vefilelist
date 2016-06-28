@@ -3,6 +3,8 @@ work ./Codes/8_dot_product_with_control.v
 work ./Codes/8_dot_product_with_control_row.v
 work ./Codes/8_organizer_with_control_row.v
 work ./Codes/8x8_adder_with_start.v
+work ./Codes/a_s.v
+work ./Codes/adder_subtractor.v
 work ./Codes/adder_subtractor_with_control.v
 work ./Codes/adder_subtractor_with_control_with_start.v
 work ./Codes/adder_subtractor_with_start.v
@@ -22,6 +24,10 @@ work ./Codes/fpadd.v
 work ./Codes/fpalign.v
 work ./Codes/fpmultiplier_8_23_8_23_8_23_uid2.v
 work ./Codes/inputieee_8_23_to_8_23.v
+work ./Codes/intadder_27_f180_uid7.v
+work ./Codes/intadder_33_f300_uid23.v
+work ./Codes/intadder_34_f180_uid18.v
+work ./Codes/intadder_42_f300_uid15.v
 work ./Codes/intmultiplier_usingdsp_24_24_48_unsigned_uid4.v
 work ./Codes/main_alu.v
 work ./Codes/mantadd.v

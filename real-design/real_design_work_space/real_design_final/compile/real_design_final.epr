@@ -2,10 +2,10 @@
 "./src/intadder_33_f300_uid23.v"	1
 "./src/memp_v2.v"	1
 "./src/final.v"	1
-"./src/top_module.v"	2
+"./src/top_module.v"	1
 "./src/div_nr_wsticky.v"	1
 "./src/adder_subtractor_with_control.v"	1
-"./src/main_alu.v"	1
+"./src/main_alu.v"	2
 "./src/outputieee_8_23_to_8_23.v"	1
 "./src/intmultiplier_usingdsp_24_24_48_unsigned_uid4.v"	1
 "./src/8x8_adder.v"	1

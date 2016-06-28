@@ -2,20 +2,25 @@
 module Alu(total,clk,reset,reset_vXv1,reset_mXv1,memA_output,Emap_mem_output_row,multiples_output,col_nos_output,total_with_additional_A,you_can_read,memories_pre_preprocess,pKold_v2,rKold,xKold,rKold_prev,memoryP_input,memoryR_input,memoryX_input,mul_add3_finish,outsider_read_now,result_mem_we_4,rkold_read_address,result_mem_we_5,result_mem_counter_5,read_again,start,read_again_2,result_mem_we_6,vXv1_finish,finish_all,I_am_ready);
 	
 	parameter element_width = 32;
-	parameter memories_address_width=32;	
+	parameter memory_height = 1000;
+	parameter address_width= $clog2(memory_height)+1;
+
 	
 	parameter no_of_elements_on_col_nos = 20 ;	 
 	parameter no_of_row_by_vector_modules = 4;	
 	parameter no_of_units = no_of_row_by_vector_modules*2;
-	parameter no_of_elements_in_p_emap_output = 8;	  
+	parameter no_of_elements_in_p_emap_output = 8;
+	
+	parameter col_nos_values_width = 24;
+	parameter multiples_memory_value_width = 3;
 	
 	
 	
 	
 	input wire [no_of_row_by_vector_modules*element_width*no_of_units-1:0] memA_output;
 	input wire [no_of_row_by_vector_modules*no_of_elements_in_p_emap_output*element_width-1:0] Emap_mem_output_row ;
-	input wire [no_of_row_by_vector_modules*no_of_elements_on_col_nos*32-1:0] col_nos_output;
-	input wire [32*no_of_row_by_vector_modules-1:0] multiples_output ;	
+	input wire [no_of_row_by_vector_modules*no_of_elements_on_col_nos*col_nos_values_width-1:0] col_nos_output;
+	input wire [multiples_memory_value_width*no_of_row_by_vector_modules-1:0] multiples_output ;	
 	input wire [no_of_row_by_vector_modules-1:0] you_can_read;
 	input wire [31:0]total_with_additional_A;
 	input wire [31:0]total;
@@ -59,9 +64,9 @@ module Alu(total,clk,reset,reset_vXv1,reset_mXv1,memA_output,Emap_mem_output_row
 	output wire read_again; 
 	output wire result_mem_we_6;
 	output wire read_again_2; 
-    output wire[31:0] rkold_read_address; 
+    output wire[32-1:0] rkold_read_address; 
 	output wire result_mem_we_5;
-    output wire[31:0] result_mem_counter_5;
+    output wire[32-1:0] result_mem_counter_5;
 	output wire mul_add3_finish;
 	output wire vXv1_finish; 
 	output wire outsider_read_now;
@@ -89,8 +94,8 @@ module Alu(total,clk,reset,reset_vXv1,reset_mXv1,memA_output,Emap_mem_output_row
 	
 	wire AP_total_we;
 	wire [element_width*no_of_units-1:0] AP_total;  
-	wire[31:0]counter;
-	wire[31:0] AP_read_address ; 
+	wire[address_width-1:0]counter;
+	wire[address_width-1:0] AP_read_address ; 
 	 
 	 
 	 
@@ -125,19 +130,19 @@ module Alu(total,clk,reset,reset_vXv1,reset_mXv1,memA_output,Emap_mem_output_row
 	//mat by vector (A*p)
 	
 
-	matrix_by_vector_v3_with_control #(.no_of_row_by_vector_modules(no_of_units/2),.NI(no_of_units),.element_width (element_width ))
+	matrix_by_vector_v3_with_control #(.no_of_row_by_vector_modules(no_of_units/2),.NI(no_of_units),.element_width (element_width ),.multiples_memory_value_width(multiples_memory_value_width))
 	mXv1_dash(clk,reset,reset_mXv1,memA_output,Emap_mem_output_row,mXv1_result,mXv1_finish,outsider_read_now,multiples_output,total_with_additional_A,memories_pre_preprocess,you_can_read,I_am_ready);
 	
 	
 	//vect by vect p*(A*p)
 	
  
-	AP_total#(.no_of_units(no_of_units),.element_width (element_width ))
+	AP_total#(.no_of_units(no_of_units),.element_width (element_width ),.memory_height(memory_height))
 	AP_total_mem(clk,mXv1_result,counter,AP_read_address,outsider_read_now,AP_total);
 
 	
 	
-	vectorXvector_mXv_with_control #(.no_of_units(no_of_units),.element_width (element_width ))
+	vectorXvector_mXv_with_control #(.no_of_units(no_of_units),.element_width (element_width ),.memory_height(memory_height))
 	vXv2(total,clk,!mXv1_finish,pKold_v2,mXv1_result,vXv2_result,vXv2_finish,AP_total_we,counter,outsider_read_now);
 	
 	//calc alpha
@@ -151,7 +156,7 @@ module Alu(total,clk,reset,reset_vXv1,reset_mXv1,memA_output,Emap_mem_output_row
 	mul_add1(total,clk,!start_mul_add,pKold_v2,div1_result,xKold,1'b0,mul_add1_finish,result_mem_we_4,memoryX_input,read_again);  
 
 		//r=r-alpha*A*p  
-	vXc_mul3_sub #(.no_of_units(no_of_units),.element_width (element_width ))
+	vXc_mul3_sub #(.no_of_units(no_of_units),.element_width (element_width ),.memory_height(memory_height))
 	mul_add2(total,clk,!start_mul_add,AP_total,div1_result,rKold_prev,1'b1,mul_add2_finish,AP_read_address,rkold_read_address,result_mem_we_5,result_mem_counter_5,memoryR_input);
 
 	//rsnew	, third stage 
@@ -347,7 +352,7 @@ module Alu(total,clk,reset,reset_vXv1,reset_mXv1,memA_output,Emap_mem_output_row
 		 
 		 if(mul_add3_finish)
 			 begin 
-				$display("%d :: Beta is %h",display_counter ,div2_result);
+				$display("%d ::Beta  is %h",display_counter ,div2_result);
 				display_counter <= display_counter +1 ;
 			 end 	
 //			 

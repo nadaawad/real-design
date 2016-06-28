@@ -1,4 +1,4 @@
-Active-HDL 9.1.2353.4205  2016-06-28 21:38:55
+Active-HDL 9.1.2353.4205  2016-06-28 21:39:36
 
 Elaboration top modules:
 Verilog Module                tb
@@ -9,6 +9,7 @@ Verilog Module                                | Library           | Info | Compi
 -------------------------------------------------------------------------------------------------------------------------------
 tb                                            | real_design_final |      | 9.1.2353.4205  (Windows) | -l real_design_final -O2
 top_module                                    | real_design_final |      | 9.1.2353.4205  (Windows) | -l real_design_final -O2
+main_alu                                      | real_design_final |      | 9.1.2353.4205  (Windows) | -l real_design_final -O2
 control_unit                                  | real_design_final |      | 9.1.2353.4205  (Windows) | -l real_design_final -O2
 memP_v2                                       | real_design_final |      | 9.1.2353.4205  (Windows) | -l real_design_final -O2
 memR                                          | real_design_final |      | 9.1.2353.4205  (Windows) | -l real_design_final -O2
@@ -19,7 +20,6 @@ memX                                          | real_design_final |      | 9.1.2
 parameters_mem                                | real_design_final |      | 9.1.2353.4205  (Windows) | -l real_design_final -O2
 P_Emap_8                                      | real_design_final |      | 9.1.2353.4205  (Windows) | -l real_design_final -O2
 rKold_prev                                    | real_design_final |      | 9.1.2353.4205  (Windows) | -l real_design_final -O2
-Alu                                           | real_design_final |      | 9.1.2353.4205  (Windows) | -l real_design_final -O2
 vectorXvector_with_control                    | real_design_final |      | 9.1.2353.4205  (Windows) | -l real_design_final -O2
 matrix_by_vector_v3_with_control              | real_design_final |      | 9.1.2353.4205  (Windows) | -l real_design_final -O2
 AP_total                                      | real_design_final |      | 9.1.2353.4205  (Windows) | -l real_design_final -O2

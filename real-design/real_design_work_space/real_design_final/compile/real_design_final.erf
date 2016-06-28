@@ -35,10 +35,6 @@ UPDATEPROGRESS 31
 UPDATEPROGRESS 32
 UPDATEPROGRESS 33
 UPDATEPROGRESS 34
-MESSAGE_SP VCP2113 "Module a_s found in current working library."
-MESSAGE_SP VCP2113 "Module IntAdder_33_f300_uid23 found in current working library."
-MESSAGE_SP VCP2113 "Module IntAdder_42_f300_uid15 found in current working library."
-MESSAGE_SP VCP2113 "Module adder_subtractor found in current working library."
 MESSAGE "Pass 2. Processing instantiations."
 MESSAGE_SP VCP2876 "Implicit net declaration, symbol dot_product_finish has not been declared in module row_by_vector_with_control." "E:/files/ahmed/College/Graduation Project/June_Work/GIT_REPOS/real_design/real-design/real_design_work_space/real_design_final/src/row_by_vector_with_control.v" 45 1
 MESSAGE_SP VCP2876 "Implicit net declaration, symbol prepare_my_new_input has not been declared in module row_by_vector_with_control." "E:/files/ahmed/College/Graduation Project/June_Work/GIT_REPOS/real_design/real-design/real_design_work_space/real_design_final/src/row_by_vector_with_control.v" 45 1
@@ -61,23 +57,20 @@ UPDATEPROGRESS 49
 UPDATEPROGRESS 51
 UPDATEPROGRESS 52
 UPDATEPROGRESS 54
-UPDATEPROGRESS 56
+UPDATEPROGRESS 55
 UPDATEPROGRESS 57
-UPDATEPROGRESS 59
+UPDATEPROGRESS 58
 UPDATEPROGRESS 60
-UPDATEPROGRESS 62
+UPDATEPROGRESS 61
+UPDATEPROGRESS 63
 UPDATEPROGRESS 64
-UPDATEPROGRESS 65
+UPDATEPROGRESS 66
 UPDATEPROGRESS 67
-UPDATEPROGRESS 68
+UPDATEPROGRESS 69
 UPDATEPROGRESS 80
 MESSAGE "Running Optimizer."
 MESSAGE "ELB/DAG code generating."
 MESSAGE_SP VCP2113 "Module \$root found in current working library."
-MESSAGE_SP VCP2113 "Module P_Emap_16 found in current working library."
-MESSAGE_SP VCP2113 "Module Eight_Organizer_with_control found in current working library."
-MESSAGE_SP VCP2113 "Module Eight_Organizer found in current working library."
-MESSAGE_SP VCP2113 "Module FPAddSub_8_23_uid2 found in current working library."
 UPDATEPROGRESS 81
 UPDATEPROGRESS 82
 UPDATEPROGRESS 83
@@ -97,8 +90,8 @@ UPDATEPROGRESS 96
 UPDATEPROGRESS 97
 UPDATEPROGRESS 98
 UPDATEPROGRESS 99
-MESSAGE "Unit top modules: memP decoder tb."
-MESSAGE "$root top modules: memP decoder P_Emap_16 Eight_Organizer_with_control tb Eight_Organizer FPAddSub_8_23_uid2."
+MESSAGE "Unit top modules: memP decoder tb adder_subtractor_with_control IntAdder_27_f180_uid7 IntAdder_34_f180_uid18."
+MESSAGE "$root top modules: memP decoder tb adder_subtractor_with_control IntAdder_27_f180_uid7 IntAdder_34_f180_uid18."
 ENDPROGRESS Compiling...
 SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time: 0[s]."
 MESSAGE "done"

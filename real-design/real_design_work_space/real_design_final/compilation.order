@@ -10,7 +10,6 @@
 .\src\p_emap_8.v
 .\src\multiply.v
 .\src\rkold_prev.v
-.\src\final.v
 .\src\8x8_adder_with_start.v
 .\src\vectorxvector_mxv_with_control.v
 .\src\mantadd.v
@@ -51,3 +50,10 @@
 .\src\outputieee_8_23_to_8_23.v
 .\src\fpalign.v
 .\src\div_nr_wsticky.v
+.\src\adder_subtractor.v
+.\src\a_s.v
+.\src\intadder_27_f180_uid7.v
+.\src\intadder_33_f300_uid23.v
+.\src\intadder_34_f180_uid18.v
+.\src\intadder_42_f300_uid15.v
+.\src\final1.v

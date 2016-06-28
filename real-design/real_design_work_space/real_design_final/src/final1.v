@@ -12,7 +12,7 @@
 
 `include "constants.v"
 
-module final(a, b, sa, sb, abig, ainf, binf, anan, bnan, asignan, bsignan, specinput, denorm,
+module final1(a, b, sa, sb, abig, ainf, binf, anan, bnan, asignan, bsignan, specinput, denorm,
 	inex, expneg, exp, effop, op, zero, roundsum,
 	 result, overflow, underflow, invalid, inexact);
 

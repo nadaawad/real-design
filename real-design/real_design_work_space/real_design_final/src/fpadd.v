@@ -92,7 +92,7 @@ rounder		rounder(normsum, round, sticky,
 						
 special		special(a[`WIDTH-2:0], b[`WIDTH-2:0], ainf, binf, anan, bnan, asignan, bsignan, specinput);
 
-final		final(a[`WSIG-2:0], b[`WSIG-2:0], a[`WIDTH-1], b[`WIDTH-1], abig, ainf, binf, anan, bnan, asignan, bsignan,
+final1		final1(a[`WSIG-2:0], b[`WSIG-2:0], a[`WIDTH-1], b[`WIDTH-1], abig, ainf, binf, anan, bnan, asignan, bsignan,
 			specinput, denorm, inex, overexp[`WEXP], exp[`WEXP:0], effop, op, zero,
 			roundsum,  result, overflow, underflow, invalid, inexact);
 

@@ -10,7 +10,6 @@ i<>.\src\special.v
 i<>.\src\p_emap_8.v
 i<>.\src\multiply.v
 i<>.\src\rkold_prev.v
-i<>.\src\final.v
 i<>.\src\8x8_adder_with_start.v
 i<>.\src\vectorxvector_mxv_with_control.v
 i<>.\src\mantadd.v

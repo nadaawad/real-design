@@ -1,4 +1,4 @@
-Active-HDL 9.1.2353.4205  2016-06-28 22:39:32
+Active-HDL 9.1.2353.4205  2016-06-29 01:15:50
 
 Elaboration top modules:
 Verilog Module                tb
@@ -48,7 +48,7 @@ mantadd                                       | real_design_final |      | 9.1.2
 normlize                                      | real_design_final |      | 9.1.2353.4205  (Windows) | -l real_design_final -O2
 rounder                                       | real_design_final |      | 9.1.2353.4205  (Windows) | -l real_design_final -O2
 special                                       | real_design_final |      | 9.1.2353.4205  (Windows) | -l real_design_final -O2
-final                                         | real_design_final |      | 9.1.2353.4205  (Windows) | -l real_design_final -O2
+final1                                        | real_design_final |      | 9.1.2353.4205  (Windows) | -l real_design_final -O2
 decoder_with_control                          | real_design_final |      | 9.1.2353.4205  (Windows) | -l real_design_final -O2
 row_by_vector_with_control                    | real_design_final |      | 9.1.2353.4205  (Windows) | -l real_design_final -O2
 eight_Dot_Product_Multiply_with_control_row   | real_design_final |      | 9.1.2353.4205  (Windows) | -l real_design_final -O2

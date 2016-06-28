@@ -1,0 +1,6 @@
+domain domain0
+
+Clock clk External 0
+Edges  {0 R} {0 F}
+
+

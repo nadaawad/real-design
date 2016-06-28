@@ -1,4 +1,4 @@
-Active-HDL 9.1.2353.4205  2016-06-28 21:39:36
+Active-HDL 9.1.2353.4205  2016-06-28 21:41:47
 
 Elaboration top modules:
 Verilog Module                tb
@@ -20,6 +20,7 @@ memX                                          | real_design_final |      | 9.1.2
 parameters_mem                                | real_design_final |      | 9.1.2353.4205  (Windows) | -l real_design_final -O2
 P_Emap_8                                      | real_design_final |      | 9.1.2353.4205  (Windows) | -l real_design_final -O2
 rKold_prev                                    | real_design_final |      | 9.1.2353.4205  (Windows) | -l real_design_final -O2
+Alu                                           | real_design_final |      | 9.1.2353.4205  (Windows) | -l real_design_final -O2
 vectorXvector_with_control                    | real_design_final |      | 9.1.2353.4205  (Windows) | -l real_design_final -O2
 matrix_by_vector_v3_with_control              | real_design_final |      | 9.1.2353.4205  (Windows) | -l real_design_final -O2
 AP_total                                      | real_design_final |      | 9.1.2353.4205  (Windows) | -l real_design_final -O2

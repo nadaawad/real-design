@@ -13,6 +13,7 @@ module matrix_by_vector_v3_with_control (clk,reset,start,A_rows,vector_rows,out,
 parameter element_width =32;   
 parameter no_of_row_by_vector_modules =4; 
 parameter NI = 8;
+parameter multiples_memory_value_width = 3;
 
          
 
@@ -20,7 +21,7 @@ parameter NI = 8;
 
 // -- Enter your statements here -- //		
 input clk,reset,start;	 
-input wire [no_of_row_by_vector_modules*element_width-1:0] no_of_multiples;
+input wire [no_of_row_by_vector_modules*multiples_memory_value_width-1:0] no_of_multiples;
 
 wire clk,reset,start;
 input A_rows;
@@ -79,8 +80,8 @@ genvar j;
 generate
 for(j=0;j<no_of_row_by_vector_modules;j=j+1) begin:instantiate_ROW_BY_VECTOR
 	
-row_by_vector_with_control #(.NI(NI),.element_width(element_width)) R(clk,A_rows[(no_of_row_by_vector_modules-j)*NI*element_width-1-:element_width*NI],
-vector_rows[(no_of_row_by_vector_modules-j)*NI*element_width-1-:element_width*NI],result[(no_of_row_by_vector_modules-j)*element_width-1-:element_width],give_us_all[(no_of_row_by_vector_modules-j-1)],no_of_multiples[(no_of_row_by_vector_modules-j)*32-1-:32],start_row_by_vector[no_of_row_by_vector_modules-j-1],decoder_read_now[no_of_row_by_vector_modules-j-1],!start,you_can_read[no_of_row_by_vector_modules-j-1],I_am_ready[no_of_row_by_vector_modules-j-1]);
+row_by_vector_with_control #(.NI(NI),.element_width(element_width),.multiples_memory_value_width(multiples_memory_value_width)) R(clk,A_rows[(no_of_row_by_vector_modules-j)*NI*element_width-1-:element_width*NI],
+vector_rows[(no_of_row_by_vector_modules-j)*NI*element_width-1-:element_width*NI],result[(no_of_row_by_vector_modules-j)*element_width-1-:element_width],give_us_all[(no_of_row_by_vector_modules-j-1)],no_of_multiples[(no_of_row_by_vector_modules-j)*multiples_memory_value_width-1-:multiples_memory_value_width],start_row_by_vector[no_of_row_by_vector_modules-j-1],decoder_read_now[no_of_row_by_vector_modules-j-1],!start,you_can_read[no_of_row_by_vector_modules-j-1],I_am_ready[no_of_row_by_vector_modules-j-1]);
 	
 end
 endgenerate

@@ -142,7 +142,7 @@ module Alu(total,clk,reset,reset_vXv1,reset_mXv1,memA_output,Emap_mem_output_row
 
 	
 	
-	vectorXvector_mXv_with_control #(.no_of_units(no_of_units),.element_width (element_width ),.memory_height(memory_height))
+	vectorXvector_mXv_with_control #(.no_of_units(no_of_units),.element_width (element_width ))
 	vXv2(total,clk,!mXv1_finish,pKold_v2,mXv1_result,vXv2_result,vXv2_finish,AP_total_we,counter,outsider_read_now);
 	
 	//calc alpha
@@ -156,7 +156,7 @@ module Alu(total,clk,reset,reset_vXv1,reset_mXv1,memA_output,Emap_mem_output_row
 	mul_add1(total,clk,!start_mul_add,pKold_v2,div1_result,xKold,1'b0,mul_add1_finish,result_mem_we_4,memoryX_input,read_again);  
 
 		//r=r-alpha*A*p  
-	vXc_mul3_sub #(.no_of_units(no_of_units),.element_width (element_width ),.memory_height(memory_height))
+	vXc_mul3_sub #(.no_of_units(no_of_units),.element_width (element_width ))
 	mul_add2(total,clk,!start_mul_add,AP_total,div1_result,rKold_prev,1'b1,mul_add2_finish,AP_read_address,rkold_read_address,result_mem_we_5,result_mem_counter_5,memoryR_input);
 
 	//rsnew	, third stage 

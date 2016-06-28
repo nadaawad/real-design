@@ -6,7 +6,8 @@ module row_by_vector_with_control (clk,a,p,result,give_me_only,no_of_multiples,s
 
 
 parameter NI=8;
-parameter element_width = 32;
+parameter element_width = 32; 
+parameter multiples_memory_value_width = 3;
 
 
 input clk;
@@ -17,7 +18,7 @@ output result;
 wire [element_width-1:0] result;	  
 
 
-input wire [31:0] no_of_multiples;
+input wire [multiples_memory_value_width-1:0] no_of_multiples;
 integer no_of_multiples_counter = 0;
 reg counter_for_deasserting=0;
 
@@ -41,7 +42,7 @@ output wire I_am_ready;
 
 
 
-eight_Dot_Product_Multiply_with_control_row  edomwcr(clk,reset,start_row_by_vector ,a,p, result,dot_product_finish,you_can_read,no_of_multiples,prepare_my_new_input,fake_prepare0,I_am_ready);
+eight_Dot_Product_Multiply_with_control_row  #(.multiples_memory_value_width(multiples_memory_value_width)) edomwcr(clk,reset,start_row_by_vector ,a,p, result,dot_product_finish,you_can_read,no_of_multiples,prepare_my_new_input,fake_prepare0,I_am_ready);
 
 	
 

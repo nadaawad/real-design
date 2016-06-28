@@ -28,7 +28,7 @@
 "./src/decoder_with_control.v"	1
 "./src/mema.v"	1
 "./src/a_s.v"	1
-"./src/alu.v"	2
+"./src/alu.v"	1
 "./src/inputieee_8_23_to_8_23.v"	1
 "./src/adder_subtractor_with_start.v"	1
 "./src/vxc_add_8_delay.v"	1

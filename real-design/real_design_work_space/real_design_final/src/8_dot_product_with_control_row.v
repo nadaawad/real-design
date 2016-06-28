@@ -3,7 +3,8 @@ module eight_Dot_Product_Multiply_with_control_row(clk,main_reset,reset ,first_r
 
 
 parameter no_of_units = 8;
-parameter element_width = 32; 
+parameter element_width = 32;
+parameter multiples_memory_value_width = 3;
 
 reg initialization_counter = 1;
 reg pos_neg_indicator = 0;  
@@ -24,8 +25,8 @@ reg fake_prepare2=0;
 reg fake_reset=0;
 
 input wire main_reset;
-input wire [31:0] no_of_multiples;
-reg [31:0] delayed_no_of_multiples=10000;
+input wire [multiples_memory_value_width-1:0] no_of_multiples;
+reg [multiples_memory_value_width-1:0] delayed_no_of_multiples=10000;
 
 input wire outsider_read_now;
 input wire reset ;
@@ -64,11 +65,11 @@ reg outsider5=0;
 
 reg reset_pip1,reset_pip2,reset_pip3;
 
-reg[12:0] fifo_read_address =0;
-reg[12:0] fifo_write_address=0 ;
+reg[3:0] fifo_read_address =0;
+reg[3:0] fifo_write_address=0 ;
 reg fifo_write_enable=0; 
 
-wire[31:0] fifo_output_data;
+wire[multiples_memory_value_width-1:0] fifo_output_data;
 
 wire ExE_finish;
 wire final_adder_finish_dash;
@@ -84,7 +85,7 @@ endgenerate
 
 Eight_Organizer_with_control_row #(.no_of_units(no_of_units)) E_O (clk,package_by_package,adder_tree_start , adder_output,outsider4,final_adder_finish_dash,ExE_finish,main_reset);
 
-multiples_fifo M_F (clk,fifo_write_enable,fifo_read_address,fifo_write_address,no_of_multiples,fifo_output_data);
+multiples_fifo #(.multiples_memory_value_width(multiples_memory_value_width)) M_F (clk,fifo_write_enable,fifo_read_address,fifo_write_address,no_of_multiples,fifo_output_data);
 
 
 initial 

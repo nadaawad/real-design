@@ -12,7 +12,8 @@ module top_module(clk,reset,finish,reset_vXv1,reset_mXv1,halt);
 	parameter memory_height = 1000;
 	parameter memory_A_height = memory_height * (no_of_units/no_of_row_by_vector_modules) + no_of_units ;
 	parameter address_width= $clog2(memory_height)+1;
-	parameter A_address_width= $clog2(memory_A_height)+1;  
+	parameter A_address_width= $clog2(memory_A_height)+1; 
+	
 	parameter multiples_memory_value_width=32;
 	
 	

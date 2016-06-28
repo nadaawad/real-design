@@ -352,7 +352,7 @@ module Alu(total,clk,reset,reset_vXv1,reset_mXv1,memA_output,Emap_mem_output_row
 		 
 		 if(mul_add3_finish)
 			 begin 
-				$display("%d ::Alpha  is %h",display_counter ,div2_result);
+				$display("%d ::BETA  is %h",display_counter ,div2_result);
 				display_counter <= display_counter +1 ;
 			 end 	
 //			 

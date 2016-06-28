@@ -1,14 +1,9 @@
 i<>.\src\normlize.v
-i<>.\src\intadder_42_f300_uid15.v
-i<>.\src\intadder_27_f180_uid7.v
 i<>.\src\fp_div.v
-i<>.\src\a_s.v
 i<>.\src\row_by_vector_with_control.v
 i<>.\src\matrix_by_vector_v3_with_control.v
 i<>.\src\delay.v
-i<>.\src\adder_subtractor.v
 i<>.\src\vxc_add_8_delay.v
-i<>.\src\fpaddsub_8_23_uid2_rightshifter.v
 i<>.\src\8_organizer_with_control_row.v
 i<>.\src\2x1_mux.v
 i<>.\src\special.v
@@ -25,7 +20,6 @@ i<>.\src\alu.v
 i<>.\src\adder_subtractor_with_start.v
 i<>.\src\8_dot_product_with_control_row.v
 i<>.\src\memp.v
-i<>.\src\intadder_33_f300_uid23.v
 i<>.\src\decoder.v
 i<>.\src\parameters_mem.v
 i<>.\src\multiples_matrix.v
@@ -36,16 +30,11 @@ i<>.\src\memr.v
 i<>.\src\mema.v
 i<>.\src\intmultiplier_usingdsp_24_24_48_unsigned_uid4.v
 i<>.\src\col_nos.v
-i<>.\src\8_organizer_with_control.v
 i<>.\src\multiples_fifo.v
-i<>.\src\8x8_adder.v
 i<>.\src\vxc_add_8.v
 i<>.\src\tb.v
-i<>.\src\lzcshifter_28_to_28_counting_32_uid15.v
 i<>.\src\ap_total_mem.v
-i<>.\src\8_organizer.v
 i<>.\src\n_to_2n_demux.v
-i<>.\src\intadder_34_f180_uid18.v
 i<>.\src\fpmultiplier_8_23_8_23_8_23_uid2.v
 i<>.\src\decoder_with_control.v
 i<>.\src\adder_subtractor_with_control.v
@@ -55,7 +44,6 @@ i<>.\src\vxc_mul3_add.v
 i<>.\src\top_module.v
 i<>.\src\memx.v
 i<>.\src\memp_v2.v
-i<>.\src\fpaddsub_8_23_uid2.v
 i<>.\src\control_unit.v
 i<>.\src\constants.v
 i<>.\src\8_dot_product_with_control.v

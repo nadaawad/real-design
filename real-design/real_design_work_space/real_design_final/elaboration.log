@@ -1,4 +1,4 @@
-Active-HDL 9.1.2353.4205  2016-06-28 21:20:19
+Active-HDL 9.1.2353.4205  2016-06-28 21:37:16
 
 Elaboration top modules:
 Verilog Module                tb
@@ -8,7 +8,6 @@ Verilog Module                tb
 Verilog Module                                | Library           | Info | Compiler Version         | Compilation Options
 -------------------------------------------------------------------------------------------------------------------------------
 tb                                            | real_design_final |      | 9.1.2353.4205  (Windows) | -l real_design_final -O2
-top_module                                    | real_design_final |      | 9.1.2353.4205  (Windows) | -l real_design_final -O2
 main_alu                                      | real_design_final |      | 9.1.2353.4205  (Windows) | -l real_design_final -O2
 control_unit                                  | real_design_final |      | 9.1.2353.4205  (Windows) | -l real_design_final -O2
 memP_v2                                       | real_design_final |      | 9.1.2353.4205  (Windows) | -l real_design_final -O2

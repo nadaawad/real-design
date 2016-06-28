@@ -2,7 +2,7 @@
 "./src/intadder_33_f300_uid23.v"	1
 "./src/memp_v2.v"	1
 "./src/final.v"	1
-"./src/top_module.v"	1
+"./src/top_module.v"	2
 "./src/div_nr_wsticky.v"	1
 "./src/adder_subtractor_with_control.v"	1
 "./src/main_alu.v"	1

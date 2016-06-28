@@ -49,10 +49,11 @@ CompileWithDebug=0
 
 [$LibMap$]
 real_design_final=.
-
 Active_lib=
+
 [IMPLEMENTATION]
 UCF=
+
 [Files]
 /normlize.v=-1
 /intadder_42_f300_uid15.v=-1
@@ -89,7 +90,6 @@ UCF=
 /intadder_33_f300_uid23.v=-1
 /decoder.v=-1
 /parameters_mem.v=-1
-/p_emap_16.v=-1
 /multiples_matrix.v=-1
 /main_alu.v=-1
 /fpadd.v=-1
@@ -130,6 +130,7 @@ UCF=
 /outputieee_8_23_to_8_23.v=-1
 /fpalign.v=-1
 /div_nr_wsticky.v=-1
+
 [Files.Data]
 .\src\normlize.v=Verilog Source Code
 .\src\intadder_42_f300_uid15.v=Verilog Source Code
@@ -166,7 +167,6 @@ UCF=
 .\src\intadder_33_f300_uid23.v=Verilog Source Code
 .\src\decoder.v=Verilog Source Code
 .\src\parameters_mem.v=Verilog Source Code
-.\src\p_emap_16.v=Verilog Source Code
 .\src\multiples_matrix.v=Verilog Source Code
 .\src\main_alu.v=Verilog Source Code
 .\src\fpadd.v=Verilog Source Code
@@ -207,3 +207,4 @@ UCF=
 .\src\outputieee_8_23_to_8_23.v=Verilog Source Code
 .\src\fpalign.v=Verilog Source Code
 .\src\div_nr_wsticky.v=Verilog Source Code
+

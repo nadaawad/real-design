@@ -3,9 +3,11 @@ module memX(clk, input_data, write_enable, input_read_address, input_write_addre
 	parameter number_of_clusters = 20;
     parameter number_of_equations_per_cluster = 9;
     parameter element_width = 32;
-    parameter address_width =20;
-    parameter memories_address_width=20;	
+
+	
 	parameter no_of_units = 8;
+	parameter memory_height = 1000;	
+	parameter address_width= $clog2(memory_height)+1;
 	
 	input wire clk;
 	input wire write_enable;
@@ -15,7 +17,7 @@ module memX(clk, input_data, write_enable, input_read_address, input_write_addre
 	
 	output wire [no_of_units * element_width - 1 : 0] memory_output;
 	
-	reg [no_of_units * element_width - 1 : 0] mem [0 : 1000];
+	reg [no_of_units * element_width - 1 : 0] mem [0 : memory_height];
 	// pragma attribute mem ram_block 1
 	
 	reg x=0;

@@ -5,10 +5,15 @@ module memA(clk,memA_read_address,memA_output,read_preprocess,no_of_multiples,I_
 	parameter element_width =32;	 
 	parameter no_of_units = no_of_row_by_vector_modules * 2;  
 	parameter overflow_allowed = no_of_elements_on_col_nos % no_of_units;
-	parameter additional =  (no_of_units -  overflow_allowed)*element_width;
+	parameter additional =  (no_of_units -  overflow_allowed)*element_width; 
+	
+	parameter memory_A_height = 2000;
+	parameter address_width =$clog2(memory_A_height)+1;	 
+	
+	parameter multiples_memory_value_width =32;
 	
 	input wire read_preprocess;
-	input wire[32*no_of_row_by_vector_modules-1:0]no_of_multiples;
+	input wire[multiples_memory_value_width*no_of_row_by_vector_modules-1:0]no_of_multiples;
 	input wire[no_of_row_by_vector_modules-1:0] I_am_ready ;
 	
 	  
@@ -22,7 +27,7 @@ module memA(clk,memA_read_address,memA_output,read_preprocess,no_of_multiples,I_
 	input clk; 
 	
 	integer display_counter = 1;
-	input[31:0] memA_read_address;  // DONT MAKE THIS element_width	
+	input[address_width-1:0] memA_read_address;  // DONT MAKE THIS element_width	
 	
 	wire[no_of_row_by_vector_modules*no_of_elements_on_col_nos*element_width-1:0] memA_extraction; // THIS MUST BE element_width
 	
@@ -67,7 +72,7 @@ module memA(clk,memA_read_address,memA_output,read_preprocess,no_of_multiples,I_
 
 	assign memA_output = {value_4,value_3,value_2,value_1};
 	
-	reg [no_of_row_by_vector_modules*no_of_elements_on_col_nos*element_width-1:0] mem [0 : 100000];	 // THIS MUST BE element_width
+	reg [no_of_row_by_vector_modules*no_of_elements_on_col_nos*element_width-1:0] mem [0 : memory_A_height];	 // THIS MUST BE element_width
 	
 	
 	assign memA_extraction = mem[memA_read_address];

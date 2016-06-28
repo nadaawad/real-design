@@ -45,22 +45,20 @@ UPDATEPROGRESS 36
 UPDATEPROGRESS 37
 UPDATEPROGRESS 38
 UPDATEPROGRESS 39
-MESSAGE_SP VCP2876 "Implicit net declaration, symbol outsider_read_now has not been declared in module top_module." "E:/files/ahmed/College/Graduation Project/June_Work/GIT_REPOS/real_design/real-design/real_design_work_space/real_design_final/src/top_module.v" 95 1
-MESSAGE_SP VCP2876 "Implicit net declaration, symbol memoryP_write_enable has not been declared in module top_module." "E:/files/ahmed/College/Graduation Project/June_Work/GIT_REPOS/real_design/real-design/real_design_work_space/real_design_final/src/top_module.v" 102 1
-MESSAGE_SP VCP2876 "Implicit net declaration, symbol memoryR_write_enable has not been declared in module top_module." "E:/files/ahmed/College/Graduation Project/June_Work/GIT_REPOS/real_design/real-design/real_design_work_space/real_design_final/src/top_module.v" 102 1
-MESSAGE_SP VCP2876 "Implicit net declaration, symbol memoryX_write_enable has not been declared in module top_module." "E:/files/ahmed/College/Graduation Project/June_Work/GIT_REPOS/real_design/real-design/real_design_work_space/real_design_final/src/top_module.v" 102 1
-MESSAGE_SP VCP2876 "Implicit net declaration, symbol finishP_v2 has not been declared in module top_module." "E:/files/ahmed/College/Graduation Project/June_Work/GIT_REPOS/real_design/real-design/real_design_work_space/real_design_final/src/top_module.v" 120 1
+MESSAGE_SP VCP2876 "Implicit net declaration, symbol outsider_read_now has not been declared in module top_module." "E:/files/ahmed/College/Graduation Project/June_Work/GIT_REPOS/real_design/real-design/real_design_work_space/real_design_final/src/top_module.v" 104 1
+MESSAGE_SP VCP2876 "Implicit net declaration, symbol memoryP_write_enable has not been declared in module top_module." "E:/files/ahmed/College/Graduation Project/June_Work/GIT_REPOS/real_design/real-design/real_design_work_space/real_design_final/src/top_module.v" 111 1
+MESSAGE_SP VCP2876 "Implicit net declaration, symbol memoryR_write_enable has not been declared in module top_module." "E:/files/ahmed/College/Graduation Project/June_Work/GIT_REPOS/real_design/real-design/real_design_work_space/real_design_final/src/top_module.v" 111 1
+MESSAGE_SP VCP2876 "Implicit net declaration, symbol memoryX_write_enable has not been declared in module top_module." "E:/files/ahmed/College/Graduation Project/June_Work/GIT_REPOS/real_design/real-design/real_design_work_space/real_design_final/src/top_module.v" 111 1
+MESSAGE_SP VCP2876 "Implicit net declaration, symbol finishP_v2 has not been declared in module top_module." "E:/files/ahmed/College/Graduation Project/June_Work/GIT_REPOS/real_design/real-design/real_design_work_space/real_design_final/src/top_module.v" 130 1
 UPDATEPROGRESS 40
-UPDATEPROGRESS 41
 UPDATEPROGRESS 45
 MESSAGE "Pass 3. Processing behavioral statements."
 UPDATEPROGRESS 46
 UPDATEPROGRESS 47
 UPDATEPROGRESS 48
-UPDATEPROGRESS 49
 UPDATEPROGRESS 50
+UPDATEPROGRESS 51
 UPDATEPROGRESS 52
-UPDATEPROGRESS 53
 UPDATEPROGRESS 54
 UPDATEPROGRESS 55
 UPDATEPROGRESS 56
@@ -68,10 +66,9 @@ UPDATEPROGRESS 57
 UPDATEPROGRESS 59
 UPDATEPROGRESS 60
 UPDATEPROGRESS 61
-UPDATEPROGRESS 62
 UPDATEPROGRESS 63
 UPDATEPROGRESS 64
-UPDATEPROGRESS 66
+UPDATEPROGRESS 65
 UPDATEPROGRESS 67
 UPDATEPROGRESS 68
 UPDATEPROGRESS 69
@@ -79,6 +76,7 @@ UPDATEPROGRESS 80
 MESSAGE "Running Optimizer."
 MESSAGE "ELB/DAG code generating."
 MESSAGE_SP VCP2113 "Module \$root found in current working library."
+MESSAGE_SP VCP2113 "Module P_Emap_16 found in current working library."
 UPDATEPROGRESS 81
 UPDATEPROGRESS 82
 UPDATEPROGRESS 83
@@ -98,7 +96,7 @@ UPDATEPROGRESS 96
 UPDATEPROGRESS 97
 UPDATEPROGRESS 98
 UPDATEPROGRESS 99
-MESSAGE "Unit top modules: memP decoder P_Emap_16 Eight_Organizer_with_control tb Eight_Organizer FPAddSub_8_23_uid2."
+MESSAGE "Unit top modules: memP decoder Eight_Organizer_with_control tb Eight_Organizer FPAddSub_8_23_uid2."
 MESSAGE "$root top modules: memP decoder P_Emap_16 Eight_Organizer_with_control tb Eight_Organizer FPAddSub_8_23_uid2."
 ENDPROGRESS Compiling...
 SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time: 1[s]."

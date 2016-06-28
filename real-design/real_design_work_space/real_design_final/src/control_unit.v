@@ -2,7 +2,8 @@
 module control_unit (total,clk,reset,finish_alu,memories_pre_preprocess,memoryP_write_enable,memoryR_write_enable,memoryX_write_enable,memoryA_read_address,memoryP_read_address,memoryP_v2_read_address, memoryR_read_address,memoryX_read_address,memoryP_write_address,memoryR_write_address ,memoryX_write_address,halt,reset_vXv1,outsider_read_now,result_mem_we_4,memoryRprev_we,result_mem_we_5,result_mem_counter_5,read_again,start,read_again_2,result_mem_we_6,vXv1_finish,finish_all);
 	
 	parameter no_of_units = 8;
-	parameter memory_read_address_width=32;	// m7tag yt3`yr
+	parameter address_width=32;	
+	parameter A_address_width=32;
 	parameter element_width = 32;
 	
 	integer counter=0;
@@ -55,15 +56,15 @@ module control_unit (total,clk,reset,finish_alu,memories_pre_preprocess,memoryP_
 	output wire memoryR_write_enable;
 	assign memoryR_write_enable=result_mem_we_5;
 	
-	output reg [memory_read_address_width-1:0]memoryA_read_address;
-	output reg [memory_read_address_width-1:0]memoryP_read_address;	
-	output reg [memory_read_address_width-1:0]memoryP_v2_read_address;
-	output reg [memory_read_address_width-1:0]memoryX_read_address;
-	output reg [memory_read_address_width-1:0]memoryR_read_address;
-	output reg [memory_read_address_width-1:0]memoryX_write_address;
-	output reg [memory_read_address_width-1:0]memoryP_write_address;
-	//output reg [memory_read_address_width-1:0]memoryR_write_address;
-	output wire [memory_read_address_width-1:0]memoryR_write_address;
+	output reg [A_address_width-1:0]memoryA_read_address;
+	output reg [address_width-1:0]memoryP_read_address;	
+	output reg [address_width-1:0]memoryP_v2_read_address;
+	output reg [address_width-1:0]memoryX_read_address;
+	output reg [address_width-1:0]memoryR_read_address;
+	output reg [address_width-1:0]memoryX_write_address;
+	output reg [address_width-1:0]memoryP_write_address;
+	//output reg [address_width-1:0]memoryR_write_address;
+	output wire [address_width-1:0]memoryR_write_address;
 	assign memoryR_write_address=result_mem_counter_5;
 	output reg memoryRprev_we;
 	

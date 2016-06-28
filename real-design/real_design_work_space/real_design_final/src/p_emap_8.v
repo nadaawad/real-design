@@ -1,4 +1,5 @@
-`define invalid 32'hFFFFFFFF  
+//`define invalid 32'hFFFFFFFF   
+`define invalid 24'hFFFFFF   // if we use 6 hex col now address 
 `define smaller_large_zero 256'h0 
 `define small_zero 32'h00000000
 
@@ -8,10 +9,13 @@ module P_Emap_8 (clk,input_data,read_preprocess,write_enable,write_address,col_n
 	parameter no_of_elements_in_output = 8 ;
 	parameter element_width = 32;   
 	parameter no_of_units = 8;	
-	parameter address_width=20;
+	parameter memory_height = 1000;
+	parameter address_width= $clog2(memory_height)+1; 
+	parameter col_nos_values_width = 32; 
+	parameter multiples_memory_value_width = 32;
 	
 	
-	input wire [31:0] no_of_multiples; 	// this should come from the index matrix
+	input wire [multiples_memory_value_width-1:0] no_of_multiples; 	// this should come from the index matrix
 	input wire I_am_ready;
 	
 	integer i = 1; 
@@ -21,12 +25,12 @@ module P_Emap_8 (clk,input_data,read_preprocess,write_enable,write_address,col_n
 input clk,read_preprocess,write_enable ; 
 input wire [no_of_units*element_width-1:0]input_data; 
 input wire [address_width - 1 : 0] write_address;
-input [no_of_elements_on_col_nos*32-1:0]col_nos;  // DONT MAKE THIS element_width
+input [no_of_elements_on_col_nos*col_nos_values_width-1:0]col_nos;  // DONT MAKE THIS element_width
 output wire [no_of_elements_in_output*element_width-1:0] output_row ;	
 
 
 
-wire [31 :0]   // // DONT MAKE THIS element_width
+wire [col_nos_values_width-1 :0]   // // DONT MAKE THIS element_width
 elem7_address,elem6_address,elem5_address,elem4_address,
 elem3_address,elem2_address,elem1_address,elem0_address;
 
@@ -34,29 +38,29 @@ elem3_address,elem2_address,elem1_address,elem0_address;
 reg read_enable;
 
 
-assign elem7_address = col_nos[((no_of_elements_on_col_nos-0-((i-1)*no_of_elements_in_output))) *element_width-1-:element_width];
-assign elem6_address = col_nos[((no_of_elements_on_col_nos-1-((i-1)*no_of_elements_in_output))) *element_width-1-:element_width];
-assign elem5_address = col_nos[((no_of_elements_on_col_nos-2-((i-1)*no_of_elements_in_output))) *element_width-1-:element_width];
-assign elem4_address = col_nos[((no_of_elements_on_col_nos-3-((i-1)*no_of_elements_in_output))) *element_width-1-:element_width];
-assign elem3_address = col_nos[((no_of_elements_on_col_nos-4-((i-1)*no_of_elements_in_output))) *element_width-1-:element_width];
-assign elem2_address = col_nos[((no_of_elements_on_col_nos-5-((i-1)*no_of_elements_in_output))) *element_width-1-:element_width];
-assign elem1_address = col_nos[((no_of_elements_on_col_nos-6-((i-1)*no_of_elements_in_output))) *element_width-1-:element_width];
-assign elem0_address = col_nos[((no_of_elements_on_col_nos-7-((i-1)*no_of_elements_in_output))) *element_width-1-:element_width];
+assign elem7_address = col_nos[((no_of_elements_on_col_nos-0-((i-1)*no_of_elements_in_output))) *col_nos_values_width-1-:col_nos_values_width];
+assign elem6_address = col_nos[((no_of_elements_on_col_nos-1-((i-1)*no_of_elements_in_output))) *col_nos_values_width-1-:col_nos_values_width];
+assign elem5_address = col_nos[((no_of_elements_on_col_nos-2-((i-1)*no_of_elements_in_output))) *col_nos_values_width-1-:col_nos_values_width];
+assign elem4_address = col_nos[((no_of_elements_on_col_nos-3-((i-1)*no_of_elements_in_output))) *col_nos_values_width-1-:col_nos_values_width];
+assign elem3_address = col_nos[((no_of_elements_on_col_nos-4-((i-1)*no_of_elements_in_output))) *col_nos_values_width-1-:col_nos_values_width];
+assign elem2_address = col_nos[((no_of_elements_on_col_nos-5-((i-1)*no_of_elements_in_output))) *col_nos_values_width-1-:col_nos_values_width];
+assign elem1_address = col_nos[((no_of_elements_on_col_nos-6-((i-1)*no_of_elements_in_output))) *col_nos_values_width-1-:col_nos_values_width];
+assign elem0_address = col_nos[((no_of_elements_on_col_nos-7-((i-1)*no_of_elements_in_output))) *col_nos_values_width-1-:col_nos_values_width];
 
 // (no_of_elements_on_col_nos-1-k-((i-1)*no_of_elements_in_output)) , k=0,1,2,3,.......,no_of_elements_in_output
 
-reg [no_of_units * element_width - 1 : 0] mem [0 : 100000];
+reg [no_of_units * element_width - 1 : 0] mem [0 : memory_height];
 // pragma attribute mem ram_block 1	
 
 // d = devision , r = remainder
-reg [element_width-1:0 ]elem0_d;	reg [element_width-1:0 ]elem0_r;  reg [element_width-1:0 ]elem0_r_pipe; 
-reg [element_width-1:0 ]elem1_d;	reg [element_width-1:0 ]elem1_r;  reg [element_width-1:0 ]elem1_r_pipe; 
-reg [element_width-1:0 ]elem2_d;	reg [element_width-1:0 ]elem2_r;  reg [element_width-1:0 ]elem2_r_pipe;
-reg [element_width-1:0 ]elem3_d;	reg [element_width-1:0 ]elem3_r;  reg [element_width-1:0 ]elem3_r_pipe;
-reg [element_width-1:0 ]elem4_d;	reg [element_width-1:0 ]elem4_r;  reg [element_width-1:0 ]elem4_r_pipe;
-reg [element_width-1:0 ]elem5_d;	reg [element_width-1:0 ]elem5_r;  reg [element_width-1:0 ]elem5_r_pipe;
-reg [element_width-1:0 ]elem6_d;	reg [element_width-1:0 ]elem6_r;  reg [element_width-1:0 ]elem6_r_pipe;
-reg [element_width-1:0 ]elem7_d;	reg [element_width-1:0 ]elem7_r;  reg [element_width-1:0 ]elem7_r_pipe;
+reg [col_nos_values_width-1:0 ]elem0_d;	reg [col_nos_values_width-1:0 ]elem0_r;  reg [col_nos_values_width-1:0 ]elem0_r_pipe; 
+reg [col_nos_values_width-1:0 ]elem1_d;	reg [col_nos_values_width-1:0 ]elem1_r;  reg [col_nos_values_width-1:0 ]elem1_r_pipe; 
+reg [col_nos_values_width-1:0 ]elem2_d;	reg [col_nos_values_width-1:0 ]elem2_r;  reg [col_nos_values_width-1:0 ]elem2_r_pipe;
+reg [col_nos_values_width-1:0 ]elem3_d;	reg [col_nos_values_width-1:0 ]elem3_r;  reg [col_nos_values_width-1:0 ]elem3_r_pipe;
+reg [col_nos_values_width-1:0 ]elem4_d;	reg [col_nos_values_width-1:0 ]elem4_r;  reg [col_nos_values_width-1:0 ]elem4_r_pipe;
+reg [col_nos_values_width-1:0 ]elem5_d;	reg [col_nos_values_width-1:0 ]elem5_r;  reg [col_nos_values_width-1:0 ]elem5_r_pipe;
+reg [col_nos_values_width-1:0 ]elem6_d;	reg [col_nos_values_width-1:0 ]elem6_r;  reg [col_nos_values_width-1:0 ]elem6_r_pipe;
+reg [col_nos_values_width-1:0 ]elem7_d;	reg [col_nos_values_width-1:0 ]elem7_r;  reg [col_nos_values_width-1:0 ]elem7_r_pipe;
 
 
 

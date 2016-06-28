@@ -3,19 +3,22 @@ module rKold_prev(clk, input_data, address,read_address ,write_enable,memory_out
 	
 	parameter element_width = 32;
 	parameter no_of_units = 8; 
-	parameter address_width=32;
+	parameter memory_height = 1000;
+	parameter address_width= $clog2(memory_height)+1;
+	
 	
 	input wire clk;
 	input wire write_enable;
 	input wire [element_width*no_of_units-1:0] input_data;
 	input wire [address_width-1:0] address; 
-	input wire [address_width-1:0] read_address;
+	input wire [address_width-1:0] read_address; 
+	
 	
 
 	output wire [element_width*no_of_units-1:0] memory_output;
 	
 	reg x=0;
-	reg [element_width*no_of_units-1:0] mem [0 : 1000];
+	reg [element_width*no_of_units-1:0] mem [0 : memory_height];
 	// pragma attribute mem ram_block 1
 	
 	assign memory_output=mem[read_address];

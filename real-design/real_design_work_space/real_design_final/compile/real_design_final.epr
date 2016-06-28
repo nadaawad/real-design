@@ -5,7 +5,6 @@
 "./src/top_module.v"	1
 "./src/div_nr_wsticky.v"	1
 "./src/adder_subtractor_with_control.v"	1
-"./src/p_emap_16.v"	1
 "./src/main_alu.v"	1
 "./src/outputieee_8_23_to_8_23.v"	1
 "./src/intmultiplier_usingdsp_24_24_48_unsigned_uid4.v"	1

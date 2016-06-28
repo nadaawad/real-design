@@ -28,7 +28,6 @@
 .\src\intadder_33_f300_uid23.v
 .\src\decoder.v
 .\src\parameters_mem.v
-.\src\p_emap_16.v
 .\src\multiples_matrix.v
 .\src\main_alu.v
 .\src\fpadd.v

@@ -92,5 +92,5 @@ UPDATEPROGRESS 99
 MESSAGE "Unit top modules: memP decoder tb adder_subtractor_with_control IntAdder_27_f180_uid7 IntAdder_34_f180_uid18."
 MESSAGE "$root top modules: memP decoder tb adder_subtractor_with_control IntAdder_27_f180_uid7 IntAdder_34_f180_uid18."
 ENDPROGRESS Compiling...
-SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time: 1[s]."
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time: 0[s]."
 MESSAGE "done"

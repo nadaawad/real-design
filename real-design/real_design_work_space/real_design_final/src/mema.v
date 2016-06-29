@@ -18,6 +18,7 @@ module memA(clk,memA_read_address,memA_output,read_preprocess,no_of_multiples,I_
 	input wire[multiples_memory_value_width*no_of_row_by_vector_modules-1:0]no_of_multiples;
 	input wire[no_of_row_by_vector_modules-1:0] I_am_ready ;
 	
+	reg[no_of_row_by_vector_modules-1:0] first_time_flag = -1;
 	  
 	reg first_time_flag_4 =1;
 	reg first_time_flag_3 =1;
@@ -32,6 +33,8 @@ module memA(clk,memA_read_address,memA_output,read_preprocess,no_of_multiples,I_
 	input[address_width-1:0] memA_read_address;  // DONT MAKE THIS element_width	
 	
 	wire[no_of_row_by_vector_modules*no_of_elements_on_col_nos*element_width-1:0] memA_extraction; // THIS MUST BE element_width
+	
+	reg[no_of_row_by_vector_modules*multiples_memory_value_width-1:0] fantastic_counters ;
 	
 	integer i=1; 
 	integer j=1;
@@ -94,7 +97,7 @@ module memA(clk,memA_read_address,memA_output,read_preprocess,no_of_multiples,I_
 					if(read_preprocess || ~first_time_flag_4)
 						begin
 							@(posedge clk);	
-							if(i<no_of_multiples[4*32-1-:32])
+							if(i<no_of_multiples[4*multiples_memory_value_width-1-:multiples_memory_value_width])
 								begin
 								//	@(I_am_ready[3]);
 									i<=i+1;
@@ -113,7 +116,7 @@ module memA(clk,memA_read_address,memA_output,read_preprocess,no_of_multiples,I_
 					if(read_preprocess || ~first_time_flag_3)
 						begin
 							@(posedge clk);	
-							if(j<no_of_multiples[3*32-1-:32])
+							if(j<no_of_multiples[3*multiples_memory_value_width-1-:multiples_memory_value_width])
 								begin
 								//	@(I_am_ready[2]);
 									j<=j+1;
@@ -132,7 +135,7 @@ module memA(clk,memA_read_address,memA_output,read_preprocess,no_of_multiples,I_
 					if(read_preprocess || ~first_time_flag_2)
 						begin
 							@(posedge clk);	
-							if(k<no_of_multiples[2*32-1-:32])
+							if(k<no_of_multiples[2*multiples_memory_value_width-1-:multiples_memory_value_width])
 								begin
 								//	@(I_am_ready[1]);
 									k<=k+1;
@@ -151,7 +154,7 @@ module memA(clk,memA_read_address,memA_output,read_preprocess,no_of_multiples,I_
 					if(read_preprocess || ~first_time_flag_1)
 						begin
 							@(posedge clk);	
-							if(q<no_of_multiples[1*32-1-:32])
+							if(q<no_of_multiples[1*multiples_memory_value_width-1-:multiples_memory_value_width])
 								begin
 								//	@(I_am_ready[0]);
 									q<=q+1;
@@ -184,21 +187,6 @@ module memA(clk,memA_read_address,memA_output,read_preprocess,no_of_multiples,I_
 				
 
 				
-		/*	always @(posedge clk)
-				begin
-				$display(" DISPLAY COUNTER %d",display_counter);
-				$display(" Read_Preprocess %b",read_preprocess);
-			
-
-				$display("%h",value_4);
-				$display("%h",value_3);
-				$display("%h",value_2);
-				$display("%h",value_1);
-	
-			   	display_counter =  display_counter+1;	  
-			
-				end		
-		*/
 			
 	
 endmodule	

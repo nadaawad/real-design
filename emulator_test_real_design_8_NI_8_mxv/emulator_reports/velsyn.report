@@ -1,0 +1,113 @@
+                           Velsyn Compile Report
+                             Version 3.16.1.3
+                         _______________________
+
+Velsyn Process ID 27556
+MED Hardware Platform:  Veloce Solo
+Configuration Name:     /net/med3/export/home2/users/mabdels/Training_Corner/Veloce_TrainingCorner/eme/real-design-emulator_test_real_design_8_NI_8_mxv/emulator_test_real_design_8_NI_8_mxv
+Root Module Name:       tb
+Date of Compile:        Wed Jun 29 13:54:52 2016
+
+Compile time to first Crystal 1.00 minutes
+Compile time to the start of Velcc/SSR netlist writes 1.05 minutes
+Compile time to the end of Velcc/SSR netlist writes 1.26 minutes
+Total Velsyn compile time 1.35 minutes
+
+LUT AND FLOP COUNTS
+Before Dead Logic Elimination
+  Number of LUTs                 298980
+  Number of flip-flops           48385
+  Combinatorial synthesis LUTs   19
+  Synthesis flip-flops           7
+  Memory Bytes                   1622280
+After Dead Logic Elimination
+  Number of LUTs                 274736
+  Number of flip-flops           42714
+  Memory Interface LUTs          0
+  Combinatorial synthesis LUTs   458
+  Synthesis flip-flops           6
+  Memory Bytes                   1622280
+
+Total Available Memory Bytes     1107296256
+
+Modeled Costs
+  Soft VW: 0 MFCs, 0 LUTs, 0 FFs
+  Soft CMEM: 11216 MFCs, 11216 LUTs, 0 FFs, 288 pins
+  pipeline: 0 MFCs, 0 LUTs, 0 FFs
+  MTD merge: 0 MFCs, 0 LUTs, 0 FFs
+
+NUMBER OF CRYSTALS IN DESIGN        6
+AVAILABLE NUMBER OF CRYSTALS        32
+
+NUMBER OF ARRAY BOARDS           2
+
+CLOCK DOMAINS
+(Memory Rows = Number of unique memory addresses)
+
+Domain                    Physical     Memory Rows      Crystals   Epochs
+                           SRAMS                                  (vcycles)
+ 0:                            0                 0          6        0 0
+
+
+ALLOWED HOPS STATISTICS:
+            hops<0     0<hops<10    10<hops<100    100<hops<1000    1000<hops
+Number of       0           0              0              0              0
+Crystals
+
+Crystals with smallest allowed hops:
+
+
+
+CLOCK SOURCE COSTS
+
+
+NET TRANSITIONS per USER CYCLE STATISTICS
+
+Transition Count Histogram for domain domain0
+ 0 : 4752
+ 1 : 330135
+ 2 : 6
+
+
+SOFT VW ELIGIBILITY STATISTICS
+
+Soft Vw statistics for domain domain0
+  Full Cycle Nets      :  331465   98%
+  0-1 Half Cycle Nets  :    2650   0%
+  1-0 Half Cycle Nets  :       1   0%
+  Both Half Cycle Nets :       6   0%
+  Pipelined Nets       :     771   0%
+  Pipelined Nets Both  :       0   0%
+  Cross-Dom Nets       :       0   0%
+  Cross-Dom Nets Both  :       0   0%
+  MTD Nets             :       0   0%
+  MTD Nets Both        :       0   0%
+
+
+
+
+
+DOMAIN ADJACENCY MATRIX
+(connections from domain[row] to domain[column])
+
+Domain 1: domain0
+
+
+               1
+       1       0
+
+
+
+
+
+
+COMPILE OPTIONS
+
+ -enc ./veloce.med/hdl_files/enc_crypt.ev -Dump c1 c1.dump -Dump c0 c0.dump 
+-Dump e0 e0.dump -Dump e50 long_paths.dump -Mm 10.0 -SWOM -SFF -disableSoftV
+w -SrND -NFBidi -RegTieUndrivenNets -Tfi veloce.med//rtlc.out/MOD_ANNOTATION
+/veloce.tfi -KeepAlive veloce.med//rtlc.out/MOD_ANNOTATION/veloce.kal -RTL -
+OPKC +define+MCT -TBX -Mem ./veloce.med/rtlc.out/vmw.mem -Com ./veloce.med/i
+lwork/vmw.com -TBX -KeepAlive veloce.med/rtlc.out/rtlcKeepAlive.txt -KeepAli
+ve veloce.med/tbxInternalKeepAlive.txt -TBXnpw -TBXnpe -base_dir ./veloce.me
+d

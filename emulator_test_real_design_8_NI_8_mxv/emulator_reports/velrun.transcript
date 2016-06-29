@@ -1,0 +1,30 @@
+# **************************************************
+#         VeloceGUI Version : Veloce 3.16.1_v2         
+#  
+#         Software Version  : 3.16.1.3      
+# **************************************************
+# Loading design veloce
+# Info!     [TCLC-5501]: : No session exist to attach. Potentially key option is
+#                        missing.
+# Info!     [TCLC-5501]: : New Session Launched.
+# Info!     [TCLC-5501]: : Single User Mode. Other users will not be able to
+#                        attach to this session.
+# Info!       [CS-5156]: : Collecting memory contents from 'rtlc generated mem cont file'.
+# Info!       [CS-5156]: : Collecting memory contents from 'rtlc generated mem cont file'.
+# Design loaded successfully.
+# Info! : : Sourcing veloce.med/compileopts.ini
+# Info! : : Sourcing velrunopts.ini
+# Info!     [RTS-20008]: : Connecting to emulator 'egytrior' (Comodel Host :
+#                        egc-med-nemo) ...
+# Warning   [RTS-20096]: : Non-fatal message during creation of global MGLS
+#                        (licensing) object : Environment variable
+#                        MGLS_PKGINFO_FILE is set, if it points an old file, new
+#                        license features may not work.
+# Info!     [RTS-20007]: : SessionId for this session is
+# Error     [RTS-20031]: : MONO USER MODE: The emulator is busy.
+#                      - : UserName 'ngamal' (ID = 24), is connected since last
+#                        418 seconds from host 'nemo'
+# Error     [TCLC-5550]: : Could not connect to the emulator. MONO USER MODE: The
+#                        emulator is busy.
+# Info!     [TCLC-5663]: : Shutting down the user runtime session.
+# Info!     [TCLC-5501]: : Project closed successfully

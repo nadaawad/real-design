@@ -78,38 +78,6 @@ always @(posedge clk)
 
 	end
 
-always @(negedge clk)
-	begin
-		if(outsider1)
-			begin
-							
-				if  (
-				(((first_row_input & anding_mask)^(second_row_input & anding_mask))== anding_mask) 
-									||
-				(((first_row_input & anding_mask)^(second_row_input & anding_mask))== 0)
-					) 
-					begin
-						I_am_ready <=1;
-					end
-				else
-					begin
-			//			@(negedge clk);
-			//			@(negedge clk);
-						I_am_ready <=1;
-					end
-					
-
-			end
-
-		else 
-			begin
-				I_am_ready <=0;
-			end
-
-	end
-
-				  
-
 always @ (posedge clk)
 	begin
 

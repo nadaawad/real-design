@@ -1,0 +1,32 @@
+
+
+**********************************************************
+
+Date:	Wed Jun 29 14:40:51 2016
+Dtask Host:	egc-med-nemo
+Command: /tools/med_tools/software/Veloce_v3.16.1.3/bin/i386.linux/velcomp -top work.tb 
+
+
+**********************************************************
+
+10 Longest Task Times: 
+
+#1# compile_rtlc_0 egc-med-nemo 4 mins. cst: 1 Idx: 2
+#2# compile_transactor_compile_final_0 egc-med-nemo 1 min. cst: 1 Idx: 4
+#3# compile_visualizer_0 egc-med-nemo 0 mins. cst: 1 Idx: 6
+#4# compile_rtlc_design_check_0 egc-med-nemo 0 mins. cst: 1 Idx: 1
+#5# compile_transactor_analysis_final_0 egc-med-nemo 0 mins. cst: 1 Idx: 3
+#6# compile_reconCodegen0_0 egc-med-nemo 0 mins. cst: 0 Idx: 8
+#7# compile_hvl_0 egc-med-nemo 0 mins. cst: 1 Idx: 5
+*****************************************
+Machine Statistics:  C(complete)  F(fail) 
+-----------------------------
+farm	 Task: C/F
+-----------------------------
+egc-med-nemo	7/1
+
+*****************************************
+
+Overall Running Time: 5 minutes.
+
+Dtask Exit at: Wed Jun 29 14:46:20 2016

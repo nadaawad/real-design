@@ -190,7 +190,7 @@ out0[(no_of_units-elem0_r_pipe)*element_width-1-:element_width]};
 
 						if(i<no_of_multiples)
 							begin
-								@(I_am_ready);
+						//		@(I_am_ready);
 								i<=i+1;
 								first_time_flag<=0;
 							end	 

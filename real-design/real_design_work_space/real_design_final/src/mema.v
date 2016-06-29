@@ -94,7 +94,7 @@ module memA(clk,memA_read_address,memA_output,read_preprocess,no_of_multiples,I_
 							@(posedge clk);	
 							if(i<no_of_multiples[4*32-1-:32])
 								begin
-									@(I_am_ready[3]);
+								//	@(I_am_ready[3]);
 									i<=i+1;
 									first_time_flag_4<=0;
 								end
@@ -113,7 +113,7 @@ module memA(clk,memA_read_address,memA_output,read_preprocess,no_of_multiples,I_
 							@(posedge clk);	
 							if(j<no_of_multiples[3*32-1-:32])
 								begin
-									@(I_am_ready[2]);
+								//	@(I_am_ready[2]);
 									j<=j+1;
 									first_time_flag_3<=0;
 								end
@@ -132,7 +132,7 @@ module memA(clk,memA_read_address,memA_output,read_preprocess,no_of_multiples,I_
 							@(posedge clk);	
 							if(k<no_of_multiples[2*32-1-:32])
 								begin
-									@(I_am_ready[1]);
+								//	@(I_am_ready[1]);
 									k<=k+1;
 									first_time_flag_2<=0;
 								end
@@ -151,7 +151,7 @@ module memA(clk,memA_read_address,memA_output,read_preprocess,no_of_multiples,I_
 							@(posedge clk);	
 							if(q<no_of_multiples[1*32-1-:32])
 								begin
-									@(I_am_ready[0]);
+								//	@(I_am_ready[0]);
 									q<=q+1;
 									first_time_flag_1<=0;
 								end

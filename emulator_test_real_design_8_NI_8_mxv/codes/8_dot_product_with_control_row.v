@@ -94,34 +94,7 @@ initialization_counter <= 1;
 end
 
 
-always @(negedge clk)
-	begin
-		if(outsider1)
-			begin			
-				if  (
-				(((first_row_input & anding_mask)^(second_row_input & anding_mask))== anding_mask) 
-									||
-				(((first_row_input & anding_mask)^(second_row_input & anding_mask))== 0)
-				    ) 
-				begin 
-					pos_neg_indicator<=0; 
-					I_am_ready <=1;
-				end
-				
-				else
-					begin
-						pos_neg_indicator<=1;
-					//	@(negedge clk);
-					//	@(negedge clk);
-						I_am_ready <=1;
-					end
-			end
-		else 
-			begin
-				I_am_ready <=0;
-			end
 
-	end
 
 				  
 

@@ -47,7 +47,7 @@ module top_module(clk,reset,finish,reset_vXv1,reset_mXv1,halt);
 	wire [element_width * no_of_units - 1 : 0] memoryP_v2_output;
 	wire [no_of_units * element_width - 1 : 0] memoryR_output; 
 	
-	wire[no_of_row_by_vector_modules*no_of_units*element_width-1:0] memA_output;
+	wire[no_of_row_by_vector_modules*no_of_elements_in_p_emap_output*element_width-1:0] memA_output;
 	wire[no_of_row_by_vector_modules*no_of_elements_on_col_nos*col_nos_values_width-1:0] col_nos_output;
 	wire [multiples_memory_value_width*no_of_row_by_vector_modules-1:0] multiples_output ;	
 	wire [no_of_row_by_vector_modules*no_of_elements_in_p_emap_output*element_width-1:0] Emap_mem_output_row ;
@@ -99,7 +99,7 @@ wire vXv1_finish;
    
    
    
-   main_alu  #(.element_width (element_width),.memory_height(memory_height),.multiples_memory_value_width(multiples_memory_value_width),.address_width(address_width))
+   main_alu  #(.element_width (element_width),.memory_height(memory_height),.multiples_memory_value_width(multiples_memory_value_width),.address_width(address_width),.no_of_row_by_vector_modules(no_of_row_by_vector_modules))
 	alu(total,clk,reset,reset_vXv1,reset_mXv1,memA_output,Emap_mem_output_row,multiples_output,col_nos_output,total_with_additional_A,you_can_read,memories_pre_preprocess,memoryP_v2_output,memoryR_output,memoryR_read_address,memoryX_output,memoryP_input,memoryR_input,memoryX_input,finish,outsider_read_now,result_mem_we_4,memoryRprev_we,result_mem_we_5,result_mem_counter_5,read_again,start,read_again_2,result_mem_we_6,vXv1_finish,finish_all, I_am_ready);
 	
 	
@@ -134,7 +134,8 @@ wire vXv1_finish;
 	matR(clk,memoryR_input, memoryR_write_enable,memoryR_read_address,memoryR_write_address, memoryR_output,finishR);
 	
 	memA #(.no_of_elements_on_col_nos(no_of_elements_on_col_nos),.no_of_row_by_vector_modules(no_of_row_by_vector_modules),
-	.element_width (element_width ),.memory_A_height(memory_A_height),.address_width(A_address_width),.multiples_memory_value_width(multiples_memory_value_width))
+	.element_width (element_width ),.memory_A_height(memory_A_height),.address_width(A_address_width),.multiples_memory_value_width(multiples_memory_value_width),
+	.no_of_elements_in_output(no_of_elements_in_p_emap_output))
 	matA(clk,memoryA_read_address,memA_output,memories_preprocess,multiples_output, I_am_ready);	 
 	
 	

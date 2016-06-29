@@ -12,6 +12,8 @@ module memA(clk,memA_read_address,memA_output,read_preprocess,no_of_multiples,I_
 	
 	parameter multiples_memory_value_width =32;
 	
+	parameter no_of_elements_in_output = 8 ;
+	
 	input wire read_preprocess;
 	input wire[multiples_memory_value_width*no_of_row_by_vector_modules-1:0]no_of_multiples;
 	input wire[no_of_row_by_vector_modules-1:0] I_am_ready ;
@@ -22,7 +24,7 @@ module memA(clk,memA_read_address,memA_output,read_preprocess,no_of_multiples,I_
 	reg first_time_flag_2 =1;
 	reg first_time_flag_1 =1;
 		
-	output wire[no_of_row_by_vector_modules*element_width*no_of_units-1:0] memA_output;
+	output wire[no_of_row_by_vector_modules*element_width*no_of_elements_in_output-1:0] memA_output;
 	
 	input clk; 
 	

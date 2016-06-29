@@ -153,3 +153,925 @@ run
 endsim
 # KERNEL: stopped at time: 1819410 ns
 #  Simulation has been stopped
+alog -O2 -sve  -work real_design_final $dsn/src/normlize.v $dsn/src/fp_div.v $dsn/src/row_by_vector_with_control.v $dsn/src/matrix_by_vector_v3_with_control.v $dsn/src/delay.v $dsn/src/vxc_add_8_delay.v $dsn/src/8_organizer_with_control_row.v $dsn/src/2x1_mux.v $dsn/src/special.v $dsn/src/p_emap_8.v $dsn/src/multiply.v $dsn/src/rkold_prev.v $dsn/src/8x8_adder_with_start.v $dsn/src/vectorxvector_mxv_with_control.v $dsn/src/mantadd.v $dsn/src/inputieee_8_23_to_8_23.v $dsn/src/division.v $dsn/src/alu.v $dsn/src/adder_subtractor_with_start.v $dsn/src/8_dot_product_with_control_row.v $dsn/src/memp.v $dsn/src/decoder.v $dsn/src/parameters_mem.v $dsn/src/multiples_matrix.v $dsn/src/main_alu.v $dsn/src/fpadd.v $dsn/src/adder_subtractor_with_control_with_start.v $dsn/src/memr.v $dsn/src/mema.v $dsn/src/intmultiplier_usingdsp_24_24_48_unsigned_uid4.v $dsn/src/col_nos.v $dsn/src/multiples_fifo.v $dsn/src/vxc_add_8.v $dsn/src/tb.v $dsn/src/ap_total_mem.v $dsn/src/n_to_2n_demux.v $dsn/src/fpmultiplier_8_23_8_23_8_23_uid2.v $dsn/src/decoder_with_control.v $dsn/src/adder_subtractor_with_control.v $dsn/src/vxc_mul3_sub.v $dsn/src/vectorxvector_with_control.v $dsn/src/vxc_mul3_add.v $dsn/src/top_module.v $dsn/src/memx.v $dsn/src/memp_v2.v $dsn/src/control_unit.v $dsn/src/constants.v $dsn/src/8_dot_product_with_control.v $dsn/src/rounder.v $dsn/src/outputieee_8_23_to_8_23.v $dsn/src/fpalign.v $dsn/src/div_nr_wsticky.v $dsn/src/adder_subtractor.v $dsn/src/a_s.v $dsn/src/intadder_27_f180_uid7.v $dsn/src/intadder_33_f300_uid23.v $dsn/src/intadder_34_f180_uid18.v $dsn/src/intadder_42_f300_uid15.v $dsn/src/final1.v
+# Warning: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
+# Compile...
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Info: VCP2876 row_by_vector_with_control.v : (45, 1): Implicit net declaration, symbol dot_product_finish has not been declared in module row_by_vector_with_control.
+# Info: VCP2876 row_by_vector_with_control.v : (45, 1): Implicit net declaration, symbol prepare_my_new_input has not been declared in module row_by_vector_with_control.
+# Info: VCP2876 8_organizer_with_control_row.v : (38, 1): Implicit net declaration, symbol ExE_finish_dash has not been declared in module Eight_Organizer_with_control_row.
+# Info: VCP2876 vectorxvector_mxv_with_control.v : (35, 1): Implicit net declaration, symbol I_am_ready has not been declared in module vectorXvector_mXv_with_control.
+# Info: VCP2876 alu.v : (134, 1): Implicit net declaration, symbol mXv1_finish has not been declared in module Alu.
+# Info: VCP2876 top_module.v : (103, 1): Implicit net declaration, symbol outsider_read_now has not been declared in module top_module.
+# Info: VCP2876 top_module.v : (110, 1): Implicit net declaration, symbol memoryP_write_enable has not been declared in module top_module.
+# Info: VCP2876 top_module.v : (110, 1): Implicit net declaration, symbol memoryR_write_enable has not been declared in module top_module.
+# Info: VCP2876 top_module.v : (110, 1): Implicit net declaration, symbol memoryX_write_enable has not been declared in module top_module.
+# Info: VCP2876 top_module.v : (130, 1): Implicit net declaration, symbol finishP_v2 has not been declared in module top_module.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: memP decoder tb adder_subtractor_with_control IntAdder_27_f180_uid7 IntAdder_34_f180_uid18.
+# $root top modules: memP decoder tb adder_subtractor_with_control IntAdder_27_f180_uid7 IntAdder_34_f180_uid18.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+alog -O2 -sve  -work real_design_final $dsn/src/normlize.v $dsn/src/fp_div.v $dsn/src/row_by_vector_with_control.v $dsn/src/matrix_by_vector_v3_with_control.v $dsn/src/delay.v $dsn/src/vxc_add_8_delay.v $dsn/src/8_organizer_with_control_row.v $dsn/src/2x1_mux.v $dsn/src/special.v $dsn/src/p_emap_8.v $dsn/src/multiply.v $dsn/src/rkold_prev.v $dsn/src/8x8_adder_with_start.v $dsn/src/vectorxvector_mxv_with_control.v $dsn/src/mantadd.v $dsn/src/inputieee_8_23_to_8_23.v $dsn/src/division.v $dsn/src/alu.v $dsn/src/adder_subtractor_with_start.v $dsn/src/8_dot_product_with_control_row.v $dsn/src/memp.v $dsn/src/decoder.v $dsn/src/parameters_mem.v $dsn/src/multiples_matrix.v $dsn/src/main_alu.v $dsn/src/fpadd.v $dsn/src/adder_subtractor_with_control_with_start.v $dsn/src/memr.v $dsn/src/mema.v $dsn/src/intmultiplier_usingdsp_24_24_48_unsigned_uid4.v $dsn/src/col_nos.v $dsn/src/multiples_fifo.v $dsn/src/vxc_add_8.v $dsn/src/tb.v $dsn/src/ap_total_mem.v $dsn/src/n_to_2n_demux.v $dsn/src/fpmultiplier_8_23_8_23_8_23_uid2.v $dsn/src/decoder_with_control.v $dsn/src/adder_subtractor_with_control.v $dsn/src/vxc_mul3_sub.v $dsn/src/vectorxvector_with_control.v $dsn/src/vxc_mul3_add.v $dsn/src/top_module.v $dsn/src/memx.v $dsn/src/memp_v2.v $dsn/src/control_unit.v $dsn/src/constants.v $dsn/src/8_dot_product_with_control.v $dsn/src/rounder.v $dsn/src/outputieee_8_23_to_8_23.v $dsn/src/fpalign.v $dsn/src/div_nr_wsticky.v $dsn/src/adder_subtractor.v $dsn/src/a_s.v $dsn/src/intadder_27_f180_uid7.v $dsn/src/intadder_33_f300_uid23.v $dsn/src/intadder_34_f180_uid18.v $dsn/src/intadder_42_f300_uid15.v $dsn/src/final1.v
+# Warning: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
+# Compile...
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Info: VCP2876 row_by_vector_with_control.v : (45, 1): Implicit net declaration, symbol dot_product_finish has not been declared in module row_by_vector_with_control.
+# Info: VCP2876 row_by_vector_with_control.v : (45, 1): Implicit net declaration, symbol prepare_my_new_input has not been declared in module row_by_vector_with_control.
+# Info: VCP2876 8_organizer_with_control_row.v : (38, 1): Implicit net declaration, symbol ExE_finish_dash has not been declared in module Eight_Organizer_with_control_row.
+# Info: VCP2876 vectorxvector_mxv_with_control.v : (35, 1): Implicit net declaration, symbol I_am_ready has not been declared in module vectorXvector_mXv_with_control.
+# Info: VCP2876 alu.v : (134, 1): Implicit net declaration, symbol mXv1_finish has not been declared in module Alu.
+# Info: VCP2876 top_module.v : (103, 1): Implicit net declaration, symbol outsider_read_now has not been declared in module top_module.
+# Info: VCP2876 top_module.v : (110, 1): Implicit net declaration, symbol memoryP_write_enable has not been declared in module top_module.
+# Info: VCP2876 top_module.v : (110, 1): Implicit net declaration, symbol memoryR_write_enable has not been declared in module top_module.
+# Info: VCP2876 top_module.v : (110, 1): Implicit net declaration, symbol memoryX_write_enable has not been declared in module top_module.
+# Info: VCP2876 top_module.v : (130, 1): Implicit net declaration, symbol finishP_v2 has not been declared in module top_module.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: memP decoder tb adder_subtractor_with_control IntAdder_27_f180_uid7 IntAdder_34_f180_uid18.
+# $root top modules: memP decoder tb adder_subtractor_with_control IntAdder_27_f180_uid7 IntAdder_34_f180_uid18.
+# Compile success 0 Errors 0 Warnings  Analysis time: 1[s].
+# done
+alog -O2 -sve  -work real_design_final $dsn/src/normlize.v $dsn/src/fp_div.v $dsn/src/row_by_vector_with_control.v $dsn/src/matrix_by_vector_v3_with_control.v $dsn/src/delay.v $dsn/src/vxc_add_8_delay.v $dsn/src/8_organizer_with_control_row.v $dsn/src/2x1_mux.v $dsn/src/special.v $dsn/src/p_emap_8.v $dsn/src/multiply.v $dsn/src/rkold_prev.v $dsn/src/8x8_adder_with_start.v $dsn/src/vectorxvector_mxv_with_control.v $dsn/src/mantadd.v $dsn/src/inputieee_8_23_to_8_23.v $dsn/src/division.v $dsn/src/alu.v $dsn/src/adder_subtractor_with_start.v $dsn/src/8_dot_product_with_control_row.v $dsn/src/memp.v $dsn/src/decoder.v $dsn/src/parameters_mem.v $dsn/src/multiples_matrix.v $dsn/src/main_alu.v $dsn/src/fpadd.v $dsn/src/adder_subtractor_with_control_with_start.v $dsn/src/memr.v $dsn/src/mema.v $dsn/src/intmultiplier_usingdsp_24_24_48_unsigned_uid4.v $dsn/src/col_nos.v $dsn/src/multiples_fifo.v $dsn/src/vxc_add_8.v $dsn/src/tb.v $dsn/src/ap_total_mem.v $dsn/src/n_to_2n_demux.v $dsn/src/fpmultiplier_8_23_8_23_8_23_uid2.v $dsn/src/decoder_with_control.v $dsn/src/adder_subtractor_with_control.v $dsn/src/vxc_mul3_sub.v $dsn/src/vectorxvector_with_control.v $dsn/src/vxc_mul3_add.v $dsn/src/top_module.v $dsn/src/memx.v $dsn/src/memp_v2.v $dsn/src/control_unit.v $dsn/src/constants.v $dsn/src/8_dot_product_with_control.v $dsn/src/rounder.v $dsn/src/outputieee_8_23_to_8_23.v $dsn/src/fpalign.v $dsn/src/div_nr_wsticky.v $dsn/src/adder_subtractor.v $dsn/src/a_s.v $dsn/src/intadder_27_f180_uid7.v $dsn/src/intadder_33_f300_uid23.v $dsn/src/intadder_34_f180_uid18.v $dsn/src/intadder_42_f300_uid15.v $dsn/src/final1.v
+# Warning: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
+# Compile...
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Error: VCP2000 mema.v : (24, 29): Syntax error. Unexpected token: ].
+# Error: VCP2505 mema.v : (24, 33): Duplicate identifier: first_time_flag
+# Error: VCP2000 mema.v : (25, 29): Syntax error. Unexpected token: ].
+# Error: VCP2505 mema.v : (25, 33): Duplicate identifier: first_time_flag
+# Error: VCP2000 mema.v : (26, 29): Syntax error. Unexpected token: ].
+# Error: VCP2505 mema.v : (26, 33): Duplicate identifier: first_time_flag
+# Error: VCP2000 mema.v : (41, 66): Syntax error. Unexpected token: -:[O_MINUS_IDX]. Expected tokens: ':' , ']'.
+# Error: VCP2000 mema.v : (42, 66): Syntax error. Unexpected token: -:[O_MINUS_IDX]. Expected tokens: ':' , ']'.
+# Error: VCP2000 mema.v : (43, 66): Syntax error. Unexpected token: -:[O_MINUS_IDX]. Expected tokens: ':' , ']'.
+# Error: VCP2000 mema.v : (44, 66): Syntax error. Unexpected token: -:[O_MINUS_IDX]. Expected tokens: ':' , ']'.
+# Error: VCP2000 mema.v : (46, 71): Syntax error. Unexpected token: -:[O_MINUS_IDX]. Expected tokens: ':' , ']'.
+# Error: VCP2000 mema.v : (47, 71): Syntax error. Unexpected token: -:[O_MINUS_IDX]. Expected tokens: ':' , ']'.
+# Error: VCP2000 mema.v : (48, 71): Syntax error. Unexpected token: -:[O_MINUS_IDX]. Expected tokens: ':' , ']'.
+# Error: VCP2000 mema.v : (49, 71): Syntax error. Unexpected token: -:[O_MINUS_IDX]. Expected tokens: ':' , ']'.
+# Error: VCP2000 mema.v : (51, 76): Syntax error. Unexpected token: -:[O_MINUS_IDX]. Expected tokens: ':' , ']'.
+# Error: VCP2000 mema.v : (52, 76): Syntax error. Unexpected token: -:[O_MINUS_IDX]. Expected tokens: ':' , ']'.
+# Error: VCP2000 mema.v : (53, 76): Syntax error. Unexpected token: -:[O_MINUS_IDX]. Expected tokens: ':' , ']'.
+# Error: VCP2000 mema.v : (54, 76): Syntax error. Unexpected token: -:[O_MINUS_IDX]. Expected tokens: ':' , ']'.
+# Compile failure 18 Errors 0 Warnings  Analysis time: 0[s].
+alog -O2 -sve  -work real_design_final $dsn/src/normlize.v $dsn/src/fp_div.v $dsn/src/row_by_vector_with_control.v $dsn/src/matrix_by_vector_v3_with_control.v $dsn/src/delay.v $dsn/src/vxc_add_8_delay.v $dsn/src/8_organizer_with_control_row.v $dsn/src/2x1_mux.v $dsn/src/special.v $dsn/src/p_emap_8.v $dsn/src/multiply.v $dsn/src/rkold_prev.v $dsn/src/8x8_adder_with_start.v $dsn/src/vectorxvector_mxv_with_control.v $dsn/src/mantadd.v $dsn/src/inputieee_8_23_to_8_23.v $dsn/src/division.v $dsn/src/alu.v $dsn/src/adder_subtractor_with_start.v $dsn/src/8_dot_product_with_control_row.v $dsn/src/memp.v $dsn/src/decoder.v $dsn/src/parameters_mem.v $dsn/src/multiples_matrix.v $dsn/src/main_alu.v $dsn/src/fpadd.v $dsn/src/adder_subtractor_with_control_with_start.v $dsn/src/memr.v $dsn/src/mema.v $dsn/src/intmultiplier_usingdsp_24_24_48_unsigned_uid4.v $dsn/src/col_nos.v $dsn/src/multiples_fifo.v $dsn/src/vxc_add_8.v $dsn/src/tb.v $dsn/src/ap_total_mem.v $dsn/src/n_to_2n_demux.v $dsn/src/fpmultiplier_8_23_8_23_8_23_uid2.v $dsn/src/decoder_with_control.v $dsn/src/adder_subtractor_with_control.v $dsn/src/vxc_mul3_sub.v $dsn/src/vectorxvector_with_control.v $dsn/src/vxc_mul3_add.v $dsn/src/top_module.v $dsn/src/memx.v $dsn/src/memp_v2.v $dsn/src/control_unit.v $dsn/src/constants.v $dsn/src/8_dot_product_with_control.v $dsn/src/rounder.v $dsn/src/outputieee_8_23_to_8_23.v $dsn/src/fpalign.v $dsn/src/div_nr_wsticky.v $dsn/src/adder_subtractor.v $dsn/src/a_s.v $dsn/src/intadder_27_f180_uid7.v $dsn/src/intadder_33_f300_uid23.v $dsn/src/intadder_34_f180_uid18.v $dsn/src/intadder_42_f300_uid15.v $dsn/src/final1.v
+# Warning: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
+# Compile...
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Error: VCP2000 mema.v : (38, 66): Syntax error. Unexpected token: -:[O_MINUS_IDX]. Expected tokens: ':' , ']'.
+# Error: VCP2000 mema.v : (39, 66): Syntax error. Unexpected token: -:[O_MINUS_IDX]. Expected tokens: ':' , ']'.
+# Error: VCP2000 mema.v : (40, 66): Syntax error. Unexpected token: -:[O_MINUS_IDX]. Expected tokens: ':' , ']'.
+# Error: VCP2000 mema.v : (41, 66): Syntax error. Unexpected token: -:[O_MINUS_IDX]. Expected tokens: ':' , ']'.
+# Error: VCP2000 mema.v : (43, 71): Syntax error. Unexpected token: -:[O_MINUS_IDX]. Expected tokens: ':' , ']'.
+# Error: VCP2000 mema.v : (44, 71): Syntax error. Unexpected token: -:[O_MINUS_IDX]. Expected tokens: ':' , ']'.
+# Error: VCP2000 mema.v : (45, 71): Syntax error. Unexpected token: -:[O_MINUS_IDX]. Expected tokens: ':' , ']'.
+# Error: VCP2000 mema.v : (46, 71): Syntax error. Unexpected token: -:[O_MINUS_IDX]. Expected tokens: ':' , ']'.
+# Error: VCP2000 mema.v : (48, 76): Syntax error. Unexpected token: -:[O_MINUS_IDX]. Expected tokens: ':' , ']'.
+# Error: VCP2000 mema.v : (49, 76): Syntax error. Unexpected token: -:[O_MINUS_IDX]. Expected tokens: ':' , ']'.
+# Error: VCP2000 mema.v : (50, 76): Syntax error. Unexpected token: -:[O_MINUS_IDX]. Expected tokens: ':' , ']'.
+# Error: VCP2000 mema.v : (51, 76): Syntax error. Unexpected token: -:[O_MINUS_IDX]. Expected tokens: ':' , ']'.
+# Compile failure 12 Errors 0 Warnings  Analysis time: 0[s].
+alog -O2 -sve  -work real_design_final $dsn/src/normlize.v $dsn/src/fp_div.v $dsn/src/row_by_vector_with_control.v $dsn/src/matrix_by_vector_v3_with_control.v $dsn/src/delay.v $dsn/src/vxc_add_8_delay.v $dsn/src/8_organizer_with_control_row.v $dsn/src/2x1_mux.v $dsn/src/special.v $dsn/src/p_emap_8.v $dsn/src/multiply.v $dsn/src/rkold_prev.v $dsn/src/8x8_adder_with_start.v $dsn/src/vectorxvector_mxv_with_control.v $dsn/src/mantadd.v $dsn/src/inputieee_8_23_to_8_23.v $dsn/src/division.v $dsn/src/alu.v $dsn/src/adder_subtractor_with_start.v $dsn/src/8_dot_product_with_control_row.v $dsn/src/memp.v $dsn/src/decoder.v $dsn/src/parameters_mem.v $dsn/src/multiples_matrix.v $dsn/src/main_alu.v $dsn/src/fpadd.v $dsn/src/adder_subtractor_with_control_with_start.v $dsn/src/memr.v $dsn/src/mema.v $dsn/src/intmultiplier_usingdsp_24_24_48_unsigned_uid4.v $dsn/src/col_nos.v $dsn/src/multiples_fifo.v $dsn/src/vxc_add_8.v $dsn/src/tb.v $dsn/src/ap_total_mem.v $dsn/src/n_to_2n_demux.v $dsn/src/fpmultiplier_8_23_8_23_8_23_uid2.v $dsn/src/decoder_with_control.v $dsn/src/adder_subtractor_with_control.v $dsn/src/vxc_mul3_sub.v $dsn/src/vectorxvector_with_control.v $dsn/src/vxc_mul3_add.v $dsn/src/top_module.v $dsn/src/memx.v $dsn/src/memp_v2.v $dsn/src/control_unit.v $dsn/src/constants.v $dsn/src/8_dot_product_with_control.v $dsn/src/rounder.v $dsn/src/outputieee_8_23_to_8_23.v $dsn/src/fpalign.v $dsn/src/div_nr_wsticky.v $dsn/src/adder_subtractor.v $dsn/src/a_s.v $dsn/src/intadder_27_f180_uid7.v $dsn/src/intadder_33_f300_uid23.v $dsn/src/intadder_34_f180_uid18.v $dsn/src/intadder_42_f300_uid15.v $dsn/src/final1.v
+# Warning: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
+# Compile...
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Info: VCP2876 row_by_vector_with_control.v : (45, 1): Implicit net declaration, symbol dot_product_finish has not been declared in module row_by_vector_with_control.
+# Info: VCP2876 row_by_vector_with_control.v : (45, 1): Implicit net declaration, symbol prepare_my_new_input has not been declared in module row_by_vector_with_control.
+# Info: VCP2876 8_organizer_with_control_row.v : (38, 1): Implicit net declaration, symbol ExE_finish_dash has not been declared in module Eight_Organizer_with_control_row.
+# Info: VCP2876 vectorxvector_mxv_with_control.v : (35, 1): Implicit net declaration, symbol I_am_ready has not been declared in module vectorXvector_mXv_with_control.
+# Info: VCP2876 alu.v : (134, 1): Implicit net declaration, symbol mXv1_finish has not been declared in module Alu.
+# Info: VCP2876 top_module.v : (103, 1): Implicit net declaration, symbol outsider_read_now has not been declared in module top_module.
+# Info: VCP2876 top_module.v : (110, 1): Implicit net declaration, symbol memoryP_write_enable has not been declared in module top_module.
+# Info: VCP2876 top_module.v : (110, 1): Implicit net declaration, symbol memoryR_write_enable has not been declared in module top_module.
+# Info: VCP2876 top_module.v : (110, 1): Implicit net declaration, symbol memoryX_write_enable has not been declared in module top_module.
+# Info: VCP2876 top_module.v : (130, 1): Implicit net declaration, symbol finishP_v2 has not been declared in module top_module.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: memP decoder tb adder_subtractor_with_control IntAdder_27_f180_uid7 IntAdder_34_f180_uid18.
+# $root top modules: memP decoder tb adder_subtractor_with_control IntAdder_27_f180_uid7 IntAdder_34_f180_uid18.
+# Compile success 0 Errors 0 Warnings  Analysis time: 1[s].
+# done
+asim -O5 +access +w_nets +accb +accr +access +r +access +r+w tb
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: Module 'normlize' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: Module 'FP_div' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# KERNEL: PLI/VHPI kernel's engine initialization done.
+# PLI: Loading library 'C:\Aldec\Active-HDL 9.1\bin\systf.dll'
+# ELAB2: Create instances ...
+# ELAB2: Warning: ELAB2_0051 8_organizer_with_control_row.v (39): Length of connection (32) does not match the length of port "ce" (1) on instance "/tb/uut/alu/alu/vXv1/vXv/E_O/final_adder"
+# ELAB2: Warning: ELAB2_0051 8_organizer_with_control_row.v (39): Length of connection (32) does not match the length of port "ce" (1) on instance "/tb/uut/alu/alu/mXv1_dash/instantiate_ROW_BY_VECTOR[0]/R/edomwcr/E_O/final_adder"
+# ELAB2: Warning: ELAB2_0051 8_organizer_with_control_row.v (39): Length of connection (32) does not match the length of port "ce" (1) on instance "/tb/uut/alu/alu/mXv1_dash/instantiate_ROW_BY_VECTOR[1]/R/edomwcr/E_O/final_adder"
+# ELAB2: Warning: ELAB2_0051 8_organizer_with_control_row.v (39): Length of connection (32) does not match the length of port "ce" (1) on instance "/tb/uut/alu/alu/mXv1_dash/instantiate_ROW_BY_VECTOR[2]/R/edomwcr/E_O/final_adder"
+# ELAB2: Warning: ELAB2_0051 8_organizer_with_control_row.v (39): Length of connection (32) does not match the length of port "ce" (1) on instance "/tb/uut/alu/alu/mXv1_dash/instantiate_ROW_BY_VECTOR[3]/R/edomwcr/E_O/final_adder"
+# ELAB2: Warning: ELAB2_0051 8_organizer_with_control_row.v (39): Length of connection (32) does not match the length of port "ce" (1) on instance "/tb/uut/alu/alu/vXv2/vXv/E_O/final_adder"
+# ELAB2: Warning: ELAB2_0051 8_organizer_with_control_row.v (39): Length of connection (32) does not match the length of port "ce" (1) on instance "/tb/uut/alu/alu/vXv3/vXv/E_O/final_adder"
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Warning: 8_organizer_with_control_row.v (39): Length of connection (32) does not match the length of port 'op' (1) on instance '/tb/uut/alu/alu/vXv1/vXv/E_O/final_adder'.
+# SLP: Warning: 8_dot_product_with_control.v (67): Length of connection (32) does not match the length of port 'ce' (1) on instance '/tb/uut/alu/alu/vXv1/vXv/instantiate_Multiplier[0]/m'.
+# SLP: Warning: 8_dot_product_with_control.v (67): Length of connection (32) does not match the length of port 'ce' (1) on instance '/tb/uut/alu/alu/vXv1/vXv/instantiate_Multiplier[1]/m'.
+# SLP: Warning: 8_dot_product_with_control.v (67): Length of connection (32) does not match the length of port 'ce' (1) on instance '/tb/uut/alu/alu/vXv1/vXv/instantiate_Multiplier[2]/m'.
+# SLP: Warning: 8_dot_product_with_control.v (67): Length of connection (32) does not match the length of port 'ce' (1) on instance '/tb/uut/alu/alu/vXv1/vXv/instantiate_Multiplier[3]/m'.
+# SLP: Warning: 8_dot_product_with_control_row.v (81): Length of connection (32) does not match the length of port 'ce' (1) on instance '/tb/uut/alu/alu/mXv1_dash/instantiate_ROW_BY_VECTOR[0]/R/edomwcr/instantiate_Multiplier[0]/m'.
+# SLP: Warning: 8_dot_product_with_control_row.v (81): Length of connection (32) does not match the length of port 'ce' (1) on instance '/tb/uut/alu/alu/mXv1_dash/instantiate_ROW_BY_VECTOR[0]/R/edomwcr/instantiate_Multiplier[1]/m'.
+# SLP: Warning: 8_dot_product_with_control_row.v (81): Length of connection (32) does not match the length of port 'ce' (1) on instance '/tb/uut/alu/alu/mXv1_dash/instantiate_ROW_BY_VECTOR[0]/R/edomwcr/instantiate_Multiplier[2]/m'.
+# SLP: Warning: 8_dot_product_with_control_row.v (81): Length of connection (32) does not match the length of port 'ce' (1) on instance '/tb/uut/alu/alu/mXv1_dash/instantiate_ROW_BY_VECTOR[0]/R/edomwcr/instantiate_Multiplier[3]/m'.
+# SLP: Warning: vxc_add_8_delay.v (33): Length of connection (32) does not match the length of port 'ce' (1) on instance '/tb/uut/alu/alu/mul_add1/vXv/instantiate_Multiplier[0]/m'.
+# SLP: Warning: vxc_add_8_delay.v (33): Length of connection (32) does not match the length of port 'ce' (1) on instance '/tb/uut/alu/alu/mul_add1/vXv/instantiate_Multiplier[1]/m'.
+# SLP: Warning: vxc_add_8_delay.v (33): Length of connection (32) does not match the length of port 'ce' (1) on instance '/tb/uut/alu/alu/mul_add1/vXv/instantiate_Multiplier[2]/m'.
+# SLP: Warning: vxc_add_8_delay.v (33): Length of connection (32) does not match the length of port 'ce' (1) on instance '/tb/uut/alu/alu/mul_add1/vXv/instantiate_Multiplier[3]/m'.
+# SLP: Warning: vxc_add_8_delay.v (33): Length of connection (32) does not match the length of port 'ce' (1) on instance '/tb/uut/alu/alu/mul_add1/vXv/instantiate_Multiplier[4]/m'.
+# SLP: Warning: vxc_add_8_delay.v (33): Length of connection (32) does not match the length of port 'ce' (1) on instance '/tb/uut/alu/alu/mul_add1/vXv/instantiate_Multiplier[5]/m'.
+# SLP: Warning: vxc_add_8_delay.v (33): Length of connection (32) does not match the length of port 'ce' (1) on instance '/tb/uut/alu/alu/mul_add1/vXv/instantiate_Multiplier[6]/m'.
+# SLP: Warning: vxc_add_8_delay.v (33): Length of connection (32) does not match the length of port 'ce' (1) on instance '/tb/uut/alu/alu/mul_add1/vXv/instantiate_Multiplier[7]/m'.
+# SLP: Warning: vxc_add_8.v (33): Length of connection (32) does not match the length of port 'ce' (1) on instance '/tb/uut/alu/alu/mul_add2/vXv/instantiate_Multiplier[0]/m'.
+# SLP: Warning: vxc_add_8.v (33): Length of connection (32) does not match the length of port 'ce' (1) on instance '/tb/uut/alu/alu/mul_add2/vXv/instantiate_Multiplier[1]/m'.
+# SLP: Warning: vxc_add_8.v (33): Length of connection (32) does not match the length of port 'ce' (1) on instance '/tb/uut/alu/alu/mul_add2/vXv/instantiate_Multiplier[2]/m'.
+# SLP: Warning: vxc_add_8.v (33): Length of connection (32) does not match the length of port 'ce' (1) on instance '/tb/uut/alu/alu/mul_add2/vXv/instantiate_Multiplier[3]/m'.
+# SLP: Warning: vxc_add_8.v (33): Length of connection (32) does not match the length of port 'ce' (1) on instance '/tb/uut/alu/alu/mul_add2/vXv/instantiate_Multiplier[4]/m'.
+# SLP: Warning: vxc_add_8.v (33): Length of connection (32) does not match the length of port 'ce' (1) on instance '/tb/uut/alu/alu/mul_add2/vXv/instantiate_Multiplier[5]/m'.
+# SLP: Warning: vxc_add_8.v (33): Length of connection (32) does not match the length of port 'ce' (1) on instance '/tb/uut/alu/alu/mul_add2/vXv/instantiate_Multiplier[6]/m'.
+# SLP: Warning: vxc_add_8.v (33): Length of connection (32) does not match the length of port 'ce' (1) on instance '/tb/uut/alu/alu/mul_add2/vXv/instantiate_Multiplier[7]/m'.
+# SLP: Warning: alu.v (145): Length of connection (11) does not match the length of port 'counter2' (32) on instance '/tb/uut/alu/alu/vXv2'.
+# SLP: Warning: alu.v (159): Length of connection (11) does not match the length of port 'counter2' (32) on instance '/tb/uut/alu/alu/mul_add2'.
+# SLP: Warning: main_alu.v (79): Length of connection (32) does not match the length of port 'read_address' (11) on instance '/tb/uut/alu/rk_prev'.
+# SLP: Elaboration phase ... done : 0.2 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 1.3 [s]
+# SLP: Finished : 1.5 [s]
+# SLP: 0 primitives and 13352 (100.00%) other processes in SLP
+# SLP: 86 (0.31%) signals in SLP and 27075 (96.66%) interface signals
+# ELAB2: Elaboration final pass complete - time: 1.7 [s].
+# KERNEL: SLP loading done - time: 0.1 [s].
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 38167 kB (elbread=1041 elab2=36415 kernel=711 sdf=0)
+# KERNEL: ASDB file was created in location E:\files\ahmed\College\Graduation Project\June_Work\GIT_REPOS\real_design\real-design\real_design_work_space\real_design_final\src\wave.asdb
+#  08:11 ã, 29 íæäíæ, 2016
+#  Simulation has been initialized
+#  Selected Top-Level: tb (tb)
+run
+# KERNEL: vXv2_finish
+# KERNEL:           0 ::BETA  is 3dad0c22
+# KERNEL:           1 ::BETA  is 3dad0c22
+# KERNEL:           2 ::BETA  is 3dad0c22
+# KERNEL:           3 ::BETA  is 3dad0c22
+# KERNEL:           4 ::BETA  is 3dad0c22
+# KERNEL:           5 ::BETA  is 3fa9038a
+# KERNEL:           6 ::BETA  is 3fa9038a
+# KERNEL:           7 ::BETA  is 3fa9038a
+# KERNEL:           8 ::BETA  is 3fa9038a
+# KERNEL:           9 ::BETA  is 3fa9038a
+# KERNEL:          10 ::BETA  is 3e431391
+# KERNEL:          11 ::BETA  is 3e431391
+# KERNEL:          12 ::BETA  is 3e431391
+# KERNEL:          13 ::BETA  is 3e431391
+# KERNEL:          14 ::BETA  is 3e431391
+# KERNEL:          15 ::BETA  is 3ff3e831
+# KERNEL:          16 ::BETA  is 3ff3e831
+# KERNEL:          17 ::BETA  is 3ff3e831
+# KERNEL:          18 ::BETA  is 3ff3e831
+# KERNEL:          19 ::BETA  is 3ff3e831
+# KERNEL:          20 ::BETA  is 3e714e75
+# KERNEL:          21 ::BETA  is 3e714e75
+# KERNEL:          22 ::BETA  is 3e714e75
+# KERNEL:          23 ::BETA  is 3e714e75
+# KERNEL:          24 ::BETA  is 3e714e75
+# KERNEL:          25 ::BETA  is 400c4e0d
+# KERNEL:          26 ::BETA  is 400c4e0d
+# KERNEL:          27 ::BETA  is 400c4e0d
+# KERNEL:          28 ::BETA  is 400c4e0d
+# KERNEL:          29 ::BETA  is 400c4e0d
+# KERNEL:          30 ::BETA  is 3e854644
+# KERNEL:          31 ::BETA  is 3e854644
+# KERNEL:          32 ::BETA  is 3e854644
+# KERNEL:          33 ::BETA  is 3e854644
+# KERNEL:          34 ::BETA  is 3e854644
+# KERNEL:          35 ::BETA  is 401737f1
+# KERNEL:          36 ::BETA  is 401737f1
+# KERNEL:          37 ::BETA  is 401737f1
+# KERNEL:          38 ::BETA  is 401737f1
+# KERNEL:          39 ::BETA  is 401737f1
+# KERNEL:          40 ::BETA  is 3e8d45ac
+# KERNEL:          41 ::BETA  is 3e8d45ac
+# KERNEL:          42 ::BETA  is 3e8d45ac
+# KERNEL:          43 ::BETA  is 3e8d45ac
+# KERNEL:          44 ::BETA  is 3e8d45ac
+# KERNEL:          45 ::BETA  is 401e80fe
+# KERNEL:          46 ::BETA  is 401e80fe
+# KERNEL:          47 ::BETA  is 401e80fe
+# KERNEL:          48 ::BETA  is 401e80fe
+# KERNEL:          49 ::BETA  is 401e80fe
+# KERNEL:          50 ::BETA  is 3e92dbd1
+# KERNEL:          51 ::BETA  is 3e92dbd1
+# KERNEL:          52 ::BETA  is 3e92dbd1
+# KERNEL:          53 ::BETA  is 3e92dbd1
+# KERNEL:          54 ::BETA  is 3e92dbd1
+# KERNEL:          55 ::BETA  is 4023ba71
+# KERNEL:          56 ::BETA  is 4023ba71
+# KERNEL:          57 ::BETA  is 4023ba71
+# KERNEL:          58 ::BETA  is 4023ba71
+# KERNEL:          59 ::BETA  is 4023ba71
+# KERNEL:          60 ::BETA  is 3e971ba1
+# KERNEL:          61 ::BETA  is 3e971ba1
+# KERNEL:          62 ::BETA  is 3e971ba1
+# KERNEL:          63 ::BETA  is 3e971ba1
+# KERNEL:          64 ::BETA  is 3e971ba1
+# KERNEL:          65 ::BETA  is 40277a5d
+# KERNEL:          66 ::BETA  is 40277a5d
+# KERNEL:          67 ::BETA  is 40277a5d
+# KERNEL:          68 ::BETA  is 40277a5d
+# KERNEL:          69 ::BETA  is 40277a5d
+# KERNEL:          70 ::BETA  is 3e9b1206
+# KERNEL:          71 ::BETA  is 3e9b1206
+# KERNEL:          72 ::BETA  is 3e9b1206
+# KERNEL:          73 ::BETA  is 3e9b1206
+# KERNEL:          74 ::BETA  is 3e9b1206
+# KERNEL:          75 ::BETA  is 4028b359
+# KERNEL:          76 ::BETA  is 4028b359
+# KERNEL:          77 ::BETA  is 4028b359
+# KERNEL:          78 ::BETA  is 4028b359
+# KERNEL:          79 ::BETA  is 4028b359
+# KERNEL:          80 ::BETA  is 3ea35458
+# KERNEL:          81 ::BETA  is 3ea35458
+# KERNEL:          82 ::BETA  is 3ea35458
+# KERNEL:          83 ::BETA  is 3ea35458
+# KERNEL:          84 ::BETA  is 3ea35458
+# KERNEL:          85 ::BETA  is 401efa85
+# KERNEL:          86 ::BETA  is 401efa85
+# KERNEL:          87 ::BETA  is 401efa85
+# KERNEL:          88 ::BETA  is 401efa85
+# KERNEL:          89 ::BETA  is 401efa85
+# KERNEL:          90 ::BETA  is 3ed8adad
+# KERNEL:          91 ::BETA  is 3ed8adad
+# KERNEL:          92 ::BETA  is 3ed8adad
+# KERNEL:          93 ::BETA  is 3ed8adad
+# KERNEL:          94 ::BETA  is 3ed8adad
+# KERNEL:          95 ::BETA  is 3fe927f7
+# KERNEL:          96 ::BETA  is 3fe927f7
+# KERNEL:          97 ::BETA  is 3fe927f7
+# KERNEL:          98 ::BETA  is 3fe927f7
+# KERNEL:          99 ::BETA  is 3fe927f7
+# KERNEL:         100 ::BETA  is 3f3d7d13
+# KERNEL:         101 ::BETA  is 3f3d7d13
+# KERNEL:         102 ::BETA  is 3f3d7d13
+# KERNEL:         103 ::BETA  is 3f3d7d13
+# KERNEL:         104 ::BETA  is 3f3d7d13
+# KERNEL:         105 ::BETA  is 3f713d8c
+# KERNEL:         106 ::BETA  is 3f713d8c
+# KERNEL:         107 ::BETA  is 3f713d8c
+# KERNEL:         108 ::BETA  is 3f713d8c
+# KERNEL:         109 ::BETA  is 3f713d8c
+# KERNEL:         110 ::BETA  is 3f347310
+# KERNEL:         111 ::BETA  is 3f347310
+# KERNEL:         112 ::BETA  is 3f347310
+# KERNEL:         113 ::BETA  is 3f347310
+# KERNEL:         114 ::BETA  is 3f347310
+# KERNEL:         115 ::BETA  is 3fd16d1d
+# KERNEL:         116 ::BETA  is 3fd16d1d
+# KERNEL:         117 ::BETA  is 3fd16d1d
+# KERNEL:         118 ::BETA  is 3fd16d1d
+# KERNEL:         119 ::BETA  is 3fd16d1d
+# KERNEL:         120 ::BETA  is 3f0c5e08
+# KERNEL:         121 ::BETA  is 3f0c5e08
+# KERNEL:         122 ::BETA  is 3f0c5e08
+# KERNEL:         123 ::BETA  is 3f0c5e08
+# KERNEL:         124 ::BETA  is 3f0c5e08
+# KERNEL:         125 ::BETA  is 3fd96278
+# KERNEL:         126 ::BETA  is 3fd96278
+# KERNEL:         127 ::BETA  is 3fd96278
+# KERNEL:         128 ::BETA  is 3fd96278
+# KERNEL:         129 ::BETA  is 3fd96278
+# KERNEL:         130 ::BETA  is 3f1cd33d
+# KERNEL:         131 ::BETA  is 3f1cd33d
+# KERNEL:         132 ::BETA  is 3f1cd33d
+# KERNEL:         133 ::BETA  is 3f1cd33d
+# KERNEL:         134 ::BETA  is 3f1cd33d
+# KERNEL:         135 ::BETA  is 3f99c671
+# KERNEL:         136 ::BETA  is 3f99c671
+# KERNEL:         137 ::BETA  is 3f99c671
+# KERNEL:         138 ::BETA  is 3f99c671
+# KERNEL:         139 ::BETA  is 3f99c671
+# KERNEL:         140 ::BETA  is 3f5b97aa
+# KERNEL:         141 ::BETA  is 3f5b97aa
+# KERNEL:         142 ::BETA  is 3f5b97aa
+# KERNEL:         143 ::BETA  is 3f5b97aa
+# KERNEL:         144 ::BETA  is 3f5b97aa
+# KERNEL:         145 ::BETA  is 3fb514f6
+# KERNEL:         146 ::BETA  is 3fb514f6
+# KERNEL:         147 ::BETA  is 3fb514f6
+# KERNEL:         148 ::BETA  is 3fb514f6
+# KERNEL:         149 ::BETA  is 3fb514f6
+# KERNEL:         150 ::BETA  is 3ef5de19
+# KERNEL:         151 ::BETA  is 3ef5de19
+# KERNEL:         152 ::BETA  is 3ef5de19
+# KERNEL:         153 ::BETA  is 3ef5de19
+# KERNEL:         154 ::BETA  is 3ef5de19
+# KERNEL:         155 ::BETA  is 3ffa836a
+# KERNEL:         156 ::BETA  is 3ffa836a
+# KERNEL:         157 ::BETA  is 3ffa836a
+# KERNEL:         158 ::BETA  is 3ffa836a
+# KERNEL:         159 ::BETA  is 3ffa836a
+# KERNEL:         160 ::BETA  is 3f2ae81e
+# KERNEL:         161 ::BETA  is 3f2ae81e
+# KERNEL:         162 ::BETA  is 3f2ae81e
+# KERNEL:         163 ::BETA  is 3f2ae81e
+# KERNEL:         164 ::BETA  is 3f2ae81e
+# KERNEL:         165 ::BETA  is 3f93fc6b
+# KERNEL:         166 ::BETA  is 3f93fc6b
+# KERNEL:         167 ::BETA  is 3f93fc6b
+# KERNEL:         168 ::BETA  is 3f93fc6b
+# KERNEL:         169 ::BETA  is 3f93fc6b
+# KERNEL:         170 ::BETA  is 3f3b7119
+# KERNEL:         171 ::BETA  is 3f3b7119
+# KERNEL:         172 ::BETA  is 3f3b7119
+# KERNEL:         173 ::BETA  is 3f3b7119
+# KERNEL:         174 ::BETA  is 3f3b7119
+# KERNEL:         175 ::BETA  is 3fc10712
+# KERNEL:         176 ::BETA  is 3fc10712
+# KERNEL:         177 ::BETA  is 3fc10712
+# KERNEL:         178 ::BETA  is 3fc10712
+# KERNEL:         179 ::BETA  is 3fc10712
+# KERNEL:         180 ::BETA  is 3f1b40ea
+# KERNEL:         181 ::BETA  is 3f1b40ea
+# KERNEL:         182 ::BETA  is 3f1b40ea
+# KERNEL:         183 ::BETA  is 3f1b40ea
+# KERNEL:         184 ::BETA  is 3f1b40ea
+# KERNEL:         185 ::BETA  is 3fdb0f81
+# KERNEL:         186 ::BETA  is 3fdb0f81
+# KERNEL:         187 ::BETA  is 3fdb0f81
+# KERNEL:         188 ::BETA  is 3fdb0f81
+# KERNEL:         189 ::BETA  is 3fdb0f81
+# KERNEL:         190 ::BETA  is 3f18cc67
+# KERNEL:         191 ::BETA  is 3f18cc67
+# KERNEL:         192 ::BETA  is 3f18cc67
+# KERNEL:         193 ::BETA  is 3f18cc67
+# KERNEL:         194 ::BETA  is 3f18cc67
+# KERNEL:         195 ::BETA  is 3faec603
+# KERNEL:         196 ::BETA  is 3faec603
+# KERNEL:         197 ::BETA  is 3faec603
+# KERNEL:         198 ::BETA  is 3faec603
+# KERNEL:         199 ::BETA  is 3faec603
+# KERNEL:         200 ::BETA  is 3f51bc52
+# KERNEL:         201 ::BETA  is 3f51bc52
+# KERNEL:         202 ::BETA  is 3f51bc52
+# KERNEL:         203 ::BETA  is 3f51bc52
+# KERNEL:         204 ::BETA  is 3f51bc52
+# KERNEL:         205 ::BETA  is 3fb7be5a
+# KERNEL:         206 ::BETA  is 3fb7be5a
+# KERNEL:         207 ::BETA  is 3fb7be5a
+# KERNEL:         208 ::BETA  is 3fb7be5a
+# KERNEL:         209 ::BETA  is 3fb7be5a
+# KERNEL:         210 ::BETA  is 3f06cdbc
+# KERNEL:         211 ::BETA  is 3f06cdbc
+# KERNEL:         212 ::BETA  is 3f06cdbc
+# KERNEL:         213 ::BETA  is 3f06cdbc
+# KERNEL:         214 ::BETA  is 3f06cdbc
+# KERNEL:         215 ::BETA  is 3ff309af
+# KERNEL:         216 ::BETA  is 3ff309af
+# KERNEL:         217 ::BETA  is 3ff309af
+# KERNEL:         218 ::BETA  is 3ff309af
+# KERNEL:         219 ::BETA  is 3ff309af
+# KERNEL:         220 ::BETA  is 3f2c096e
+# KERNEL:         221 ::BETA  is 3f2c096e
+# KERNEL:         222 ::BETA  is 3f2c096e
+# KERNEL:         223 ::BETA  is 3f2c096e
+# KERNEL:         224 ::BETA  is 3f2c096e
+# KERNEL:         225 ::BETA  is 3fa15e13
+# KERNEL:         226 ::BETA  is 3fa15e13
+# KERNEL:         227 ::BETA  is 3fa15e13
+# KERNEL:         228 ::BETA  is 3fa15e13
+# KERNEL:         229 ::BETA  is 3fa15e13
+# KERNEL:         230 ::BETA  is 3f396deb
+# KERNEL:         231 ::BETA  is 3f396deb
+# KERNEL:         232 ::BETA  is 3f396deb
+# KERNEL:         233 ::BETA  is 3f396deb
+# KERNEL:         234 ::BETA  is 3f396deb
+# KERNEL:         235 ::BETA  is 3fd95c10
+# KERNEL:         236 ::BETA  is 3fd95c10
+# KERNEL:         237 ::BETA  is 3fd95c10
+# KERNEL:         238 ::BETA  is 3fd95c10
+# KERNEL:         239 ::BETA  is 3fd95c10
+# KERNEL:         240 ::BETA  is 3f118328
+# KERNEL:         241 ::BETA  is 3f118328
+# KERNEL:         242 ::BETA  is 3f118328
+# KERNEL:         243 ::BETA  is 3f118328
+# KERNEL:         244 ::BETA  is 3f118328
+# KERNEL:         245 ::BETA  is 3fd1b873
+# KERNEL:         246 ::BETA  is 3fd1b873
+# KERNEL:         247 ::BETA  is 3fd1b873
+# KERNEL:         248 ::BETA  is 3fd1b873
+# KERNEL:         249 ::BETA  is 3fd1b873
+# KERNEL:         250 ::BETA  is 3f30e0e1
+# KERNEL:         251 ::BETA  is 3f30e0e1
+# KERNEL:         252 ::BETA  is 3f30e0e1
+# KERNEL:         253 ::BETA  is 3f30e0e1
+# KERNEL:         254 ::BETA  is 3f30e0e1
+# KERNEL:         255 ::BETA  is 3fb786f3
+# KERNEL:         256 ::BETA  is 3fb786f3
+# KERNEL:         257 ::BETA  is 3fb786f3
+# KERNEL:         258 ::BETA  is 3fb786f3
+# KERNEL:         259 ::BETA  is 3fb786f3
+# KERNEL:         260 ::BETA  is 3f30d155
+# KERNEL:         261 ::BETA  is 3f30d155
+# KERNEL:         262 ::BETA  is 3f30d155
+# KERNEL:         263 ::BETA  is 3f30d155
+# KERNEL:         264 ::BETA  is 3f30d155
+# KERNEL:         265 ::BETA  is 3fd0d78d
+# KERNEL:         266 ::BETA  is 3fd0d78d
+# KERNEL:         267 ::BETA  is 3fd0d78d
+# KERNEL:         268 ::BETA  is 3fd0d78d
+# KERNEL:         269 ::BETA  is 3fd0d78d
+# KERNEL:         270 ::BETA  is 3f191c0c
+# KERNEL:         271 ::BETA  is 3f191c0c
+# KERNEL:         272 ::BETA  is 3f191c0c
+# KERNEL:         273 ::BETA  is 3f191c0c
+# KERNEL:         274 ::BETA  is 3f191c0c
+# KERNEL:         275 ::BETA  is 3fdb878d
+# KERNEL:         276 ::BETA  is 3fdb878d
+# KERNEL:         277 ::BETA  is 3fdb878d
+# KERNEL:         278 ::BETA  is 3fdb878d
+# KERNEL:         279 ::BETA  is 3fdb878d
+# KERNEL:         280 ::BETA  is 3f316ddf
+# KERNEL:         281 ::BETA  is 3f316ddf
+# KERNEL:         282 ::BETA  is 3f316ddf
+# KERNEL:         283 ::BETA  is 3f316ddf
+# KERNEL:         284 ::BETA  is 3f316ddf
+# KERNEL:         285 ::BETA  is 3fae2682
+# KERNEL:         286 ::BETA  is 3fae2682
+# KERNEL:         287 ::BETA  is 3fae2682
+# KERNEL:         288 ::BETA  is 3fae2682
+# KERNEL:         289 ::BETA  is 3fae2682
+# KERNEL:         290 ::BETA  is 3f3eee42
+# KERNEL:         291 ::BETA  is 3f3eee42
+# KERNEL:         292 ::BETA  is 3f3eee42
+# KERNEL:         293 ::BETA  is 3f3eee42
+# KERNEL:         294 ::BETA  is 3f3eee42
+# KERNEL:         295 ::BETA  is 3fd5494d
+# KERNEL:         296 ::BETA  is 3fd5494d
+# KERNEL:         297 ::BETA  is 3fd5494d
+# KERNEL:         298 ::BETA  is 3fd5494d
+# KERNEL:         299 ::BETA  is 3fd5494d
+# KERNEL:         300 ::BETA  is 3f1d7314
+# KERNEL:         301 ::BETA  is 3f1d7314
+# KERNEL:         302 ::BETA  is 3f1d7314
+# KERNEL:         303 ::BETA  is 3f1d7314
+# KERNEL:         304 ::BETA  is 3f1d7314
+# KERNEL:         305 ::BETA  is 3fbcb114
+# KERNEL:         306 ::BETA  is 3fbcb114
+# KERNEL:         307 ::BETA  is 3fbcb114
+# KERNEL:         308 ::BETA  is 3fbcb114
+# KERNEL:         309 ::BETA  is 3fbcb114
+# KERNEL:         310 ::BETA  is 3f662a24
+# KERNEL:         311 ::BETA  is 3f662a24
+# KERNEL:         312 ::BETA  is 3f662a24
+# KERNEL:         313 ::BETA  is 3f662a24
+# KERNEL:         314 ::BETA  is 3f662a24
+# KERNEL:         315 ::BETA  is 3f9921e3
+# KERNEL:         316 ::BETA  is 3f9921e3
+# KERNEL:         317 ::BETA  is 3f9921e3
+# KERNEL:         318 ::BETA  is 3f9921e3
+# KERNEL:         319 ::BETA  is 3f9921e3
+# KERNEL:         320 ::BETA  is 3f4ceaec
+# KERNEL:         321 ::BETA  is 3f4ceaec
+# KERNEL:         322 ::BETA  is 3f4ceaec
+# KERNEL:         323 ::BETA  is 3f4ceaec
+# KERNEL:         324 ::BETA  is 3f4ceaec
+# KERNEL:         325 ::BETA  is 3fb2c413
+# KERNEL:         326 ::BETA  is 3fb2c413
+# KERNEL:         327 ::BETA  is 3fb2c413
+# KERNEL:         328 ::BETA  is 3fb2c413
+# KERNEL:         329 ::BETA  is 3fb2c413
+# KERNEL:         330 ::BETA  is 3f732be9
+# KERNEL:         331 ::BETA  is 3f732be9
+# KERNEL:         332 ::BETA  is 3f732be9
+# KERNEL:         333 ::BETA  is 3f732be9
+# KERNEL:         334 ::BETA  is 3f732be9
+# KERNEL:         335 ::BETA  is 3f74be5d
+# KERNEL:         336 ::BETA  is 3f74be5d
+# KERNEL:         337 ::BETA  is 3f74be5d
+# KERNEL:         338 ::BETA  is 3f74be5d
+# KERNEL:         339 ::BETA  is 3f74be5d
+# KERNEL:         340 ::BETA  is 3f98b00e
+# KERNEL:         341 ::BETA  is 3f98b00e
+# KERNEL:         342 ::BETA  is 3f98b00e
+# KERNEL:         343 ::BETA  is 3f98b00e
+# KERNEL:         344 ::BETA  is 3f98b00e
+# KERNEL:         345 ::BETA  is 3f8662ac
+# KERNEL:         346 ::BETA  is 3f8662ac
+# KERNEL:         347 ::BETA  is 3f8662ac
+# KERNEL:         348 ::BETA  is 3f8662ac
+# KERNEL:         349 ::BETA  is 3f8662ac
+# KERNEL:         350 ::BETA  is 3f81d019
+# KERNEL:         351 ::BETA  is 3f81d019
+# KERNEL:         352 ::BETA  is 3f81d019
+# KERNEL:         353 ::BETA  is 3f81d019
+# KERNEL:         354 ::BETA  is 3f81d019
+# KERNEL:         355 ::BETA  is 3f84f4de
+# KERNEL:         356 ::BETA  is 3f84f4de
+# KERNEL:         357 ::BETA  is 3f84f4de
+# KERNEL:         358 ::BETA  is 3f84f4de
+# KERNEL:         359 ::BETA  is 3f84f4de
+# KERNEL:         360 ::BETA  is 3fa53c7b
+# KERNEL:         361 ::BETA  is 3fa53c7b
+# KERNEL:         362 ::BETA  is 3fa53c7b
+# KERNEL:         363 ::BETA  is 3fa53c7b
+# KERNEL:         364 ::BETA  is 3fa53c7b
+# KERNEL:         365 ::BETA  is 3f6b8a83
+# KERNEL:         366 ::BETA  is 3f6b8a83
+# KERNEL:         367 ::BETA  is 3f6b8a83
+# KERNEL:         368 ::BETA  is 3f6b8a83
+# KERNEL:         369 ::BETA  is 3f6b8a83
+# KERNEL:         370 ::BETA  is 3f90136b
+# KERNEL:         371 ::BETA  is 3f90136b
+# KERNEL:         372 ::BETA  is 3f90136b
+# KERNEL:         373 ::BETA  is 3f90136b
+# KERNEL:         374 ::BETA  is 3f90136b
+# KERNEL:         375 ::BETA  is 3f92f480
+# KERNEL:         376 ::BETA  is 3f92f480
+# KERNEL:         377 ::BETA  is 3f92f480
+# KERNEL:         378 ::BETA  is 3f92f480
+# KERNEL:         379 ::BETA  is 3f92f480
+# KERNEL:         380 ::BETA  is 3f90f436
+# KERNEL:         381 ::BETA  is 3f90f436
+# KERNEL:         382 ::BETA  is 3f90f436
+# KERNEL:         383 ::BETA  is 3f90f436
+# KERNEL:         384 ::BETA  is 3f90f436
+# KERNEL:         385 ::BETA  is 3f880a1e
+# KERNEL:         386 ::BETA  is 3f880a1e
+# KERNEL:         387 ::BETA  is 3f880a1e
+# KERNEL:         388 ::BETA  is 3f880a1e
+# KERNEL:         389 ::BETA  is 3f880a1e
+# KERNEL:         390 ::BETA  is 3fa08c55
+# KERNEL:         391 ::BETA  is 3fa08c55
+# KERNEL:         392 ::BETA  is 3fa08c55
+# KERNEL:         393 ::BETA  is 3fa08c55
+# KERNEL:         394 ::BETA  is 3fa08c55
+# KERNEL:         395 ::BETA  is 3f8e4ba1
+# KERNEL:         396 ::BETA  is 3f8e4ba1
+# KERNEL:         397 ::BETA  is 3f8e4ba1
+# KERNEL:         398 ::BETA  is 3f8e4ba1
+# KERNEL:         399 ::BETA  is 3f8e4ba1
+# KERNEL:         400 ::BETA  is 3f9e062c
+# KERNEL:         401 ::BETA  is 3f9e062c
+# KERNEL:         402 ::BETA  is 3f9e062c
+# KERNEL:         403 ::BETA  is 3f9e062c
+# KERNEL:         404 ::BETA  is 3f9e062c
+# KERNEL:         405 ::BETA  is 3fa61ccc
+# KERNEL:         406 ::BETA  is 3fa61ccc
+# KERNEL:         407 ::BETA  is 3fa61ccc
+# KERNEL:         408 ::BETA  is 3fa61ccc
+# KERNEL:         409 ::BETA  is 3fa61ccc
+# KERNEL:         410 ::BETA  is 3fbe45ff
+# KERNEL:         411 ::BETA  is 3fbe45ff
+# KERNEL:         412 ::BETA  is 3fbe45ff
+# KERNEL:         413 ::BETA  is 3fbe45ff
+# KERNEL:         414 ::BETA  is 3fbe45ff
+# KERNEL:         415 ::BETA  is 3fc14fb3
+# KERNEL:         416 ::BETA  is 3fc14fb3
+# KERNEL:         417 ::BETA  is 3fc14fb3
+# KERNEL:         418 ::BETA  is 3fc14fb3
+# KERNEL:         419 ::BETA  is 3fc14fb3
+# KERNEL:         420 ::BETA  is 402d34f5
+# KERNEL:         421 ::BETA  is 402d34f5
+# KERNEL:         422 ::BETA  is 402d34f5
+# KERNEL:         423 ::BETA  is 402d34f5
+# KERNEL:         424 ::BETA  is 402d34f5
+# KERNEL:         425 ::BETA  is 40bbc994
+# KERNEL:         426 ::BETA  is 40bbc994
+# KERNEL:         427 ::BETA  is 40bbc994
+# KERNEL:         428 ::BETA  is 40bbc994
+# KERNEL:         429 ::BETA  is 40bbc994
+# KERNEL:         430 ::BETA  is 402ebf72
+# KERNEL:         431 ::BETA  is 402ebf72
+# KERNEL:         432 ::BETA  is 402ebf72
+# KERNEL:         433 ::BETA  is 402ebf72
+# KERNEL:         434 ::BETA  is 402ebf72
+# KERNEL:         435 ::BETA  is 3dbc9835
+# KERNEL:         436 ::BETA  is 3dbc9835
+# KERNEL:         437 ::BETA  is 3dbc9835
+# KERNEL:         438 ::BETA  is 3dbc9835
+# KERNEL:         439 ::BETA  is 3dbc9835
+# KERNEL:         440 ::BETA  is 3e98f862
+# KERNEL:         441 ::BETA  is 3e98f862
+# KERNEL:         442 ::BETA  is 3e98f862
+# KERNEL:         443 ::BETA  is 3e98f862
+# KERNEL:         444 ::BETA  is 3e98f862
+# KERNEL:         445 ::BETA  is 3ee47dd6
+# KERNEL:         446 ::BETA  is 3ee47dd6
+# KERNEL:         447 ::BETA  is 3ee47dd6
+# KERNEL:         448 ::BETA  is 3ee47dd6
+# KERNEL:         449 ::BETA  is 3ee47dd6
+# KERNEL:         450 ::BETA  is 3f362692
+# KERNEL:         451 ::BETA  is 3f362692
+# KERNEL:         452 ::BETA  is 3f362692
+# KERNEL:         453 ::BETA  is 3f362692
+# KERNEL:         454 ::BETA  is 3f362692
+# KERNEL:         455 ::BETA  is 3fbac8a8
+# KERNEL:         456 ::BETA  is 3fbac8a8
+# KERNEL:         457 ::BETA  is 3fbac8a8
+# KERNEL:         458 ::BETA  is 3fbac8a8
+# KERNEL:         459 ::BETA  is 3fbac8a8
+# KERNEL:         460 ::BETA  is 3fa158d0
+# KERNEL:         461 ::BETA  is 3fa158d0
+# KERNEL:         462 ::BETA  is 3fa158d0
+# KERNEL:         463 ::BETA  is 3fa158d0
+# KERNEL:         464 ::BETA  is 3fa158d0
+# KERNEL:         465 ::BETA  is 3fd28cb4
+# KERNEL:         466 ::BETA  is 3fd28cb4
+# KERNEL:         467 ::BETA  is 3fd28cb4
+# KERNEL:         468 ::BETA  is 3fd28cb4
+# KERNEL:         469 ::BETA  is 3fd28cb4
+# KERNEL:         470 ::BETA  is 3f8b2d04
+# KERNEL:         471 ::BETA  is 3f8b2d04
+# KERNEL:         472 ::BETA  is 3f8b2d04
+# KERNEL:         473 ::BETA  is 3f8b2d04
+# KERNEL:         474 ::BETA  is 3f8b2d04
+# KERNEL:         475 ::BETA  is 3f72c453
+# KERNEL:         476 ::BETA  is 3f72c453
+# KERNEL:         477 ::BETA  is 3f72c453
+# KERNEL:         478 ::BETA  is 3f72c453
+# KERNEL:         479 ::BETA  is 3f72c453
+# KERNEL:         480 ::BETA  is 3f8c1a62
+# KERNEL:         481 ::BETA  is 3f8c1a62
+# KERNEL:         482 ::BETA  is 3f8c1a62
+# KERNEL:         483 ::BETA  is 3f8c1a62
+# KERNEL:         484 ::BETA  is 3f8c1a62
+# KERNEL:         485 ::BETA  is 402bb2dd
+# KERNEL:         486 ::BETA  is 402bb2dd
+# KERNEL:         487 ::BETA  is 402bb2dd
+# KERNEL:         488 ::BETA  is 402bb2dd
+# KERNEL:         489 ::BETA  is 402bb2dd
+# KERNEL:         490 ::BETA  is 40f28645
+# KERNEL:         491 ::BETA  is 40f28645
+# KERNEL:         492 ::BETA  is 40f28645
+# KERNEL:         493 ::BETA  is 40f28645
+# KERNEL:         494 ::BETA  is 40f28645
+# KERNEL:         495 ::BETA  is 410da557
+# KERNEL:         496 ::BETA  is 410da557
+# KERNEL:         497 ::BETA  is 410da557
+# KERNEL:         498 ::BETA  is 410da557
+# KERNEL:         499 ::BETA  is 410da557
+alog -O2 -sve  -work real_design_final $dsn/src/normlize.v $dsn/src/fp_div.v $dsn/src/row_by_vector_with_control.v $dsn/src/matrix_by_vector_v3_with_control.v $dsn/src/delay.v $dsn/src/vxc_add_8_delay.v $dsn/src/8_organizer_with_control_row.v $dsn/src/2x1_mux.v $dsn/src/special.v $dsn/src/p_emap_8.v $dsn/src/multiply.v $dsn/src/rkold_prev.v $dsn/src/8x8_adder_with_start.v $dsn/src/vectorxvector_mxv_with_control.v $dsn/src/mantadd.v $dsn/src/inputieee_8_23_to_8_23.v $dsn/src/division.v $dsn/src/alu.v $dsn/src/adder_subtractor_with_start.v $dsn/src/8_dot_product_with_control_row.v $dsn/src/memp.v $dsn/src/decoder.v $dsn/src/parameters_mem.v $dsn/src/multiples_matrix.v $dsn/src/main_alu.v $dsn/src/fpadd.v $dsn/src/adder_subtractor_with_control_with_start.v $dsn/src/memr.v $dsn/src/mema.v $dsn/src/intmultiplier_usingdsp_24_24_48_unsigned_uid4.v $dsn/src/col_nos.v $dsn/src/multiples_fifo.v $dsn/src/vxc_add_8.v $dsn/src/tb.v $dsn/src/ap_total_mem.v $dsn/src/n_to_2n_demux.v $dsn/src/fpmultiplier_8_23_8_23_8_23_uid2.v $dsn/src/decoder_with_control.v $dsn/src/adder_subtractor_with_control.v $dsn/src/vxc_mul3_sub.v $dsn/src/vectorxvector_with_control.v $dsn/src/vxc_mul3_add.v $dsn/src/top_module.v $dsn/src/memx.v $dsn/src/memp_v2.v $dsn/src/control_unit.v $dsn/src/constants.v $dsn/src/8_dot_product_with_control.v $dsn/src/rounder.v $dsn/src/outputieee_8_23_to_8_23.v $dsn/src/fpalign.v $dsn/src/div_nr_wsticky.v $dsn/src/adder_subtractor.v $dsn/src/a_s.v $dsn/src/intadder_27_f180_uid7.v $dsn/src/intadder_33_f300_uid23.v $dsn/src/intadder_34_f180_uid18.v $dsn/src/intadder_42_f300_uid15.v $dsn/src/final1.v
+# Warning: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
+# Compile...
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Info: VCP2876 row_by_vector_with_control.v : (45, 1): Implicit net declaration, symbol dot_product_finish has not been declared in module row_by_vector_with_control.
+# Info: VCP2876 row_by_vector_with_control.v : (45, 1): Implicit net declaration, symbol prepare_my_new_input has not been declared in module row_by_vector_with_control.
+# Info: VCP2876 8_organizer_with_control_row.v : (38, 1): Implicit net declaration, symbol ExE_finish_dash has not been declared in module Eight_Organizer_with_control_row.
+# Info: VCP2876 vectorxvector_mxv_with_control.v : (35, 1): Implicit net declaration, symbol I_am_ready has not been declared in module vectorXvector_mXv_with_control.
+# Info: VCP2876 alu.v : (134, 1): Implicit net declaration, symbol mXv1_finish has not been declared in module Alu.
+# Info: VCP2876 top_module.v : (103, 1): Implicit net declaration, symbol outsider_read_now has not been declared in module top_module.
+# Info: VCP2876 top_module.v : (110, 1): Implicit net declaration, symbol memoryP_write_enable has not been declared in module top_module.
+# Info: VCP2876 top_module.v : (110, 1): Implicit net declaration, symbol memoryR_write_enable has not been declared in module top_module.
+# Info: VCP2876 top_module.v : (110, 1): Implicit net declaration, symbol memoryX_write_enable has not been declared in module top_module.
+# Info: VCP2876 top_module.v : (130, 1): Implicit net declaration, symbol finishP_v2 has not been declared in module top_module.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# KERNEL:         500 ::BETA  is 3d1a34b1
+# KERNEL:         501 ::BETA  is 3d1a34b1
+# KERNEL:         502 ::BETA  is 3d1a34b1
+# KERNEL:         503 ::BETA  is 3d1a34b1
+# KERNEL:         504 ::BETA  is 3d1a34b1
+endsim
+# KERNEL: stopped at time: 53512810 ns
+#  Simulation has been stopped
+# Unit top modules: memP decoder tb adder_subtractor_with_control IntAdder_27_f180_uid7 IntAdder_34_f180_uid18.
+# $root top modules: memP decoder tb adder_subtractor_with_control IntAdder_27_f180_uid7 IntAdder_34_f180_uid18.
+# Compile success 0 Errors 0 Warnings  Analysis time: 1[s].
+# done
+alog -O2 -sve  -work real_design_final $dsn/src/normlize.v $dsn/src/fp_div.v $dsn/src/row_by_vector_with_control.v $dsn/src/matrix_by_vector_v3_with_control.v $dsn/src/delay.v $dsn/src/vxc_add_8_delay.v $dsn/src/8_organizer_with_control_row.v $dsn/src/2x1_mux.v $dsn/src/special.v $dsn/src/p_emap_8.v $dsn/src/multiply.v $dsn/src/rkold_prev.v $dsn/src/8x8_adder_with_start.v $dsn/src/vectorxvector_mxv_with_control.v $dsn/src/mantadd.v $dsn/src/inputieee_8_23_to_8_23.v $dsn/src/division.v $dsn/src/alu.v $dsn/src/adder_subtractor_with_start.v $dsn/src/8_dot_product_with_control_row.v $dsn/src/memp.v $dsn/src/decoder.v $dsn/src/parameters_mem.v $dsn/src/multiples_matrix.v $dsn/src/main_alu.v $dsn/src/fpadd.v $dsn/src/adder_subtractor_with_control_with_start.v $dsn/src/memr.v $dsn/src/mema.v $dsn/src/intmultiplier_usingdsp_24_24_48_unsigned_uid4.v $dsn/src/col_nos.v $dsn/src/multiples_fifo.v $dsn/src/vxc_add_8.v $dsn/src/tb.v $dsn/src/ap_total_mem.v $dsn/src/n_to_2n_demux.v $dsn/src/fpmultiplier_8_23_8_23_8_23_uid2.v $dsn/src/decoder_with_control.v $dsn/src/adder_subtractor_with_control.v $dsn/src/vxc_mul3_sub.v $dsn/src/vectorxvector_with_control.v $dsn/src/vxc_mul3_add.v $dsn/src/top_module.v $dsn/src/memx.v $dsn/src/memp_v2.v $dsn/src/control_unit.v $dsn/src/constants.v $dsn/src/8_dot_product_with_control.v $dsn/src/rounder.v $dsn/src/outputieee_8_23_to_8_23.v $dsn/src/fpalign.v $dsn/src/div_nr_wsticky.v $dsn/src/adder_subtractor.v $dsn/src/a_s.v $dsn/src/intadder_27_f180_uid7.v $dsn/src/intadder_33_f300_uid23.v $dsn/src/intadder_34_f180_uid18.v $dsn/src/intadder_42_f300_uid15.v $dsn/src/final1.v
+# Warning: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
+# Compile...
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Info: VCP2876 row_by_vector_with_control.v : (45, 1): Implicit net declaration, symbol dot_product_finish has not been declared in module row_by_vector_with_control.
+# Info: VCP2876 row_by_vector_with_control.v : (45, 1): Implicit net declaration, symbol prepare_my_new_input has not been declared in module row_by_vector_with_control.
+# Info: VCP2876 8_organizer_with_control_row.v : (38, 1): Implicit net declaration, symbol ExE_finish_dash has not been declared in module Eight_Organizer_with_control_row.
+# Info: VCP2876 vectorxvector_mxv_with_control.v : (35, 1): Implicit net declaration, symbol I_am_ready has not been declared in module vectorXvector_mXv_with_control.
+# Info: VCP2876 alu.v : (134, 1): Implicit net declaration, symbol mXv1_finish has not been declared in module Alu.
+# Info: VCP2876 top_module.v : (103, 1): Implicit net declaration, symbol outsider_read_now has not been declared in module top_module.
+# Info: VCP2876 top_module.v : (110, 1): Implicit net declaration, symbol memoryP_write_enable has not been declared in module top_module.
+# Info: VCP2876 top_module.v : (110, 1): Implicit net declaration, symbol memoryR_write_enable has not been declared in module top_module.
+# Info: VCP2876 top_module.v : (110, 1): Implicit net declaration, symbol memoryX_write_enable has not been declared in module top_module.
+# Info: VCP2876 top_module.v : (130, 1): Implicit net declaration, symbol finishP_v2 has not been declared in module top_module.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: memP decoder tb adder_subtractor_with_control IntAdder_27_f180_uid7 IntAdder_34_f180_uid18.
+# $root top modules: memP decoder tb adder_subtractor_with_control IntAdder_27_f180_uid7 IntAdder_34_f180_uid18.
+# Compile success 0 Errors 0 Warnings  Analysis time: 1[s].
+# done
+asim -O5 +access +w_nets +accb +accr +access +r +access +r+w tb
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: Module 'normlize' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: Module 'FP_div' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# KERNEL: PLI/VHPI kernel's engine initialization done.
+# PLI: Loading library 'C:\Aldec\Active-HDL 9.1\bin\systf.dll'
+# ELAB2: Create instances ...
+# ELAB2: Warning: ELAB2_0051 8_organizer_with_control_row.v (39): Length of connection (32) does not match the length of port "ce" (1) on instance "/tb/uut/alu/alu/vXv1/vXv/E_O/final_adder"
+# ELAB2: Warning: ELAB2_0051 8_organizer_with_control_row.v (39): Length of connection (32) does not match the length of port "ce" (1) on instance "/tb/uut/alu/alu/mXv1_dash/instantiate_ROW_BY_VECTOR[0]/R/edomwcr/E_O/final_adder"
+# ELAB2: Warning: ELAB2_0051 8_organizer_with_control_row.v (39): Length of connection (32) does not match the length of port "ce" (1) on instance "/tb/uut/alu/alu/mXv1_dash/instantiate_ROW_BY_VECTOR[1]/R/edomwcr/E_O/final_adder"
+# ELAB2: Warning: ELAB2_0051 8_organizer_with_control_row.v (39): Length of connection (32) does not match the length of port "ce" (1) on instance "/tb/uut/alu/alu/mXv1_dash/instantiate_ROW_BY_VECTOR[2]/R/edomwcr/E_O/final_adder"
+# ELAB2: Warning: ELAB2_0051 8_organizer_with_control_row.v (39): Length of connection (32) does not match the length of port "ce" (1) on instance "/tb/uut/alu/alu/mXv1_dash/instantiate_ROW_BY_VECTOR[3]/R/edomwcr/E_O/final_adder"
+# ELAB2: Warning: ELAB2_0051 8_organizer_with_control_row.v (39): Length of connection (32) does not match the length of port "ce" (1) on instance "/tb/uut/alu/alu/vXv2/vXv/E_O/final_adder"
+# ELAB2: Warning: ELAB2_0051 8_organizer_with_control_row.v (39): Length of connection (32) does not match the length of port "ce" (1) on instance "/tb/uut/alu/alu/vXv3/vXv/E_O/final_adder"
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Warning: 8_organizer_with_control_row.v (39): Length of connection (32) does not match the length of port 'op' (1) on instance '/tb/uut/alu/alu/vXv1/vXv/E_O/final_adder'.
+# SLP: Warning: 8_dot_product_with_control.v (67): Length of connection (32) does not match the length of port 'ce' (1) on instance '/tb/uut/alu/alu/vXv1/vXv/instantiate_Multiplier[0]/m'.
+# SLP: Warning: 8_dot_product_with_control.v (67): Length of connection (32) does not match the length of port 'ce' (1) on instance '/tb/uut/alu/alu/vXv1/vXv/instantiate_Multiplier[1]/m'.
+# SLP: Warning: 8_dot_product_with_control.v (67): Length of connection (32) does not match the length of port 'ce' (1) on instance '/tb/uut/alu/alu/vXv1/vXv/instantiate_Multiplier[2]/m'.
+# SLP: Warning: 8_dot_product_with_control.v (67): Length of connection (32) does not match the length of port 'ce' (1) on instance '/tb/uut/alu/alu/vXv1/vXv/instantiate_Multiplier[3]/m'.
+# SLP: Warning: 8_dot_product_with_control_row.v (81): Length of connection (32) does not match the length of port 'ce' (1) on instance '/tb/uut/alu/alu/mXv1_dash/instantiate_ROW_BY_VECTOR[0]/R/edomwcr/instantiate_Multiplier[0]/m'.
+# SLP: Warning: 8_dot_product_with_control_row.v (81): Length of connection (32) does not match the length of port 'ce' (1) on instance '/tb/uut/alu/alu/mXv1_dash/instantiate_ROW_BY_VECTOR[0]/R/edomwcr/instantiate_Multiplier[1]/m'.
+# SLP: Warning: 8_dot_product_with_control_row.v (81): Length of connection (32) does not match the length of port 'ce' (1) on instance '/tb/uut/alu/alu/mXv1_dash/instantiate_ROW_BY_VECTOR[0]/R/edomwcr/instantiate_Multiplier[2]/m'.
+# SLP: Warning: 8_dot_product_with_control_row.v (81): Length of connection (32) does not match the length of port 'ce' (1) on instance '/tb/uut/alu/alu/mXv1_dash/instantiate_ROW_BY_VECTOR[0]/R/edomwcr/instantiate_Multiplier[3]/m'.
+# SLP: Warning: vxc_add_8_delay.v (33): Length of connection (32) does not match the length of port 'ce' (1) on instance '/tb/uut/alu/alu/mul_add1/vXv/instantiate_Multiplier[0]/m'.
+# SLP: Warning: vxc_add_8_delay.v (33): Length of connection (32) does not match the length of port 'ce' (1) on instance '/tb/uut/alu/alu/mul_add1/vXv/instantiate_Multiplier[1]/m'.
+# SLP: Warning: vxc_add_8_delay.v (33): Length of connection (32) does not match the length of port 'ce' (1) on instance '/tb/uut/alu/alu/mul_add1/vXv/instantiate_Multiplier[2]/m'.
+# SLP: Warning: vxc_add_8_delay.v (33): Length of connection (32) does not match the length of port 'ce' (1) on instance '/tb/uut/alu/alu/mul_add1/vXv/instantiate_Multiplier[3]/m'.
+# SLP: Warning: vxc_add_8_delay.v (33): Length of connection (32) does not match the length of port 'ce' (1) on instance '/tb/uut/alu/alu/mul_add1/vXv/instantiate_Multiplier[4]/m'.
+# SLP: Warning: vxc_add_8_delay.v (33): Length of connection (32) does not match the length of port 'ce' (1) on instance '/tb/uut/alu/alu/mul_add1/vXv/instantiate_Multiplier[5]/m'.
+# SLP: Warning: vxc_add_8_delay.v (33): Length of connection (32) does not match the length of port 'ce' (1) on instance '/tb/uut/alu/alu/mul_add1/vXv/instantiate_Multiplier[6]/m'.
+# SLP: Warning: vxc_add_8_delay.v (33): Length of connection (32) does not match the length of port 'ce' (1) on instance '/tb/uut/alu/alu/mul_add1/vXv/instantiate_Multiplier[7]/m'.
+# SLP: Warning: vxc_add_8.v (33): Length of connection (32) does not match the length of port 'ce' (1) on instance '/tb/uut/alu/alu/mul_add2/vXv/instantiate_Multiplier[0]/m'.
+# SLP: Warning: vxc_add_8.v (33): Length of connection (32) does not match the length of port 'ce' (1) on instance '/tb/uut/alu/alu/mul_add2/vXv/instantiate_Multiplier[1]/m'.
+# SLP: Warning: vxc_add_8.v (33): Length of connection (32) does not match the length of port 'ce' (1) on instance '/tb/uut/alu/alu/mul_add2/vXv/instantiate_Multiplier[2]/m'.
+# SLP: Warning: vxc_add_8.v (33): Length of connection (32) does not match the length of port 'ce' (1) on instance '/tb/uut/alu/alu/mul_add2/vXv/instantiate_Multiplier[3]/m'.
+# SLP: Warning: vxc_add_8.v (33): Length of connection (32) does not match the length of port 'ce' (1) on instance '/tb/uut/alu/alu/mul_add2/vXv/instantiate_Multiplier[4]/m'.
+# SLP: Warning: vxc_add_8.v (33): Length of connection (32) does not match the length of port 'ce' (1) on instance '/tb/uut/alu/alu/mul_add2/vXv/instantiate_Multiplier[5]/m'.
+# SLP: Warning: vxc_add_8.v (33): Length of connection (32) does not match the length of port 'ce' (1) on instance '/tb/uut/alu/alu/mul_add2/vXv/instantiate_Multiplier[6]/m'.
+# SLP: Warning: vxc_add_8.v (33): Length of connection (32) does not match the length of port 'ce' (1) on instance '/tb/uut/alu/alu/mul_add2/vXv/instantiate_Multiplier[7]/m'.
+# SLP: Warning: alu.v (145): Length of connection (11) does not match the length of port 'counter2' (32) on instance '/tb/uut/alu/alu/vXv2'.
+# SLP: Warning: alu.v (159): Length of connection (11) does not match the length of port 'counter2' (32) on instance '/tb/uut/alu/alu/mul_add2'.
+# SLP: Warning: main_alu.v (79): Length of connection (32) does not match the length of port 'read_address' (11) on instance '/tb/uut/alu/rk_prev'.
+# SLP: Elaboration phase ... done : 0.2 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 1.7 [s]
+# SLP: Finished : 1.9 [s]
+# SLP: 0 primitives and 13352 (100.00%) other processes in SLP
+# SLP: 86 (0.31%) signals in SLP and 27072 (96.66%) interface signals
+# ELAB2: Elaboration final pass complete - time: 2.3 [s].
+# KERNEL: SLP loading done - time: 0.1 [s].
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 38233 kB (elbread=1041 elab2=36480 kernel=711 sdf=0)
+# KERNEL: ASDB file was created in location E:\files\ahmed\College\Graduation Project\June_Work\GIT_REPOS\real_design\real-design\real_design_work_space\real_design_final\src\wave.asdb
+#  08:22 ã, 29 íæäíæ, 2016
+#  Simulation has been initialized
+#  Selected Top-Level: tb (tb)
+run
+# KERNEL: vXv2_finish
+# KERNEL:           0 ::BETA  is 3dad0c22
+# KERNEL:           1 ::BETA  is 3dad0c22
+# KERNEL:           2 ::BETA  is 3dad0c22
+# KERNEL:           3 ::BETA  is 3dad0c22
+# KERNEL:           4 ::BETA  is 3dad0c22
+# KERNEL:           5 ::BETA  is 3fa9038a
+# KERNEL:           6 ::BETA  is 3fa9038a
+# KERNEL:           7 ::BETA  is 3fa9038a
+# KERNEL:           8 ::BETA  is 3fa9038a
+# KERNEL:           9 ::BETA  is 3fa9038a
+endsim
+# KERNEL: stopped at time: 1297630 ns
+#  Simulation has been stopped
+alog -O2 -sve  -work real_design_final $dsn/src/normlize.v $dsn/src/fp_div.v $dsn/src/row_by_vector_with_control.v $dsn/src/matrix_by_vector_v3_with_control.v $dsn/src/delay.v $dsn/src/vxc_add_8_delay.v $dsn/src/8_organizer_with_control_row.v $dsn/src/2x1_mux.v $dsn/src/special.v $dsn/src/p_emap_8.v $dsn/src/multiply.v $dsn/src/rkold_prev.v $dsn/src/8x8_adder_with_start.v $dsn/src/vectorxvector_mxv_with_control.v $dsn/src/mantadd.v $dsn/src/inputieee_8_23_to_8_23.v $dsn/src/division.v $dsn/src/alu.v $dsn/src/adder_subtractor_with_start.v $dsn/src/8_dot_product_with_control_row.v $dsn/src/memp.v $dsn/src/decoder.v $dsn/src/parameters_mem.v $dsn/src/multiples_matrix.v $dsn/src/main_alu.v $dsn/src/fpadd.v $dsn/src/adder_subtractor_with_control_with_start.v $dsn/src/memr.v $dsn/src/mema.v $dsn/src/intmultiplier_usingdsp_24_24_48_unsigned_uid4.v $dsn/src/col_nos.v $dsn/src/multiples_fifo.v $dsn/src/vxc_add_8.v $dsn/src/tb.v $dsn/src/ap_total_mem.v $dsn/src/n_to_2n_demux.v $dsn/src/fpmultiplier_8_23_8_23_8_23_uid2.v $dsn/src/decoder_with_control.v $dsn/src/adder_subtractor_with_control.v $dsn/src/vxc_mul3_sub.v $dsn/src/vectorxvector_with_control.v $dsn/src/vxc_mul3_add.v $dsn/src/top_module.v $dsn/src/memx.v $dsn/src/memp_v2.v $dsn/src/control_unit.v $dsn/src/constants.v $dsn/src/8_dot_product_with_control.v $dsn/src/rounder.v $dsn/src/outputieee_8_23_to_8_23.v $dsn/src/fpalign.v $dsn/src/div_nr_wsticky.v $dsn/src/adder_subtractor.v $dsn/src/a_s.v $dsn/src/intadder_27_f180_uid7.v $dsn/src/intadder_33_f300_uid23.v $dsn/src/intadder_34_f180_uid18.v $dsn/src/intadder_42_f300_uid15.v $dsn/src/final1.v
+# Warning: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
+# Compile...
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Info: VCP2876 row_by_vector_with_control.v : (45, 1): Implicit net declaration, symbol dot_product_finish has not been declared in module row_by_vector_with_control.
+# Info: VCP2876 row_by_vector_with_control.v : (45, 1): Implicit net declaration, symbol prepare_my_new_input has not been declared in module row_by_vector_with_control.
+# Info: VCP2876 8_organizer_with_control_row.v : (38, 1): Implicit net declaration, symbol ExE_finish_dash has not been declared in module Eight_Organizer_with_control_row.
+# Info: VCP2876 vectorxvector_mxv_with_control.v : (35, 1): Implicit net declaration, symbol I_am_ready has not been declared in module vectorXvector_mXv_with_control.
+# Info: VCP2876 alu.v : (134, 1): Implicit net declaration, symbol mXv1_finish has not been declared in module Alu.
+# Info: VCP2876 top_module.v : (103, 1): Implicit net declaration, symbol outsider_read_now has not been declared in module top_module.
+# Info: VCP2876 top_module.v : (110, 1): Implicit net declaration, symbol memoryP_write_enable has not been declared in module top_module.
+# Info: VCP2876 top_module.v : (110, 1): Implicit net declaration, symbol memoryR_write_enable has not been declared in module top_module.
+# Info: VCP2876 top_module.v : (110, 1): Implicit net declaration, symbol memoryX_write_enable has not been declared in module top_module.
+# Info: VCP2876 top_module.v : (130, 1): Implicit net declaration, symbol finishP_v2 has not been declared in module top_module.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: memP decoder tb adder_subtractor_with_control IntAdder_27_f180_uid7 IntAdder_34_f180_uid18.
+# $root top modules: memP decoder tb adder_subtractor_with_control IntAdder_27_f180_uid7 IntAdder_34_f180_uid18.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+asim -O5 +access +w_nets +accb +accr +access +r +access +r+w tb
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: Module 'normlize' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: Module 'FP_div' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# KERNEL: PLI/VHPI kernel's engine initialization done.
+# PLI: Loading library 'C:\Aldec\Active-HDL 9.1\bin\systf.dll'
+# ELAB2: Create instances ...
+# ELAB2: Warning: ELAB2_0051 8_organizer_with_control_row.v (39): Length of connection (32) does not match the length of port "ce" (1) on instance "/tb/uut/alu/alu/vXv1/vXv/E_O/final_adder"
+# ELAB2: Warning: ELAB2_0051 8_organizer_with_control_row.v (39): Length of connection (32) does not match the length of port "ce" (1) on instance "/tb/uut/alu/alu/mXv1_dash/instantiate_ROW_BY_VECTOR[0]/R/edomwcr/E_O/final_adder"
+# ELAB2: Warning: ELAB2_0051 8_organizer_with_control_row.v (39): Length of connection (32) does not match the length of port "ce" (1) on instance "/tb/uut/alu/alu/mXv1_dash/instantiate_ROW_BY_VECTOR[1]/R/edomwcr/E_O/final_adder"
+# ELAB2: Warning: ELAB2_0051 8_organizer_with_control_row.v (39): Length of connection (32) does not match the length of port "ce" (1) on instance "/tb/uut/alu/alu/mXv1_dash/instantiate_ROW_BY_VECTOR[2]/R/edomwcr/E_O/final_adder"
+# ELAB2: Warning: ELAB2_0051 8_organizer_with_control_row.v (39): Length of connection (32) does not match the length of port "ce" (1) on instance "/tb/uut/alu/alu/mXv1_dash/instantiate_ROW_BY_VECTOR[3]/R/edomwcr/E_O/final_adder"
+# ELAB2: Warning: ELAB2_0051 8_organizer_with_control_row.v (39): Length of connection (32) does not match the length of port "ce" (1) on instance "/tb/uut/alu/alu/vXv2/vXv/E_O/final_adder"
+# ELAB2: Warning: ELAB2_0051 8_organizer_with_control_row.v (39): Length of connection (32) does not match the length of port "ce" (1) on instance "/tb/uut/alu/alu/vXv3/vXv/E_O/final_adder"
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Warning: 8_organizer_with_control_row.v (39): Length of connection (32) does not match the length of port 'op' (1) on instance '/tb/uut/alu/alu/vXv1/vXv/E_O/final_adder'.
+# SLP: Warning: 8_dot_product_with_control.v (67): Length of connection (32) does not match the length of port 'ce' (1) on instance '/tb/uut/alu/alu/vXv1/vXv/instantiate_Multiplier[0]/m'.
+# SLP: Warning: 8_dot_product_with_control.v (67): Length of connection (32) does not match the length of port 'ce' (1) on instance '/tb/uut/alu/alu/vXv1/vXv/instantiate_Multiplier[1]/m'.
+# SLP: Warning: 8_dot_product_with_control.v (67): Length of connection (32) does not match the length of port 'ce' (1) on instance '/tb/uut/alu/alu/vXv1/vXv/instantiate_Multiplier[2]/m'.
+# SLP: Warning: 8_dot_product_with_control.v (67): Length of connection (32) does not match the length of port 'ce' (1) on instance '/tb/uut/alu/alu/vXv1/vXv/instantiate_Multiplier[3]/m'.
+# SLP: Warning: 8_dot_product_with_control_row.v (81): Length of connection (32) does not match the length of port 'ce' (1) on instance '/tb/uut/alu/alu/mXv1_dash/instantiate_ROW_BY_VECTOR[0]/R/edomwcr/instantiate_Multiplier[0]/m'.
+# SLP: Warning: 8_dot_product_with_control_row.v (81): Length of connection (32) does not match the length of port 'ce' (1) on instance '/tb/uut/alu/alu/mXv1_dash/instantiate_ROW_BY_VECTOR[0]/R/edomwcr/instantiate_Multiplier[1]/m'.
+# SLP: Warning: 8_dot_product_with_control_row.v (81): Length of connection (32) does not match the length of port 'ce' (1) on instance '/tb/uut/alu/alu/mXv1_dash/instantiate_ROW_BY_VECTOR[0]/R/edomwcr/instantiate_Multiplier[2]/m'.
+# SLP: Warning: 8_dot_product_with_control_row.v (81): Length of connection (32) does not match the length of port 'ce' (1) on instance '/tb/uut/alu/alu/mXv1_dash/instantiate_ROW_BY_VECTOR[0]/R/edomwcr/instantiate_Multiplier[3]/m'.
+# SLP: Warning: vxc_add_8_delay.v (33): Length of connection (32) does not match the length of port 'ce' (1) on instance '/tb/uut/alu/alu/mul_add1/vXv/instantiate_Multiplier[0]/m'.
+# SLP: Warning: vxc_add_8_delay.v (33): Length of connection (32) does not match the length of port 'ce' (1) on instance '/tb/uut/alu/alu/mul_add1/vXv/instantiate_Multiplier[1]/m'.
+# SLP: Warning: vxc_add_8_delay.v (33): Length of connection (32) does not match the length of port 'ce' (1) on instance '/tb/uut/alu/alu/mul_add1/vXv/instantiate_Multiplier[2]/m'.
+# SLP: Warning: vxc_add_8_delay.v (33): Length of connection (32) does not match the length of port 'ce' (1) on instance '/tb/uut/alu/alu/mul_add1/vXv/instantiate_Multiplier[3]/m'.
+# SLP: Warning: vxc_add_8_delay.v (33): Length of connection (32) does not match the length of port 'ce' (1) on instance '/tb/uut/alu/alu/mul_add1/vXv/instantiate_Multiplier[4]/m'.
+# SLP: Warning: vxc_add_8_delay.v (33): Length of connection (32) does not match the length of port 'ce' (1) on instance '/tb/uut/alu/alu/mul_add1/vXv/instantiate_Multiplier[5]/m'.
+# SLP: Warning: vxc_add_8_delay.v (33): Length of connection (32) does not match the length of port 'ce' (1) on instance '/tb/uut/alu/alu/mul_add1/vXv/instantiate_Multiplier[6]/m'.
+# SLP: Warning: vxc_add_8_delay.v (33): Length of connection (32) does not match the length of port 'ce' (1) on instance '/tb/uut/alu/alu/mul_add1/vXv/instantiate_Multiplier[7]/m'.
+# SLP: Warning: vxc_add_8.v (33): Length of connection (32) does not match the length of port 'ce' (1) on instance '/tb/uut/alu/alu/mul_add2/vXv/instantiate_Multiplier[0]/m'.
+# SLP: Warning: vxc_add_8.v (33): Length of connection (32) does not match the length of port 'ce' (1) on instance '/tb/uut/alu/alu/mul_add2/vXv/instantiate_Multiplier[1]/m'.
+# SLP: Warning: vxc_add_8.v (33): Length of connection (32) does not match the length of port 'ce' (1) on instance '/tb/uut/alu/alu/mul_add2/vXv/instantiate_Multiplier[2]/m'.
+# SLP: Warning: vxc_add_8.v (33): Length of connection (32) does not match the length of port 'ce' (1) on instance '/tb/uut/alu/alu/mul_add2/vXv/instantiate_Multiplier[3]/m'.
+# SLP: Warning: vxc_add_8.v (33): Length of connection (32) does not match the length of port 'ce' (1) on instance '/tb/uut/alu/alu/mul_add2/vXv/instantiate_Multiplier[4]/m'.
+# SLP: Warning: vxc_add_8.v (33): Length of connection (32) does not match the length of port 'ce' (1) on instance '/tb/uut/alu/alu/mul_add2/vXv/instantiate_Multiplier[5]/m'.
+# SLP: Warning: vxc_add_8.v (33): Length of connection (32) does not match the length of port 'ce' (1) on instance '/tb/uut/alu/alu/mul_add2/vXv/instantiate_Multiplier[6]/m'.
+# SLP: Warning: vxc_add_8.v (33): Length of connection (32) does not match the length of port 'ce' (1) on instance '/tb/uut/alu/alu/mul_add2/vXv/instantiate_Multiplier[7]/m'.
+# SLP: Warning: alu.v (145): Length of connection (11) does not match the length of port 'counter2' (32) on instance '/tb/uut/alu/alu/vXv2'.
+# SLP: Warning: alu.v (159): Length of connection (11) does not match the length of port 'counter2' (32) on instance '/tb/uut/alu/alu/mul_add2'.
+# SLP: Warning: main_alu.v (79): Length of connection (32) does not match the length of port 'read_address' (11) on instance '/tb/uut/alu/rk_prev'.
+# SLP: Elaboration phase ... done : 0.2 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 1.4 [s]
+# SLP: Finished : 1.6 [s]
+# SLP: 0 primitives and 13352 (100.00%) other processes in SLP
+# SLP: 86 (0.31%) signals in SLP and 27072 (96.66%) interface signals
+# ELAB2: Elaboration final pass complete - time: 1.9 [s].
+# KERNEL: SLP loading done - time: 0.1 [s].
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 38234 kB (elbread=1041 elab2=36481 kernel=711 sdf=0)
+# KERNEL: ASDB file was created in location E:\files\ahmed\College\Graduation Project\June_Work\GIT_REPOS\real_design\real-design\real_design_work_space\real_design_final\src\wave.asdb
+#  08:47 ã, 29 íæäíæ, 2016
+#  Simulation has been initialized
+#  Selected Top-Level: tb (tb)
+run
+# KERNEL: vXv2_finish
+# KERNEL:           0 ::BETA  is 3dad0c22
+# KERNEL:           1 ::BETA  is 3dad0c22
+# KERNEL:           2 ::BETA  is 3dad0c22
+# KERNEL:           3 ::BETA  is 3dad0c22
+# KERNEL:           4 ::BETA  is 3dad0c22
+endsim
+# KERNEL: stopped at time: 739330 ns
+#  Simulation has been stopped

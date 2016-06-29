@@ -169,9 +169,7 @@ always@(posedge clk)
 
 always @(posedge clk)
 	begin 
-		if(main_reset)
-		 begin initialization_counter <=1;end
-		else if(reset )
+		 if(reset )
 			begin
 				fifo_write_address <= (fifo_write_address +1)%10 ;
 				fifo_write_enable<=1;	
@@ -186,7 +184,9 @@ always @(posedge clk)
 
 always @(posedge clk)
 	begin
-		if(reset_pip2 && initialization_counter)
+		if(main_reset)
+		 begin initialization_counter <=1;end
+		else if(reset_pip2 && initialization_counter)
 		begin
 				delayed_no_of_multiples <=fifo_output_data;
 				fifo_read_address <= (fifo_read_address +1)%10;

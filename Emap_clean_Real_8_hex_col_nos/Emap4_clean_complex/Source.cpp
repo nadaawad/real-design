@@ -1653,6 +1653,19 @@ else /* Multiply hermitian of matrix with vector */
 
 /****************************Main routine************************************/
 
+
+int clog2(int address)
+{
+	float clog2 = (log(address*1.0f)/log(2.0f)) ;
+	float clog22 = clog2-(int)clog2;
+	if(clog22*clog22 <.0000000000001)
+		return clog2;
+	else return (int)(clog2+1);
+
+}
+
+
+
 void ConjugateSolver(int MatrixSize,int* RowIIndex,int** RowICol,complex** RowIDat,complex* RHSVec,int ITmax,float TOL)
 
 {
@@ -1668,28 +1681,15 @@ for(int i = 0;i<MatrixSize;i++)
 	}
 
 
-// COMMENTS TO SHEDEED 
-// COMMENTS TO SHEDEED
-// COMMENTS TO SHEDEED
-// COMMENTS TO SHEDEED
-// COMMENTS TO SHEDEED
-// These are the memories we need to send to the design 
 A_matrix = fopen("A.txt","w");
+A_floating_matrix = fopen("A_floating.txt","w");
+b_new_matrix = fopen("B_new.txt", "w");
+Ap_values = fopen("AP.txt", "w");
 Multiples_Matrix = fopen("multiples_matrix.txt","w");
 col_nos_matrix = fopen("col_nos.txt","w");
 Parameters_matrix = fopen("Parameters.txt","w");
 B_matrix = fopen("b.txt","w");
 X_matrix =fopen("memx.txt","w");
-
-
-
-
-
-
-
-A_floating_matrix = fopen("A_floating.txt","w");
-b_new_matrix = fopen("B_new.txt", "w");
-Ap_values = fopen("AP.txt", "w");
 B_floating_matrix = fopen("b_floating.txt","w");
 b_new_floatin_matrix = fopen("b_new_floating.txt","w");
 
@@ -1721,6 +1721,7 @@ for(II=0;II<MatrixSize;II++)
 int counter = 0;
 float zero = 0;
 int unused = -1;
+int col_nos_unused = -1;
 
 
 // for debugging 
@@ -1732,13 +1733,24 @@ printf("\n\n MAX INDEX VALUE :: %d \n",max_index_value);
 
 if(max_index_value>20)
 { printf("ERROR\nERROR\nERROR\nERROR\nERROR\nERROR\nERROR\nERROR\nERROR\nERROR\nERROR\nERROR\nERROR\nERROR\nERROR\nERROR\n");}
+
+// VERY IMPORTANT PARAMETERS FOR VERILOG 
+
 int fixed_col_nos_value = 20;
 int limit = (max_index_value>fixed_col_nos_value)?max_index_value:fixed_col_nos_value;
-
-int number_of_row_by_vector_modules = 4;
+int number_of_row_by_vector_modules = 8;
 int no_of_units = number_of_row_by_vector_modules*2;
+int no_of_elements_in_p_emap_output = 8 ;
+int memory_height = 1000;
+int memory_A_height = memory_height * (no_of_units/number_of_row_by_vector_modules) + no_of_units ;
+int A_address_width = ((int) log(1.0*memory_height)/log(1.0*2))+4;
 
+int A_file_index = 0;
+int b_file_index = 0;
 
+printf(" A_ADDRESS_WIDTH  :: %d \n",A_address_width);
+
+printf(" :: %d \n ", clog2(1000));
 
 int additional_b =((MatrixSize*1)%(no_of_units) !=0)? (no_of_units-((MatrixSize*1)%(no_of_units))):0;
 printf("MATRIX SIZE IS %d",MatrixSize);
@@ -1762,11 +1774,11 @@ for (int i = 0; i < MatrixSize; i++)
 
  for (II=0;II<MatrixSize;II++) 
     { 
-		int no_of_multiples_ii = ((RowIIndex[II]%no_of_units) ==0) ? (RowIIndex[II]/no_of_units) :((RowIIndex[II]/no_of_units)+1);
+		int no_of_multiples_ii = ((RowIIndex[II]%no_of_elements_in_p_emap_output) ==0) ? (RowIIndex[II]/no_of_elements_in_p_emap_output) :((RowIIndex[II]/no_of_elements_in_p_emap_output)+1);
 		fprintf(Multiples_Matrix,"%08X",no_of_multiples_ii);
 		float testNum1 = 500.5 + II;
-
 		fprintf(B_matrix,"%08X",*(unsigned int*)&RHSVec[II].x/*&testNum1*/);
+
 		fprintf(X_matrix,"%08X",*(unsigned int*)&zero/*&testNum1*/);
 		fprintf(B_floating_matrix,"%f ",RHSVec[II].x/*&testNum1*/);
 		matb[II] = RHSVec[II].x/*&testNum1*/;
@@ -1789,32 +1801,64 @@ for (int i = 0; i < MatrixSize; i++)
 		 {
 			  fprintf(A_matrix,"%08X",*(unsigned int*)&zero);
 			  fprintf(A_floating_matrix,"%f ",zero);
-			  fprintf(col_nos_matrix,"%08X",unused);
+			  fprintf(col_nos_matrix,"%08X",col_nos_unused);
 			  mata[II][JJ] = zero;
 		  }
 
       } 
-	if((II+1)%number_of_row_by_vector_modules ==0)
-	{
-		fprintf(A_matrix,"\n"); 
-		fprintf(A_floating_matrix,"\n");
-		fprintf(col_nos_matrix,"\n");
-		fprintf(Multiples_Matrix,"\n");
-	}
-	if(counter%8==0)
+		if((II+1)%number_of_row_by_vector_modules ==0)
 		{
+			fprintf(A_matrix,"\n"); 
+			fprintf(A_floating_matrix,"\n");
+			fprintf(col_nos_matrix,"\n");
+			fprintf(Multiples_Matrix,"\n");
+			A_file_index ++;
+		}
+		if(counter%no_of_units==0)
+		{
+			b_file_index++;
 			fprintf(B_matrix,"\n");
 			fprintf(B_floating_matrix,"\n");
 			fprintf(X_matrix,"\n");
 		}
+		if(
+			((II+1)%number_of_row_by_vector_modules != 0) && (II == (MatrixSize-1))
+			)
+		{
+			printf("\n :: %d :L \n",(number_of_row_by_vector_modules-(II+1)%number_of_row_by_vector_modules));
+			for(int q = 0 ; q < (number_of_row_by_vector_modules-(II+1)%number_of_row_by_vector_modules) ; q++)
+			{
+				fprintf(Multiples_Matrix,"%08X",1);
+			}
+
+		for(int q = 0 ; q <limit*(number_of_row_by_vector_modules-(II+1)%number_of_row_by_vector_modules);q++)
+			 {
+	 		  fprintf(A_matrix,"%08X",*(unsigned int*)&zero);
+			  fprintf(A_floating_matrix,"%f ",zero);
+			  fprintf(col_nos_matrix,"%08X",col_nos_unused);
+			}
+		
+			  A_file_index++;
+			  fprintf(Multiples_Matrix,"%\n");
+			  fprintf(A_matrix,"\n");
+			  fprintf(A_floating_matrix,"\n");
+			  fprintf(col_nos_matrix,"\n");
+		
+		}
     } 
 
+ int III = II ;
 
- int third_additional = ((MatrixSize/number_of_row_by_vector_modules)%no_of_units!=0)
+	
+
+
+ int third_additional = ((MatrixSize/number_of_row_by_vector_modules)%no_of_elements_in_p_emap_output!=0)
 	 ?
-	 (no_of_units-(MatrixSize/number_of_row_by_vector_modules)%no_of_units)
+	 (no_of_elements_in_p_emap_output-(MatrixSize/number_of_row_by_vector_modules)%no_of_elements_in_p_emap_output)
 	 :0
 	 ;
+
+ printf("\n THIRD ADDTITIONAL IS :: %d \n\n",third_additional);
 
  fprintf(Parameters_matrix,"%08X\n",MatrixSize+additional_b);
  fprintf(Parameters_matrix,"%08X\n",MatrixSize+additional_b);
@@ -1825,15 +1869,29 @@ for (int i = 0; i < MatrixSize; i++)
  {
 	 for(int q = 0 ; q <limit*number_of_row_by_vector_modules;q++)
 	 {
-	 		  fprintf(A_matrix,"%08X",*(unsigned int*)&zero);
-			  fprintf(A_floating_matrix,"%f ",zero);
-			  fprintf(col_nos_matrix,"%08X",unused);
+	 		//  fprintf(A_matrix,"%08X",*(unsigned int*)&zero);
+			//  fprintf(A_floating_matrix,"%f ",zero);
+			//  fprintf(col_nos_matrix,"%08X",col_nos_unused);
 	 }
 	 for(int t = 0 ; t<number_of_row_by_vector_modules;t++)
 	 {
-		fprintf(Multiples_Matrix,"%08X",1);
+		//fprintf(Multiples_Matrix,"%08X",1);
 	 }
+		//	 A_file_index++;
+	   	 	// fprintf(A_matrix,"\n");
+			  //fprintf(A_floating_matrix,"\n");
+			  //fprintf(col_nos_matrix,"\n");
+			  //fprintf(Multiples_Matrix,"\n");
  }
+
+ /*
+	fprintf(Multiples_Matrix,"\nIII IS %d \n",III);
+		fprintf(A_matrix,"\n"); 
+		fprintf(A_floating_matrix,"\n");
+		fprintf(col_nos_matrix,"\n");
+		fprintf(Multiples_Matrix,"\n");
+		*/
+
  for (II = 0; II<MatrixSize; II++)
  {
 	// printf("mat_b is %f", matb[II] );
@@ -1899,25 +1957,34 @@ for (int i = 0; i < MatrixSize; i++)
  if(additional_b!=0)
  {
  for(int i=0;i<additional_b;i++)
-	 {
-		 fprintf(B_matrix,"%08X",*(unsigned int*)&zero);
-		 fprintf(X_matrix,"%08X",*(unsigned int*)&zero);
-		 fprintf(B_floating_matrix,"%f ",zero);
-	 }
+	{
+	 fprintf(B_matrix,"%08X",*(unsigned int*)&zero);
+	 fprintf(X_matrix,"%08X",*(unsigned int*)&zero);
+	 fprintf(B_floating_matrix,"%f ",zero);
+	}
  }
-  if(additional_A!=0)
- {
- for(int i=0;i<additional_A;i++)
+
+ printf("\n\n\nADDITIONAL A IS %d\n\n",additional_A);
+
+ printf("\n\n\nA file index ::  %d\n\n",A_file_index);
+ printf("\n\n\nB file index ::  %d\n\n",b_file_index);
+
+
+
+ while(A_file_index < 2*(1+b_file_index))
 	 {
-		for(int k =0;k<limit ; k++)
+		 for(int k =0;k<limit*number_of_row_by_vector_modules ; k++)
 		{
 			fprintf(A_matrix,"%08X",*(unsigned int*)&zero);
 			fprintf(A_floating_matrix,"%f ",zero);
-			fprintf(col_nos_matrix,"%08X",unused);
+			fprintf(col_nos_matrix,"%08X",col_nos_unused);
 		}
-			fprintf(Multiples_Matrix,"%08X",*(unsigned int*)&zero);
+		 for(int k =0;k<number_of_row_by_vector_modules ; k++)
+		 {fprintf(Multiples_Matrix,"%08X",1);}
+
+		 A_file_index ++;
 	 }
- }
+ 
 
 
     fclose(A_matrix);
@@ -2051,11 +2118,9 @@ for(II=0;II<MatrixSize;II++)
    Old_Solution[II] = X[II]; /* Starting point for next iteration */
    }
 }
-
 /***************************************************************************
 *   FUNCTION        : Read_Input_Pass_1()
 ****************************************************************************/
-
 void Read_Input_Pass_1()
 {
  int    x1, y1, z1, x2, y2, z2, p, p1, p2, OutF_Count=0, output_flag=0;

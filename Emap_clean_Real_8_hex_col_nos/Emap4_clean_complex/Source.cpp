@@ -1738,7 +1738,7 @@ if(max_index_value>20)
 
 int fixed_col_nos_value = 20;
 int limit = (max_index_value>fixed_col_nos_value)?max_index_value:fixed_col_nos_value;
-int number_of_row_by_vector_modules = 8;
+int number_of_row_by_vector_modules =4;
 int no_of_units = number_of_row_by_vector_modules*2;
 int no_of_elements_in_p_emap_output = 8 ;
 int memory_height = 1000;

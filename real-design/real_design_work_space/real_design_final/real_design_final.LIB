@@ -1,486 +1,486 @@
-timestamp=1467245747301
+timestamp=1467303107880
 
 [$root]
-A/$root=22|""|0|1*5661015
-BinI32/$root=3*4751835
+A/$root=22|""|0|1*6553441
+BinI32/$root=3*5638522
 Version=9.1.2353.4205  (Windows)|00000018789cd3cd51284a4dcc894f492dce4ccf8b4fcbcc4bcc51d0f53702006c43086e
 
 [AP_total]
-A/AP_total=22|./src/ap_total_mem.v|1|1*5810395
-BinI32/AP_total=3*4887593
+A/AP_total=22|./src/ap_total_mem.v|1|1*6702821
+BinI32/AP_total=3*5774172
 P/~emb=554,842,1158,1268
 R=./src/ap_total_mem.v|1
 Version=9.1.2353.4205  (Windows)|00000018789cd3cd51284a4dcc894f492dce4ccf8b4fcbcc4bcc51d0f53702006c43086e
 
 [Alu]
-A/Alu=22|./src/alu.v|2|1*5790637
-BinI32/Alu=3*4881536
+A/Alu=22|./src/alu.v|2|1*6683063
+BinI32/Alu=3*5768124
 P/~emb=5709,6783,8236,9097
 R=./src/alu.v|2
 Version=9.1.2353.4205  (Windows)|00000018789cd3cd51284a4dcc894f492dce4ccf8b4fcbcc4bcc51d0f53702006c43086e
 
 [Eight_Organizer_with_control_row]
-A/Eight_Organizer_with_control_row=22|./src/8_organizer_with_control_row.v|2|1*5720381
-BinI32/Eight_Organizer_with_control_row=3*4821031
+A/Eight_Organizer_with_control_row=22|./src/8_organizer_with_control_row.v|2|1*6612807
+BinI32/Eight_Organizer_with_control_row=3*5707755
 P/~emb=903,1378,1861,2130
 R=./src/8_organizer_with_control_row.v|2
 Version=9.1.2353.4205  (Windows)|00000018789cd3cd51284a4dcc894f492dce4ccf8b4fcbcc4bcc51d0f53702006c43086e
 
 [EightxEight_Adder_with_start]
-A/EightxEight_Adder_with_start=22|./src/8x8_adder_with_start.v|1|1*5726341
-BinI32/EightxEight_Adder_with_start=3*4823082
+A/EightxEight_Adder_with_start=22|./src/8x8_adder_with_start.v|1|1*6618767
+BinI32/EightxEight_Adder_with_start=3*5709793
 P/~emb=1328,1834,2436,2924
 R=./src/8x8_adder_with_start.v|1
 Version=9.1.2353.4205  (Windows)|00000018789cd3cd51284a4dcc894f492dce4ccf8b4fcbcc4bcc51d0f53702006c43086e
 
 [FPMultiplier_8_23_8_23_8_23_uid2]
-A/FPMultiplier_8_23_8_23_8_23_uid2=22|./src/fpmultiplier_8_23_8_23_8_23_uid2.v|146|1*5757077
-BinI32/FPMultiplier_8_23_8_23_8_23_uid2=3*4854303
+A/FPMultiplier_8_23_8_23_8_23_uid2=22|./src/fpmultiplier_8_23_8_23_8_23_uid2.v|146|1*6649503
+BinI32/FPMultiplier_8_23_8_23_8_23_uid2=3*5741002
 P/~emb=451,1081,2157,2366
 R=./src/fpmultiplier_8_23_8_23_8_23_uid2.v|146
 Version=9.1.2353.4205  (Windows)|00000018789cd3cd51284a4dcc894f492dce4ccf8b4fcbcc4bcc51d0f53702006c43086e
 
 [FP_div]
-A/FP_div=22|./src/fp_div.v|17|1*5665805
-BinI32/FP_div=3*4755996
+A/FP_div=22|./src/fp_div.v|17|1*6558231
+BinI32/FP_div=3*5642683
 P/~emb=421,984,2580,2868
 R=./src/fp_div.v|17
 Version=9.1.2353.4205  (Windows)|00000018789cd3cd51284a4dcc894f492dce4ccf8b4fcbcc4bcc51d0f53702006c43086e
 
 [InputIEEE_8_23_to_8_23]
-A/InputIEEE_8_23_to_8_23=22|./src/inputieee_8_23_to_8_23.v|24|1*5752685
-BinI32/InputIEEE_8_23_to_8_23=3*4852367
+A/InputIEEE_8_23_to_8_23=22|./src/inputieee_8_23_to_8_23.v|24|1*6645111
+BinI32/InputIEEE_8_23_to_8_23=3*5739063
 P/~emb=211,566,1192,1256
 R=./src/inputieee_8_23_to_8_23.v|24
 Version=9.1.2353.4205  (Windows)|00000018789cd3cd51284a4dcc894f492dce4ccf8b4fcbcc4bcc51d0f53702006c43086e
 
 [IntAdder_27_f180_uid7]
-A/IntAdder_27_f180_uid7=22|./src/intadder_27_f180_uid7.v|16|1*5955352
-BinI32/IntAdder_27_f180_uid7=3*5046622
+A/IntAdder_27_f180_uid7=22|./src/intadder_27_f180_uid7.v|16|1*6847778
+BinI32/IntAdder_27_f180_uid7=3*5932724
 P/~emb=269,453,628,692
 R=./src/intadder_27_f180_uid7.v|16
 Version=9.1.2353.4205  (Windows)|00000018789cd3cd51284a4dcc894f492dce4ccf8b4fcbcc4bcc51d0f53702006c43086e
 
 [IntAdder_33_f300_uid23]
-A/IntAdder_33_f300_uid23=22|./src/intadder_33_f300_uid23.v|16|1*5934098
-BinI32/IntAdder_33_f300_uid23=3*5033751
+A/IntAdder_33_f300_uid23=22|./src/intadder_33_f300_uid23.v|16|1*6826524
+BinI32/IntAdder_33_f300_uid23=3*5919934
 P/~emb=271,475,708,796
 R=./src/intadder_33_f300_uid23.v|16
 Version=9.1.2353.4205  (Windows)|00000018789cd3cd51284a4dcc894f492dce4ccf8b4fcbcc4bcc51d0f53702006c43086e
 
 [IntAdder_34_f180_uid18]
-A/IntAdder_34_f180_uid18=22|./src/intadder_34_f180_uid18.v|16|1*5956857
-BinI32/IntAdder_34_f180_uid18=3*5047235
+A/IntAdder_34_f180_uid18=22|./src/intadder_34_f180_uid18.v|16|1*6849283
+BinI32/IntAdder_34_f180_uid18=3*5933327
 P/~emb=271,456,631,695
 R=./src/intadder_34_f180_uid18.v|16
 Version=9.1.2353.4205  (Windows)|00000018789cd3cd51284a4dcc894f492dce4ccf8b4fcbcc4bcc51d0f53702006c43086e
 
 [IntAdder_42_f300_uid15]
-A/IntAdder_42_f300_uid15=22|./src/intadder_42_f300_uid15.v|16|1*5907499
-BinI32/IntAdder_42_f300_uid15=3*5018694
+A/IntAdder_42_f300_uid15=22|./src/intadder_42_f300_uid15.v|16|1*6799925
+BinI32/IntAdder_42_f300_uid15=3*5904824
 P/~emb=271,456,631,695
 R=./src/intadder_42_f300_uid15.v|16
 Version=9.1.2353.4205  (Windows)|00000018789cd3cd51284a4dcc894f492dce4ccf8b4fcbcc4bcc51d0f53702006c43086e
 
 [IntMultiplier_UsingDSP_24_24_48_unsigned_uid4]
-A/IntMultiplier_UsingDSP_24_24_48_unsigned_uid4=22|./src/intmultiplier_usingdsp_24_24_48_unsigned_uid4.v|15|1*5876582
-BinI32/IntMultiplier_UsingDSP_24_24_48_unsigned_uid4=3*5010343
+A/IntMultiplier_UsingDSP_24_24_48_unsigned_uid4=22|./src/intmultiplier_usingdsp_24_24_48_unsigned_uid4.v|15|1*6769008
+BinI32/IntMultiplier_UsingDSP_24_24_48_unsigned_uid4=3*5896518
 P/~emb=329,1448,4145,4312
 R=./src/intmultiplier_usingdsp_24_24_48_unsigned_uid4.v|15
 Version=9.1.2353.4205  (Windows)|00000018789cd3cd51284a4dcc894f492dce4ccf8b4fcbcc4bcc51d0f53702006c43086e
 
 [N_to_2N_demux]
-A/N_to_2N_demux=22|./src/n_to_2n_demux.v|1|1*5829247
-BinI32/N_to_2N_demux=3*4895572
+A/N_to_2N_demux=22|./src/n_to_2n_demux.v|1|1*6721673
+BinI32/N_to_2N_demux=3*5782179
 P/~emb=282,485,724,839
 R=./src/n_to_2n_demux.v|1
 Version=9.1.2353.4205  (Windows)|00000018789cd3cd51284a4dcc894f492dce4ccf8b4fcbcc4bcc51d0f53702006c43086e
 
 [OutputIEEE_8_23_to_8_23]
-A/OutputIEEE_8_23_to_8_23=22|./src/outputieee_8_23_to_8_23.v|24|1*5765151
-BinI32/OutputIEEE_8_23_to_8_23=3*4858066
+A/OutputIEEE_8_23_to_8_23=22|./src/outputieee_8_23_to_8_23.v|24|1*6657577
+BinI32/OutputIEEE_8_23_to_8_23=3*5744684
 P/~emb=213,525,1061,1125
 R=./src/outputieee_8_23_to_8_23.v|24
 Version=9.1.2353.4205  (Windows)|00000018789cd3cd51284a4dcc894f492dce4ccf8b4fcbcc4bcc51d0f53702006c43086e
 
 [P_Emap_8]
-A/P_Emap_8=22|./src/p_emap_8.v|6|1*5740934
-BinI32/P_Emap_8=3*4827641
+A/P_Emap_8=22|./src/p_emap_8.v|6|1*6633360
+BinI32/P_Emap_8=3*5714324
 P/~emb=990,1638,3134,3577
 R=./src/p_emap_8.v|6
 Version=9.1.2353.4205  (Windows)|00000018789cd3cd51284a4dcc894f492dce4ccf8b4fcbcc4bcc51d0f53702006c43086e
 
 [TwoxOne_mux]
-A/TwoxOne_mux=22|./src/2x1_mux.v|1|1*5725063
-BinI32/TwoxOne_mux=3*4822444
+A/TwoxOne_mux=22|./src/2x1_mux.v|1|1*6617489
+BinI32/TwoxOne_mux=3*5709167
 P/~emb=243,417,574,637
 R=./src/2x1_mux.v|1
 Version=9.1.2353.4205  (Windows)|00000018789cd3cd51284a4dcc894f492dce4ccf8b4fcbcc4bcc51d0f53702006c43086e
 
 [a_s]
-A/a_s=22|./src/a_s.v|17|1*5953776
-BinI32/a_s=3*5045593
+A/a_s=22|./src/a_s.v|17|1*6846202
+BinI32/a_s=3*5931699
 P/~emb=220,391,600,722
 R=./src/a_s.v|17
 Version=9.1.2353.4205  (Windows)|00000018789cd3cd51284a4dcc894f492dce4ccf8b4fcbcc4bcc51d0f53702006c43086e
 
 [adder_subtractor]
-A/adder_subtractor=22|./src/adder_subtractor.v|25|1*5718318
-BinI32/adder_subtractor=3*4820260
+A/adder_subtractor=22|./src/adder_subtractor.v|25|1*6610744
+BinI32/adder_subtractor=3*5706984
 P/~emb=339,568,805,914
 R=./src/adder_subtractor.v|25
 Version=9.1.2353.4205  (Windows)|00000018789cd3cd51284a4dcc894f492dce4ccf8b4fcbcc4bcc51d0f53702006c43086e
 
 [adder_subtractor_with_control]
-A/adder_subtractor_with_control=22|./src/adder_subtractor_with_control.v|25|1*5936233
-BinI32/adder_subtractor_with_control=3*5034854
+A/adder_subtractor_with_control=22|./src/adder_subtractor_with_control.v|25|1*6828659
+BinI32/adder_subtractor_with_control=3*5921037
 P/~emb=517,822,1184,1338
 R=./src/adder_subtractor_with_control.v|25
 Version=9.1.2353.4205  (Windows)|00000018789cd3cd51284a4dcc894f492dce4ccf8b4fcbcc4bcc51d0f53702006c43086e
 
 [adder_subtractor_with_control_with_start]
-A/adder_subtractor_with_control_with_start=22|./src/adder_subtractor_with_control_with_start.v|25|1*5733721
-BinI32/adder_subtractor_with_control_with_start=3*4824617
+A/adder_subtractor_with_control_with_start=22|./src/adder_subtractor_with_control_with_start.v|25|1*6626147
+BinI32/adder_subtractor_with_control_with_start=3*5711330
 P/~emb=651,1006,1431,1610
 R=./src/adder_subtractor_with_control_with_start.v|25
 Version=9.1.2353.4205  (Windows)|00000018789cd3cd51284a4dcc894f492dce4ccf8b4fcbcc4bcc51d0f53702006c43086e
 
 [adder_subtractor_with_start]
-A/adder_subtractor_with_start=22|./src/adder_subtractor_with_start.v|23|1*5771483
-BinI32/adder_subtractor_with_start=3*4861901
+A/adder_subtractor_with_start=22|./src/adder_subtractor_with_start.v|23|1*6663909
+BinI32/adder_subtractor_with_start=3*5748531
 P/~emb=429,697,997,1127
 R=./src/adder_subtractor_with_start.v|23
 Version=9.1.2353.4205  (Windows)|00000018789cd3cd51284a4dcc894f492dce4ccf8b4fcbcc4bcc51d0f53702006c43086e
 
 [col_nos]
-A/col_nos=22|./src/col_nos.v|1|1*5909010
-BinI32/col_nos=3*5019416
+A/col_nos=22|./src/col_nos.v|1|1*6801436
+BinI32/col_nos=3*5905533
 P/~emb=511,809,1074,1162
 R=./src/col_nos.v|1
 Version=9.1.2353.4205  (Windows)|00000018789cd3cd51284a4dcc894f492dce4ccf8b4fcbcc4bcc51d0f53702006c43086e
 
 [control_unit]
-A/control_unit=22|./src/control_unit.v|2|1*5939267
-BinI32/control_unit=3*5036342
+A/control_unit=22|./src/control_unit.v|2|1*6831693
+BinI32/control_unit=3*5922458
 P/~emb=1886,2484,3752,4224
 R=./src/control_unit.v|2
 Version=9.1.2353.4205  (Windows)|00000018789cd3cd51284a4dcc894f492dce4ccf8b4fcbcc4bcc51d0f53702006c43086e
 
 [decoder]
-A/decoder=22|./src/decoder.v|25|1*5837067
-BinI32/decoder=3*4902597
+A/decoder=22|./src/decoder.v|25|1*6729493
+BinI32/decoder=3*5789242
 P/~emb=266,461,695,811
 R=./src/decoder.v|25
 Version=9.1.2353.4205  (Windows)|00000018789cd3cd51284a4dcc894f492dce4ccf8b4fcbcc4bcc51d0f53702006c43086e
 
 [decoder_with_control]
-A/decoder_with_control=22|./src/decoder_with_control.v|25|1*5706855
-BinI32/decoder_with_control=3*4812404
+A/decoder_with_control=22|./src/decoder_with_control.v|25|1*6599281
+BinI32/decoder_with_control=3*5699122
 P/~emb=452,730,1074,1230
 R=./src/decoder_with_control.v|25
 Version=9.1.2353.4205  (Windows)|00000018789cd3cd51284a4dcc894f492dce4ccf8b4fcbcc4bcc51d0f53702006c43086e
 
 [delay]
-A/delay=22|./src/delay.v|27|1*5709266
-BinI32/delay=3*4815214
+A/delay=22|./src/delay.v|27|1*6601692
+BinI32/delay=3*5701938
 P/~emb=153,305,486,574
 R=./src/delay.v|27
 Version=9.1.2353.4205  (Windows)|00000018789cd3cd51284a4dcc894f492dce4ccf8b4fcbcc4bcc51d0f53702006c43086e
 
 [div_nr_wsticky]
-A/div_nr_wsticky=22|./src/div_nr_wsticky.v|17|1*5677178
-BinI32/div_nr_wsticky=3*4780691
+A/div_nr_wsticky=22|./src/div_nr_wsticky.v|17|1*6569604
+BinI32/div_nr_wsticky=3*5667371
 P/~emb=313,643,1348,1717
 R=./src/div_nr_wsticky.v|17
 Version=9.1.2353.4205  (Windows)|00000018789cd3cd51284a4dcc894f492dce4ccf8b4fcbcc4bcc51d0f53702006c43086e
 
 [division]
-A/division=22|./src/division.v|25|1*5788868
-BinI32/division=3*4880808
+A/division=22|./src/division.v|25|1*6681294
+BinI32/division=3*5767394
 P/~emb=312,517,856,1042
 R=./src/division.v|25
 Version=9.1.2353.4205  (Windows)|00000018789cd3cd51284a4dcc894f492dce4ccf8b4fcbcc4bcc51d0f53702006c43086e
 
 [eight_Dot_Product_Multiply_with_control]
-A/eight_Dot_Product_Multiply_with_control=22|./src/8_dot_product_with_control.v|2|1*5778306
-BinI32/eight_Dot_Product_Multiply_with_control=3*4864745
+A/eight_Dot_Product_Multiply_with_control=22|./src/8_dot_product_with_control.v|2|1*6670732
+BinI32/eight_Dot_Product_Multiply_with_control=3*5751356
 P/~emb=930,1585,2574,3142
 R=./src/8_dot_product_with_control.v|2
 Version=9.1.2353.4205  (Windows)|00000018789cd3cd51284a4dcc894f492dce4ccf8b4fcbcc4bcc51d0f53702006c43086e
 
 [eight_Dot_Product_Multiply_with_control_row]
-A/eight_Dot_Product_Multiply_with_control_row=22|./src/8_dot_product_with_control_row.v|2|1*5688746
-BinI32/eight_Dot_Product_Multiply_with_control_row=3*4788210
+A/eight_Dot_Product_Multiply_with_control_row=22|./src/8_dot_product_with_control_row.v|2|1*6581172
+BinI32/eight_Dot_Product_Multiply_with_control_row=3*5674880
 P/~emb=1207,2085,3583,4396
 R=./src/8_dot_product_with_control_row.v|2
 Version=9.1.2353.4205  (Windows)|00000018789cd3cd51284a4dcc894f492dce4ccf8b4fcbcc4bcc51d0f53702006c43086e
 
 [final1]
-A/final1=22|./src/final1.v|15|1*5858937
-BinI32/final1=3*4913138
+A/final1=22|./src/final1.v|15|1*6751363
+BinI32/final1=3*5799688
 P/~emb=915,1337,2179,2249
 R=./src/final1.v|15
 Version=9.1.2353.4205  (Windows)|00000018789cd3cd51284a4dcc894f492dce4ccf8b4fcbcc4bcc51d0f53702006c43086e
 
 [fpadd]
-A/fpadd=22|./src/fpadd.v|23|1*5822310
-BinI32/fpadd=3*4894591
+A/fpadd=22|./src/fpadd.v|23|1*6714736
+BinI32/fpadd=3*5781207
 P/~emb=364,867,1509,1997
 R=./src/fpadd.v|23
 Version=9.1.2353.4205  (Windows)|00000018789cd3cd51284a4dcc894f492dce4ccf8b4fcbcc4bcc51d0f53702006c43086e
 
 [fpalign]
-A/fpalign=22|./src/fpalign.v|17|1*5851685
-BinI32/fpalign=3*4909372
+A/fpalign=22|./src/fpalign.v|17|1*6744111
+BinI32/fpalign=3*5795988
 P/~emb=265,549,1160,1224
 R=./src/fpalign.v|17
 Version=9.1.2353.4205  (Windows)|00000018789cd3cd51284a4dcc894f492dce4ccf8b4fcbcc4bcc51d0f53702006c43086e
 
 [main_alu]
-A/main_alu=22|./src/main_alu.v|2|1*5843046
-BinI32/main_alu=3*4907598
+A/main_alu=22|./src/main_alu.v|2|1*6735472
+BinI32/main_alu=3*5794245
 P/~emb=3361,4054,4661,5004
 R=./src/main_alu.v|2
 Version=9.1.2353.4205  (Windows)|00000018789cd3cd51284a4dcc894f492dce4ccf8b4fcbcc4bcc51d0f53702006c43086e
 
 [mantadd]
-A/mantadd=22|./src/mantadd.v|18|1*5786092
-BinI32/mantadd=3*4879501
+A/mantadd=22|./src/mantadd.v|18|1*6678518
+BinI32/mantadd=3*5766084
 P/~emb=349,564,954,1018
 R=./src/mantadd.v|18
 Version=9.1.2353.4205  (Windows)|00000018789cd3cd51284a4dcc894f492dce4ccf8b4fcbcc4bcc51d0f53702006c43086e
 
 [matrix_by_vector_v3_with_control]
-A/matrix_by_vector_v3_with_control=22|./src/matrix_by_vector_v3_with_control.v|7|1*5698879
-BinI32/matrix_by_vector_v3_with_control=3*4803877
+A/matrix_by_vector_v3_with_control=22|./src/matrix_by_vector_v3_with_control.v|7|1*6591305
+BinI32/matrix_by_vector_v3_with_control=3*5690586
 P/~emb=1107,1699,2659,3248
 R=./src/matrix_by_vector_v3_with_control.v|7
 Version=9.1.2353.4205  (Windows)|00000018789cd3cd51284a4dcc894f492dce4ccf8b4fcbcc4bcc51d0f53702006c43086e
 
 [memA]
-A/memA=22|./src/mema.v|1|1*5868700
-BinI32/memA=3*4918567
+A/memA=22|./src/mema.v|1|1*6761126
+BinI32/memA=3*5805133
 P/~emb=968,1475,2759,3049
 R=./src/mema.v|1
 Version=9.1.2353.4205  (Windows)|00000018789cd3cd51284a4dcc894f492dce4ccf8b4fcbcc4bcc51d0f53702006c43086e
 
 [memP]
-A/memP=22|./src/memp.v|1|1*5833599
-BinI32/memP=3*4900421
+A/memP=22|./src/memp.v|1|1*6726025
+BinI32/memP=3*5787056
 P/~emb=698,1017,1397,1542
 R=./src/memp.v|1
 Version=9.1.2353.4205  (Windows)|00000018789cd3cd51284a4dcc894f492dce4ccf8b4fcbcc4bcc51d0f53702006c43086e
 
 [memP_v2]
-A/memP_v2=22|./src/memp_v2.v|1|1*5946869
-BinI32/memP_v2=3*5040866
+A/memP_v2=22|./src/memp_v2.v|1|1*6839295
+BinI32/memP_v2=3*5926924
 P/~emb=704,1053,1455,1600
 R=./src/memp_v2.v|1
 Version=9.1.2353.4205  (Windows)|00000018789cd3cd51284a4dcc894f492dce4ccf8b4fcbcc4bcc51d0f53702006c43086e
 
 [memR]
-A/memR=22|./src/memr.v|1|1*5865507
-BinI32/memR=3*4916134
+A/memR=22|./src/memr.v|1|1*6757933
+BinI32/memR=3*5802700
 P/~emb=617,915,1301,1446
 R=./src/memr.v|1
 Version=9.1.2353.4205  (Windows)|00000018789cd3cd51284a4dcc894f492dce4ccf8b4fcbcc4bcc51d0f53702006c43086e
 
 [memX]
-A/memX=22|./src/memx.v|1|1*5950409
-BinI32/memX=3*5043319
+A/memX=22|./src/memx.v|1|1*6842835
+BinI32/memX=3*5929410
 P/~emb=664,1026,1401,1534
 R=./src/memx.v|1
 Version=9.1.2353.4205  (Windows)|00000018789cd3cd51284a4dcc894f492dce4ccf8b4fcbcc4bcc51d0f53702006c43086e
 
 [multiples_fifo]
-A/multiples_fifo=22|./src/multiples_fifo.v|1|1*5830997
-BinI32/multiples_fifo=3*4898528
+A/multiples_fifo=22|./src/multiples_fifo.v|1|1*6723423
+BinI32/multiples_fifo=3*5785139
 P/~emb=507,772,1076,1186
 R=./src/multiples_fifo.v|1
 Version=9.1.2353.4205  (Windows)|00000018789cd3cd51284a4dcc894f492dce4ccf8b4fcbcc4bcc51d0f53702006c43086e
 
 [multiples_memory]
-A/multiples_memory=22|./src/multiples_matrix.v|1|1*5840452
-BinI32/multiples_memory=3*4905848
+A/multiples_memory=22|./src/multiples_matrix.v|1|1*6732878
+BinI32/multiples_memory=3*5792496
 P/~emb=484,775,1033,1121
 R=./src/multiples_matrix.v|1
 Version=9.1.2353.4205  (Windows)|00000018789cd3cd51284a4dcc894f492dce4ccf8b4fcbcc4bcc51d0f53702006c43086e
 
 [multiply]
-A/multiply=22|./src/multiply.v|25|1*5715596
-BinI32/multiply=3*4819950
+A/multiply=22|./src/multiply.v|25|1*6608022
+BinI32/multiply=3*5706674
 P/~emb=480,756,974,1208
 R=./src/multiply.v|25
 Version=9.1.2353.4205  (Windows)|00000018789cd3cd51284a4dcc894f492dce4ccf8b4fcbcc4bcc51d0f53702006c43086e
 
 [normlize]
-A/normlize=22|./src/normlize.v|17|1*5661485
-BinI32/normlize=3*4751974
+A/normlize=22|./src/normlize.v|17|1*6553911
+BinI32/normlize=3*5638661
 P/~emb=558,913,1767,1837
 R=./src/normlize.v|17
 Version=9.1.2353.4205  (Windows)|00000018789cd3cd51284a4dcc894f492dce4ccf8b4fcbcc4bcc51d0f53702006c43086e
 
 [parameters_mem]
-A/parameters_mem=22|./src/parameters_mem.v|1|1*5838784
-BinI32/parameters_mem=3*4905211
+A/parameters_mem=22|./src/parameters_mem.v|1|1*6731210
+BinI32/parameters_mem=3*5791859
 P/~emb=190,386,569,657
 R=./src/parameters_mem.v|1
 Version=9.1.2353.4205  (Windows)|00000018789cd3cd51284a4dcc894f492dce4ccf8b4fcbcc4bcc51d0f53702006c43086e
 
 [rKold_prev]
-A/rKold_prev=22|./src/rkold_prev.v|1|1*5768537
-BinI32/rKold_prev=3*4859805
+A/rKold_prev=22|./src/rkold_prev.v|1|1*6660963
+BinI32/rKold_prev=3*5746420
 P/~emb=558,843,1159,1269
 R=./src/rkold_prev.v|1
 Version=9.1.2353.4205  (Windows)|00000018789cd3cd51284a4dcc894f492dce4ccf8b4fcbcc4bcc51d0f53702006c43086e
 
 [rounder]
-A/rounder=22|./src/rounder.v|16|1*5856072
-BinI32/rounder=3*4911774
+A/rounder=22|./src/rounder.v|16|1*6748498
+BinI32/rounder=3*5798325
 P/~emb=379,625,964,1034
 R=./src/rounder.v|16
 Version=9.1.2353.4205  (Windows)|00000018789cd3cd51284a4dcc894f492dce4ccf8b4fcbcc4bcc51d0f53702006c43086e
 
 [row_by_vector_with_control]
-A/row_by_vector_with_control=22|./src/row_by_vector_with_control.v|5|1*5684069
-BinI32/row_by_vector_with_control=3*4786664
+A/row_by_vector_with_control=22|./src/row_by_vector_with_control.v|5|1*6576495
+BinI32/row_by_vector_with_control=3*5673332
 P/~emb=1253,1747,2237,2498
 R=./src/row_by_vector_with_control.v|5
 Version=9.1.2353.4205  (Windows)|00000018789cd3cd51284a4dcc894f492dce4ccf8b4fcbcc4bcc51d0f53702006c43086e
 
 [special]
-A/special=22|./src/special.v|13|1*5737512
-BinI32/special=3*4826363
+A/special=22|./src/special.v|13|1*6629938
+BinI32/special=3*5713053
 P/~emb=368,590,991,1055
 R=./src/special.v|13
 Version=9.1.2353.4205  (Windows)|00000018789cd3cd51284a4dcc894f492dce4ccf8b4fcbcc4bcc51d0f53702006c43086e
 
 [tb]
-A/tb=22|./src/tb.v|3|1*5916554
-BinI32/tb=3*5025384
+A/tb=22|./src/tb.v|3|1*6808980
+BinI32/tb=3*5911508
 P/~emb=938,1205,1666,1915
 R=./src/tb.v|3
 Version=9.1.2353.4205  (Windows)|00000018789cd3cd51284a4dcc894f492dce4ccf8b4fcbcc4bcc51d0f53702006c43086e
 
 [top_module]
-A/top_module=22|./src/top_module.v|3|1*5919380
-BinI32/top_module=3*5026495
+A/top_module=22|./src/top_module.v|3|1*6811806
+BinI32/top_module=3*5912616
 P/~emb=1745,2712,3607,4594
 R=./src/top_module.v|3
 Version=9.1.2353.4205  (Windows)|00000018789cd3cd51284a4dcc894f492dce4ccf8b4fcbcc4bcc51d0f53702006c43086e
 
 [vXc_add_8]
-A/vXc_add_8=22|./src/vxc_add_8.v|1|1*5911777
-BinI32/vXc_add_8=3*5021252
+A/vXc_add_8=22|./src/vxc_add_8.v|1|1*6804203
+BinI32/vXc_add_8=3*5907375
 P/~emb=590,1009,1588,1983
 R=./src/vxc_add_8.v|1
 Version=9.1.2353.4205  (Windows)|00000018789cd3cd51284a4dcc894f492dce4ccf8b4fcbcc4bcc51d0f53702006c43086e
 
 [vXc_add_8_delay]
-A/vXc_add_8_delay=22|./src/vxc_add_8_delay.v|1|1*5710517
-BinI32/vXc_add_8_delay=3*4815723
+A/vXc_add_8_delay=22|./src/vxc_add_8_delay.v|1|1*6602943
+BinI32/vXc_add_8_delay=3*5702447
 P/~emb=602,1028,1632,2057
 R=./src/vxc_add_8_delay.v|1
 Version=9.1.2353.4205  (Windows)|00000018789cd3cd51284a4dcc894f492dce4ccf8b4fcbcc4bcc51d0f53702006c43086e
 
 [vXc_mul3_add]
-A/vXc_mul3_add=22|./src/vxc_mul3_add.v|1|1*5813337
-BinI32/vXc_mul3_add=3*4889687
+A/vXc_mul3_add=22|./src/vxc_mul3_add.v|1|1*6705763
+BinI32/vXc_mul3_add=3*5776281
 P/~emb=999,1376,2086,2478
 R=./src/vxc_mul3_add.v|1
 Version=9.1.2353.4205  (Windows)|00000018789cd3cd51284a4dcc894f492dce4ccf8b4fcbcc4bcc51d0f53702006c43086e
 
 [vXc_mul3_sub]
-A/vXc_mul3_sub=22|./src/vxc_mul3_sub.v|1|1*5817867
-BinI32/vXc_mul3_sub=3*4892007
+A/vXc_mul3_sub=22|./src/vxc_mul3_sub.v|1|1*6710293
+BinI32/vXc_mul3_sub=3*5778609
 P/~emb=1113,1495,2201,2580
 R=./src/vxc_mul3_sub.v|1
 Version=9.1.2353.4205  (Windows)|00000018789cd3cd51284a4dcc894f492dce4ccf8b4fcbcc4bcc51d0f53702006c43086e
 
 [vectorXvector_mXv_with_control]
-A/vectorXvector_mXv_with_control=22|./src/vectorxvector_mxv_with_control.v|1|1*5774230
-BinI32/vectorXvector_mXv_with_control=3*4862946
+A/vectorXvector_mXv_with_control=22|./src/vectorxvector_mxv_with_control.v|1|1*6666656
+BinI32/vectorXvector_mXv_with_control=3*5749571
 P/~emb=1166,1591,2033,2261
 R=./src/vectorxvector_mxv_with_control.v|1
 Version=9.1.2353.4205  (Windows)|00000018789cd3cd51284a4dcc894f492dce4ccf8b4fcbcc4bcc51d0f53702006c43086e
 
 [vectorXvector_with_control]
-A/vectorXvector_with_control=22|./src/vectorxvector_with_control.v|23|1*5806912
-BinI32/vectorXvector_with_control=3*4885943
+A/vectorXvector_with_control=22|./src/vectorxvector_with_control.v|23|1*6699338
+BinI32/vectorXvector_with_control=3*5772536
 P/~emb=1128,1526,1916,2133
 R=./src/vectorxvector_with_control.v|23
 Version=9.1.2353.4205  (Windows)|00000018789cd3cd51284a4dcc894f492dce4ccf8b4fcbcc4bcc51d0f53702006c43086e
 
 [~A]
-E:/files/ahmed/College/Graduation Project/June_Work/GIT_REPOS/real_design/real-design/real_design_work_space/real_design_final/src/normlize.v_fp_div.v_row_by_vector_with_control.v_matrix_by_vector_v3_with_control.v_delay.v_vxc_add_8_delay.v_8_organizer_with_control_row.v_2x1_mux.v_special.v_p_emap_8.v_multiply.v_rkold_prev.v_8x8_adder_with_start.v_vectorxvector_mxv_with_control.v_mantadd.v_inputieee_8_23_to_8_23.v_division.v_alu.v_adder_subtractor_with_start.v_8_dot_product_with_control_row.v_memp.v_decoder.v_parameters_mem.v_multiples_matrix.v_main_alu.v_fpadd.v_adder_subtractor_with_control_with_start.v_memr.v_mema.v_intmultiplier_usingdsp_24_24_48_unsigned_uid4.v_col_nos.v_multiples_fifo.v_vxc_add_8.v_tb.v_ap_total_mem.v_n_to_2n_demux.v_fpmultiplier_8_23_8_23_8_23_uid2.v_decoder_with_control.v_adder_subtractor_with_control.v_vxc_mul3_sub.v_vectorxvector_with_control.v_vxc_mul3_add.v_top_module.v_memx.v_memp_v2.v_control_unit.v_constants.v_8_dot_product_with_control.v_rounder.v_outputieee_8_23_to_8_23.v_fpa=0*3713480*3751970
+E:/files/ahmed/College/Graduation Project/June_Work/GIT_REPOS/real_design/real-design/real_design_work_space/real_design_final/src/normlize.v_fp_div.v_row_by_vector_with_control.v_matrix_by_vector_v3_with_control.v_delay.v_vxc_add_8_delay.v_8_organizer_with_control_row.v_2x1_mux.v_special.v_p_emap_8.v_multiply.v_rkold_prev.v_8x8_adder_with_start.v_vectorxvector_mxv_with_control.v_mantadd.v_inputieee_8_23_to_8_23.v_division.v_alu.v_adder_subtractor_with_start.v_8_dot_product_with_control_row.v_memp.v_decoder.v_parameters_mem.v_multiples_matrix.v_main_alu.v_fpadd.v_adder_subtractor_with_control_with_start.v_memr.v_mema.v_intmultiplier_usingdsp_24_24_48_unsigned_uid4.v_col_nos.v_multiples_fifo.v_vxc_add_8.v_tb.v_ap_total_mem.v_n_to_2n_demux.v_fpmultiplier_8_23_8_23_8_23_uid2.v_decoder_with_control.v_adder_subtractor_with_control.v_vxc_mul3_sub.v_vectorxvector_with_control.v_vxc_mul3_add.v_top_module.v_memx.v_memp_v2.v_control_unit.v_constants.v_8_dot_product_with_control.v_rounder.v_outputieee_8_23_to_8_23.v_fpa=0*4277110*4315600
 E:/files/ahmed/College/Graduation Project/June_Work/GIT_REPOS/real_design/real-design/real_design_work_space/real_design_final/src/normlize.v_fp_div.v_row_by_vector_with_control.v_matrix_by_vector_v3_with_control.v_delay.v_vxc_add_8_delay.v_8_organizer_with_control_row.v_2x1_mux.v_special.v_p_emap_8.v_multiply.v_rkold_prev.v_final.v_8x8_adder_with_start.v_vectorxvector_mxv_with_control.v_mantadd.v_inputieee_8_23_to_8_23.v_division.v_alu.v_adder_subtractor_with_start.v_8_dot_product_with_control_row.v_memp.v_decoder.v_parameters_mem.v_multiples_matrix.v_main_alu.v_fpadd.v_adder_subtractor_with_control_with_start.v_memr.v_mema.v_intmultiplier_usingdsp_24_24_48_unsigned_uid4.v_col_nos.v_multiples_fifo.v_vxc_add_8.v_tb.v_ap_total_mem.v_n_to_2n_demux.v_fpmultiplier_8_23_8_23_8_23_uid2.v_decoder_with_control.v_adder_subtractor_with_control.v_vxc_mul3_sub.v_vectorxvector_with_control.v_vxc_mul3_add.v_top_module.v_memx.v_memp_v2.v_control_unit.v_constants.v_8_dot_product_with_control.v_rounder.v_outputieee_8_23_to_8_=0*147442*185724
 LastVerilogToplevel=IntAdder_34_f180_uid18
-ModifyID=51732
+ModifyID=53868
 Version=73
 
 [~MFT]
-0=1255|0real_design_final.mgf|3751970|731464
-1=2300|1real_design_final.mgf|5956857|5661015
-3=2300|3real_design_final.mgf|5047235|4751835
+0=1444|0real_design_final.mgf|4315600|853932
+1=2654|1real_design_final.mgf|6849283|6553441
+3=2654|3real_design_final.mgf|5933327|5638522
 
 [~U]
-$root=12|0*3566484|
-AP_total=12|0*3644240||0x80
-Alu=12|0*3631620||0x80
-Eight_Organizer_with_control_row=12|0*3596936||0x80
-EightxEight_Adder_with_start=12|0*3600256||0x80
-FPMultiplier_8_23_8_23_8_23_uid2=12|0*3614198||0x80
-FP_div=12|0*3569664||0x80
-InputIEEE_8_23_to_8_23=12|0*3612349||0x80
-IntAdder_27_f180_uid7=12|0*3711786||0x90
-IntAdder_33_f300_uid23=12|0*3698930||0x80
-IntAdder_34_f180_uid18=12|0*3712631||0x90
-IntAdder_42_f300_uid15=12|0*3686691||0x80
-IntMultiplier_UsingDSP_24_24_48_unsigned_uid4=12|0*3679658||0x80
-N_to_2N_demux=12|0*3654699||0x80
-OutputIEEE_8_23_to_8_23=12|0*3617591||0x80
-P_Emap_8=12|0*3607184||0x80
-TwoxOne_mux=12|0*3599469||0x80
-a_s=12|0*3710859||0x80
-adder_subtractor=12|0*3595788||0x80
-adder_subtractor_with_control=12|0*3699960||0x90
-adder_subtractor_with_control_with_start=12|0*3603729||0x80
-adder_subtractor_with_start=12|0*3620725||0x80
-col_nos=12|0*3687540||0x80
-control_unit=12|0*3701670||0x80
-decoder=12|0*3659112||0x90
-decoder_with_control=12|0*3589521||0x80
-delay=12|0*3591117||0x80
-div_nr_wsticky=12|0*3574154||0x80
-division=12|0*3630248||0x80
-eight_Dot_Product_Multiply_with_control=12|0*3624780||0x80
-eight_Dot_Product_Multiply_with_control_row=12|0*3579445||0x80
-final1=12|0*3670567||0x80
-fpadd=12|0*3652191||0x80
-fpalign=12|0*3667473||0x80
-main_alu=12|0*3662322||0x80
-mantadd=12|0*3628916||0x80
-matrix_by_vector_v3_with_control=12|0*3585396||0x80
-memA=12|0*3675230||0x80
-memP=12|0*3657257||0x90
-memP_v2=12|0*3707095||0x80
-memR=12|0*3673471||0x80
-memX=12|0*3709007||0x80
-multiples_fifo=12|0*3655789||0x80
-multiples_memory=12|0*3661015||0x80
-multiply=12|0*3594404||0x80
-normlize=12|0*3567082||0x80
-parameters_mem=12|0*3660166||0x80
-rKold_prev=12|0*3619228||0x80
-rounder=12|0*3669237||0x80
-row_by_vector_with_control=12|0*3576545||0x80
-special=12|0*3605773||0x80
-tb=12|0*3691318||0x90
-top_module=12|0*3693760||0x80
-vXc_add_8=12|0*3688878||0x80
-vXc_add_8_delay=12|0*3591875||0x80
-vXc_mul3_add=12|0*3645734||0x80
-vXc_mul3_sub=12|0*3648920||0x80
-vectorXvector_mXv_with_control=12|0*3622149||0x80
-vectorXvector_with_control=12|0*3641772||0x80
+$root=12|0*4130114|
+AP_total=12|0*4207870||0x80
+Alu=12|0*4195250||0x80
+Eight_Organizer_with_control_row=12|0*4160566||0x80
+EightxEight_Adder_with_start=12|0*4163886||0x80
+FPMultiplier_8_23_8_23_8_23_uid2=12|0*4177828||0x80
+FP_div=12|0*4133294||0x80
+InputIEEE_8_23_to_8_23=12|0*4175979||0x80
+IntAdder_27_f180_uid7=12|0*4275416||0x90
+IntAdder_33_f300_uid23=12|0*4262560||0x80
+IntAdder_34_f180_uid18=12|0*4276261||0x90
+IntAdder_42_f300_uid15=12|0*4250321||0x80
+IntMultiplier_UsingDSP_24_24_48_unsigned_uid4=12|0*4243288||0x80
+N_to_2N_demux=12|0*4218329||0x80
+OutputIEEE_8_23_to_8_23=12|0*4181221||0x80
+P_Emap_8=12|0*4170814||0x80
+TwoxOne_mux=12|0*4163099||0x80
+a_s=12|0*4274489||0x80
+adder_subtractor=12|0*4159418||0x80
+adder_subtractor_with_control=12|0*4263590||0x90
+adder_subtractor_with_control_with_start=12|0*4167359||0x80
+adder_subtractor_with_start=12|0*4184355||0x80
+col_nos=12|0*4251170||0x80
+control_unit=12|0*4265300||0x80
+decoder=12|0*4222742||0x90
+decoder_with_control=12|0*4153151||0x80
+delay=12|0*4154747||0x80
+div_nr_wsticky=12|0*4137784||0x80
+division=12|0*4193878||0x80
+eight_Dot_Product_Multiply_with_control=12|0*4188410||0x80
+eight_Dot_Product_Multiply_with_control_row=12|0*4143075||0x80
+final1=12|0*4234197||0x80
+fpadd=12|0*4215821||0x80
+fpalign=12|0*4231103||0x80
+main_alu=12|0*4225952||0x80
+mantadd=12|0*4192546||0x80
+matrix_by_vector_v3_with_control=12|0*4149026||0x80
+memA=12|0*4238860||0x80
+memP=12|0*4220887||0x90
+memP_v2=12|0*4270725||0x80
+memR=12|0*4237101||0x80
+memX=12|0*4272637||0x80
+multiples_fifo=12|0*4219419||0x80
+multiples_memory=12|0*4224645||0x80
+multiply=12|0*4158034||0x80
+normlize=12|0*4130712||0x80
+parameters_mem=12|0*4223796||0x80
+rKold_prev=12|0*4182858||0x80
+rounder=12|0*4232867||0x80
+row_by_vector_with_control=12|0*4140175||0x80
+special=12|0*4169403||0x80
+tb=12|0*4254948||0x90
+top_module=12|0*4257390||0x80
+vXc_add_8=12|0*4252508||0x80
+vXc_add_8_delay=12|0*4155505||0x80
+vXc_mul3_add=12|0*4209364||0x80
+vXc_mul3_sub=12|0*4212550||0x80
+vectorXvector_mXv_with_control=12|0*4185779||0x80
+vectorXvector_with_control=12|0*4205402||0x80
 

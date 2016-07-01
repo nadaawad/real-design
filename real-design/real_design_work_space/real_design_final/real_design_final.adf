@@ -70,6 +70,23 @@ HierarchyInformation=
 ShowHide=ShowTopLevel
 Selected=
 
+[Folders]
+Name3=Makefiles
+Directory3=E:\files\ahmed\College\Graduation Project\June_Work\GIT_REPOS\real_design\real-design\real_design_work_space\real_design_final\
+Extension3=mak
+Name4=Memory
+Directory4=E:\files\ahmed\College\Graduation Project\June_Work\GIT_REPOS\real_design\real-design\real_design_work_space\real_design_final\src
+Extension4=mem;mif;hex
+Name5=Dll Libraries
+Directory5=E:\files\ahmed\College\Graduation Project\June_Work\GIT_REPOS\real_design\real-design\real_design_work_space\real_design_final\
+Extension5=dll
+Name6=PDF
+Directory6=E:\files\ahmed\College\Graduation Project\June_Work\GIT_REPOS\real_design\real-design\real_design_work_space\real_design_final\
+Extension6=pdf
+Name7=HTML
+Directory7=E:\files\ahmed\College\Graduation Project\June_Work\GIT_REPOS\real_design\real-design\real_design_work_space\real_design_final\
+Extension7=
+
 [Files]
 /normlize.v=-1
 /fp_div.v=-1
@@ -245,3 +262,4 @@ wave.asdbw\LOCAL___DC0473579EBC0B100600.sid/typeinfo=-1
 .\src\wave.asdbw\LOCAL___DC0473579EBC0B100600.sid\strings.index=External File
 .\src\wave.asdbw\LOCAL___DC0473579EBC0B100600.sid\treeinfo=External File
 .\src\wave.asdbw\LOCAL___DC0473579EBC0B100600.sid\typeinfo=External File
+

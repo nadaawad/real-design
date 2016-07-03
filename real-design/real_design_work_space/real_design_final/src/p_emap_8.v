@@ -12,8 +12,7 @@ module P_Emap_8 (clk,input_data,read_preprocess,write_enable,write_address,col_n
 	parameter memory_height = 1000;
 	parameter address_width= $clog2(memory_height)+1; 
 	parameter col_nos_values_width = 32; 
-	parameter multiples_memory_value_width = 32; 
-	integer uuu = 8;
+	parameter multiples_memory_value_width = 32;
 	
 	
 	input wire [multiples_memory_value_width-1:0] no_of_multiples; 	// this should come from the index matrix
@@ -36,7 +35,8 @@ elem7_address,elem6_address,elem5_address,elem4_address,
 elem3_address,elem2_address,elem1_address,elem0_address;
 
 
-reg read_enable;
+reg read_enable; 
+reg read_enable_dash;
 
 
 assign elem7_address = col_nos[((no_of_elements_on_col_nos-0-((i-1)*no_of_elements_in_output))) *col_nos_values_width-1-:col_nos_values_width];
@@ -54,61 +54,53 @@ reg [no_of_units * element_width - 1 : 0] mem [0 : memory_height];
 // pragma attribute mem ram_block 1	
 
 // d = devision , r = remainder
-reg [col_nos_values_width-1:0 ]elem0_d; 
-reg [col_nos_values_width-1:0 ]elem1_d; 
-reg [col_nos_values_width-1:0 ]elem2_d;
-reg [col_nos_values_width-1:0 ]elem3_d;
-reg [col_nos_values_width-1:0 ]elem4_d;
-reg [col_nos_values_width-1:0 ]elem5_d;
-reg [col_nos_values_width-1:0 ]elem6_d;
-reg [col_nos_values_width-1:0 ]elem7_d;
- reg [3-1:0 ]elem0_8p; 
- reg [3-1:0 ]elem1_8p; 
- reg [3-1:0 ]elem2_8p; 
- reg [3-1:0 ]elem3_8p; 
- reg [3-1:0 ]elem4_8p; 
- reg [3-1:0 ]elem5_8p; 
- reg [3-1:0 ]elem6_8p; 
- reg [3-1:0 ]elem7_8p;
- 
- reg [3-1:0 ]elem0_8r; 
- reg [3-1:0 ]elem1_8r; 
- reg [3-1:0 ]elem2_8r; 
- reg [3-1:0 ]elem3_8r; 
- reg [3-1:0 ]elem4_8r; 
- reg [3-1:0 ]elem5_8r; 
- reg [3-1:0 ]elem6_8r; 
- reg [3-1:0 ]elem7_8r; 
- 
- reg [3-1:0 ]elem0_8r_pip; 
- reg [3-1:0 ]elem1_8r_pip; 
- reg [3-1:0 ]elem2_8r_pip; 
- reg [3-1:0 ]elem3_8r_pip; 
- reg [3-1:0 ]elem4_8r_pip; 
- reg [3-1:0 ]elem5_8r_pip; 
- reg [3-1:0 ]elem6_8r_pip; 
- reg [3-1:0 ]elem7_8r_pip;
+reg [col_nos_values_width-1:0 ]elem0_d;	reg [col_nos_values_width-1:0 ]elem0_r;  reg [col_nos_values_width-1:0 ]elem0_r_pipe; 
+reg [col_nos_values_width-1:0 ]elem1_d;	reg [col_nos_values_width-1:0 ]elem1_r;  reg [col_nos_values_width-1:0 ]elem1_r_pipe; 
+reg [col_nos_values_width-1:0 ]elem2_d;	reg [col_nos_values_width-1:0 ]elem2_r;  reg [col_nos_values_width-1:0 ]elem2_r_pipe;
+reg [col_nos_values_width-1:0 ]elem3_d;	reg [col_nos_values_width-1:0 ]elem3_r;  reg [col_nos_values_width-1:0 ]elem3_r_pipe;
+reg [col_nos_values_width-1:0 ]elem4_d;	reg [col_nos_values_width-1:0 ]elem4_r;  reg [col_nos_values_width-1:0 ]elem4_r_pipe;
+reg [col_nos_values_width-1:0 ]elem5_d;	reg [col_nos_values_width-1:0 ]elem5_r;  reg [col_nos_values_width-1:0 ]elem5_r_pipe;
+reg [col_nos_values_width-1:0 ]elem6_d;	reg [col_nos_values_width-1:0 ]elem6_r;  reg [col_nos_values_width-1:0 ]elem6_r_pipe;
+reg [col_nos_values_width-1:0 ]elem7_d;	reg [col_nos_values_width-1:0 ]elem7_r;  reg [col_nos_values_width-1:0 ]elem7_r_pipe;
 
 
+reg [col_nos_values_width-1:0 ]elem0_d_pip;
+reg [col_nos_values_width-1:0 ]elem1_d_pip;
+reg [col_nos_values_width-1:0 ]elem2_d_pip;
+reg [col_nos_values_width-1:0 ]elem3_d_pip;
+reg [col_nos_values_width-1:0 ]elem4_d_pip;
+reg [col_nos_values_width-1:0 ]elem5_d_pip;
+reg [col_nos_values_width-1:0 ]elem6_d_pip;	 
+reg [col_nos_values_width-1:0 ]elem7_d_pip;
 
-reg[8 * element_width - 1 : 0] out7;
-reg[8 * element_width - 1 : 0] out6;
-reg[8 * element_width - 1 : 0] out5;
-reg[8 * element_width - 1 : 0] out4;
-reg[8 * element_width - 1 : 0] out3;
-reg[8 * element_width - 1 : 0] out2;
-reg[8 * element_width - 1 : 0] out1;
-reg[8 * element_width - 1 : 0] out0;   
+wire[no_of_units * element_width - 1 : 0] out7;
+wire[no_of_units * element_width - 1 : 0] out6;
+wire[no_of_units * element_width - 1 : 0] out5;
+wire[no_of_units * element_width - 1 : 0] out4;
+wire[no_of_units * element_width - 1 : 0] out3;
+wire[no_of_units * element_width - 1 : 0] out2;
+wire[no_of_units * element_width - 1 : 0] out1;
+wire[no_of_units * element_width - 1 : 0] out0;   
+
+	assign out0= ((elem0_d_pip != `invalid)&& !write_enable )?(mem[elem0_d_pip]):0;	
+	assign out1= ((elem1_d_pip != `invalid)&& !write_enable )?(mem[elem1_d_pip]):0;
+	assign out2= ((elem2_d_pip != `invalid)&& !write_enable )?(mem[elem2_d_pip]):0;
+	assign out3= ((elem3_d_pip != `invalid)&& !write_enable )?(mem[elem3_d_pip]):0;
+	assign out4= ((elem4_d_pip != `invalid)&& !write_enable )?(mem[elem4_d_pip]):0;
+	assign out5= ((elem5_d_pip != `invalid)&& !write_enable )?(mem[elem5_d_pip]):0;
+	assign out6= ((elem6_d_pip != `invalid)&& !write_enable )?(mem[elem6_d_pip]):0;	
+	assign out7= ((elem7_d_pip != `invalid)&& !write_enable )?(mem[elem7_d]):0;
+	
 
 assign output_row = {
-out7[(8-elem7_8r_pip)*element_width-1-:element_width],
-out6[(8-elem6_8r_pip)*element_width-1-:element_width],
-out5[(8-elem5_8r_pip)*element_width-1-:element_width],
-out4[(8-elem4_8r_pip)*element_width-1-:element_width],
-out3[(8-elem3_8r_pip)*element_width-1-:element_width],
-out2[(8-elem2_8r_pip)*element_width-1-:element_width],
-out1[(8-elem1_8r_pip)*element_width-1-:element_width],
-out0[(8-elem0_8r_pip)*element_width-1-:element_width]};
+out7[(no_of_units-elem7_r_pipe)*element_width-1-:element_width],
+out6[(no_of_units-elem6_r_pipe)*element_width-1-:element_width],
+out5[(no_of_units-elem5_r_pipe)*element_width-1-:element_width],
+out4[(no_of_units-elem4_r_pipe)*element_width-1-:element_width],
+out3[(no_of_units-elem3_r_pipe)*element_width-1-:element_width],
+out2[(no_of_units-elem2_r_pipe)*element_width-1-:element_width],
+out1[(no_of_units-elem1_r_pipe)*element_width-1-:element_width],
+out0[(no_of_units-elem0_r_pipe)*element_width-1-:element_width]};
 
 	
 	initial 
@@ -120,108 +112,98 @@ out0[(8-elem0_8r_pip)*element_width-1-:element_width]};
 		always @(posedge clk)
 			begin 
 				read_enable <= (read_preprocess || ~first_time_flag);
+				read_enable_dash<=read_enable;
 				
-				
-				//$display("%h",out15);  
-				//$display("%h",out15[(no_of_units-elem15_r)*element_width-1-:element_width]); 
-				//$display("%h",output_row);
+				elem0_d_pip <= elem0_d ;
+				elem1_d_pip <= elem1_d ;
+				elem2_d_pip <= elem2_d ;
+				elem3_d_pip <= elem3_d ;
+				elem4_d_pip <= elem4_d ;
+				elem5_d_pip <= elem5_d ;
+				elem6_d_pip <= elem6_d ;
+				elem7_d_pip <= elem7_d ;
+
 			end	
-												  
+		
 	always @(posedge clk)
 		begin 
 			if(read_preprocess || ~first_time_flag)
 				begin  
 				if(elem0_address != `invalid)	
-					begin elem0_d <= elem0_address/no_of_units;  
-					elem0_8p <=(elem0_address%no_of_units)/8;
-					elem0_8r <=(elem0_address%no_of_units)%8; end
-				else begin	elem0_d <= `invalid;  end	
+					begin elem0_d <= elem0_address/no_of_units; elem0_r <=elem0_address%no_of_units ;end
+				else begin	elem0_d <= `invalid; elem0_r <=`small_zero; end	
 				if(elem1_address != `invalid)	
-					begin elem1_d <= elem1_address/no_of_units;  
-					elem1_8p <=(elem1_address%no_of_units)/8 ;
-					elem1_8r <=(elem1_address%no_of_units)%8;end	   
-				else begin	elem1_d <= `invalid; end	
+					begin elem1_d <= elem1_address/no_of_units; elem1_r <=elem1_address%no_of_units ;end	   
+				else begin	elem1_d <= `invalid; elem1_r <=`small_zero; end	
 				if(elem2_address != `invalid)
-					begin elem2_d <= elem2_address/no_of_units;
-					elem2_8p <=(elem2_address%no_of_units)/8 ;
-					elem2_8r <=(elem2_address%no_of_units)%8;end
-				else begin	elem2_d <= `invalid;  end
+					begin elem2_d <= elem2_address/no_of_units; elem2_r <=elem2_address%no_of_units ;end
+				else begin	elem2_d <= `invalid; elem2_r <=`small_zero; end
 				if(elem3_address != `invalid)
-					begin elem3_d <= elem3_address/no_of_units; 
-					elem3_8p <=(elem3_address%no_of_units)/8 ;
-					elem3_8r <=(elem3_address%no_of_units)%8;end
-				else begin	elem3_d <= `invalid;  end
+					begin elem3_d <= elem3_address/no_of_units; elem3_r <=elem3_address%no_of_units ;end
+				else begin	elem3_d <= `invalid; elem3_r <=`small_zero; end
 				if(elem4_address != `invalid)
-					begin elem4_d <= elem4_address/no_of_units; 
-					elem4_8p <=(elem4_address%no_of_units)/8 ;
-					elem4_8r <=(elem4_address%no_of_units)%8;end
-				else begin	elem4_d <= `invalid;  end
+					begin elem4_d <= elem4_address/no_of_units; elem4_r <=elem4_address%no_of_units ;end
+				else begin	elem4_d <= `invalid; elem4_r <=`small_zero; end
 				if(elem5_address != `invalid)
-					begin elem5_d <= elem5_address/no_of_units; 
-					elem5_8p <=(elem5_address%no_of_units)/8 ;
-					elem5_8r <=(elem5_address%no_of_units)%8;end	
-				else begin	elem5_d <= `invalid; end
+					begin elem5_d <= elem5_address/no_of_units; elem5_r <=elem5_address%no_of_units ;end	
+				else begin	elem5_d <= `invalid; elem5_r <=`small_zero; end
 				if(elem6_address != `invalid)
-					begin elem6_d <= elem6_address/no_of_units; 
-					elem6_8p <=(elem6_address%no_of_units)/8 ;
-					elem6_8r <=(elem6_address%no_of_units)%8;end
-				else begin	elem6_d <= `invalid;  end
+					begin elem6_d <= elem6_address/no_of_units; elem6_r <=elem6_address%no_of_units ;end
+				else begin	elem6_d <= `invalid; elem6_r <=`small_zero; end
 				if(elem7_address != `invalid)
-					begin elem7_d <= elem7_address/no_of_units;
-					elem7_8p <=(elem7_address%no_of_units)/8 ;
-					elem7_8r <=(elem7_address%no_of_units)%8;end
-				else begin	elem7_d <= `invalid;  end
+					begin elem7_d <= elem7_address/no_of_units; elem7_r <=elem7_address%no_of_units ;end
+				else begin	elem7_d <= `invalid; elem7_r <=`small_zero; end
 
 		
 
 				end	
 			
 		end	
-	always @(posedge clk)
-		begin  
-		if(read_enable)	
-			begin	 
-				
-				if(elem0_d != `invalid)	 
-					out0<= mem[elem0_d][(no_of_units-8*elem0_8p)*element_width-1-:8*element_width];
-				else out0<=`smaller_large_zero;	
-				if(elem1_d != `invalid)	 
-					out1<= mem[elem1_d][(no_of_units-8*elem1_8p)*element_width-1-:8*element_width]; 
-				else out1<=`smaller_large_zero;	
-				if(elem2_d != `invalid)	 
-					out2<= mem[elem2_d][(no_of_units-8*elem2_8p)*element_width-1-:8*element_width];
-				else out2<=`smaller_large_zero;	
-				if(elem3_d != `invalid)	 
-					out3<= mem[elem3_d][(no_of_units-8*elem3_8p)*element_width-1-:8*element_width];
-				else out3<=`smaller_large_zero;	
-				if(elem4_d != `invalid)	 
-					out4<= mem[elem4_d][(no_of_units-8*elem4_8p)*element_width-1-:8*element_width];
-				else out4<=`smaller_large_zero;	
-				if(elem5_d != `invalid)	 
-					out5<= mem[elem5_d][(no_of_units-8*elem5_8p)*element_width-1-:8*element_width];
-				else out5<=`smaller_large_zero;	
-				if(elem6_d != `invalid)	 
-					out6<= mem[elem6_d][(no_of_units-8*elem6_8p)*element_width-1-:8*element_width];
-				else out6<=`smaller_large_zero;	
-				if(elem7_d != `invalid)	 
-					out7<= mem[elem7_d][(no_of_units-8*elem7_8p)*element_width-1-:8*element_width]; 
-				else out7<=`smaller_large_zero;	
-
-			end 	
-		end	   
+//	always @(posedge clk)
+//		begin  
+//		if(read_enable)	
+//			begin	 
+//
+//				if(elem0_d != `invalid)	 
+//					out0<= mem[elem0_d];
+//				else out0<=`smaller_large_zero;	
+//				if(elem1_d != `invalid)	 
+//					out1<= mem[elem1_d]; 
+//				else out1<=`smaller_large_zero;	
+//				if(elem2_d != `invalid)	 
+//					out2<= mem[elem2_d];
+//				else out2<=`smaller_large_zero;	
+//				if(elem3_d != `invalid)	 
+//					out3<= mem[elem3_d];
+//				else out3<=`smaller_large_zero;	
+//				if(elem4_d != `invalid)	 
+//					out4<= mem[elem4_d];
+//				else out4<=`smaller_large_zero;	
+//				if(elem5_d != `invalid)	 
+//					out5<= mem[elem5_d];
+//				else out5<=`smaller_large_zero;	
+//				if(elem6_d != `invalid)	 
+//					out6<= mem[elem6_d];
+//				else out6<=`smaller_large_zero;	
+//				if(elem7_d != `invalid)	 
+//					out7<= mem[elem7_d]; 
+//				else out7<=`smaller_large_zero;	
+//
+//			end 	
+//		end	   
 		
 	always @(posedge clk)
 		begin
 			if(read_enable)
-				begin	 
-					 elem0_8r_pip<=elem0_8r;
-					 elem1_8r_pip<=elem1_8r;
-					 elem2_8r_pip<=elem2_8r;
-					 elem3_8r_pip<=elem3_8r;
-					 elem4_8r_pip<=elem4_8r;
-					 elem5_8r_pip<=elem5_8r;
-					 elem6_8r_pip<=elem6_8r;
-					 elem7_8r_pip<=elem7_8r;
+				begin
+					elem0_r_pipe <= elem0_r;
+					elem1_r_pipe <= elem1_r;
+					elem2_r_pipe <= elem2_r;
+					elem3_r_pipe <= elem3_r;
+					elem4_r_pipe <= elem4_r;
+					elem5_r_pipe <= elem5_r;
+					elem6_r_pipe <= elem6_r;
+					elem7_r_pipe <= elem7_r;
 					
 				end	
 			
@@ -260,4 +242,4 @@ out0[(8-elem0_8r_pip)*element_width-1-:element_width]};
 			end
 
 endmodule 	 
-	
+	 

@@ -4,4 +4,10 @@ TemplateId=2
 TemplateId=2
 [OPENDOC|Aldec.Hde.HdePlugIn.7|.\src\mema.v|]
 TemplateId=2
+[OPENDOC|Aldec.Hde.HdePlugIn.7|.\src\p_emap_8.v|]
+TemplateId=2
 ActiveDocument=1
+[OPENDOC|Aldec.Hde.HdePlugIn.7|.\src\adder_subtractor_with_control_with_start.v|]
+TemplateId=2
+[OPENDOC|Aldec.Hde.HdePlugIn.7|.\src\row_by_vector_with_control.v|]
+TemplateId=2

@@ -1,5 +1,5 @@
-//`define invalid 32'hFFFFFFFF   
-`define invalid 24'hFFFFFF   // if we use 6 hex col now address 
+`define invalid 32'hFFFFFFFF   
+//`define invalid 24'hFFFFFF   // if we use 6 hex col now address 
 `define smaller_large_zero 256'h0 
 `define small_zero 32'h00000000
 

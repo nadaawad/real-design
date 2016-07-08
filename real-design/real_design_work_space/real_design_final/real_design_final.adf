@@ -61,8 +61,6 @@ Active_lib=
 UCF=
 
 [Groups]
-wave.asdbw=1
-wave.asdbw\LOCAL___DC0473579EBC0B100600.sid=1
 
 [HierarchyViewer]
 SortInfo=u
@@ -126,7 +124,6 @@ Extension7=
 /intmultiplier_usingdsp_24_24_48_unsigned_uid4.v=-1
 /col_nos.v=-1
 /b.txt=-1
-/real_design_final_final.mpf=-1
 /multiples_fifo.v=-1
 /vxc_add_8.v=-1
 /tb.v=-1
@@ -158,22 +155,6 @@ Extension7=
 /intadder_34_f180_uid18.v=-1
 /intadder_42_f300_uid15.v=-1
 /final1.v=-1
-wave.asdbw/strings.data=-1
-wave.asdbw\LOCAL___DC0473579EBC0B100600.sid/channels.data=-1
-wave.asdbw\LOCAL___DC0473579EBC0B100600.sid/channels.index=-1
-wave.asdbw\LOCAL___DC0473579EBC0B100600.sid/current_time=-1
-wave.asdbw\LOCAL___DC0473579EBC0B100600.sid/global_info=-1
-wave.asdbw\LOCAL___DC0473579EBC0B100600.sid/names.data=-1
-wave.asdbw\LOCAL___DC0473579EBC0B100600.sid/names.index=-1
-wave.asdbw\LOCAL___DC0473579EBC0B100600.sid/pattern_lut=-1
-wave.asdbw\LOCAL___DC0473579EBC0B100600.sid/ref_counter=-1
-wave.asdbw\LOCAL___DC0473579EBC0B100600.sid/scratchpad.data=-1
-wave.asdbw\LOCAL___DC0473579EBC0B100600.sid/scratchpad.index=-1
-wave.asdbw\LOCAL___DC0473579EBC0B100600.sid/sources=-1
-wave.asdbw\LOCAL___DC0473579EBC0B100600.sid/status_ok=-1
-wave.asdbw\LOCAL___DC0473579EBC0B100600.sid/strings.index=-1
-wave.asdbw\LOCAL___DC0473579EBC0B100600.sid/treeinfo=-1
-wave.asdbw\LOCAL___DC0473579EBC0B100600.sid/typeinfo=-1
 
 [Files.Data]
 .\src\normlize.v=Verilog Source Code
@@ -214,7 +195,6 @@ wave.asdbw\LOCAL___DC0473579EBC0B100600.sid/typeinfo=-1
 .\src\intmultiplier_usingdsp_24_24_48_unsigned_uid4.v=Verilog Source Code
 .\src\col_nos.v=Verilog Source Code
 .\src\b.txt=Text File
-.\src\real_design_final_final.mpf=External File
 .\src\multiples_fifo.v=Verilog Source Code
 .\src\vxc_add_8.v=Verilog Source Code
 .\src\tb.v=Verilog Source Code
@@ -246,19 +226,4 @@ wave.asdbw\LOCAL___DC0473579EBC0B100600.sid/typeinfo=-1
 .\src\intadder_34_f180_uid18.v=Verilog Source Code
 .\src\intadder_42_f300_uid15.v=Verilog Source Code
 .\src\final1.v=Verilog Source Code
-.\src\wave.asdbw\strings.data=External File
-.\src\wave.asdbw\LOCAL___DC0473579EBC0B100600.sid\channels.data=External File
-.\src\wave.asdbw\LOCAL___DC0473579EBC0B100600.sid\channels.index=External File
-.\src\wave.asdbw\LOCAL___DC0473579EBC0B100600.sid\current_time=External File
-.\src\wave.asdbw\LOCAL___DC0473579EBC0B100600.sid\global_info=External File
-.\src\wave.asdbw\LOCAL___DC0473579EBC0B100600.sid\names.data=External File
-.\src\wave.asdbw\LOCAL___DC0473579EBC0B100600.sid\names.index=External File
-.\src\wave.asdbw\LOCAL___DC0473579EBC0B100600.sid\pattern_lut=External File
-.\src\wave.asdbw\LOCAL___DC0473579EBC0B100600.sid\ref_counter=External File
-.\src\wave.asdbw\LOCAL___DC0473579EBC0B100600.sid\scratchpad.data=External File
-.\src\wave.asdbw\LOCAL___DC0473579EBC0B100600.sid\scratchpad.index=External File
-.\src\wave.asdbw\LOCAL___DC0473579EBC0B100600.sid\sources=External File
-.\src\wave.asdbw\LOCAL___DC0473579EBC0B100600.sid\status_ok=External File
-.\src\wave.asdbw\LOCAL___DC0473579EBC0B100600.sid\strings.index=External File
-.\src\wave.asdbw\LOCAL___DC0473579EBC0B100600.sid\treeinfo=External File
-.\src\wave.asdbw\LOCAL___DC0473579EBC0B100600.sid\typeinfo=External File
+
